@@ -1,0 +1,25 @@
+
+@media (max-width:1000px) {
+#index_menu_rwd{ display:block}  
+#index_menu{ display:none} 
+
+#memu_rwd{ display:block}  
+#memu{ display:none} 
+
+#page_top_img{
+	height:350px;
+	}	
+
+}
+
+
+
+@media (max-width:1350px) {
+
+#ab_main{ display:none}
+#ab_main_rwd{ display: block}
+#about_introduction_rwd{max-width:1360px;margin:auto;padding-top:20px}
+#about_introduction_rwd .img{max-width:676px; height:452px;background-position:center; background-size: cover;display: block; margin:auto}
+#about_introduction_rwd .txt{max-width:676px; display:block;vertical-align:top;border-left:0px solid #FFF; background-color:#f2f2f2; text-align:center; position: inherit; margin: auto; padding:10px 0}
+#about_introduction_rwd .box{max-width:350px; height: auto; margin:auto; text-align:center }
+}

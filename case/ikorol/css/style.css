@@ -1,0 +1,160 @@
+
+h1{font-size:30px; font-weight:bold}
+h2{font-size:15px; font-weight:bold}
+p { font-size:13px;line-height:25px; color:#6f6f6f} 
+
+
+/*---------------------------------------*/
+/*  選單 */
+/*---------------------------------------*/
+#memu { 
+	max-width:1107px; 
+	height:62px;
+	margin:0 auto;
+	padding:10px
+	}
+#memu ul{padding-top:5px}
+#memu li{float:left}
+#memu li a{ 
+	text-decoration:none; 
+	color:#FFF; 
+	margin:0 20px}
+#memu li a:hover{ color:#CCC} 
+#memu .logo{float:left}
+
+
+#memu_rwd { 
+	width:100%;  
+	margin:0 auto; position:relative; z-index:999; 
+	display:none}
+#memu_rwd ul{ display:none;}
+#memu_rwd li{
+	border-bottom:1px solid #999;
+	width:100%;float: inherit; 
+	text-align:center; 
+	background-color:#333; 
+	padding:10px 0; 
+	opacity: 0.8
+	}
+#memu_rwd li a{ text-decoration:none; color:#FFF; margin:0 20px}
+#memu_rwd li a:hover{ color:#CCC} 
+#memu_rwd .logo{ margin-left:10px;} 
+
+
+/*---------------------------------------*/
+/*  首頁 */
+/*---------------------------------------*/
+#top_img{   
+  width:100%;
+  height:100% ; 
+  background-position:center; 
+  background-size:cover;
+  display:table; 
+  position:relative; 
+  }
+    
+
+#index_menu{max-width:1360px;margin:auto; padding-top:48px}   
+.index_tab{ background-position:center; background-size:cover; position:relative }    
+
+
+#index_menu_rwd{width:100%; display:none}   
+#index_menu_rwd li{
+	width:100%; height:100px; 
+	margin:5px 0; 
+	background-position:100% 70%; 
+	background-size:cover; 
+	position:relative
+	}
+#index_menu_rwd li .tt{position:absolute;top: 5%;left: 2%; }   
+
+
+/*---------------------------------------*/
+/*  ABOUT 關於我們 */
+/*---------------------------------------*/
+#memu li a{ 
+	text-decoration:none; 
+	color:#464646; 
+	margin:0 20px
+	}
+	
+	
+#page_top_img{
+	width:100%;
+	height:633px;
+	background-position:center; 
+	background-size:cover; position:relative
+	}	
+
+#page_top_img .caption{max-width:1107px; height:280px; color:#FFF; margin: auto; padding:0 30px; position:absolute;top: 0;bottom: 0; left: 0;right: 0;}
+#page_top_img span{font-size:15px; font-weight:bold}
+#page_top_img p{color:#FFF}
+
+.img-responsive{max-width:100%;display:inline-block ; }
+.banners{ padding:50px 0}
+
+
+
+#ab_main_rwd{ display:none}
+#about_introduction{max-width:1360px;margin:auto; padding-top:20px}
+#about_introduction .img{width:676px; height:452px; display:table-cell}
+#about_introduction .txt{width:676px;display:table-cell;vertical-align:top;border-left:5px solid #FFF; background-color:#f2f2f2; padding:100px 0 0 20px }
+#about_introduction .box{width:350px; height:300px;}
+
+/*---------------------------------------*/
+/*  lookbook 目錄 */
+/*---------------------------------------*/
+.lookbook_type{text-align: center;margin:10px 0}
+
+.lookbook_main .left{border:5px solid #ebebeb;max-width:516px; margin:auto; }
+.lookbook_main .right{max-width:516px; margin:auto}
+.lookbook_main .right p{line-height: 20px}
+#buy_bth a{width:216px; height:35px; background-color:#999; color:#FFF; margin-top:35px; float:right; text-align:center;line-height: 35px;text-decoration:none; }
+#buy_bth a:hover{ background-color: #666;}
+
+.lookbook_info{max-width:333px; margin:auto; padding:20px 0}
+.lookbook_info .box{margin:10px 0}
+.lookbook_info .box img{float:left; padding:4px 5px 0 0}
+.lookbook_info .box .tt{float:left;ont-size:15px; font-weight:bold}
+
+/*---------------------------------------*/
+/*  showroom 展示 */
+/*---------------------------------------*/
+.showroom_type{max-width:754px; margin:auto; padding:20px 0; text-align:center}
+.showroom_type img{margin:20px 0}
+.showroom_type p{text-align:left; padding:0 50px}
+
+
+/*---------------------------------------*/
+/*  news 新聞 */
+/*---------------------------------------*/
+.news_type{max-width:282px;margin: auto; padding:20px 0}
+.news_type a{ color:#404040;text-decoration:none;}
+.news_type span{ display:block;font-size:11px; margin:5px 0} 
+.news_type .tt{font-size:15px; font-weight:bold; margin:5px 0}
+.news_type p{ line-height:20px;}
+.news_type a:hover p{ color: #000}
+
+.news_post span{ display:block;font-size:11px; margin:15px 0} 
+.news_post .tt{font-size:15px; font-weight:bold; margin:15px 0}
+.news_post p{ line-height:25px;}
+
+
+/*---------------------------------------*/
+/*  contact 聯絡 */
+/*---------------------------------------*/
+.contact_type{max-width:900px; padding:20px 0}
+.td{line-height:40px;font-size:15px; font-weight:bold}
+.td span{ color:#9f2323;font-weight:bold}
+.bth{
+	cursor:pointer;
+	display:block ;
+	-webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius:15px; 
+	background-color:#999999; 
+	color:#FFF;
+	margin:auto; 
+	padding:10px 70px
+	}
+
