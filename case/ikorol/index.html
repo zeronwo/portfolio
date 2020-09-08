@@ -23,9 +23,10 @@
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script>
-        function load_home() {
-            document.getElementById("content").innerHTML = '<object type="text/html" data="1-1.html" ></object>';
-        }
+        $(function () {
+            $("#include_top").load("include/1-1.html");
+            $("#include_footer").load("include/5-1.html");
+        });
     </script>
 
     <script type="text/javascript">
@@ -40,7 +41,7 @@
 
 <body>
 
-    <div id="content"></div>
+    <div id="include_top"></div>
     <!--top_img st -->
 
     <div id="top_img" style="background-image: url(imgs/index_r1_c1.jpg);">
