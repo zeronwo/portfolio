@@ -391,8 +391,8 @@ body {
     width: 40px;
     height: 40px;
     border-radius: 5px;
-    border: 3px #d94485 solid;
-    background: $color3;
+    border: 3px #942d26 solid;
+    background: #ea5d5b;
     background-size: cover;
     display: block;
     position: relative;
@@ -1178,13 +1178,13 @@ section {
       }
     }
     li:nth-of-type(odd) {
-      background: #2722db;
+      background: #356fc7;
     }
     li:nth-of-type(even) {
-      background: #4242fa;
+      background: #1654B1;
     }
     li:not(:last-child) {
-      border-right: 2px #acffff solid;
+      border-right: 2px #4ea8fa solid;
     }
   }
 }
@@ -1504,7 +1504,7 @@ footer {
     position: fixed;
     bottom: 70px;
     z-index: 99;
-    background-color: rgba(185, 1, 121, 0.8);
+    background-color: rgba(234, 93, 91, 0.8);
     .reciprocal_box {
       border: none;
       border-radius: inherit;
