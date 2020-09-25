@@ -156,7 +156,7 @@ header {
     height: auto;
     z-index: 99;
     @include flex();
-    padding: 0.5% 2%;
+    padding: 5px 2%;
     .logo {
       img {
         max-height: 30px;
@@ -183,6 +183,15 @@ header {
   min-height: 100vh;
   position: fixed;
   top: 0;
+}
+
+.youtube-background{
+  iframe{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+  }
 }
 
 .content {
@@ -213,6 +222,7 @@ header {
   color: #fff;
   .tt{
     overflow: hidden;
+    text-shadow: 2px 2px 10px #000000;
     strong{
       display: block;
       @include big-text();
