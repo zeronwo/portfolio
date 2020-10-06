@@ -1,278 +1,1114 @@
 <!DOCTYPE html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <title>ikorol</title>
-
     <meta name="description" content="Source code generated using layoutit.com">
     <meta name="author" content="LayoutIt!">
-   
-    <link href="css/reset.css" rel="stylesheet" type="text/css" />
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="../../js/owlCarousel/owl.carousel.css" rel="stylesheet" type="text/css">
+    <link href="../../js/owlCarousel/owl.theme.default.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="../../js/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="../../js/slick/slick-theme.css" />
+
     <link href="css/style.css" rel="stylesheet">
     <link href="css/max.css" rel="stylesheet" type="text/css" />
-<style>
 
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/owlCarousel/owl.carousel.js"></script>
 
-
-
-</style>
-    
-    
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script type="text/javascript">
-$(document).ready(function() {
-    $(".toggle").click(function() {
-        $(".mm").slideToggle();
-    });
-});
-</script>
+    <script type="text/javascript" src="../../js/slick/slick.js"></script>
+    <script src="https://vuejs.org/js/vue.js"></script>
+    <script src="js/scripts.js"></script>
 
 
 </head>
+
 <body>
 
-<!--menu_all st-->
-    
-	<div style="border-bottom:1px solid  #464646;width:100%; height:56px; ">
-    	 <!--menu st-->
-        <div id="memu" class="clearfix">
-            <div class="logo"><a href="index.html"><img src="imgs/index_logo2.png"></a></div>
-            <ul class="clearfix" style="float:right">
-            	<li>
-                	<a href="index.html">HOME</a> 
-                </li>
-            	<li style="">
-                	<a href="1-1.html">ABOUT</a> 
-                </li>
-            	<li style="">
-                	<a href="2-1.html">LOOKBOOK</a> 
-                </li>
-            	<li style="">
-                	<a href="3-1.html">SHOWROOM</a> 
-                </li>
-            	<li style="">
-                	<a href="4-1.html">NEWS & TOPICS</a> 
-                </li>
-            	<li style="">
-                	<a href="5-1.html">CONTACT</a> 
-                </li>
-                
-                
-                
-            </ul>
-    	</div>
-    <!--menu end-->
-    
-    <!--memu_rwd st-->
-    	<div id="memu_rwd" class="clearfix">
-        	<div class="clearfix" style="width:100%; background-color:#000; padding:13px 10px">
-            	
-                <div class="logo" style="float:left"><a href="index.html"><img src="imgs/index_logo.png"></a></div>
-            	<span class="toggle" style="color:#FFF; float:right; margin:10px 10px 0 0; cursor:pointer">MENU</span>
-            </div>
-            <ul class="clearfix mm">
-            	<li>
-                	<a href="index.html">HOME</a> 
-                </li>
-            	<li style="">
-                	<a href="1-1.html">ABOUT</a> 
-                </li>
-            	<li style="">
-                	<a href="2-1.html">LOOKBOOK</a> 
-                </li>
-            	<li style="">
-                	<a href="3-1.html">SHOWROOM</a> 
-                </li>
-            	<li style="">
-                	<a href="4-1.html">NEWS & TOPICS</a> 
-                </li>
-            	<li style="">
-                	<a href="5-1.html">CONTACT</a> 
-                </li>
-                
-                
-                
-            </ul>
-    	</div>
-    <!--memu_rwd end-->
-    
-    
-    </div>
+    <!--menu_all st-->
 
-<!--menu_all end-->
-    
-<div align="center" style=" margin:25px 0"><img src="imgs/lookbook_tt.png" ></div>    
-<!--top_img st-->
-<div id="page_top_img" style="background-image: url(imgs/lookbook_top_img.jpg); ">
+    <!--top_img st-->
+    <div class="page_top_img lookbook_top_img">
 
-  <div class="caption">
-      <span>目錄</span>
-      <div style="margin:10px 0"><img src="imgs/lookbook_top_img_tt.png" class="img-responsive"></div>
-      
-      <p>
-        我會永遠在你身邊。<br>
-        即使當你累了，哭了，一天<br>
-        感覺太有線睡覺，我會一直在你身邊。<br>
-        有好日子和好運氣。<br>
-        我會等著你回去。<br>      
-      </p>
-  </div>
+        <div id="header_menu">
+            <div class="site-nav">
+                <!--menu st-->
+                <div id="menu">
+                    <div class="menu_main">
+                        <div class="logo"><a href="index.html"><img src="imgs/index_logo.png"></a></div>
+                        <ul>
+                            <li>
+                                <a href="1-1.html">ABOUT</a>
+                            </li>
+                            <li class="active">
+                                <a href="2-1.html">LOOKBOOK</a>
+                            </li>
+                            <li>
+                                <a href="3-1.html">SHOWROOM</a>
+                            </li>
+                            <li>
+                                <a href="4-1.html">NEWS & TOPICS</a>
+                            </li>
+                            <li>
+                                <a href="5-1.html">CONTACT</a>
+                            </li>
+                        </ul>
+                    </div>
 
-</div>
-<!--top_img end-->
-
-
-<!--選單項目-->
-<div class="container" style="padding:0 50px;">
-    <div class="lookbook_main row banners">
-      
-      <div class="col-md-6">
-        	<div class="left">
-            	<div><img src="imgs/lookbook_post_img_p1.jpg" class="img-responsive"></div>
-            </div>    
-      </div>
-      
-      <div class="col-md-6 right">
-       		<h1>淡水河谷木床 / 自然</h1>   
-            <h2>美麗的實木，經過精心打磨</h2> 
-            <p>
-            床頭採用耐用的偏差小白樺在整個表面。在明亮的自然色，是奢華質感精美的深大富大貴的木紋光澤的樣子。
-			表面已進行油漆，以保護由滲入木材。而不與樹的呼吸干擾，根據時間的推移，油會出來熟悉鮮明深光澤到樹中。
-            </p> 
-            
-            <h2>尺寸</h2> 
-            <p>
-            ■  單：99厘米半雙：124厘米雙<br>
-            ■  正常規格：209厘米長尺寸：221Cm<br>
-            ■  材質：框架實心樺木/地板桐木<br>
-            ■  原產國：日本
-            </p> 
-            
-            <h2>重量</h2> 
-            <p>
-            正文：180X 101X9.5厘米（35千克）<br>
-            側軌：200×11 x 21公分（16千克）<br>
-            地板：165×100×9.5厘米（16公斤）            
-			</p> 
-            <hr style=" margin:0">
-            <div class="clearfix">
-            	<div style="float:left">
-                    <h2>數量</h2>
-                    <select name="">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    </select>
                 </div>
-                <div id="buy_bth"><a href="#">加入購物車</a></div>
-    		</div>
+                <!--menu end-->
+
+                <!--menu st-->
+                <div id="menu_rwd">
+                    <div class="menu_rwd_main">
+
+                        <div class="logo"><a href="index.html"><img src="imgs/index_logo.png"></a>
+                        </div>
+                        <span class="menu_rwd_toggle">
+                            <button class="gloval-navi-sp-open">
+                                <i class="gloval-navi-sp-open-line"></i>
+                                <i class="gloval-navi-sp-open-line"></i>
+                            </button>
+
+                        </span>
+                    </div>
+                    <ul class=" mm">
+                        <li>
+                            <a href="index.html">
+                                <span>HOME</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="1-1.html">
+                                <span>ABOUT</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="2-1.html">
+                                <span>LOOKBOOK</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="3-1.html">
+                                <span>SHOWROOM</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="4-1.html">
+                                <span>NEWS & TOPICS</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="5-1.html">
+                                <span>CONTACT</span>
+                            </a>
+                        </li>
+
+
+                    </ul>
+                    <div class="menu_rwd_bg">
+
+                    </div>
+                </div>
+                <!--menu end-->
+            </div>
+        </div>
     </div>
-  </div> 
-</div>
+    <!--top_img end-->
+    <!--menu_all end-->
 
 
-<div style="max-width:1112px;margin:auto;"><img src="imgs/lookbook_post_img2_p1.jpg" class="img-responsive"></div>
+    <!--top_img end-->
 
-<!--選單項目-->
-<div class="container">
-    <div class="row banners">
-      
-      <div class="col-sm-4">
-      	<div class="lookbook_info">
-            <img src="imgs/lookbook_post_img3_p1.jpg" class="img-responsive">
-            <div class="clearfix box">
-            	<img src="imgs/point.jpg">
-                <div class="tt">令人耳目一新</div> 
+
+    <!--選單項目-->
+
+
+    <section>
+        <div class="lookbook_main">
+            <div class="container">
+                <div class="breadcrumb">
+                    <ul>
+                        <li>
+                            <a href="index.html"><span>Home</span></a>
+                        </li>
+                        <li>
+                            <a href="2-1.html"><span>LOOKBOOK</span></a>
+                        </li>
+                        <li>
+                            <span>Shop Best Sellers</span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 03 -->
+                <h2 class="m_20">Shop Best Sellers</h2>
+                <!-- lookbook_menu_web -->
+                <div class="lookbook_menu_web">
+                  
+                    <ul class="lookbook_menu m_10">
+                        <!-- 01 -->
+                        <li>
+                            <button>
+                                <span>Size</span>
+                            </button>
+                            <div class="lookbook_submenu">
+                                <div class="lookbook_submenu_box">
+                                    <input type="checkbox">
+                                    <label>Twin</label>
+                                </div>
+                                <div class="lookbook_submenu_box">
+                                    <input type="checkbox">
+                                    <label>Twin XL</label>
+                                </div>
+                                <div class="lookbook_submenu_box">
+                                    <input type="checkbox">
+                                    <label>Full / Double</label>
+                                </div>
+                                <div class="lookbook_submenu_box">
+                                    <input type="checkbox">
+                                    <label>Queen</label>
+                                </div>
+                                <div class="lookbook_submenu_box">
+                                    <input type="checkbox">
+                                    <label>King</label>
+                                </div>
+                                <div class="lookbook_submenu_box">
+                                    <input type="checkbox">
+                                    <label>California King</label>
+                                </div>
+                                <div class="lookbook_submenu_box">
+                                    <input type="checkbox">
+                                    <label>Daybed</label>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- 01 -->
+                        <li>
+                            <button>
+                                <span>Color</span>
+                            </button>
+                            <div class="lookbook_submenu">
+                                <div class="lookbook_submenu_box">
+                                    <input type="checkbox">
+                                    <label>Blue</label>
+                                </div>
+                                <div class="lookbook_submenu_box">
+                                    <input type="checkbox">
+                                    <label>Green</label>
+                                </div>
+                                <div class="lookbook_submenu_box">
+                                    <input type="checkbox">
+                                    <label>Yellow & Gold</label>
+                                </div>
+                                <div class="lookbook_submenu_box">
+                                    <input type="checkbox">
+                                    <label>White</label>
+                                </div>
+                                <div class="lookbook_submenu_box">
+                                    <input type="checkbox">
+                                    <label>Black</label>
+                                </div>
+                                <div class="lookbook_submenu_box">
+                                    <input type="checkbox">
+                                    <label>Red</label>
+                                </div>
+                                <div class="lookbook_submenu_box">
+                                    <input type="checkbox">
+                                    <label>Gray & Silver</label>
+                                </div>
+                                <div class="lookbook_submenu_box">
+                                    <input type="checkbox">
+                                    <label>Pink</label>
+                                </div>
+                                <div class="lookbook_submenu_box">
+                                    <input type="checkbox">
+                                    <label>Rose Gold</label>
+                                </div>
+                                <div class="lookbook_submenu_box">
+                                    <input type="checkbox">
+                                    <label>Orange</label>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- 01 -->
+                        <li>
+                            <button>
+                                <span>Price</span>
+                            </button>
+                            <div class="lookbook_submenu">
+                                <div class="lookbook_submenu_box">
+                                    <input type="checkbox">
+                                    <label>$0 - $500</label>
+                                </div>
+                                <div class="lookbook_submenu_box">
+                                    <input type="checkbox">
+                                    <label>$500 - $1,000</label>
+                                </div>
+                                <div class="lookbook_submenu_box">
+                                    <input type="checkbox">
+                                    <label>$1,000 - $1,500</label>
+                                </div>
+                                <div class="lookbook_submenu_box">
+                                    <input type="checkbox">
+                                    <label>$1,500 - $2,000</label>
+                                </div>
+                                <div class="lookbook_submenu_box">
+                                    <input type="checkbox">
+                                    <label>$2,000 - and above</label>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- 01 -->
+                        <li>
+                            <button>
+                                <span>Style</span>
+                            </button>
+                            <div class="lookbook_submenu">
+                                <div class="lookbook_submenu_box">
+                                    <input type="checkbox">
+                                    <label>Casual</label>
+                                </div>
+                                <div class="lookbook_submenu_box">
+                                    <input type="checkbox">
+                                    <label>Coastal</label>
+                                </div>
+                                <div class="lookbook_submenu_box">
+                                    <input type="checkbox">
+                                    <label>Contemporary</label>
+                                </div>
+                                <div class="lookbook_submenu_box">
+                                    <input type="checkbox">
+                                    <label>Cottage</label>
+                                </div>
+                                <div class="lookbook_submenu_box">
+                                    <input type="checkbox">
+                                    <label>Country</label>
+                                </div>
+                                <div class="lookbook_submenu_box">
+                                    <input type="checkbox">
+                                    <label>Farmhouse</label>
+                                </div>
+                                <div class="lookbook_submenu_box">
+                                    <input type="checkbox">
+                                    <label>French</label>
+                                </div>
+                                <div class="lookbook_submenu_box">
+                                    <input type="checkbox">
+                                    <label>Glam</label>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- 01 -->
+                        <li>
+                            <button>
+                                <span>Material</span>
+                            </button>
+                            <div class="lookbook_submenu">
+                                <div class="lookbook_submenu_box">
+                                    <input type="checkbox">
+                                    <label>Bonded Leather</label>
+                                </div>
+                                <div class="lookbook_submenu_box">
+                                    <input type="checkbox">
+                                    <label>Brass</label>
+                                </div>
+                                <div class="lookbook_submenu_box">
+                                    <input type="checkbox">
+                                    <label>Fabric</label>
+                                </div>
+                                <div class="lookbook_submenu_box">
+                                    <input type="checkbox">
+                                    <label>Faux Leather</label>
+                                </div>
+                                <div class="lookbook_submenu_box">
+                                    <input type="checkbox">
+                                    <label>Glass</label>
+                                </div>
+                                <div class="lookbook_submenu_box">
+                                    <input type="checkbox">
+                                    <label>Iron</label>
+                                </div>
+                                <div class="lookbook_submenu_box">
+                                    <input type="checkbox">
+                                    <label>Leather</label>
+                                </div>
+                                <div class="lookbook_submenu_box">
+                                    <input type="checkbox">
+                                    <label>MDF</label>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- 01 -->
+                        <li>
+                            <button>
+                                <span>Brand</span>
+                            </button>
+                            <div class="lookbook_submenu">
+                                <div class="lookbook_submenu_box">
+                                    <input type="checkbox">
+                                    <label>A-America</label>
+                                </div>
+                                <div class="lookbook_submenu_box">
+                                    <input type="checkbox">
+                                    <label>A.R.T.</label>
+                                </div>
+                                <div class="lookbook_submenu_box">
+                                    <input type="checkbox">
+                                    <label>ACME</label>
+                                </div>
+                                <div class="lookbook_submenu_box">
+                                    <input type="checkbox">
+                                    <label>Alpine</label>
+                                </div>
+                                <div class="lookbook_submenu_box">
+                                    <input type="checkbox">
+                                    <label>American Drew</label>
+                                </div>
+                                <div class="lookbook_submenu_box">
+                                    <input type="checkbox">
+                                    <label>American Woodcrafters</label>
+                                </div>
+                                <div class="lookbook_submenu_box">
+                                    <input type="checkbox">
+                                    <label>Armen Living</label>
+                                </div>
+                                <div class="lookbook_submenu_box">
+                                    <input type="checkbox">
+                                    <label>Artisan & Post</label>
+                                </div>
+                            </div>
+                        </li>
+
+
+                    </ul>
+                  
+                </div>
+                <div class="lookbook_menu_list m_20">
+                    <ul>
+                        <li>
+                            <button> <span>Size: Twin</span> </button>
+                        </li>
+                        <li>
+                            <button> <span>Color: Blue</span> </button>
+                        </li>
+                        <li>
+                            <button> <span>Price: $500 - $1,000</span> </button>
+                        </li>
+                        <li>
+                            <button> <span>Style: Contemporary</span> </button>
+                        </li>
+                    </ul>
+                    <a class="lookbook_menu_list_clear" href="javascript:;">Clear All</a>
+                </div>
+                <div class="lookbook_filter m_20">
+                    <button>
+                        <span>Sort & Filter</span>
+                    </button>
+                </div>
+                <!-- lookbook_menu_rwd -->
+                <div class="lookbook_menu_rwd">
+                    <div class="lookbook_menu_rwd_main">
+                        <div class="lookbook_menu_rwd_tt">
+                            <button class="lookbook_menu_rwd_close">
+                                <i class="fa fa-times" aria-hidden="true"></i>
+                            </button>
+
+                            <strong>Sort & Filter</strong>
+                        </div>
+                        <ul class="lookbook_menu m_20">
+                            <!-- 01 -->
+                            <li>
+                                <button>
+                                    <span>Size</span>
+                                </button>
+                                <div class="lookbook_submenu">
+                                    <div class="lookbook_submenu_box">
+                                        <input type="checkbox">
+                                        <label>Twin</label>
+                                    </div>
+                                    <div class="lookbook_submenu_box">
+                                        <input type="checkbox">
+                                        <label>Twin XL</label>
+                                    </div>
+                                    <div class="lookbook_submenu_box">
+                                        <input type="checkbox">
+                                        <label>Full / Double</label>
+                                    </div>
+                                    <div class="lookbook_submenu_box">
+                                        <input type="checkbox">
+                                        <label>Queen</label>
+                                    </div>
+                                    <div class="lookbook_submenu_box">
+                                        <input type="checkbox">
+                                        <label>King</label>
+                                    </div>
+                                    <div class="lookbook_submenu_box">
+                                        <input type="checkbox">
+                                        <label>California King</label>
+                                    </div>
+                                    <div class="lookbook_submenu_box">
+                                        <input type="checkbox">
+                                        <label>Daybed</label>
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- 01 -->
+                            <li>
+                                <button>
+                                    <span>Color</span>
+                                </button>
+                                <div class="lookbook_submenu">
+                                    <div class="lookbook_submenu_box">
+                                        <input type="checkbox">
+                                        <label>Blue</label>
+                                    </div>
+                                    <div class="lookbook_submenu_box">
+                                        <input type="checkbox">
+                                        <label>Green</label>
+                                    </div>
+                                    <div class="lookbook_submenu_box">
+                                        <input type="checkbox">
+                                        <label>Yellow & Gold</label>
+                                    </div>
+                                    <div class="lookbook_submenu_box">
+                                        <input type="checkbox">
+                                        <label>White</label>
+                                    </div>
+                                    <div class="lookbook_submenu_box">
+                                        <input type="checkbox">
+                                        <label>Black</label>
+                                    </div>
+                                    <div class="lookbook_submenu_box">
+                                        <input type="checkbox">
+                                        <label>Red</label>
+                                    </div>
+                                    <div class="lookbook_submenu_box">
+                                        <input type="checkbox">
+                                        <label>Gray & Silver</label>
+                                    </div>
+                                    <div class="lookbook_submenu_box">
+                                        <input type="checkbox">
+                                        <label>Pink</label>
+                                    </div>
+                                    <div class="lookbook_submenu_box">
+                                        <input type="checkbox">
+                                        <label>Rose Gold</label>
+                                    </div>
+                                    <div class="lookbook_submenu_box">
+                                        <input type="checkbox">
+                                        <label>Orange</label>
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- 01 -->
+                            <li>
+                                <button>
+                                    <span>Price</span>
+                                </button>
+                                <div class="lookbook_submenu">
+                                    <div class="lookbook_submenu_box">
+                                        <input type="checkbox">
+                                        <label>$0 - $500</label>
+                                    </div>
+                                    <div class="lookbook_submenu_box">
+                                        <input type="checkbox">
+                                        <label>$500 - $1,000</label>
+                                    </div>
+                                    <div class="lookbook_submenu_box">
+                                        <input type="checkbox">
+                                        <label>$1,000 - $1,500</label>
+                                    </div>
+                                    <div class="lookbook_submenu_box">
+                                        <input type="checkbox">
+                                        <label>$1,500 - $2,000</label>
+                                    </div>
+                                    <div class="lookbook_submenu_box">
+                                        <input type="checkbox">
+                                        <label>$2,000 - and above</label>
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- 01 -->
+                            <li>
+                                <button>
+                                    <span>Style</span>
+                                </button>
+                                <div class="lookbook_submenu">
+                                    <div class="lookbook_submenu_box">
+                                        <input type="checkbox">
+                                        <label>Casual</label>
+                                    </div>
+                                    <div class="lookbook_submenu_box">
+                                        <input type="checkbox">
+                                        <label>Coastal</label>
+                                    </div>
+                                    <div class="lookbook_submenu_box">
+                                        <input type="checkbox">
+                                        <label>Contemporary</label>
+                                    </div>
+                                    <div class="lookbook_submenu_box">
+                                        <input type="checkbox">
+                                        <label>Cottage</label>
+                                    </div>
+                                    <div class="lookbook_submenu_box">
+                                        <input type="checkbox">
+                                        <label>Country</label>
+                                    </div>
+                                    <div class="lookbook_submenu_box">
+                                        <input type="checkbox">
+                                        <label>Farmhouse</label>
+                                    </div>
+                                    <div class="lookbook_submenu_box">
+                                        <input type="checkbox">
+                                        <label>French</label>
+                                    </div>
+                                    <div class="lookbook_submenu_box">
+                                        <input type="checkbox">
+                                        <label>Glam</label>
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- 01 -->
+                            <li>
+                                <button>
+                                    <span>Material</span>
+                                </button>
+                                <div class="lookbook_submenu">
+                                    <div class="lookbook_submenu_box">
+                                        <input type="checkbox">
+                                        <label>Bonded Leather</label>
+                                    </div>
+                                    <div class="lookbook_submenu_box">
+                                        <input type="checkbox">
+                                        <label>Brass</label>
+                                    </div>
+                                    <div class="lookbook_submenu_box">
+                                        <input type="checkbox">
+                                        <label>Fabric</label>
+                                    </div>
+                                    <div class="lookbook_submenu_box">
+                                        <input type="checkbox">
+                                        <label>Faux Leather</label>
+                                    </div>
+                                    <div class="lookbook_submenu_box">
+                                        <input type="checkbox">
+                                        <label>Glass</label>
+                                    </div>
+                                    <div class="lookbook_submenu_box">
+                                        <input type="checkbox">
+                                        <label>Iron</label>
+                                    </div>
+                                    <div class="lookbook_submenu_box">
+                                        <input type="checkbox">
+                                        <label>Leather</label>
+                                    </div>
+                                    <div class="lookbook_submenu_box">
+                                        <input type="checkbox">
+                                        <label>MDF</label>
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- 01 -->
+                            <li>
+                                <button>
+                                    <span>Brand</span>
+                                </button>
+                                <div class="lookbook_submenu">
+                                    <div class="lookbook_submenu_box">
+                                        <input type="checkbox">
+                                        <label>A-America</label>
+                                    </div>
+                                    <div class="lookbook_submenu_box">
+                                        <input type="checkbox">
+                                        <label>A.R.T.</label>
+                                    </div>
+                                    <div class="lookbook_submenu_box">
+                                        <input type="checkbox">
+                                        <label>ACME</label>
+                                    </div>
+                                    <div class="lookbook_submenu_box">
+                                        <input type="checkbox">
+                                        <label>Alpine</label>
+                                    </div>
+                                    <div class="lookbook_submenu_box">
+                                        <input type="checkbox">
+                                        <label>American Drew</label>
+                                    </div>
+                                    <div class="lookbook_submenu_box">
+                                        <input type="checkbox">
+                                        <label>American Woodcrafters</label>
+                                    </div>
+                                    <div class="lookbook_submenu_box">
+                                        <input type="checkbox">
+                                        <label>Armen Living</label>
+                                    </div>
+                                    <div class="lookbook_submenu_box">
+                                        <input type="checkbox">
+                                        <label>Artisan & Post</label>
+                                    </div>
+                                </div>
+                            </li>
+
+
+                        </ul>
+                    </div>
+
+                    <div class="lookbook_menu_rwd_overlay"></div>
+                </div>
+                <!-- 03-1 -->
+                <div class="row lookbook_border m_20">
+                    <!-- 03-1-1 -->
+                    <div class="col-md-3  col-6 m_20">
+                        <div class="lookbook_sellers sale">
+                            <div class="lookbook_heart"></div>
+                            <a href="2-3.html">
+                                <div class="lookbook_img">
+                                    <img src="imgs/lookbook/01/1.jpg" alt="">
+                                </div>
+                                <div class="lookbook_options">
+                                    <p>+9 Colors | 3 Sizes</p>
+                                </div>
+                                <div class="lookbook_header">
+                                    <p>Wayfair Basics Duvet Cover Set</p>
+                                </div>
+                                <div class="lookbook_pricing">
+                                    <span class="lookbook_price">
+                                        <p>$19.99</p>
+                                    </span>
+                                    <span class="lookbook_price lookbook-price--listPrice">
+                                        <p>$22</p>
+                                    </span>
+                                </div>
+                                <div class="lookbook_reviews">
+                                    <div class="lookbook_reviews_star">
+                                        <p class="rating" style="width: 90%">★★★★★</p>
+                                        <p>★★★★★</p>
+                                    </div>
+                                    <span class="pl-ReviewStars-stars">
+                                        <p>58</p>
+                                    </span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- 03-1-2 -->
+                    <div class="col-md-3  col-6 m_20">
+                        <div class="lookbook_sellers">
+                            <div class="lookbook_heart"></div>
+                            <a href="2-3.html">
+                                <div class="lookbook_img">
+                                    <img src="imgs/lookbook/01/2.jpg" alt="">
+                                </div>
+                                <div class="lookbook_options">
+                                    <p>+6 Colors | 2 Sizes</p>
+                                </div>
+                                <div class="lookbook_header">
+                                    <p>Legette Duvet Cover Set</p>
+                                </div>
+                                <div class="lookbook_pricing">
+                                    <span class="lookbook_price">
+                                        <p>$103</p>
+                                    </span>
+                                    <span class="lookbook_price lookbook-price--listPrice">
+                                        <p>$149.99</p>
+                                    </span>
+                                </div>
+                                <div class="lookbook_reviews">
+                                    <div class="lookbook_reviews_star">
+                                        <p class="rating" style="width: 80%">★★★★★</p>
+                                        <p>★★★★★</p>
+                                    </div>
+                                    <span class="pl-ReviewStars-stars">
+                                        <p>137</p>
+                                    </span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- 03-1-3 -->
+                    <div class="col-md-3  col-6 m_20">
+                        <div class="lookbook_sellers">
+                            <div class="lookbook_heart"></div>
+                            <a href="2-3.html">
+                                <div class="lookbook_img">
+                                    <img src="imgs/lookbook/01/3.jpg" alt="">
+                                </div>
+                                <div class="lookbook_options">
+                                    <p>3 Colors</p>
+                                </div>
+                                <div class="lookbook_header">
+                                    <p>Finnian Geometric 20" Throw Pillow</p>
+                                </div>
+                                <div class="lookbook_pricing">
+                                    <span class="lookbook_price">
+                                        <p>$29</p>
+                                    </span>
+
+                                </div>
+                                <div class="lookbook_reviews">
+                                    <div class="lookbook_reviews_star">
+                                        <p class="rating" style="width: 90%">★★★★★</p>
+                                        <p>★★★★★</p>
+                                    </div>
+                                    <span class="pl-ReviewStars-stars">
+                                        <p>439</p>
+                                    </span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- 03-1-4 -->
+                    <div class="col-md-3  col-6 m_20">
+                        <div class="lookbook_sellers sale">
+                            <div class="lookbook_heart"></div>
+                            <a href="2-3.html">
+                                <div class="lookbook_img">
+                                    <img src="imgs/lookbook/01/4.jpg" alt="">
+                                </div>
+                                <div class="lookbook_options">
+                                    <p>+5 Colors | 3 Sizes</p>
+                                </div>
+                                <div class="lookbook_header">
+                                    <p>Lexington Quilt Set</p>
+                                </div>
+                                <div class="lookbook_pricing">
+                                    <span class="lookbook_price">
+                                        <p>$97</p>
+                                    </span>
+                                    <span class="lookbook_price lookbook-price--listPrice">
+                                        <p>$100</p>
+                                    </span>
+                                </div>
+                                <div class="lookbook_reviews">
+                                    <div class="lookbook_reviews_star">
+                                        <p class="rating" style="width: 90%">★★★★★</p>
+                                        <p>★★★★★</p>
+                                    </div>
+                                    <span class="pl-ReviewStars-stars">
+                                        <p>86</p>
+                                    </span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+
+
+
+
+
+                </div>
+                <!-- 03-2 -->
+                <div class="row lookbook_border m_20">
+                    <!-- 03-2-1 -->
+                    <div class="col-md-3  col-6 m_20">
+                        <div class="lookbook_sellers">
+                            <div class="lookbook_heart"></div>
+                            <a href="2-3.html">
+                                <div class="lookbook_img">
+                                    <img src="imgs/lookbook/02/1.jpg" alt="">
+                                </div>
+                                <div class="lookbook_options">
+                                    <p>More Options</p>
+                                </div>
+                                <div class="lookbook_header">
+                                    <p>Keesha Reversible Quilt Set</p>
+                                </div>
+                                <div class="lookbook_pricing">
+                                    <span class="lookbook_price">
+                                        <p>$67</p>
+                                    </span>
+                                    <span class="lookbook_price lookbook-price--listPrice">
+                                        <p>$69.99</p>
+                                    </span>
+                                </div>
+                                <div class="lookbook_reviews">
+                                    <div class="lookbook_reviews_star">
+                                        <p class="rating" style="width: 90%">★★★★★</p>
+                                        <p>★★★★★</p>
+                                    </div>
+                                    <span class="pl-ReviewStars-stars">
+                                        <p>19</p>
+                                    </span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- 03-2-3 -->
+                    <div class="col-md-3  col-6 m_20">
+                        <div class="lookbook_sellers">
+                            <div class="lookbook_heart"></div>
+                            <a href="2-3.html">
+                                <div class="lookbook_img">
+                                    <img src="imgs/lookbook/02/2.jpg" alt="">
+                                </div>
+                                <div class="lookbook_options">
+                                    <p>+2 Colors | 2 Sizes</p>
+                                </div>
+                                <div class="lookbook_header">
+                                    <p>Ackerman Chenille Lattice Single Duvet Cover</p>
+                                </div>
+                                <div class="lookbook_pricing">
+                                    <span class="lookbook_price">
+                                        <p>$99</p>
+                                    </span>
+                                    <span class="lookbook_price lookbook-price--listPrice">
+                                        <p>$108.99</p>
+                                    </span>
+                                </div>
+                                <div class="lookbook_reviews">
+                                    <div class="lookbook_reviews_star">
+                                        <p class="rating" style="width: 80%">★★★★★</p>
+                                        <p>★★★★★</p>
+                                    </div>
+                                    <span class="pl-ReviewStars-stars">
+                                        <p>345</p>
+                                    </span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- 03-2-3 -->
+                    <div class="col-md-3  col-6 m_20">
+                        <div class="lookbook_sellers sale">
+                            <div class="lookbook_heart"></div>
+                            <a href="2-3.html">
+                                <div class="lookbook_img">
+                                    <img src="imgs/lookbook/02/3.jpg" alt="">
+                                </div>
+                                <div class="lookbook_options">
+                                    <p>+2 Colors | 3 Sizes</p>
+                                </div>
+                                <div class="lookbook_header">
+                                    <p>Gabriel Quilt Set</p>
+                                </div>
+                                <div class="lookbook_pricing">
+                                    <span class="lookbook_price">
+                                        <p>$96</p>
+                                    </span>
+                                    <span class="lookbook_price lookbook-price--listPrice">
+                                        <p>$122</p>
+                                    </span>
+
+                                </div>
+                                <div class="lookbook_reviews">
+                                    <div class="lookbook_reviews_star">
+                                        <p class="rating" style="width: 90%">★★★★★</p>
+                                        <p>★★★★★</p>
+                                    </div>
+                                    <span class="pl-ReviewStars-stars">
+                                        <p>31</p>
+                                    </span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- 03-2-4 -->
+                    <div class="col-md-3  col-6 m_20">
+                        <div class="lookbook_sellers ">
+                            <div class="lookbook_heart"></div>
+                            <a href="2-3.html">
+                                <div class="lookbook_img">
+                                    <img src="imgs/lookbook/02/4.jpg" alt="">
+                                </div>
+                                <div class="lookbook_options">
+                                    <p>+2 Sizes</p>
+                                </div>
+                                <div class="lookbook_header">
+                                    <p>Mollifer Reversible Quilt Set</p>
+                                </div>
+                                <div class="lookbook_pricing">
+                                    <span class="lookbook_price">
+                                        <p>$81</p>
+                                    </span>
+                                    <span class="lookbook_price lookbook-price--listPrice">
+                                        <p>$103.99</p>
+                                    </span>
+                                </div>
+                                <div class="lookbook_reviews">
+                                    <div class="lookbook_reviews_star">
+                                        <p class="rating" style="width: 90%">★★★★★</p>
+                                        <p>★★★★★</p>
+                                    </div>
+                                    <span class="pl-ReviewStars-stars">
+                                        <p>8</p>
+                                    </span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+
+
+
+
+
+                </div>
+                <!-- 03-3 -->
+                <div class="row lookbook_border m_20">
+                    <!-- 03-3-1 -->
+                    <div class="col-md-3  col-6 m_20">
+                        <div class="lookbook_sellers">
+                            <div class="lookbook_heart"></div>
+                            <a href="2-3.html">
+                                <div class="lookbook_img">
+                                    <img src="imgs/lookbook/03/1.jpg" alt="">
+                                </div>
+                                <div class="lookbook_options">
+                                    <p>+10 Colors</p>
+                                </div>
+                                <div class="lookbook_header">
+                                    <p>Roslyn Linen Throw Pillow</p>
+                                </div>
+                                <div class="lookbook_pricing">
+                                    <span class="lookbook_price">
+                                        <p>$43</p>
+                                    </span>
+                                    <span class="lookbook_price lookbook-price--listPrice">
+                                        <p>$58</p>
+                                    </span>
+                                </div>
+                                <div class="lookbook_reviews">
+                                    <div class="lookbook_reviews_star">
+                                        <p class="rating" style="width: 90%">★★★★★</p>
+                                        <p>★★★★★</p>
+                                    </div>
+                                    <span class="pl-ReviewStars-stars">
+                                        <p>472</p>
+                                    </span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- 03-3-2 -->
+                    <div class="col-md-3  col-6 m_20">
+                        <div class="lookbook_sellers sale">
+                            <div class="lookbook_heart"></div>
+                            <a href="2-3.html">
+                                <div class="lookbook_img">
+                                    <img src="imgs/lookbook/03/2.jpg" alt="">
+                                </div>
+                                <div class="lookbook_options">
+                                    <p>+2 Colors | 3 Sizes</p>
+                                </div>
+                                <div class="lookbook_header">
+                                    <p>Travis Duvet Cover Set</p>
+                                </div>
+                                <div class="lookbook_pricing">
+                                    <span class="lookbook_price">
+                                        <p>$66</p>
+                                    </span>
+                                    <span class="lookbook_price lookbook-price--listPrice">
+                                        <p>$87.99</p>
+                                    </span>
+                                </div>
+                                <div class="lookbook_reviews">
+                                    <div class="lookbook_reviews_star">
+                                        <p class="rating" style="width: 80%">★★★★★</p>
+                                        <p>★★★★★</p>
+                                    </div>
+                                    <span class="pl-ReviewStars-stars">
+                                        <p>325</p>
+                                    </span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- 03-3-3 -->
+                    <div class="col-md-3  col-6 m_20">
+                        <div class="lookbook_sellers">
+                            <div class="lookbook_heart"></div>
+                            <a href="2-3.html">
+                                <div class="lookbook_img">
+                                    <img src="imgs/lookbook/03/3.jpg" alt="">
+                                </div>
+                                <div class="lookbook_options">
+                                    <p>+3 Colors</p>
+                                </div>
+                                <div class="lookbook_header">
+                                    <p>Mulder Cotton Throw Pillow</p>
+                                </div>
+                                <div class="lookbook_pricing">
+                                    <span class="lookbook_price">
+                                        <p>$96</p>
+                                    </span>
+                                    <span class="lookbook_price lookbook-price--listPrice">
+                                        <p>$122</p>
+                                    </span>
+
+                                </div>
+                                <div class="lookbook_reviews">
+                                    <div class="lookbook_reviews_star">
+                                        <p class="rating" style="width: 90%">★★★★★</p>
+                                        <p>★★★★★</p>
+                                    </div>
+                                    <span class="pl-ReviewStars-stars">
+                                        <p>31</p>
+                                    </span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- 03-3-4 -->
+                    <div class="col-md-3  col-6 m_20">
+                        <div class="lookbook_sellers">
+                            <div class="lookbook_heart"></div>
+                            <a href="2-3.html">
+                                <div class="lookbook_img">
+                                    <img src="imgs/lookbook/03/4.jpg" alt="">
+                                </div>
+                                <div class="lookbook_options">
+                                    <p>+5 Colors | 3 Sizes</p>
+                                </div>
+                                <div class="lookbook_header">
+                                    <p>Shantel Reversible Duvet Set</p>
+                                </div>
+                                <div class="lookbook_pricing">
+                                    <span class="lookbook_price">
+                                        <p>$79</p>
+                                    </span>
+
+                                </div>
+                                <div class="lookbook_reviews">
+                                    <div class="lookbook_reviews_star">
+                                        <p class="rating" style="width: 90%">★★★★★</p>
+                                        <p>★★★★★</p>
+                                    </div>
+                                    <span class="pl-ReviewStars-stars">
+                                        <p>453</p>
+                                    </span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+
+
+
+
+
+                </div>
+
             </div>
-            <p>簡單的直線優美，設計令人耳目一新。<br>
-			   你可以使用你永遠。<br>
-			</p>
         </div>
-      </div>
-      
-      
-      <div class="col-sm-4">
-      	<div class="lookbook_info">
-            <img src="imgs/lookbook_post_img3_p2.jpg" class="img-responsive">
-            <div class="clearfix box">
-            	<img src="imgs/point.jpg">
-                <div class="tt">支撐耐久</div> 
-            </div>
-            <p>床頭板設計穿著角落。在反面是一個持久的決策，<br>
-			   使得即使有支持。。<br>
-			</p>
-        </div>
-      </div>
 
-      <div class="col-sm-4">
-      	<div class="lookbook_info">
-            <img src="imgs/lookbook_post_img3_p3.jpg" class="img-responsive">
-            <div class="clearfix box">
-            	<img src="imgs/point.jpg">
-                <div class="tt">調整高度</div> 
-            </div>
-            <p>腿可以調整高度的床框架內。這是很難的結構，。<br>
-			   打自己的腳。。<br>
-			</p>
-        </div>
-      </div>
-      
+    </section>
+    <!--img_02-->
+    <div style="max-width:1360px;margin:auto;"><img src="imgs/lookbook_img2.jpg" width="100%"></div>
 
-      <div class="col-sm-4">
-      	<div class="lookbook_info">
-            <img src="imgs/lookbook_post_img3_p4.jpg" class="img-responsive">
-            <div class="clearfix box">
-            	<img src="imgs/point.jpg">
-                <div class="tt">輕鬆調節</div> 
-            </div>
-            <p>安裝側架的位置是在三個階段開一個孔，<br>
-			   可以輕鬆調節高度。<br>
-			</p>
-        </div>
-      </div>
-      
-      
-      <div class="col-sm-4">
-      	<div class="lookbook_info">
-            <img src="imgs/lookbook_post_img3_p5.jpg" class="img-responsive">
-            <div class="clearfix box">
-            	<img src="imgs/point.jpg">
-                <div class="tt">三種方式</div> 
-            </div>
-            <p>腿的高度，可調節的下擺腿附著。申請書被遞了<br>
-			   使用三種方式。<br>
-			</p>
-        </div>
-      </div>
 
-      <div class="col-sm-4">
-      	<div class="lookbook_info">
-            <img src="imgs/lookbook_post_img3_p6.jpg" class="img-responsive">
-            <div class="clearfix box">
-            	<img src="imgs/point.jpg">
-                <div class="tt">透氣規範</div> 
-            </div>
-            <p>板良好的透氣簀戶規範。我們使用的是在抽屜等中，<br>
-			   使用的泡桐。<br>
-			</p>
-        </div>
-      </div>
+    <!--footer-->
+    <footer>
+        <img src="imgs/foot.png">
+    </footer>
 
-    
-    </div>
-</div>
 
-<!--foot-->
-<div style=" max-width:1360px;margin:auto;padding:20px">
-	<div style="max-width:341px;margin:auto;"><img src="imgs/foot.png" width="100%"></div>
-</div>
 
-<script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/scripts.js"></script>
-  </body>
+
+</body>
+
 </html>

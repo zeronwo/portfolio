@@ -4,208 +4,241 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <title>ikorol</title>
-
     <meta name="description" content="Source code generated using layoutit.com">
     <meta name="author" content="LayoutIt!">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="../../js/owlCarousel/owl.carousel.css" rel="stylesheet" type="text/css">
+    <link href="../../js/owlCarousel/owl.theme.default.css" rel="stylesheet" type="text/css">
 
-    <link href="css/reset.css" rel="stylesheet" type="text/css" />
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../js/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="../../js/slick/slick-theme.css" />
+
+
     <link href="css/style.css" rel="stylesheet">
     <link href="css/max.css" rel="stylesheet" type="text/css" />
-    <style>
-        #memu li a {
-            color: #FFF;
-        }
-    </style>
+
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/owlCarousel/owl.carousel.js"></script>
+
+    <script type="text/javascript" src="../../js/slick/slick.js"></script>
+    <script src="js/scripts.js"></script>
 
 
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script>
-        $(function () {
-            $("#include_top").load("1-1.html");
-            $("#include_footer").load("include/5-1.html");
-        });
-    </script>
-
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $(".toggle").click(function () {
-                $(".mm").slideToggle();
-            });
-        });
-    </script>
 
 </head>
 
 <body>
+    <header class="m_20">
 
-    <div id="include_top"></div>
-    <!--top_img st -->
+        <div class="scroll">
+            <p>scroll</p>
+            <img src="imgs/line_long.gif">
+        </div>
+        <!--top_img st -->
 
-    <div id="top_img" style="background-image: url(imgs/index_r1_c1.jpg);">
-        <div style="border-bottom:1px solid  #FFF;width:100%; height:56px; ">
-            <!--menu st-->
-            <div id="memu" class="clearfix">
-                <div class="logo"><a href="index.html"><img src="imgs/index_logo.png"></a></div>
-                <ul class="clearfix" style="float:right">
-                    <li>
-                        <a href="index.html">HOME</a>
-                    </li>
-                    <li>
-                        <a href="1-1.html">ABOUT</a>
-                    </li>
-                    <li>
-                        <a href="2-1.html">LOOKBOOK</a>
-                    </li>
-                    <li>
-                        <a href="3-1.html">SHOWROOM</a>
-                    </li>
-                    <li>
-                        <a href="4-1.html">NEWS & TOPICS</a>
-                    </li>
-                    <li>
-                        <a href="5-1.html">CONTACT</a>
-                    </li>
+        <div id="header_menu">
+            <div class="site-nav">
+      <!--menu st-->
+      <div id="menu">
+        <div class="menu_main">
+            <div class="logo"><a href="index.html"><img src="imgs/index_logo.png"></a></div>
+            <ul>
+                <li >
+                    <a href="1-1.html">ABOUT</a>
+                </li>
+                <li>
+                    <a href="2-1.html">LOOKBOOK</a>
+                </li>
+                <li>
+                    <a href="3-1.html">SHOWROOM</a>
+                </li>
+                <li>
+                    <a href="4-1.html">NEWS & TOPICS</a>
+                </li>
+                <li>
+                    <a href="5-1.html">CONTACT</a>
+                </li>
+            </ul>
+        </div>
+       
+    </div>
+    <!--menu end-->
 
+    <!--menu st-->
+    <div id="menu_rwd">
+        <div class="menu_rwd_main">
 
-
-                </ul>
+            <div class="logo"><a href="index.html"><img src="imgs/index_logo.png"></a>
             </div>
-            <!--menu end-->
+            <span class="menu_rwd_toggle">
+                <button class="gloval-navi-sp-open">
+                    <i class="gloval-navi-sp-open-line"></i>
+                    <i class="gloval-navi-sp-open-line"></i>
+                </button>
 
-            <!--menu st-->
-            <div id="memu_rwd" class="clearfix">
-                <div class="clearfix" style="width:100%; background-color:#000; padding:15px 10px">
+            </span>
+        </div>
+        <ul class=" mm">
+            <li>
+                <a href="index.html">
+                    <span>HOME</span>
+                </a>
+            </li>
+            <li>
+                <a href="1-1.html">
+                    <span>ABOUT</span>
+                </a>
+            </li>
+            <li>
+                <a href="2-1.html">
+                    <span>LOOKBOOK</span>
+                </a>
+            </li>
+            <li>
+                <a href="3-1.html">
+                    <span>SHOWROOM</span>
+                </a>
+            </li>
+            <li>
+                <a href="4-1.html">
+                    <span>NEWS & TOPICS</span>
+                </a>
+            </li>
+            <li>
+                <a href="5-1.html">
+                    <span>CONTACT</span>
+                </a>
+            </li>
 
-                    <div class="logo" style="float:left"><a href="index.html"><img src="imgs/index_logo.png"></a></div>
-                    <span class="toggle"
-                        style="color:#FFF; float:right; margin:10px 10px 0 0; cursor:pointer">MENU</span>
+
+        </ul>
+        <div class="menu_rwd_bg">
+
+        </div>
+    </div>
+    <!--menu end-->
+            </div>
+        </div>
+
+        <!--top_img end -->
+        <div class="header_img  ">
+
+            <div class="header_img_box slick">
+                <div class="item slick-slide">
+                    <div class="slick-slide-image" style="background-image: url('imgs/index_r1_c1-1.jpg')"></div>
                 </div>
-                <ul class="clearfix mm">
-                    <li>
-                        <a href="index.html">HOME</a>
-                    </li>
-                    <li>
-                        <a href="1-1.html">ABOUT</a>
-                    </li>
-                    <li>
-                        <a href="2-1.html">LOOKBOOK</a>
-                    </li>
-                    <li>
-                        <a href="3-1.html">SHOWROOM</a>
-                    </li>
-                    <li>
-                        <a href="4-1.html">NEWS & TOPICS</a>
-                    </li>
-                    <li>
-                        <a href="5-1.html">CONTACT</a>
-                    </li>
-
-
-                </ul>
-            </div>
-            <!--menu end-->
-
-
-
-        </div>
-    </div>
-
-    <!--top_img end -->
-
-    <div align="center" style="margin:48px 0; padding:0 10px "><img src="imgs/index_t1.png" style="max-width:100%">
-    </div>
-
-    <div align="center" style="margin:48px 0; "><img src="imgs/index_r3_c2.jpg" style="max-width:100%"></div>
-
-
-    <!--內文 st -->
-    <div class="container">
-
-        <div style="text-align:center;">
-            <p>
-                床，只是沒有在家具的睡眠。任何時候輕聲還包你，它給我們帶來了新的一天是存在的，比如“家庭”。<br>
-                這就是為什麼，我們每人人的客戶，真誠的床。和可再生的材料，通過使用對環境較少的材料的影響，<br>
-                您試圖創建一個可以持續共存與地球環境的社會理念。<br>
-                我們，為了發揮這樣的社會決策的作用，我們提供了基於可持續設計概念的產物。<br><br>
-
-                它也走上了產品和材料，你可以可持續利用的發展，<br>
-                請在有時最優的材料採購。並且，進行浪費很少的處理盡可能，例如以提供原來的客戶，新系統的建設，我會爭取。<br>
-            </p>
-        </div>
-
-    </div>
-    <!--內文 end -->
-
-    <!--index_menu st-->
-    <div id="index_menu" class=" clearfix">
-        <!--left-->
-        <div style="padding-right:8px">
-            <div class="index_tab"
-                style="width:50%; height:596px;background-image:url(imgs/index_r5_c3.jpg);float:left;">
-                <div style=" position:absolute; left:20px; bottom:20px"><img src="imgs/index_r6_c1.png"></div>
+                <div class="item slick-slide">
+                    <div class="slick-slide-image" style="background-image: url('imgs/index_r1_c1-2.jpg')"></div>
+                </div>
+                <div class="item slick-slide">
+                    <div class="slick-slide-image" style="background-image: url('imgs/index_r1_c1-3.jpg')"></div>
+                </div>
+                <div class="item slick-slide">
+                    <div class="slick-slide-image" style="background-image: url('imgs/index_r1_c1-4.jpg')"></div>
+                </div>
             </div>
         </div>
-        <!--right-->
-        <div class="index_tab" style="width:50%; height:596px;background-position:center;float: right">
-            <!--up-->
-            <div class="index_tab" style="width:100%; height:298px;background-image:url(imgs/index_r5_c5.jpg)">
-                <div style=" position:absolute; left:20px; bottom:20px"><img src="imgs/index_r1_c5.png"></div>
+    </header>
+
+
+    <section>
+        <p class="index_slogan m_20">
+            BED IS NOT JUST FOR SLEEP.<br>
+            IT ALWAYS ENVELOPS YOU IN WAR HUG.<br>
+            AND GIVE YOU A NEW DAY LIKE FAMILY.
+        </p>
+
+    </section>
+
+    <section class="t-align-center m_50">
+        <div class="container">
+            <img src="imgs/index_r3_c2.jpg" style="max-width:100%">
+        </div>
+        </section>
+
+
+        <!--內文 st -->
+        <section class="m_50">
+            <div class="container">
+
+                <div class="index_text t-align-center">
+       <p>
+        IKOROL的理念起源於為大多數人提供價格實惠的家具家飾，<br>
+        而非僅為了少數人。透過將功能、品質、設計和價值結合在一起，<br>
+        而且始終秉持著永續要素，<br>
+        並透過設計、採購、包裝、配送與經營業務模式，<br>
+        在每一個環節都體現IKOROL理念，<br>
+        實踐我們的願景：為大多數人創造更美好的生活。
+       </p>
+                    
+                </div>
 
             </div>
+        </section>
 
-            <!--down-->
-            <div class="clearfix" style=" width:100%; height:295px; margin-top:3px ">
-                <div style="padding-right:5px;">
-                    <div class="index_tab"
-                        style="width:50%; height:295px;background-image:url(imgs/index_r7_c5.jpg);float:left">
-                        <div style=" position:absolute; left:20px; bottom:20px"><img src="imgs/index_r7_c6.png"></div>
+        <!--內文 end -->
+
+        <section>
+            <div class="container">
+                <div class="index_menu">
+                    <div class="index_menu_item index_shadow">
+                        <a href="1-1.html">
+                            <div class="index_menu_text">
+                                <p>ABOUT</p>
+                                <span>關於我們</span>
+                            </div>
+
+                        </a>
+                        <img src="imgs/index_r5_c3.jpg" alt="">
+
+                    </div>
+                    <div class="index_menu_item">
+                        <ul>
+                            <li class="big index_shadow">
+                                <a href="2-1.html">
+                                    <div class="index_menu_text">
+                                        <p>LOOKBOOK</p>
+                                        <span>目&nbsp;&nbsp;&nbsp;&nbsp;錄</span>
+                                    </div>
+
+                                </a>
+                                <img src="imgs/index_r5_c5.jpg" alt="">
+                            </li>
+                            <li class="index_shadow">
+                                <a href="3-1.html">
+                                    <div class="index_menu_text">
+                                        <p>SHOWROOM</p>
+                                        <span>展&nbsp;&nbsp;&nbsp;&nbsp;示</span>
+                                    </div>
+
+                                </a>
+                                <img src="imgs/index_r7_c5.jpg" alt="">
+                            </li>
+                            <li class="index_shadow">
+                                <a href="4-1.html">
+                                    <div class="index_menu_text">
+                                        <p>NEWS<br>TOPICS</p>
+                                        <span>新&nbsp;&nbsp;&nbsp;&nbsp;聞</span>
+                                    </div>
+
+                                </a>
+                                <img src="imgs/index_r7_c7.jpg" alt="">
+                            </li>
+                        </ul>
                     </div>
                 </div>
-                <div class="index_tab"
-                    style="width:50%; height:295px;background-image:url(imgs/index_r7_c7.jpg); float: right">
-                    <div style=" position:absolute; left:20px; bottom:20px"><img src="imgs/index_r5_c11.png"></div>
-                </div>
             </div>
-
-        </div>
-    </div>
-    <!--index_menu end-->
+        </section>
 
 
-    <!--index_menu_rwd st-->
-    <ul id="index_menu_rwd">
-        <li style=" background-image:url(imgs/index_r5_c3.jpg);">
-            <div class="tt"><img src="imgs/index_r6_c1.png"></div>
-        </li>
-
-        <li style=" background-image:url(imgs/index_r5_c5.jpg);">
-            <div class="tt"><img src="imgs/index_r1_c5.png"></div>
-        </li>
-
-        <li style=" background-image:url(imgs/index_r7_c5.jpg);">
-            <div class="tt"><img src="imgs/index_r7_c6.png"></div>
-        </li>
-
-        <li style=" background-image:url(imgs/index_r7_c7.jpg);">
-            <div class="tt"><img src="imgs/index_r5_c11.png"></div>
-        </li>
 
 
-    </ul>
-    <!--index_menu_rwd end-->
+        <!--footer-->
+        <footer>
+            <img src="imgs/foot.png">
+        </footer>
 
-
-    <!--foot-->
-    <div style=" max-width:1360px;margin:auto;padding:20px">
-        <div style="max-width:341px;margin:auto;"><img src="imgs/foot.png" width="100%"></div>
-    </div>
-
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/scripts.js"></script>
 </body>
 
 </html>

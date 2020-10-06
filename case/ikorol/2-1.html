@@ -1,223 +1,182 @@
 <!DOCTYPE html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <title>ikorol</title>
-
     <meta name="description" content="Source code generated using layoutit.com">
     <meta name="author" content="LayoutIt!">
-   
-    <link href="css/reset.css" rel="stylesheet" type="text/css" />
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="../../js/owlCarousel/owl.carousel.css" rel="stylesheet" type="text/css">
+    <link href="../../js/owlCarousel/owl.theme.default.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="../../js/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="../../js/slick/slick-theme.css" />
+
     <link href="css/style.css" rel="stylesheet">
     <link href="css/max.css" rel="stylesheet" type="text/css" />
-<style>
 
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/owlCarousel/owl.carousel.js"></script>
 
-
-
-
-</style>
-    
-    
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script type="text/javascript">
-$(document).ready(function() {
-    $(".toggle").click(function() {
-        $(".mm").slideToggle();
-    });
-});
-</script>
+    <script type="text/javascript" src="../../js/slick/slick.js"></script>
+    <script src="https://vuejs.org/js/vue.js"></script>
+    <script src="js/scripts.js"></script>
 
 
 </head>
+
 <body>
 
-<!--menu_all st-->
-    
-	<div style="border-bottom:1px solid  #464646;width:100%; height:56px; ">
-    	 <!--menu st-->
-        <div id="memu" class="clearfix">
-            <div class="logo"><a href="index.html"><img src="imgs/index_logo2.png"></a></div>
-            <ul class="clearfix" style="float:right">
-            	<li>
-                	<a href="index.html">HOME</a> 
-                </li>
-            	<li style="">
-                	<a href="1-1.html">ABOUT</a> 
-                </li>
-            	<li style="">
-                	<a href="2-1.html">LOOKBOOK</a> 
-                </li>
-            	<li style="">
-                	<a href="3-1.html">SHOWROOM</a> 
-                </li>
-            	<li style="">
-                	<a href="4-1.html">NEWS & TOPICS</a> 
-                </li>
-            	<li style="">
-                	<a href="5-1.html">CONTACT</a> 
-                </li>
-                
-                
-                
-            </ul>
-    	</div>
-    <!--menu end-->
-    
-    <!--memu_rwd st-->
-    	<div id="memu_rwd" class="clearfix">
-        	<div class="clearfix" style="width:100%; background-color:#000; padding:13px 10px">
-            	
-                <div class="logo" style="float:left"><a href="index.html"><img src="imgs/index_logo.png"></a></div>
-            	<span class="toggle" style="color:#FFF; float:right; margin:10px 10px 0 0; cursor:pointer">MENU</span>
+    <!--menu_all st-->
+
+    <!--top_img st-->
+    <div class="page_top_img lookbook_top_img">
+
+        <div id="header_menu">
+            <div class="site-nav">
+                <!--menu st-->
+                <div id="menu">
+                    <div class="menu_main">
+                        <div class="logo"><a href="index.html"><img src="imgs/index_logo.png"></a></div>
+                        <ul>
+                            <li>
+                                <a href="1-1.html">ABOUT</a>
+                            </li>
+                            <li class="active">
+                                <a href="2-1.html">LOOKBOOK</a>
+                            </li>
+                            <li>
+                                <a href="3-1.html">SHOWROOM</a>
+                            </li>
+                            <li>
+                                <a href="4-1.html">NEWS & TOPICS</a>
+                            </li>
+                            <li>
+                                <a href="5-1.html">CONTACT</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+                <!--menu end-->
+
+                <!--menu st-->
+                <div id="menu_rwd">
+                    <div class="menu_rwd_main">
+
+                        <div class="logo"><a href="index.html"><img src="imgs/index_logo.png"></a>
+                        </div>
+                        <span class="menu_rwd_toggle">
+                            <button class="gloval-navi-sp-open">
+                                <i class="gloval-navi-sp-open-line"></i>
+                                <i class="gloval-navi-sp-open-line"></i>
+                            </button>
+
+                        </span>
+                    </div>
+                    <ul class=" mm">
+                        <li>
+                            <a href="index.html">
+                                <span>HOME</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="1-1.html">
+                                <span>ABOUT</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="2-1.html">
+                                <span>LOOKBOOK</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="3-1.html">
+                                <span>SHOWROOM</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="4-1.html">
+                                <span>NEWS & TOPICS</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="5-1.html">
+                                <span>CONTACT</span>
+                            </a>
+                        </li>
+
+
+                    </ul>
+                    <div class="menu_rwd_bg">
+
+                    </div>
+                </div>
+                <!--menu end-->
             </div>
-            <ul class="clearfix mm">
-            	<li>
-                	<a href="index.html">HOME</a> 
-                </li>
-            	<li style="">
-                	<a href="1-1.html">ABOUT</a> 
-                </li>
-            	<li style="">
-                	<a href="2-1.html">LOOKBOOK</a> 
-                </li>
-            	<li style="">
-                	<a href="3-1.html">SHOWROOM</a> 
-                </li>
-            	<li style="">
-                	<a href="4-1.html">NEWS & TOPICS</a> 
-                </li>
-            	<li style="">
-                	<a href="5-1.html">CONTACT</a> 
-                </li>
-                
-                
-                
-            </ul>
-    	</div>
-    <!--memu_rwd end-->
-    
-    
+        </div>
     </div>
-
-<!--menu_all end-->
-    
-<div align="center" style=" margin:25px 0"><img src="imgs/lookbook_tt.png"></div>    
-<!--top_img st-->
-<div id="page_top_img" style="background-image: url(imgs/lookbook_top_img.jpg); ">
-
-  <div class="caption">
-      <span>目錄</span>
-      <div style="margin:10px 0"><img src="imgs/lookbook_top_img_tt.png"  class="img-responsive"></div>
-      
-      <p>
-        我會永遠在你身邊。<br>
-        即使當你累了，哭了，一天<br>
-        感覺太有線睡覺，我會一直在你身邊。<br>
-        有好日子和好運氣。<br>
-        我會等著你回去。<br>      
-      </p>
-  </div>
-
-</div>
-<!--top_img end-->
+    <!--top_img end-->
+    <!--menu_all end-->
 
 
-<!--選單項目-->
-<div class="container">
-    <div class="row banners">
-      
-      <div class="col-sm-3">
-      	<div class="lookbook_type">
-        	<a href="2-2.html">
-            <img src="imgs/lookbook_img_p1.jpg" class="img-responsive">
-            <p>Bed Frame</p>
-            </a>
+    <!--top_img end-->
+
+
+    <!--選單項目-->
+    <section id="app">
+        <div class="container">
+           <div class="lookbook_main">
+                <!-- 01 -->
+            <h2 class="m_20">Featured Categories</h2>
+            <div class="row ">
+
+                <div class="col-md-2 col-4 m_20" v-for="item in items">
+                    <div class="lookbook_type">
+                        <a href="2-2.html">
+                            <div class="circle">
+                                <img :src="item.圖片">
+                            </div>
+                            <p v-text="item.名稱"></p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 02 -->
+            <h2 class="m_20">Bedding Essentials</h2>
+            <div class="row ">
+
+                <div class="col-md-2 col-4 m_20" v-for="item in items2">
+                    <div class="lookbook_type">
+                        <a href="2-2.html">
+                            <div class="circle">
+                                <img :src="item.圖片">
+                            </div>
+                            <p v-text="item.名稱"></p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+           </div>
         </div>
-      </div>
-      
-      <div class="col-sm-3">
-      	<div class="lookbook_type">
-        	<a href="2-2.html">
-            <img src="imgs/lookbook_img_p2.jpg" class="img-responsive">
-            <p>Bed Frame</p>
-            </a>
-        </div>
-      </div>
-     
-      <div class="col-sm-3">
-      	<div class="lookbook_type">
-        	<a href="2-2.html">
-            <img src="imgs/lookbook_img_p3.jpg" class="img-responsive">
-            <p>Bed Frame</p>
-            </a>
-        </div>
-      </div>
-      
-      <div class="col-sm-3">
-      	<div class="lookbook_type">
-        	<a href="2-2.html">
-            <img src="imgs/lookbook_img_p4.jpg" class="img-responsive">
-            <p>Bed Frame</p>
-            </a>
-        </div>
-      </div>
-      
-      <div class="col-sm-3">
-      	<div class="lookbook_type">
-        	<a href="2-2.html">
-            <img src="imgs/lookbook_img_p5.jpg" class="img-responsive">
-            <p>Bed Frame</p>
-            </a>
-        </div>
-      </div>
-      
-      <div class="col-sm-3">
-      	<div class="lookbook_type">
-        	<a href="2-2.html">
-            <img src="imgs/lookbook_img_p6.jpg" class="img-responsive">
-            <p>Bed Frame</p>
-            </a>
-        </div>
-      </div>
-     
-      <div class="col-sm-3">
-      	<div class="lookbook_type">
-        	<a href="2-2.html">
-            <img src="imgs/lookbook_img_p7.jpg" class="img-responsive">
-            <p>Bed Frame</p>
-            </a>
-        </div>
-      </div>
-      
-      <div class="col-sm-3">
-      	<div class="lookbook_type">
-        	<a href="2-2.html">
-            <img src="imgs/lookbook_img_p8.jpg" class="img-responsive">
-            <p>Bed Frame</p>
-            </a>
-        </div>
-      </div>
-      
-      
-    
-    </div>
-</div>
+    </section>
 
-<!--img_02-->
-<div style="max-width:1360px;margin:auto;"><img src="imgs/lookbook_img2.jpg" width="100%"></div>
+ 
+    <!--img_02-->
+    <div style="max-width:1360px;margin:auto;"><img src="imgs/lookbook_img2.jpg" width="100%"></div>
 
 
-<!--foot-->
-<div style=" max-width:1360px;margin:auto;padding:20px">
-	<div style="max-width:341px;margin:auto;"><img src="imgs/foot.png" width="100%"></div>
-</div>
+    <!--footer-->
+    <footer>
+        <img src="imgs/foot.png">
+    </footer>
 
-<script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/scripts.js"></script>
-  </body>
+
+
+
+</body>
+
 </html>
