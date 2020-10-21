@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,117 +8,158 @@
     <title>ikorol</title>
     <meta name="description" content="Source code generated using layoutit.com">
     <meta name="author" content="LayoutIt!">
+    <link href="css/font-awesome.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link href="../../js/owlCarousel/owl.carousel.css" rel="stylesheet" type="text/css">
     <link href="../../js/owlCarousel/owl.theme.default.css" rel="stylesheet" type="text/css">
-
     <link rel="stylesheet" type="text/css" href="../../js/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="../../js/slick/slick-theme.css" />
-
-
+    <!-- 彈窗-->
+    <link href="js/lity/lity.css" rel="stylesheet" type="text/css">
     <link href="css/style.css" rel="stylesheet">
     <link href="css/max.css" rel="stylesheet" type="text/css" />
 
     <script src="../../js/jquery.min.js"></script>
+    <script src="js/lity/lity.js"></script>
     <script src="../../js/owlCarousel/owl.carousel.js"></script>
 
     <script type="text/javascript" src="../../js/slick/slick.js"></script>
-    <script src="js/scripts.js"></script>
+    <script type="text/javascript" src="https://www.kansai-sp.co.jp/wp/wp-content/themes/kansai-Kaseihin-yuso/common/js/jquery.bxslider.js"></script>
+    <script src="https://vuejs.org/js/vue.js"></script>
 
+
+    <script src="js/scripts.js"></script>
 
 
 </head>
 
 <body>
+
     <header class="m_20">
 
-        <div class="scroll">
-            <p>scroll</p>
-            <img src="imgs/line_long.gif">
-        </div>
         <!--top_img st -->
 
         <div id="header_menu">
             <div class="site-nav">
-      <!--menu st-->
-      <div id="menu">
-        <div class="menu_main">
-            <div class="logo"><a href="index.html"><img src="imgs/index_logo.png"></a></div>
-            <ul>
-                <li >
-                    <a href="1-1.html">ABOUT</a>
-                </li>
-                <li>
-                    <a href="2-1.html">LOOKBOOK</a>
-                </li>
-                <li>
-                    <a href="3-1.html">SHOWROOM</a>
-                </li>
-                <li>
-                    <a href="4-1.html">NEWS & TOPICS</a>
-                </li>
-                <li>
-                    <a href="5-1.html">CONTACT</a>
-                </li>
-            </ul>
-        </div>
-       
-    </div>
-    <!--menu end-->
+    
 
-    <!--menu st-->
-    <div id="menu_rwd">
-        <div class="menu_rwd_main">
+                <!--menu st-->
+                <div id="menu">
+                    <div class="menu_main">
+                        <span class="menu_rwd_toggle">
+                            <button class="gloval-navi-sp-open">
+                                <i class="gloval-navi-sp-open-line"></i>
+                                <i class="gloval-navi-sp-open-line"></i>
+                            </button>
 
-            <div class="logo"><a href="index.html"><img src="imgs/index_logo.png"></a>
-            </div>
-            <span class="menu_rwd_toggle">
-                <button class="gloval-navi-sp-open">
-                    <i class="gloval-navi-sp-open-line"></i>
-                    <i class="gloval-navi-sp-open-line"></i>
-                </button>
+                        </span>
+                        <div class="logo"><a href="index.html"><img src="imgs/index_logo.png"></a></div>
+                        
+                        <ul>
+                            <li>
+                                <a href="1-1.html">ABOUT</a>
+                            </li>
+                            <li>
+                                <a href="2-1.html">LOOKBOOK</a>
+                            </li>
+                            <li>
+                                <a href="3-1.html">SHOWROOM</a>
+                            </li>
+                            <li>
+                                <a href="4-1.html">NEWS & TOPICS</a>
+                            </li>
+                            <li>
+                                <a href="5-1.html">CONTACT</a>
+                            </li>
+                            <li>
+                             
 
-            </span>
-        </div>
-        <ul class=" mm">
-            <li>
-                <a href="index.html">
-                    <span>HOME</span>
-                </a>
-            </li>
-            <li>
-                <a href="1-1.html">
-                    <span>ABOUT</span>
-                </a>
-            </li>
-            <li>
-                <a href="2-1.html">
-                    <span>LOOKBOOK</span>
-                </a>
-            </li>
-            <li>
-                <a href="3-1.html">
-                    <span>SHOWROOM</span>
-                </a>
-            </li>
-            <li>
-                <a href="4-1.html">
-                    <span>NEWS & TOPICS</span>
-                </a>
-            </li>
-            <li>
-                <a href="5-1.html">
-                    <span>CONTACT</span>
-                </a>
-            </li>
+                            </li>
+                        </ul>
+                        <div class="menu_main_right">
+                            
+                            <a class="menu_btn login_btn" href="javascript:;">
+                                <i class="fa fa-user" aria-hidden="true"></i><span>Login</span>
+                            </a>
+                            <a class="menu_btn" href="">
+                                <i class="fa fa-shopping-cart" aria-hidden="true"></i><span>Cart</span>
+                            </a>
+                            <a class="menu_btn search_btn" href="javascript:;">
+                                <i class="fa fa-search" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
 
+                </div>
+                <!--menu end-->
+                <div class="menu_search" style="display:none;">
+                    <form action="/search/index.html" method="get">
+                        <div class="menu_search_main">
+                            <input type="text" name="query" id="header-search-input" placeholder="Search for">
+                            <input type="submit" id="header-search-btn" value="Search">
+                        </div>
+                    </form>
+                </div>
 
-        </ul>
-        <div class="menu_rwd_bg">
+                <!--menu st-->
+                <div id="menu_rwd">
 
-        </div>
-    </div>
-    <!--menu end-->
+                    <ul class=" mm">
+                        <li>
+                            <div class="menu_search">
+                                <form action="/search/index.html" method="get">
+                                    <div class="menu_search_main">
+                                        <input type="text" name="query" id="header-search-input"
+                                            placeholder="Search for">
+                                        <input type="submit" id="header-search-btn" value="Search">
+                                    </div>
+                                </form>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="index.html">
+                                <span>HOME</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="1-1.html">
+                                <span>ABOUT</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="2-1.html">
+                                <span>LOOKBOOK</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="3-1.html">
+                                <span>SHOWROOM</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="4-1.html">
+                                <span>NEWS & TOPICS</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="5-1.html">
+                                <span>CONTACT</span>
+                            </a>
+                        </li>
+
+                        <li class="social">
+                            <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                            <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                            <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                            <a href=""><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                        </li>
+
+                    </ul>
+                    <div class="menu_rwd_bg">
+
+                    </div>
+                </div>
+                <!--menu end-->
             </div>
         </div>
 
@@ -152,92 +194,116 @@
     </section>
 
     <section class="t-align-center m_50">
+       <ul class="advantage-sec-slide">
+           <li><img src="imgs/index_r3-1.jpg" alt=""></li>
+           <li><img src="imgs/index_r3-2.jpg" alt=""></li>
+           <li><img src="imgs/index_r3-3.jpg" alt=""></li>
+           <li><img src="imgs/index_r3-4.jpg" alt=""></li>
+           <li><img src="imgs/index_r3-5.jpg" alt=""></li>
+           <li><img src="imgs/index_r3-6.jpg" alt=""></li>
+       </ul>
+    </section>
+
+
+    <!--內文 st -->
+    <section class="m_50">
         <div class="container">
-            <img src="imgs/index_r3_c2.jpg" style="max-width:100%">
+
+            <div class="index_text t-align-center">
+                <p>
+                    IKOROL的理念起源於為大多數人提供價格實惠的家具家飾，<br>
+                    而非僅為了少數人。透過將功能、品質、設計和價值結合在一起，<br>
+                    而且始終秉持著永續要素，<br>
+                    並透過設計、採購、包裝、配送與經營業務模式，<br>
+                    在每一個環節都體現IKOROL理念，<br>
+                    實踐我們的願景：為大多數人創造更美好的生活。
+                </p>
+
+            </div>
+
         </div>
-        </section>
+    </section>
 
+    <!--內文 end -->
 
-        <!--內文 st -->
-        <section class="m_50">
-            <div class="container">
+    <section>
+        <div class="container">
+            <div class="index_menu">
+                <div class="index_menu_item index_shadow">
+                    <a href="1-1.html">
+                        <div class="index_menu_text">
+                            <p>ABOUT</p>
+                            <span>關於我們</span>
+                        </div>
 
-                <div class="index_text t-align-center">
-       <p>
-        IKOROL的理念起源於為大多數人提供價格實惠的家具家飾，<br>
-        而非僅為了少數人。透過將功能、品質、設計和價值結合在一起，<br>
-        而且始終秉持著永續要素，<br>
-        並透過設計、採購、包裝、配送與經營業務模式，<br>
-        在每一個環節都體現IKOROL理念，<br>
-        實踐我們的願景：為大多數人創造更美好的生活。
-       </p>
-                    
+                    </a>
+                    <img src="imgs/index_r5_c3.jpg" alt="">
+
                 </div>
+                <div class="index_menu_item">
+                    <ul>
+                        <li class="big index_shadow">
+                            <a href="2-1.html">
+                                <div class="index_menu_text">
+                                    <p>LOOKBOOK</p>
+                                    <span>目&nbsp;&nbsp;&nbsp;&nbsp;錄</span>
+                                </div>
 
-            </div>
-        </section>
+                            </a>
+                            <img src="imgs/index_r5_c5.jpg" alt="">
+                        </li>
+                        <li class="index_shadow">
+                            <a href="3-1.html">
+                                <div class="index_menu_text">
+                                    <p>SHOWROOM</p>
+                                    <span>展&nbsp;&nbsp;&nbsp;&nbsp;示</span>
+                                </div>
 
-        <!--內文 end -->
+                            </a>
+                            <img src="imgs/index_r7_c5.jpg" alt="">
+                        </li>
+                        <li class="index_shadow">
+                            <a href="4-1.html">
+                                <div class="index_menu_text">
+                                    <p>NEWS<br>TOPICS</p>
+                                    <span>新&nbsp;&nbsp;&nbsp;&nbsp;聞</span>
+                                </div>
 
-        <section>
-            <div class="container">
-                <div class="index_menu">
-                    <div class="index_menu_item index_shadow">
-                        <a href="1-1.html">
-                            <div class="index_menu_text">
-                                <p>ABOUT</p>
-                                <span>關於我們</span>
-                            </div>
-
-                        </a>
-                        <img src="imgs/index_r5_c3.jpg" alt="">
-
-                    </div>
-                    <div class="index_menu_item">
-                        <ul>
-                            <li class="big index_shadow">
-                                <a href="2-1.html">
-                                    <div class="index_menu_text">
-                                        <p>LOOKBOOK</p>
-                                        <span>目&nbsp;&nbsp;&nbsp;&nbsp;錄</span>
-                                    </div>
-
-                                </a>
-                                <img src="imgs/index_r5_c5.jpg" alt="">
-                            </li>
-                            <li class="index_shadow">
-                                <a href="3-1.html">
-                                    <div class="index_menu_text">
-                                        <p>SHOWROOM</p>
-                                        <span>展&nbsp;&nbsp;&nbsp;&nbsp;示</span>
-                                    </div>
-
-                                </a>
-                                <img src="imgs/index_r7_c5.jpg" alt="">
-                            </li>
-                            <li class="index_shadow">
-                                <a href="4-1.html">
-                                    <div class="index_menu_text">
-                                        <p>NEWS<br>TOPICS</p>
-                                        <span>新&nbsp;&nbsp;&nbsp;&nbsp;聞</span>
-                                    </div>
-
-                                </a>
-                                <img src="imgs/index_r7_c7.jpg" alt="">
-                            </li>
-                        </ul>
-                    </div>
+                            </a>
+                            <img src="imgs/index_r7_c7.jpg" alt="">
+                        </li>
+                    </ul>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
 
 
 
-        <!--footer-->
-        <footer>
-            <img src="imgs/foot.png">
-        </footer>
+    <!--footer-->
+    <footer>
+        <div class="container">
+            <div class="footer_main">
+                <div class="footer_logo">
+                    <img src="imgs/index_logo.png">
+                </div>
+
+                <div class="footer_right">
+                    <div class="social">
+                        <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                        <a href=""><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                    </div>
+                    <p>© 2020 ikorol. All Rights Reserved</p>
+                </div>
+            </div>
+
+
+        </div>
+
+    </footer>
 
 </body>
 

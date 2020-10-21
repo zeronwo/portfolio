@@ -1036,9 +1036,12 @@ section {
 /*---------------------------------------*/
 /*  選單 */
 /*---------------------------------------*/
+.logo a {
+  display: block;
+  padding: 0 10px;
+}
+
 .site-nav {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  background-color: rgba(0, 0, 0, 0.3);
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
@@ -1099,6 +1102,7 @@ section {
 }
 
 .menu_main {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1118,8 +1122,28 @@ section {
       align-content: stretch;
 }
 
+.menu_main .menu_main_right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: stretch;
+      align-content: stretch;
+}
+
 #menu {
-  max-width: 1107px;
+  max-width: 90%;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1166,9 +1190,10 @@ section {
 }
 
 #menu ul li a {
-  color: #fff;
+  color: #000;
   display: block;
   padding: 20px;
+  font-size: 0.9em;
   -webkit-transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
   transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
@@ -1176,11 +1201,11 @@ section {
 #menu ul li::after {
   position: absolute;
   content: "";
-  top: 100%;
+  bottom: 0;
   left: 0;
   width: 100%;
   height: 1px;
-  background: #fff;
+  background: #000;
   -webkit-transform: scaleX(0);
           transform: scaleX(0);
   -webkit-transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -1194,7 +1219,82 @@ section {
 }
 
 #menu ul:hover li:not(:hover) a {
-  opacity: 0.5;
+  opacity: 0.3;
+}
+
+.menu_main_right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: stretch;
+      align-content: stretch;
+}
+
+.menu_main_right a {
+  color: #000;
+  display: block;
+  padding: 10px;
+}
+
+.menu_main_right a span {
+  padding: 0 5px;
+  font-size: 0.9em;
+}
+
+.menu_main_right a:hover {
+  color: #ccc;
+}
+
+.menu_search {
+  background: #f8f8f8;
+}
+
+.menu_search form {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px 0;
+}
+
+.menu_search form .menu_search_main {
+  position: relative;
+  padding: 0 30px;
+  border-radius: 100px;
+  background: #fff;
+}
+
+.menu_search form .menu_search_main #header-search-input {
+  width: calc(100% - 60px);
+  padding: 20px 0;
+  color: #333;
+  font-size: 16px;
+  border: none;
+}
+
+.menu_search form .menu_search_main #header-search-btn {
+  position: absolute;
+  top: calc(50% - 15px);
+  right: 30px;
+  width: 30px;
+  height: 30px;
+  background: url(../imgs/ico_search_b.svg);
+  background-repeat: no-repeat;
+  background-size: 30px auto;
+  text-indent: 100%;
+  white-space: nowrap;
+  cursor: pointer;
+  border: none;
 }
 
 #menu_rwd {
@@ -1202,13 +1302,13 @@ section {
   margin: 0 auto;
   position: relative;
   z-index: 999;
-  display: none;
+  visibility: hidden;
 }
 
 #menu_rwd .menu_rwd_bg {
   width: 100vw;
   height: 100vh;
-  background: #000;
+  background: #fff;
   position: absolute;
   top: 0;
   z-index: -1;
@@ -1244,6 +1344,7 @@ section {
   color: #fff;
   cursor: pointer;
   position: relative;
+  display: none;
 }
 
 .menu_rwd_toggle p {
@@ -1253,38 +1354,6 @@ section {
   z-index: 9;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-}
-
-#menu_rwd.active ul {
-  display: block;
-}
-
-#menu_rwd.active ul li a span {
-  -webkit-transform: translateY(140%);
-          transform: translateY(140%);
-  opacity: 0;
-  -webkit-animation: info-out 0.8s ease-in-out forwards;
-          animation: info-out 0.8s ease-in-out forwards;
-}
-
-#menu_rwd.active .gloval-navi-sp-open i:first-of-type {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-  position: relative;
-  top: 2px;
-  -webkit-transition: 0.5s all ease;
-  transition: 0.5s all ease;
-}
-
-#menu_rwd.active .gloval-navi-sp-open i:last-of-type {
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-  margin-top: 0;
-}
-
-#menu_rwd.active .menu_rwd_bg {
-  opacity: 1;
-  visibility: visible;
 }
 
 @-webkit-keyframes info-out {
@@ -1317,7 +1386,7 @@ section {
 .gloval-navi-sp-open i {
   width: 2rem;
   height: 1px;
-  background: #fff;
+  background: #000;
   display: block;
   -webkit-transition: 0.5s all ease;
   transition: 0.5s all ease;
@@ -1347,7 +1416,7 @@ body.menu-open {
 
 #menu_rwd ul li a {
   padding: 10px 0;
-  color: #fff;
+  color: #000;
   display: block;
 }
 
@@ -1359,6 +1428,59 @@ body.menu-open {
   display: block;
   -webkit-transition: all 2s 0.5s;
   transition: all 2s 0.5s;
+}
+
+#menu_rwd ul li.social,
+.social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: stretch;
+      align-content: stretch;
+}
+
+#menu_rwd ul li.social a,
+.social a {
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  background: #000;
+  color: #fff;
+  font-size: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: stretch;
+      align-content: stretch;
+}
+
+#menu_rwd ul li.social a:not(:last-child),
+.social a:not(:last-child) {
+  margin-right: 8px;
 }
 
 #menu_rwd .logo {
@@ -1455,24 +1577,59 @@ body.menu-open {
   height: 33px;
 }
 
-body.hideUp #header_menu {
-  top: -67px;
-}
-
 #header_menu {
+  border-bottom: 1px #dcdcdc solid;
   width: 100%;
   position: fixed;
-  z-index: 999;
   top: 0;
-  -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease;
+  z-index: 999;
+  background: #fff;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
-#header_menu.active .site-nav {
-  background-color: rgba(0, 0, 0, 0.5);
+#header_menu.active .gloval-navi-sp-open i:first-of-type {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  position: relative;
+  top: 2px;
+  -webkit-transition: 0.5s all ease;
+  transition: 0.5s all ease;
 }
 
-#header_menu.active .site-nav #menu ul li {
+#header_menu.active .gloval-navi-sp-open i:last-of-type {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  margin-top: 0;
+}
+
+#header_menu.active #menu_rwd {
+  height: 100vh;
+  visibility: visible;
+}
+
+#header_menu.active #menu_rwd ul {
+  display: block;
+}
+
+#header_menu.active #menu_rwd ul li a span {
+  -webkit-transform: translateY(140%);
+          transform: translateY(140%);
+  opacity: 0;
+  -webkit-animation: info-out 0.8s ease-in-out forwards;
+          animation: info-out 0.8s ease-in-out forwards;
+}
+
+#header_menu.active #menu_rwd .menu_rwd_bg {
+  opacity: 1;
+  visibility: visible;
+}
+
+body.open #header_menu {
+  top: -43px;
+}
+
+body.open #header_menu #menu ul li a {
   padding: 10px 20px;
 }
 
@@ -1628,6 +1785,20 @@ body.hideUp #header_menu {
   text-align: center;
   font-family: "Roboto";
   font-weight: bold;
+}
+
+.advantage-sec-slide {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-transition-duration: 100s;
+          transition-duration: 100s;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+  -webkit-transform: translate3d(-4500px, 0px, 0px);
+          transform: translate3d(-4500px, 0px, 0px);
 }
 
 /*---------------------------------------*/
@@ -1983,48 +2154,6 @@ body.hideUp #header_menu {
   color: #c4113f;
 }
 
-.lookbook_sellers a .lookbook_reviews {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-line-pack: stretch;
-      align-content: stretch;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  font-family: "sofiapro";
-  margin-bottom: 10px;
-}
-
-.lookbook_sellers a .lookbook_reviews .lookbook_reviews_star {
-  color: #dfdfe1;
-  position: relative;
-  display: inline-block;
-  margin-right: 5px;
-}
-
-.lookbook_sellers a .lookbook_reviews .lookbook_reviews_star .rating {
-  color: #f6b71d;
-  position: absolute;
-  overflow: hidden;
-}
-
-.lookbook_sellers a .lookbook_reviews span {
-  color: #333;
-}
-
 .lookbook_sellers a:hover {
   -webkit-box-shadow: 0px 0px 6px 0px #c3c3c3;
           box-shadow: 0px 0px 6px 0px #c3c3c3;
@@ -2050,6 +2179,48 @@ body.hideUp #header_menu {
   border-bottom-right-radius: 0;
   border-top-right-radius: 8px;
   border-bottom-left-radius: 8px;
+}
+
+.lookbook_reviews {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: stretch;
+      align-content: stretch;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  font-family: "sofiapro";
+  margin-bottom: 10px;
+}
+
+.lookbook_reviews .lookbook_reviews_star {
+  color: #dfdfe1;
+  position: relative;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.lookbook_reviews .lookbook_reviews_star .rating {
+  color: #f6b71d;
+  position: absolute;
+  overflow: hidden;
+}
+
+.lookbook_reviews span {
+  color: #333;
 }
 
 .lookbook_heart {
@@ -2080,7 +2251,7 @@ body.hideUp #header_menu {
           transform: translate(-50%, -50%);
 }
 
-.lookbook_heart:hover:before, .lookbook_heart.active:before {
+.lookbook_heart.active:before {
   content: "\f004";
 }
 
@@ -2095,10 +2266,14 @@ body.hideUp #header_menu {
 .lookbook_main .lookbook_main_right .lookbook_main_title {
   font-size: 1.875em;
   font-weight: bold;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
-.lookbook_main .lookbook_main_right p {
+.lookbook_main .lookbook_main_right .lookbook_main_grid {
+  font-size: 1.9375rem;
+}
+
+.lookbook_main .lookbook_main_right > p {
   color: #6f6f6f;
   font-size: 0.9em;
   margin-bottom: 20px;
@@ -2118,6 +2293,73 @@ body.hideUp #header_menu {
   color: #6f6f6f;
   font-size: 0.9em;
   margin-bottom: 5px;
+}
+
+.lookbook_main .lookbook_main_right .lookbook_reviews .lookbook_reviews_star .rating,
+.lookbook_main .lookbook_main_right .lookbook_reviews .lookbook_reviews_star p {
+  margin-bottom: 0;
+}
+
+.lookbook_main_select a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: stretch;
+      align-content: stretch;
+  align-items: center;
+  border: 1px solid #dfdfe1;
+  color: #000;
+  padding: 5px 10px;
+}
+
+.lookbook_main_select a .lookbook_main_select_left span {
+  color: #646266;
+  font-size: 13px;
+}
+
+.lookbook_main_select a .lookbook_main_select_left p {
+  color: #000;
+}
+
+.lookbook_main_select a .lookbook_main_select_right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: stretch;
+      align-content: stretch;
+}
+
+.lookbook_main_select a .lookbook_main_select_right img {
+  max-width: 30px;
+  margin-right: 5px;
+}
+
+.lookbook_main_select a .lookbook_main_select_right i {
+  font-size: 25px;
 }
 
 .buy_bth_form {
@@ -2239,8 +2481,8 @@ body.hideUp #header_menu {
   display: none;
 }
 
-.lookbook_menu li .lookbook_submenu .lookbook_submenu_box {
-  margin-bottom: 10px;
+.lookbook_menu li .lookbook_submenu .lookbook_submenu_box:not(:last-child) {
+  margin-bottom: 8px;
 }
 
 .lookbook_menu li:not(:last-child) {
@@ -2351,7 +2593,7 @@ body.hideUp #header_menu {
   font-weight: bold;
 }
 
-.lookbook_menu_rwd {
+.right-menu {
   left: 0;
   position: fixed;
   top: 0;
@@ -2361,11 +2603,10 @@ body.hideUp #header_menu {
   pointer-events: none;
 }
 
-.lookbook_menu_rwd .lookbook_menu_rwd_main {
-  background: #fff;
-  width: 230px;
+.right-menu .right-menu_main {
+  background: #f5f5f5;
+  width: 500px;
   height: 100vh;
-  padding: 15px 10px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-flow: column;
@@ -2377,20 +2618,28 @@ body.hideUp #header_menu {
   z-index: 99;
   -webkit-transition: 0.4s ease-in-out;
   transition: 0.4s ease-in-out;
-  -webkit-transform: translate3d(300px, 0, 0);
-          transform: translate3d(300px, 0, 0);
+  -webkit-transform: translate3d(500px, 0, 0);
+          transform: translate3d(500px, 0, 0);
   overflow: auto;
 }
 
-.lookbook_menu_rwd .lookbook_menu_rwd_main .lookbook_menu_rwd_tt {
+.right-menu .right-menu_main .right-menu_list {
+  overflow-y: auto;
+  overflow-y: overlay;
+  height: 100%;
+  padding: 15px 10px 40px;
+}
+
+.right-menu .right-menu_main .right-menu_list .right-menu_tt {
   border-bottom: 1px solid #bbbbbf;
   text-align: center;
   font-size: 1.125em;
   padding-bottom: 10px;
   position: relative;
+  margin-bottom: 20px;
 }
 
-.lookbook_menu_rwd .lookbook_menu_rwd_main .lookbook_menu_rwd_tt button {
+.right-menu .right-menu_main .right-menu_list .right-menu_tt button {
   position: absolute;
   left: 13px;
   bottom: 9px;
@@ -2398,40 +2647,23 @@ body.hideUp #header_menu {
   border: 0;
 }
 
-.lookbook_menu_rwd .lookbook_menu_rwd_main .lookbook_menu li {
+.right-menu .right-menu_main footer {
   width: 100%;
-  border-bottom: 1px solid #bbbbbf;
-  margin: 0;
-}
-
-.lookbook_menu_rwd .lookbook_menu_rwd_main .lookbook_menu li button {
-  width: 100%;
-  height: auto;
-  padding: 20px;
-  border: 0;
-  border-radius: 0;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-}
-
-.lookbook_menu_rwd .lookbook_menu_rwd_main .lookbook_menu li button span {
-  font-size: 1.125em;
-  font-weight: bold;
-}
-
-.lookbook_menu_rwd .lookbook_menu_rwd_main .lookbook_menu li .lookbook_submenu {
-  border: 0;
-  position: static;
+  position: absolute;
+  bottom: 0;
   padding: 0;
 }
 
-.lookbook_menu_rwd .lookbook_menu_rwd_main .lookbook_menu li .lookbook_submenu .lookbook_submenu_box {
-  padding-left: 35px;
-  margin-bottom: 15px;
+.right-menu .right-menu_main footer button {
+  border: 0;
+  background: #000;
+  width: 100%;
+  color: #fff;
+  padding: 15px;
+  font-size: 1.25em;
 }
 
-.lookbook_menu_rwd .lookbook_menu_rwd_overlay {
+.right-menu .right-menu_overlay {
   background-color: #000;
   opacity: 0;
   left: 0;
@@ -2445,23 +2677,169 @@ body.hideUp #header_menu {
   transition: all 0.2s;
 }
 
-.lookbook_menu_rwd.open {
+.right-menu.open {
   pointer-events: initial;
 }
 
-.lookbook_menu_rwd.open .lookbook_menu_rwd_main {
+.right-menu.open .right-menu_main {
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
 }
 
-.lookbook_menu_rwd.open .lookbook_menu_rwd_overlay {
+.right-menu.open .right-menu_overlay {
   visibility: visible;
   pointer-events: initial;
   opacity: 0.5;
 }
 
+.right-menu .lookbook_menu li {
+  width: 100%;
+  border-bottom: 1px solid #bbbbbf;
+  margin: 0;
+}
+
+.right-menu .lookbook_menu li button {
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  border: 0;
+  border-radius: 0;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.right-menu .lookbook_menu li button span {
+  font-size: 1.125em;
+  font-weight: bold;
+}
+
+.right-menu .lookbook_menu li .lookbook_submenu {
+  border: 0;
+  position: static;
+  padding: 0 0 15px 0;
+}
+
+.right-menu .lookbook_menu li .lookbook_submenu .lookbook_submenu_box {
+  padding-left: 35px;
+}
+
+.right-menu .lookbook_menu li .lookbook_submenu .lookbook_submenu_box:not(:last-child) {
+  margin-bottom: 10px;
+}
+
 .lookbook_filter {
   display: none;
+}
+
+.lookbook_main_left_main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: stretch;
+      align-content: stretch;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.lookbook_main_left_menu {
+  width: 70px;
+}
+
+.lookbook_main_left_menu .slider-nav .slick-track {
+  margin: inherit;
+}
+
+.lookbook_main_left_menu .slider-nav .slick-track .slick-slide {
+  float: none;
+}
+
+.lookbook_main_left_img {
+  width: calc(100% - 80px);
+}
+
+.slick-slide img {
+  border: 2px solid rgba(0, 0, 0, 0);
+}
+
+.slick-current a img {
+  border: 2px solid black;
+}
+
+a,
+a:visited,
+a:focus,
+a:active,
+a:link {
+  text-decoration: none;
+  outline: 0;
+}
+
+.option-list {
+  margin-top: 20px;
+}
+
+.option-list li {
+  background: #fff;
+  padding: 15px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: stretch;
+      align-content: stretch;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-bottom: 5px;
+}
+
+.option-list li .option-list_img {
+  margin-right: 20px;
+}
+
+.option-list li .option-list_details {
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+}
+
+.option-list li .option-list_selectButton {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  text-align: right;
+}
+
+.option-list li .option-list_selectButton button {
+  border: 0;
+  background: #000;
+  color: #fff;
+  padding: 15px;
 }
 
 /*---------------------------------------*/
@@ -2563,9 +2941,60 @@ body.hideUp #header_menu {
 }
 
 footer {
-  text-align: center;
-  font-size: 1.25em;
   padding: 30px 0;
+}
+
+footer .footer_main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: stretch;
+      align-content: stretch;
+}
+
+footer .footer_main .footer_right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: stretch;
+      align-content: stretch;
+}
+
+footer .footer_main .footer_right .social {
+  margin-right: 5px;
+}
+
+footer .footer_main .footer_right .social a {
+  width: 25px;
+  height: 25px;
+}
+
+footer .footer_main .footer_right .social a i {
+  font-size: 15px;
 }
 
 @media screen and (min-width: 1300px) {
@@ -2578,12 +3007,15 @@ footer {
 }
 
 @media (max-width: 1300px) {
-  #menu,
+  #menu ul,
+  .menu_main_right .search_btn,
+  .menu_top .menu_top_main .menu_top_right .menu_btn span,
+  .menu_main_right a span,
   .lookbook_menu_web {
     display: none;
   }
-  #menu_rwd,
-  .lookbook_menu_rwd,
+  .right-menu,
+  .menu_rwd_toggle,
   .lookbook_filter {
     display: block;
   }
@@ -2591,6 +3023,12 @@ footer {
   .d_no,
   .menu_below {
     display: block;
+  }
+  body {
+    font-size: 80%;
+  }
+  body.open #header_menu {
+    top: -62px;
   }
   header.active .container .menu_button .menuicon {
     background: transparent;
@@ -2612,15 +3050,55 @@ footer {
   .site-nav {
     border-bottom: none;
   }
+  .logo {
+    position: absolute;
+    top: 13px;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+  }
+  .menu_top {
+    padding: 10px;
+  }
+  .menu_search {
+    background: none;
+  }
+  .menu_search form {
+    padding: 0 40px;
+  }
+  .menu_search form .menu_search_main {
+    background: #f7f7f7;
+  }
+  .menu_search form .menu_search_main #header-search-input {
+    width: calc(100% - 9px);
+    background: #f7f7f7;
+    padding: 10px 0;
+  }
+  .menu_search form .menu_search_main #header-search-btn {
+    top: calc(50% - 10px);
+    right: 11px;
+    width: 20px;
+    height: 20px;
+    background-size: 20px auto;
+  }
+  .menu_top .menu_top_main .menu_top_right .menu_btn {
+    padding: 10px 15px;
+  }
+  #menu {
+    max-width: inherit;
+  }
+  #menu .menu_main {
+    padding: 10px;
+  }
+  #menu .menu_main .menu_main_right a i {
+    font-size: 16px;
+  }
   .index_slogan {
     font-size: 1.25em;
     line-height: 21px;
   }
   .slick-slide-image {
     padding-bottom: 530px;
-  }
-  .scroll {
-    bottom: 52%;
   }
   .page_top_img .caption {
     padding: 10px;
@@ -2666,6 +3144,9 @@ footer {
   .index_shadow {
     margin-bottom: 2px;
   }
+  .index_menu .index_menu_item a .index_menu_text p {
+    font-size: 1.125em;
+  }
   .slick-slide-image {
     padding-bottom: 250px;
   }
@@ -2696,6 +3177,45 @@ footer {
   }
   .lookbook_menu_list ul li {
     margin: 0 8px 8px 0;
+  }
+  .right-menu .right-menu_main {
+    width: 100%;
+  }
+  footer {
+    padding: 20px;
+  }
+  footer .footer_main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-line-pack: stretch;
+        align-content: stretch;
+    -ms-flex-direction: column;
+        flex-direction: column;
+  }
+  footer .footer_main .footer_logo {
+    margin-bottom: 10px;
+  }
+  footer .footer_main .footer_right {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  footer .footer_main .footer_right .social {
+    margin-bottom: 10px;
   }
   .lity-close,
   .lity-close:hover,

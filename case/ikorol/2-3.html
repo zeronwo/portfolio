@@ -14,15 +14,21 @@
     <link href="../../js/owlCarousel/owl.theme.default.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="../../js/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="../../js/slick/slick-theme.css" />
-
+    <!-- 彈窗-->
+    <link href="js/lity/lity.css" rel="stylesheet" type="text/css">
     <link href="css/style.css" rel="stylesheet">
     <link href="css/max.css" rel="stylesheet" type="text/css" />
 
     <script src="../../js/jquery.min.js"></script>
+    <script src="js/lity/lity.js"></script>
     <script src="../../js/owlCarousel/owl.carousel.js"></script>
 
     <script type="text/javascript" src="../../js/slick/slick.js"></script>
+    <script type="text/javascript"
+        src="https://www.kansai-sp.co.jp/wp/wp-content/themes/kansai-Kaseihin-yuso/common/js/jquery.bxslider.js"></script>
     <script src="https://vuejs.org/js/vue.js"></script>
+
+
     <script src="js/scripts.js"></script>
 
 
@@ -37,15 +43,25 @@
 
         <div id="header_menu">
             <div class="site-nav">
+
+
                 <!--menu st-->
                 <div id="menu">
                     <div class="menu_main">
+                        <span class="menu_rwd_toggle">
+                            <button class="gloval-navi-sp-open">
+                                <i class="gloval-navi-sp-open-line"></i>
+                                <i class="gloval-navi-sp-open-line"></i>
+                            </button>
+
+                        </span>
                         <div class="logo"><a href="index.html"><img src="imgs/index_logo.png"></a></div>
+
                         <ul>
                             <li>
                                 <a href="1-1.html">ABOUT</a>
                             </li>
-                            <li class="active">
+                            <li>
                                 <a href="2-1.html">LOOKBOOK</a>
                             </li>
                             <li>
@@ -57,27 +73,51 @@
                             <li>
                                 <a href="5-1.html">CONTACT</a>
                             </li>
+                            <li>
+
+
+                            </li>
                         </ul>
+                        <div class="menu_main_right">
+
+                            <a class="menu_btn login_btn" href="javascript:;">
+                                <i class="fa fa-user" aria-hidden="true"></i><span>Login</span>
+                            </a>
+                            <a class="menu_btn" href="">
+                                <i class="fa fa-shopping-cart" aria-hidden="true"></i><span>Cart</span>
+                            </a>
+                            <a class="menu_btn search_btn" href="javascript:;">
+                                <i class="fa fa-search" aria-hidden="true"></i>
+                            </a>
+                        </div>
                     </div>
 
                 </div>
                 <!--menu end-->
+                <div class="menu_search" style="display:none;">
+                    <form action="/search/index.html" method="get">
+                        <div class="menu_search_main">
+                            <input type="text" name="query" id="header-search-input" placeholder="Search for">
+                            <input type="submit" id="header-search-btn" value="Search">
+                        </div>
+                    </form>
+                </div>
 
                 <!--menu st-->
                 <div id="menu_rwd">
-                    <div class="menu_rwd_main">
 
-                        <div class="logo"><a href="index.html"><img src="imgs/index_logo.png"></a>
-                        </div>
-                        <span class="menu_rwd_toggle">
-                            <button class="gloval-navi-sp-open">
-                                <i class="gloval-navi-sp-open-line"></i>
-                                <i class="gloval-navi-sp-open-line"></i>
-                            </button>
-
-                        </span>
-                    </div>
                     <ul class=" mm">
+                        <li>
+                            <div class="menu_search">
+                                <form action="/search/index.html" method="get">
+                                    <div class="menu_search_main">
+                                        <input type="text" name="query" id="header-search-input"
+                                            placeholder="Search for">
+                                        <input type="submit" id="header-search-btn" value="Search">
+                                    </div>
+                                </form>
+                            </div>
+                        </li>
                         <li>
                             <a href="index.html">
                                 <span>HOME</span>
@@ -109,6 +149,12 @@
                             </a>
                         </li>
 
+                        <li class="social">
+                            <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                            <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                            <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                            <a href=""><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                        </li>
 
                     </ul>
                     <div class="menu_rwd_bg">
@@ -118,6 +164,7 @@
                 <!--menu end-->
             </div>
         </div>
+
     </div>
     <!--top_img end-->
     <!--menu_all end-->
@@ -125,25 +172,226 @@
 
     <!--top_img end-->
 
+    <!-- right-menu -->
+    <div class="right-menu lookbook_menu_rwd">
+        <div class="right-menu_main">
+            <div class="right-menu_list">
+                <div class="right-menu_tt">
+                    <button class="right-menu_close">
+                        <i class="fa fa-times" aria-hidden="true"></i>
+                    </button>
+
+                    <strong>Color</strong>
+                </div>
+                <ul class="option-list">
+                    <li>
+                        <div class="option-list_img">
+                            <img src="imgs/default_name.jpg" alt="">
+                        </div>
+                        <div class="option-list_details">
+                            <p>Blue</p>
+                            <p>$50</p>
+                        </div>
+                        <div class="option-list_selectButton">
+                            <button>select</button>
+                        </div>
+
+                    </li>
+                    <li>
+                        <div class="option-list_img">
+                            <img src="imgs/default_name (1).jpg" alt="">
+                        </div>
+                        <div class="option-list_details">
+                            <p>Gray</p>
+                            <p>$50</p>
+                        </div>
+                        <div class="option-list_selectButton">
+                            <button>select</button>
+                        </div>
+
+                    </li>
+                    <li>
+                        <div class="option-list_img">
+                            <img src="imgs/default_name (2).jpg" alt="">
+                        </div>
+                        <div class="option-list_details">
+                            <p>Tan</p>
+                            <p>$50</p>
+                        </div>
+                        <div class="option-list_selectButton">
+                            <button>select</button>
+                        </div>
+
+                    </li>
+                </ul>
+
+            </div>
+
+            <div class="right-menu_list" style="display: none;">
+                <div class="right-menu_tt">
+                    <button class="right-menu_close">
+                        <i class="fa fa-times" aria-hidden="true"></i>
+                    </button>
+
+                    <strong>Color</strong>
+                </div>
+                <ul class="option-list">
+                    <li>
+                        <div class="option-list_img">
+                            <img src="imgs/default_name.jpg" alt="">
+                        </div>
+                        <div class="option-list_details">
+                            <p>Twin Comforter + 1 Sham</p>
+                            <p>$50</p>
+                        </div>
+                        <div class="option-list_selectButton">
+                            <button>select</button>
+                        </div>
+
+                    </li>
+                    <li>
+                        <div class="option-list_img">
+                            <img src="imgs/default_name.jpg" alt="">
+                        </div>
+                        <div class="option-list_details">
+                            <p>Full/Queen Comforter + 2 Shams</p>
+                            <p>$50</p>
+                        </div>
+                        <div class="option-list_selectButton">
+                            <button>select</button>
+                        </div>
+
+                    </li>
+                    <li>
+                        <div class="option-list_img">
+                            <img src="imgs/default_name.jpg" alt="">
+                        </div>
+                        <div class="option-list_details">
+                            <p>King/Cal.King Comforter + 2 Shams</p>
+                            <p>$50</p>
+                        </div>
+                        <div class="option-list_selectButton">
+                            <button>select</button>
+                        </div>
+
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <div class="right-menu_overlay"></div>
+    </div>
 
     <section class="m_30">
         <!--選單項目-->
-        <div class="container">
-            <div class="lookbook_main">
+        <div class="lookbook_main ">
+            <div class="container">
+                <div class="breadcrumb">
+                    <ul>
+                        <li>
+                            <a href="index.html"><span>Home</span></a>
+                        </li>
+                        <li>
+                            <a href="2-1.html"><span>LOOKBOOK</span></a>
+                        </li>
+                        <li>
+                            <span>Shop Best Sellers</span>
+                        </li>
+                    </ul>
+                </div>
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-7">
                         <div class="lookbook_main_left t-align-center">
-                            <img src="imgs/lookbook_post_img_p1.jpg" class="img-responsive">
+                            <div class="lookbook_main_left_main">
+
+                                <div class="lookbook_main_left_menu">
+                                    <div class="slider-nav">
+                                        <div class="lookbook_main_left_menu_box">
+                                            <a href="javascript:;">
+                                                <img src="imgs/Holton+Reversible+Comforter+Set (6).jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="lookbook_main_left_menu_box">
+                                            <a href="javascript:;">
+                                                <img src="imgs/Holton+Reversible+Comforter+Set (7).jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="lookbook_main_left_menu_box">
+                                            <a href="javascript:;">
+                                                <img src="imgs/Holton+Reversible+Comforter+Set (8).jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="lookbook_main_left_menu_box">
+                                            <a href="javascript:;">
+                                                <img src="imgs/Holton+Reversible+Comforter+Set (9).jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="lookbook_main_left_menu_box">
+                                            <a href="javascript:;">
+                                                <img src="imgs/Holton+Reversible+Comforter+Set (10).jpg" alt="">
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+                                <!--輪播圖-->
+                                <div class="lookbook_main_left_img">
+                                    <div class="slick slider-for">
+                                        <!-- 01 -->
+                                        <div class="lookbook_main_left_img_box">
+                                            <img src="imgs/Holton+Reversible+Comforter+Set (1).jpg" alt="">
+                                        </div>
+                                        <!-- 02 -->
+                                        <div class="lookbook_main_left_img_box">
+                                            <img src="imgs/Holton+Reversible+Comforter+Set (2).jpg" alt="">
+                                        </div>
+                                        <!-- 03 -->
+                                        <div class="lookbook_main_left_img_box">
+                                            <img src="imgs/Holton+Reversible+Comforter+Set (3).jpg" alt="">
+                                        </div>
+                                        <!-- 04 -->
+                                        <div class="lookbook_main_left_img_box">
+                                            <img src="imgs/Holton+Reversible+Comforter+Set (4).jpg" alt="">
+                                        </div>
+                                        <!-- 05 -->
+                                        <div class="lookbook_main_left_img_box">
+                                            <img src="imgs/Holton+Reversible+Comforter+Set (5).jpg" alt="">
+                                        </div>
+
+
+                                    </div>
+
+
+                                </div>
+                                <!--輪播圖 end-->
+
+
+
+
+                            </div>
                         </div>
                     </div>
 
-                    <div class="col-md-6 ">
+                    <div class="col-md-5 ">
                         <div class="lookbook_main_right">
-                            <div class="lookbook_main_title">淡水河谷木床 / 自然</div>
-                            <strong>美麗的實木，經過精心打磨</strong>
+                            <div class="lookbook_main_title">Holton雙面被套</div>
+                            <strong class="lookbook_main_grid">$50</strong>
+                            <div class="lookbook_reviews">
+                                <div class="lookbook_reviews_star">
+                                    <p class="rating" style="width: 80%">★★★★★</p>
+                                    <p>★★★★★</p>
+                                </div>
+                                <span class="pl-ReviewStars-stars">
+                                    <p>137</p>
+                                </span>
+                            </div>
                             <p>
-                                床頭採用耐用的偏差小白樺在整個表面。在明亮的自然色，是奢華質感精美的深大富大貴的木紋光澤的樣子。
-                                表面已進行油漆，以保護由滲入木材。而不與樹的呼吸干擾，根據時間的推移，油會出來熟悉鮮明深光澤到樹中。
+                                免費送貨。<br>
+                                10月26日，星期一領取
                             </p>
 
                             <strong>尺寸</strong>
@@ -153,6 +401,7 @@
                                 <li>■ 材質：框架實心樺木/地板桐木</li>
                                 <li>■ 原產國：日本</li>
                             </ul>
+                
 
                             <strong>重量</strong>
                             <ul>
@@ -160,6 +409,35 @@
                                 <li>側軌：200×11 x 21公分（16千克）</li>
                                 <li>地板：165×100×9.5厘米（16公斤）</li>
                             </ul>
+                            <div>
+                                <div class="lookbook_main_select right-menu_btn m_10">
+                                    <a href="javascript:;">
+                                        <div class="lookbook_main_select_left">
+                                            <span>Color(3)</span>
+                                            <p>Blue</p>
+                                        </div>
+                                        <div class="lookbook_main_select_right">
+                                            <img src="imgs/default_name.jpg" alt="">
+                                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                        </div>
+
+                                    </a>
+                                </div>
+                                <div class="lookbook_main_select right-menu_btn m_10">
+                                    <a href="javascript:;">
+                                        <div class="lookbook_main_select_left">
+                                            <span>Size(3)</span>
+                                            <p>Select Size</p>
+                                        </div>
+                                        <div class="lookbook_main_select_right">
+                                            <img src="imgs/default_name.jpg" alt="">
+                                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                        </div>
+
+                                    </a>
+                                </div>
+                            </div>
+
                             <div class="buy_bth">
                                 <div class="">
                                     <strong>數量</strong>
@@ -290,9 +568,7 @@
         <div style="max-width:341px;margin:auto;"><img src="imgs/foot.png" width="100%"></div>
     </div>
 
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/scripts.js"></script>
+
 </body>
 
 </html>

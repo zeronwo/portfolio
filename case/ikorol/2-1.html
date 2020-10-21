@@ -36,15 +36,25 @@
 
         <div id="header_menu">
             <div class="site-nav">
+    
+
                 <!--menu st-->
                 <div id="menu">
                     <div class="menu_main">
+                        <span class="menu_rwd_toggle">
+                            <button class="gloval-navi-sp-open">
+                                <i class="gloval-navi-sp-open-line"></i>
+                                <i class="gloval-navi-sp-open-line"></i>
+                            </button>
+
+                        </span>
                         <div class="logo"><a href="index.html"><img src="imgs/index_logo.png"></a></div>
+                        
                         <ul>
                             <li>
                                 <a href="1-1.html">ABOUT</a>
                             </li>
-                            <li class="active">
+                            <li>
                                 <a href="2-1.html">LOOKBOOK</a>
                             </li>
                             <li>
@@ -56,27 +66,51 @@
                             <li>
                                 <a href="5-1.html">CONTACT</a>
                             </li>
+                            <li>
+                             
+
+                            </li>
                         </ul>
+                        <div class="menu_main_right">
+                            
+                            <a class="menu_btn login_btn" href="javascript:;">
+                                <i class="fa fa-user" aria-hidden="true"></i><span>Login</span>
+                            </a>
+                            <a class="menu_btn" href="">
+                                <i class="fa fa-shopping-cart" aria-hidden="true"></i><span>Cart</span>
+                            </a>
+                            <a class="menu_btn search_btn" href="javascript:;">
+                                <i class="fa fa-search" aria-hidden="true"></i>
+                            </a>
+                        </div>
                     </div>
 
                 </div>
                 <!--menu end-->
+                <div class="menu_search" style="display:none;">
+                    <form action="/search/index.html" method="get">
+                        <div class="menu_search_main">
+                            <input type="text" name="query" id="header-search-input" placeholder="Search for">
+                            <input type="submit" id="header-search-btn" value="Search">
+                        </div>
+                    </form>
+                </div>
 
                 <!--menu st-->
                 <div id="menu_rwd">
-                    <div class="menu_rwd_main">
 
-                        <div class="logo"><a href="index.html"><img src="imgs/index_logo.png"></a>
-                        </div>
-                        <span class="menu_rwd_toggle">
-                            <button class="gloval-navi-sp-open">
-                                <i class="gloval-navi-sp-open-line"></i>
-                                <i class="gloval-navi-sp-open-line"></i>
-                            </button>
-
-                        </span>
-                    </div>
                     <ul class=" mm">
+                        <li>
+                            <div class="menu_search">
+                                <form action="/search/index.html" method="get">
+                                    <div class="menu_search_main">
+                                        <input type="text" name="query" id="header-search-input"
+                                            placeholder="Search for">
+                                        <input type="submit" id="header-search-btn" value="Search">
+                                    </div>
+                                </form>
+                            </div>
+                        </li>
                         <li>
                             <a href="index.html">
                                 <span>HOME</span>
@@ -108,6 +142,12 @@
                             </a>
                         </li>
 
+                        <li class="social">
+                            <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                            <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                            <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                            <a href=""><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                        </li>
 
                     </ul>
                     <div class="menu_rwd_bg">
@@ -117,6 +157,7 @@
                 <!--menu end-->
             </div>
         </div>
+
     </div>
     <!--top_img end-->
     <!--menu_all end-->

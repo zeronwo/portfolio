@@ -3,24 +3,25 @@ $(document).ready(function () {
 
     //手機選單
     $(".menu_rwd_toggle").click(function () {
-        $("#menu_rwd").toggleClass("active");
+        $("#header_menu").toggleClass("active");
         $("body").toggleClass("menu-open");
 
     });
 
-    //捲軸上滑 選單展示
     var bodyClass = document.body.classList,
-        lastScrollY = 200;
+        lastScrollY = 0;
     window.addEventListener('scroll', function () {
         var st = this.scrollY;
         // 判斷是向上捲動，而且捲軸超過 200px
         if (st < lastScrollY) {
-            bodyClass.remove('hideUp');
+            bodyClass.remove('open');
         } else {
-            bodyClass.add('hideUp');
+            bodyClass.add('open');
         }
         lastScrollY = st;
     });
+
+
 
     //首頁輪播
     $('.header_img_box').slick({
@@ -36,6 +37,10 @@ $(document).ready(function () {
         slidesToScroll: 1
     });
 
+
+    $(".search_btn").click(function () {
+        $(".menu_search").slideToggle();
+    });
 
     //手機選單
     $(".lookbook_heart").click(function () {
@@ -109,33 +114,81 @@ $(document).ready(function () {
     //# sourceURL=pen.js
 
 
-    //lookbook 分類選單
-    $(".lookbook_submenu").hide();
-    $(".lookbook_menu li button").click(function () {
+    //lookbook WEB的篩選
+    $(".lookbook_menu_web .lookbook_submenu").hide();
+    $(".lookbook_menu_web li button").click(function () {
         $(this).parent().toggleClass("open").siblings().removeClass("open");
         $(this).parent().find(".lookbook_submenu").slideToggle();
         $(this).parent().siblings().find(".lookbook_submenu").slideUp();
     });
 
-    //lookbook 手機分類選單
-    $(".lookbook_filter button").click(function () {
-        $(".lookbook_menu_rwd").toggleClass("open");
+
+    //右側選單的lookbook MOB的篩選
+    $(".right-menu .lookbook_submenu").hide();
+    $(".right-menu li button").click(function () {
+        $(this).parent().toggleClass("open").siblings().removeClass("open");
+        $(this).parent().find(".lookbook_submenu").slideToggle();
+
     });
 
-    //lookbook 手機分類黑遮罩
-    $(".lookbook_menu_rwd_overlay,.lookbook_menu_rwd_close").click(function () {
-        $(".lookbook_menu_rwd").removeClass("open");
+    //呼叫右側選單
+    $(".right-menu_btn").click(function () {
+        $(".right-menu").toggleClass("open");
+        $("body").css({ "overflow": "hidden", "max-height": "100vh" });
     });
 
-     //lookbook 標籤取消
-    $(".lookbook_menu_list button").click(function(){
+    //關閉右側選單 
+    $(".right-menu_overlay,.right-menu_close").click(function () {
+        $(".right-menu").removeClass("open");
+        $("body").removeAttr("style");
+    });
+
+    //lookbook 標籤取消
+    $(".lookbook_menu_list button").click(function () {
         $(this).parent("li").remove();
-      });
+    });
 
-         //lookbook 標籤全取消
-    $(".lookbook_menu_list_clear").click(function(){
+    //lookbook 標籤全取消
+    $(".lookbook_menu_list_clear").click(function () {
         $(".lookbook_menu_list").remove();
-      });
+    });
+
+
+    // 表格切換
+    $('.lookbook_main_select').click(function (e) {
+        var $tabIndex = $(this).index();
+        $(".right-menu_list").eq($tabIndex).fadeIn().siblings(".right-menu_list").hide();
+    });
+
+
+    //首頁水平輪播
+    $(".advantage-sec-slide").bxSlider({
+        minSlides: 2,
+        maxSlides: 6,
+        slideWidth: 400,
+        slideMargin: 1,
+        ticker: true,
+        speed: 100000
+    });
+
+    $('.slider-for').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        asNavFor: '.slider-nav',
+        infinite: false,
+    });
+    $('.slider-nav').slick({
+        slidesToShow: 7,
+        slidesToScroll: 7,
+        asNavFor: '.slider-for',
+        focusOnSelect: true,
+        focusOnChange: false,
+        infinite: false,
+        centerMode: false,
+        vertical: true,
+
+    });
 
 });
 
