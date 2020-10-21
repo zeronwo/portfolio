@@ -111,6 +111,12 @@ html {
   width: 100%;
   height: 100%;
 }
+button {
+  border: 0;
+  background: 0;
+  cursor: pointer;
+}
+
 body {
   background: $white;
   color: $color1;
@@ -1359,7 +1365,7 @@ body.open #header_menu {
     align-items: center;
     border: 1px solid #dfdfe1;
     color: $dark;
-    padding:5px 10px;
+    padding: 5px 10px;
     .lookbook_main_select_left {
       span {
         color: #646266;
@@ -1389,33 +1395,68 @@ body.open #header_menu {
   justify-content: flex-start;
 }
 
-.buy_bth_form-input-text {
-  width: 100px;
-  text-align: right;
-  font-size: 16px;
-  line-height: 40px;
-  box-sizing: border-box;
-  height: 40px;
-  padding: 0 10px;
-  transition: 0.2s;
-  vertical-align: middle;
-  border: 2px solid #eaeaea;
-  border-radius: 4px;
-  appearance: none;
-  margin-right: 5px;
-}
 .buy_bth_form_wrap {
-  a {
-    color: $color1;
-    display: block;
-    i {
-      font-size: 1.5em;
+  width: 100%;
+  @include flex();
+  .buy_bth_form_counter {
+    border: 1px solid #9d9a9f;
+    border-radius: 30px;
+    width: 80px;
+    @include flex();
+    flex-grow: 1;
+    margin-right: 10px;
+    overflow: hidden;
+    .up,
+    .down {
+      display: block;
+      color: $dark;
+      font-size: 18px;
+      cursor: pointer;
+      width: 33%;
+      line-height: 44px;
+      height: 44px;
+      user-select: none;
+      text-align: center;
+    }
+    .up:hover,
+    .down:hover {
+      background: #ccc;
+    }
+
+    input {
+      appearance: none;
+      border: 0;
+      background: white;
+      text-align: center;
+      width: 42px;
+      line-height: 24px;
+      font-size: 15px;
+      border-radius: 5px;
+    }
+  }
+  .FavoritesButton {
+    flex-grow: 2;
+    button {
+      border: 1px solid #9d9a9f;
+      background: #fff;
+      border-radius: 30px;
+      width: 100%;
+      height: 44px;
+      &:before {
+        content: "\f08a";
+        font-family: FontAwesome;
+        color: #000;
+        font-size: 18px;
+        padding-right: 0.5em;
+      }
+    }
+    &.active button:before {
+      content: "\f004";
     }
   }
 }
 
-.buy_bth button {
-  max-width: 250px;
+.buy_bth .cart_btn button {
   width: 100%;
   font-size: 14px;
   font-weight: normal;
@@ -1431,7 +1472,7 @@ body.open #header_menu {
   color: #fff;
   border: 0;
   border-radius: 4px;
-  background: #fd7f23;
+  background: $dark;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -1658,7 +1699,6 @@ body.open #header_menu {
     .slick-track {
       margin: inherit;
       .slick-slide {
-        float: none;
       }
     }
   }
@@ -1943,6 +1983,11 @@ footer {
     padding-bottom: 530px;
   }
 
+  .lookbook_main_left_menu,
+  .lookbook_main_left_img {
+    width: 100%;
+  }
+
   .page_top_img .caption {
     padding: 10px;
   }
@@ -2049,16 +2094,5 @@ footer {
     position: fixed;
     right: 0;
     top: 0;
-  }
-}
-
-@media (max-width: 350px) {
-  .rule_top > ul > li {
-    flex-direction: column;
-    align-items: center;
-    align-content: center;
-  }
-  .rule_top > ul > li .rule_txt {
-    text-align: center;
   }
 }

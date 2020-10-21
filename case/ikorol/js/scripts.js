@@ -42,8 +42,8 @@ $(document).ready(function () {
         $(".menu_search").slideToggle();
     });
 
-    //手機選單
-    $(".lookbook_heart").click(function () {
+    //lookbook最愛
+    $(".lookbook_heart,.FavoritesButton").click(function () {
         $(this).toggleClass("active");
 
     });
@@ -171,6 +171,7 @@ $(document).ready(function () {
         speed: 100000
     });
 
+    //lookbook輪播圖
     $('.slider-for').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -179,17 +180,29 @@ $(document).ready(function () {
         infinite: false,
     });
     $('.slider-nav').slick({
-        slidesToShow: 7,
-        slidesToScroll: 7,
+        slidesToShow: 5,
+        slidesToScroll: 5,
         asNavFor: '.slider-for',
         focusOnSelect: true,
         focusOnChange: false,
         infinite: false,
         centerMode: false,
         vertical: true,
+        responsive: [
+
+            {
+                breakpoint: 1300,
+                settings: {
+                    
+                    vertical: false,
+                }
+            }
+
+        ]
 
     });
 
+  
 });
 
 
