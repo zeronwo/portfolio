@@ -3,6 +3,15 @@
 
 $(document).ready(function (e) {
 
+
+  //手機選單
+  $(".menu_button,header .md-overlay,.menu_mob a").click(function () {
+    $("header").toggleClass("active");
+    $(".menu_mob").slideToggle();
+  });
+
+
+
   $('.m_culture').click(function () {
     $('html,body').animate({ scrollTop: $('.culture').offset().top }, 800);
   });
@@ -11,9 +20,6 @@ $(document).ready(function (e) {
     $('html,body').animate({ scrollTop: $('.map').offset().top }, 800);
   });
 
-  $('.m_photo').click(function () {
-    $('html,body').animate({ scrollTop: $('.photo').offset().top }, 800);
-  });
 
   $('.m_news').click(function () {
     $('html,body').animate({ scrollTop: $('.news').offset().top }, 800);
@@ -24,22 +30,28 @@ $(document).ready(function (e) {
 
   $('.go_top').click(function () {
     $('html,body').animate({ scrollTop: '0px' }, 800);
-});
-
-
-  $('[data-youtube]').youtube_background();
+  });
 
 
 
-
-
-  $('.map_position li').click(function(e) {
+  $('.map_position li').click(function (e) {
     var $tabIndex = $(this).index();
     $(this).addClass('active').siblings(".map_position li").removeClass('active');
     $('.map_present li').eq($tabIndex).fadeIn().siblings(".map_present li").hide();
     $('.map_present li').eq($tabIndex).addClass("active");
-});
+  });
 
+
+
+  $('.top_img_box').owlCarousel({
+    loop: true, //循環播放
+    animateOut: 'fadeOut',
+    items: 1,
+    margin: 0,
+    autoplay: true, //自動撥放
+    dots:false,
+    smartSpeed: 450
+});
 
   var owl = $('.activity_photo');
   owl.owlCarousel({
@@ -49,29 +61,38 @@ $(document).ready(function (e) {
     autoplay: false, //自動撥放
     nav: true, //左右箭頭
     dots: false, //小圓點
-    margin:80,
+    margin: 80,
     items: 2, //數量 
-    responsive:{
-      0:{
-        nav: false, 
+    responsive: {
+      0: {
+        nav: false,
         dots: true,
         items: 1, //數量 
       },
-      600:{
-        nav: true, 
+      600: {
+        nav: true,
         dots: false,
-        
+
       },
-  }
+    }
   })
 
+    //首頁水平輪播
+    $(".advantage-sec-slide").bxSlider({
+      minSlides: 2,
+      maxSlides: 6,
+      slideWidth: 400,
+      slideMargin: 5,
+      ticker: true,
+      speed: 100000
+  });
 
-  
+
   AOS.init({
-    offset: 300,
-    duration: 600,
+    offset: 200,
+    duration: 400,
     delay: 0,
-   once: true, //只執行一次動畫
+    once: true, //只執行一次動畫
 
   });
 

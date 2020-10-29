@@ -12,6 +12,9 @@
     <link rel="stylesheet" href="js/owlCarousel/owl.carousel.css">
     <link rel="stylesheet" href="js/owlCarousel/owl.theme.default.css">
 
+    <!-- 彈窗-->
+    <link href="js/lity/lity.css" rel="stylesheet" type="text/css">
+
     <link rel="stylesheet" href="js/aos/aos.css" />
     <link rel="stylesheet" href="css/animate.css" />
 
@@ -24,9 +27,12 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/aos/aos.js"></script>
     <script src="js/owlCarousel/owl.carousel.js"></script>
-    <!-- 首頁影片 -->
-    <script src="js/jquery.youtube-background.js"></script>
 
+    <!-- 彈窗-->
+    <script src="js/lity/lity.js"></script>
+
+    <script type="text/javascript"
+        src="https://www.kansai-sp.co.jp/wp/wp-content/themes/kansai-Kaseihin-yuso/common/js/jquery.bxslider.js"></script>
     <!--  -->
     <script src="js/jquery.parallax-scroll.js"></script>
 
@@ -45,46 +51,89 @@
                     <img src="images/logo.png" alt="">
                 </a>
             </h1>
-            <div class="b_main">
-                <div class="b">
-                    <i class="b1"></i>
-                    <i class="b2"></i>
-                    <i class="b3"></i>
-                </div>
-            </div>
+            <a href="javascript:;" class="menu_button">
+                <div class="menuicon"></div>
+            </a>
             <ul class="menu">
-                <li class="m_culture"><a href="javascript:;"><span>習俗</span></a></li>
-                <li class="m_map"><a href="javascript:;"><span>地區</span></a></li>
-                <li class="m_photo"><a href="javascript:;"><span>特色</span></a></li>
-                <li class="m_news"><a href="javascript:;"><span>消息</span></a></li>
-                <li class="m_activity"><a href="javascript:;"><span>活動</span></a></li>
+                <li class="m_culture">
+                    <a href="javascript:;">
+                        <span>習俗</span>
+                        <span>習俗</span>
+                    </a>
+                </li>
+                <li class="m_map">
+                    <a href="javascript:;">
+                        <span>地區</span>
+                        <span>地區</span>
+                    </a>
+                </li>
+
+                <li class="m_news">
+                    <a href="javascript:;">
+                        <span>消息</span>
+                        <span>消息</span>
+                    </a>
+                </li>
+                <li class="m_activity">
+                    <a href="javascript:;">
+                        <span>活動</span>
+                        <span>活動</span>
+                    </a>
+                </li>
+
+            </ul>
+            <ul class="menu_mob">
+                <div class="menu_mob_box">
+                    <ul>
+                        <li class="m_culture"><a href="javascript:;"><span>習俗</span></a></li>
+                        <li class="m_map"><a href="javascript:;"><span>地區</span></a></li>
+                        <li class="m_news"><a href="javascript:;"><span>消息</span></a></li>
+                        <li class="m_activity"><a href="javascript:;"><span>活動</span></a></li>
+                    </ul>
+                </div>
 
             </ul>
         </div>
+        <div class="content">
+            <div class="inner">
+                <h1>
+                    <div class="tt"><strong data-aos="fade-up" data-aos-duration="1500"
+                            class="aos-init aos-animate">Best culture</strong></div>
+                    <div class="tt"><strong data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300"
+                            class="aos-init aos-animate">Experience Kyoto</strong></div>
 
 
-        <div class="example-marquee">
-
-            <div id="ytbg" data-youtube="https://youtu.be/-YdH5j0uLew"></div>
-            <div class="content">
-                <div class="inner">
-                    <h1>
-                        <div class="tt"><strong data-aos="fade-up" data-aos-duration="1500">Best culture</strong></div>
-                        <div class="tt"><strong data-aos="fade-up" data-aos-duration="1500"
-                                data-aos-delay="300">Experience Kyoto</strong></div>
+                </h1>
 
 
-                    </h1>
+                <p data-aos="fade-right" data-aos-duration="1500" data-aos-delay="1200" class="aos-init aos-animate">
+                    京都一年四季都充滿了和文化、藝術以及大自然相關的活動。
+                </p>
 
-
-                    <p data-aos="fade-right" data-aos-duration="1500" data-aos-delay="1200">京都一年四季都充滿了和文化、藝術以及大自然相關的活動。
-                    </p>
-
+            </div>
+        </div>
+        <div class="top_img">
+            <div class="top_img_box owl-carousel owl-theme">
+                <div class="item">
+                    <img src="images/header_img01.jpg">
+                </div>
+                <div class="item">
+                    <img src="images/header_img02.jpg">
+                </div>
+                <div class="item">
+                    <img src="images/header_img03.jpg">
+                </div>
+                <div class="item">
+                    <img src="images/header_img04.jpg">
+                </div>
+                <div class="item">
+                    <img src="images/header_img05.jpg">
+                </div>
+                <div class="item">
+                    <img src="images/header_img06.jpg">
                 </div>
             </div>
-
         </div>
-
     </header>
     <main>
         <div class="go_top">
@@ -196,7 +245,7 @@
             </ul>
         </section>
 
-        <section class="map m_50">
+        <section class="map">
 
             <div class="inner-wrapper">
                 <div class="plane"></div>
@@ -356,395 +405,49 @@
             </div>
         </section>
 
-        <section class="photo m_50">
-
-            <div class="inner-wrapper" data-aos="fade-up" data-aos-duration="1500">
-
-                <div id="js-filters-masonry-projects" class="cbp-l-filters-buttonCenter">
-                    <div data-filter="*" class="cbp-filter-item-active cbp-filter-item">
-                        All <div class="cbp-filter-counter"></div>
-                    </div>
-                    <div data-filter=".castle" class="cbp-filter-item">
-                        castle <div class="cbp-filter-counter"></div>
-                    </div>
-                    <div data-filter=".temple" class="cbp-filter-item">
-                        temple <div class="cbp-filter-counter"></div>
-                    </div>
-                    <div data-filter=".street" class="cbp-filter-item">
-                        street <div class="cbp-filter-counter"></div>
-                    </div>
-                    <div data-filter=".flower" class="cbp-filter-item">
-                        flower <div class="cbp-filter-counter"></div>
-                    </div>
-
-                </div>
-
-                <div id="js-grid-masonry-projects" class="cbp cbp-l-grid-masonry-projects">
-                    <!--01-->
-                    <div class="cbp-item castle">
-                        <div class="cbp-caption">
-                            <div class="cbp-caption-defaultWrap">
-                                <img src="https://images.pexels.com/photos/1440476/pexels-photo-1440476.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-                                    alt="">
-                            </div>
-                            <div class="cbp-caption-activeWrap">
-                                <div class="cbp-l-caption-alignCenter">
-                                    <div class="cbp-l-caption-body">
-                                        <a href="https://images.pexels.com/photos/1440476/pexels-photo-1440476.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                                            class="cbp-lightbox cbp-l-caption-buttonRight">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--01-->
-                    <div class="cbp-item castle">
-                        <div class="cbp-caption">
-                            <div class="cbp-caption-defaultWrap">
-                                <img src="https://images.pexels.com/photos/1654748/pexels-photo-1654748.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-                                    alt="">
-                            </div>
-                            <div class="cbp-caption-activeWrap">
-                                <div class="cbp-l-caption-alignCenter">
-                                    <div class="cbp-l-caption-body">
-                                        <a href="https://images.pexels.com/photos/1654748/pexels-photo-1654748.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                                            class="cbp-lightbox cbp-l-caption-buttonRight">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--01-->
-                    <div class="cbp-item castle">
-                        <div class="cbp-caption">
-                            <div class="cbp-caption-defaultWrap">
-                                <img src="https://images.pexels.com/photos/1829980/pexels-photo-1829980.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-                                    alt="">
-                            </div>
-                            <div class="cbp-caption-activeWrap">
-                                <div class="cbp-l-caption-alignCenter">
-                                    <div class="cbp-l-caption-body">
-                                        <a href="https://images.pexels.com/photos/1829980/pexels-photo-1829980.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                                            class="cbp-lightbox cbp-l-caption-buttonRight">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--01-->
-                    <div class="cbp-item castle">
-                        <div class="cbp-caption">
-                            <div class="cbp-caption-defaultWrap">
-                                <img src="https://images.pexels.com/photos/161923/osaka-castle-japan-five-osaka-161923.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-                                    alt="">
-                            </div>
-                            <div class="cbp-caption-activeWrap">
-                                <div class="cbp-l-caption-alignCenter">
-                                    <div class="cbp-l-caption-body">
-                                        <a href="https://images.pexels.com/photos/161923/osaka-castle-japan-five-osaka-161923.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                                            class="cbp-lightbox cbp-l-caption-buttonRight">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--01-->
-                    <div class="cbp-item castle">
-                        <div class="cbp-caption">
-                            <div class="cbp-caption-defaultWrap">
-                                <img src="https://images.pexels.com/photos/2425464/pexels-photo-2425464.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-                                    alt="">
-                            </div>
-                            <div class="cbp-caption-activeWrap">
-                                <div class="cbp-l-caption-alignCenter">
-                                    <div class="cbp-l-caption-body">
-                                        <a href="https://images.pexels.com/photos/2425464/pexels-photo-2425464.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                                            class="cbp-lightbox cbp-l-caption-buttonRight">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--01-->
-                    <div class="cbp-item castle">
-                        <div class="cbp-caption">
-                            <div class="cbp-caption-defaultWrap">
-                                <img src="https://images.pexels.com/photos/2795513/pexels-photo-2795513.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-                                    alt="">
-                            </div>
-                            <div class="cbp-caption-activeWrap">
-                                <div class="cbp-l-caption-alignCenter">
-                                    <div class="cbp-l-caption-body">
-                                        <a href="https://images.pexels.com/photos/2795513/pexels-photo-2795513.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                                            class="cbp-lightbox cbp-l-caption-buttonRight">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--02-->
-                    <div class="cbp-item temple">
-                        <div class="cbp-caption">
-                            <div class="cbp-caption-defaultWrap">
-                                <img src="https://images.pexels.com/photos/402028/pexels-photo-402028.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-                                    alt="">
-                            </div>
-                            <div class="cbp-caption-activeWrap">
-                                <div class="cbp-l-caption-alignCenter">
-                                    <div class="cbp-l-caption-body">
-                                        <a href="https://images.pexels.com/photos/402028/pexels-photo-402028.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                                            class="cbp-lightbox cbp-l-caption-buttonRight">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!--02-->
-                    <div class="cbp-item temple">
-                        <div class="cbp-caption">
-                            <div class="cbp-caption-defaultWrap">
-                                <img src="https://images.pexels.com/photos/161251/senso-ji-temple-japan-kyoto-landmark-161251.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-                                    alt="">
-                            </div>
-                            <div class="cbp-caption-activeWrap">
-                                <div class="cbp-l-caption-alignCenter">
-                                    <div class="cbp-l-caption-body">
-                                        <a href="https://images.pexels.com/photos/161251/senso-ji-temple-japan-kyoto-landmark-161251.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                                            class="cbp-lightbox cbp-l-caption-buttonRight">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!--02-->
-                    <div class="cbp-item temple">
-                        <div class="cbp-caption">
-                            <div class="cbp-caption-defaultWrap">
-                                <img src="https://images.pexels.com/photos/161401/fushimi-inari-taisha-shrine-kyoto-japan-temple-161401.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-                                    alt="">
-                            </div>
-                            <div class="cbp-caption-activeWrap">
-                                <div class="cbp-l-caption-alignCenter">
-                                    <div class="cbp-l-caption-body">
-                                        <a href="https://images.pexels.com/photos/161401/fushimi-inari-taisha-shrine-kyoto-japan-temple-161401.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                                            class="cbp-lightbox cbp-l-caption-buttonRight">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <!--02-->
-                    <div class="cbp-item temple">
-                        <div class="cbp-caption">
-                            <div class="cbp-caption-defaultWrap">
-                                <img src="https://images.pexels.com/photos/96423/pexels-photo-96423.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-                                    alt="">
-                            </div>
-                            <div class="cbp-caption-activeWrap">
-                                <div class="cbp-l-caption-alignCenter">
-                                    <div class="cbp-l-caption-body">
-                                        <a href="https://images.pexels.com/photos/96423/pexels-photo-96423.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                                            class="cbp-lightbox cbp-l-caption-buttonRight">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!--02-->
-                    <div class="cbp-item temple">
-                        <div class="cbp-caption">
-                            <div class="cbp-caption-defaultWrap">
-                                <img src="https://images.pexels.com/photos/356629/pexels-photo-356629.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-                                    alt="">
-                            </div>
-                            <div class="cbp-caption-activeWrap">
-                                <div class="cbp-l-caption-alignCenter">
-                                    <div class="cbp-l-caption-body">
-                                        <a href="https://images.pexels.com/photos/356629/pexels-photo-356629.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                                            class="cbp-lightbox cbp-l-caption-buttonRight">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!--03-->
-                    <div class="cbp-item street">
-                        <div class="cbp-caption">
-                            <div class="cbp-caption-defaultWrap">
-                                <img src="https://images.pexels.com/photos/1325837/pexels-photo-1325837.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-                                    alt="">
-                            </div>
-                            <div class="cbp-caption-activeWrap">
-                                <div class="cbp-l-caption-alignCenter">
-                                    <div class="cbp-l-caption-body">
-                                        <a href="https://images.pexels.com/photos/1325837/pexels-photo-1325837.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                                            class="cbp-lightbox cbp-l-caption-buttonRight">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!--03-->
-                    <div class="cbp-item street">
-                        <div class="cbp-caption">
-                            <div class="cbp-caption-defaultWrap">
-                                <img src="https://images.pexels.com/photos/2187661/pexels-photo-2187661.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-                                    alt="">
-                            </div>
-                            <div class="cbp-caption-activeWrap">
-                                <div class="cbp-l-caption-alignCenter">
-                                    <div class="cbp-l-caption-body">
-                                        <a href="https://images.pexels.com/photos/2187661/pexels-photo-2187661.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                                            class="cbp-lightbox cbp-l-caption-buttonRight">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!--03-->
-                    <div class="cbp-item street">
-                        <div class="cbp-caption">
-                            <div class="cbp-caption-defaultWrap">
-                                <img src="https://images.pexels.com/photos/2187662/pexels-photo-2187662.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-                                    alt="">
-                            </div>
-                            <div class="cbp-caption-activeWrap">
-                                <div class="cbp-l-caption-alignCenter">
-                                    <div class="cbp-l-caption-body">
-                                        <a href="https://images.pexels.com/photos/2187662/pexels-photo-2187662.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                                            class="cbp-lightbox cbp-l-caption-buttonRight">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!--03-->
-                    <div class="cbp-item street">
-                        <div class="cbp-caption">
-                            <div class="cbp-caption-defaultWrap">
-                                <img src="https://images.pexels.com/photos/2187673/pexels-photo-2187673.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-                                    alt="">
-                            </div>
-                            <div class="cbp-caption-activeWrap">
-                                <div class="cbp-l-caption-alignCenter">
-                                    <div class="cbp-l-caption-body">
-                                        <a href="https://images.pexels.com/photos/2187673/pexels-photo-2187673.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                                            class="cbp-lightbox cbp-l-caption-buttonRight">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--04-->
-                    <div class="cbp-item flower">
-                        <div class="cbp-caption">
-                            <div class="cbp-caption-defaultWrap">
-                                <img src="https://images.pexels.com/photos/1023953/pexels-photo-1023953.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-                                    alt="">
-                            </div>
-                            <div class="cbp-caption-activeWrap">
-                                <div class="cbp-l-caption-alignCenter">
-                                    <div class="cbp-l-caption-body">
-                                        <a href="https://images.pexels.com/photos/1023953/pexels-photo-1023953.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                                            class="cbp-lightbox cbp-l-caption-buttonRight">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--04-->
-                    <div class="cbp-item flower">
-                        <div class="cbp-caption">
-                            <div class="cbp-caption-defaultWrap">
-                                <img src="https://images.pexels.com/photos/250591/pexels-photo-250591.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-                                    alt="">
-                            </div>
-                            <div class="cbp-caption-activeWrap">
-                                <div class="cbp-l-caption-alignCenter">
-                                    <div class="cbp-l-caption-body">
-                                        <a href="https://images.pexels.com/photos/250591/pexels-photo-250591.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                                            class="cbp-lightbox cbp-l-caption-buttonRight">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--04-->
-                    <div class="cbp-item flower">
-                        <div class="cbp-caption">
-                            <div class="cbp-caption-defaultWrap">
-                                <img src="https://images.pexels.com/photos/981364/pexels-photo-981364.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-                                    alt="">
-                            </div>
-                            <div class="cbp-caption-activeWrap">
-                                <div class="cbp-l-caption-alignCenter">
-                                    <div class="cbp-l-caption-body">
-                                        <a href="https://images.pexels.com/photos/981364/pexels-photo-981364.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                                            class="cbp-lightbox cbp-l-caption-buttonRight">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!--04-->
-                    <div class="cbp-item flower">
-                        <div class="cbp-caption">
-                            <div class="cbp-caption-defaultWrap">
-                                <img src="https://images.pexels.com/photos/356269/pexels-photo-356269.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-                                    alt="">
-                            </div>
-                            <div class="cbp-caption-activeWrap">
-                                <div class="cbp-l-caption-alignCenter">
-                                    <div class="cbp-l-caption-body">
-                                        <a href="https://images.pexels.com/photos/356269/pexels-photo-356269.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                                            class="cbp-lightbox cbp-l-caption-buttonRight">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                </div>
-
-                <div id="js-loadMore-masonry-projects" class="cbp-l-loadMore-button">
-                    <a href="ajax-masonry-projects/loadMore.html" class="cbp-l-loadMore-link" rel="nofollow">
-                        <span class="cbp-l-loadMore-defaultText">LOAD MORE (<span
-                                class="cbp-l-loadMore-loadItems">3</span>)</span>
-                        <span class="cbp-l-loadMore-loadingText">LOADING...</span>
-                        <span class="cbp-l-loadMore-noMoreLoading">NO MORE WORKS</span>
+        <section class="t-align-center m_50">
+            <ul class="advantage-sec-slide">
+                <li>
+                    <a href="images/bxslider-1.jpg" data-lity="">
+                        <img src="images/bxslider-1.jpg" alt="">
                     </a>
-                </div>
-            </div>
+                </li>
+                <li>
+                    <a href="images/bxslider-2.jpg" data-lity="">
+                        <img src="images/bxslider-2.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="images/bxslider-3.jpg" data-lity="">
+                        <img src="images/bxslider-3.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="images/bxslider-4.jpg" data-lity="">
+                        <img src="images/bxslider-4.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="images/bxslider-5.jpg" data-lity="">
+                        <img src="images/bxslider-5.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="images/bxslider-6.jpg" data-lity="">
+                        <img src="images/bxslider-6.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="images/bxslider-7.jpg" data-lity="">
+                        <img src="images/bxslider-7.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="images/bxslider-8.jpg" data-lity="">
+                        <img src="images/bxslider-8.jpg" alt="">
+                    </a>
+                </li>
+            </ul>
         </section>
 
         <section class="news m_50">
@@ -759,7 +462,7 @@
 
                 </div>
                 <ul class="news_list">
-                    <li  data-aos="fade-up" data-aos-duration="2000" data-aos-delay="1000">
+                    <li data-aos="fade-up" data-aos-duration="2000" data-aos-delay="100">
                         <a href="">
                             <div class="news_list_img">
                                 <img src="images/news_img01.png" alt="">
@@ -775,7 +478,7 @@
                         </a>
 
                     </li>
-                    <li  data-aos="fade-up" data-aos-duration="2000" data-aos-delay="1500">
+                    <li data-aos="fade-up" data-aos-duration="2000" data-aos-delay="150">
                         <a href="">
                             <div class="news_list_img">
                                 <img src="images/news_img02.png" alt="">
@@ -793,7 +496,7 @@
 
                     </li>
 
-                    <li  data-aos="fade-up" data-aos-duration="2000" data-aos-delay="2000">
+                    <li data-aos="fade-up" data-aos-duration="2000" data-aos-delay="200">
                         <a href="">
                             <div class="news_list_img">
                                 <img src="images/news_img03.png" alt="">
@@ -810,7 +513,7 @@
                         </a>
                     </li>
 
-                    <li data-aos="fade-up" data-aos-duration="2000" data-aos-delay="2500">
+                    <li data-aos="fade-up" data-aos-duration="2000" data-aos-delay="250">
                         <a href="">
                             <div class="news_list_img">
                                 <img src="images/news_img04.png" alt="">
@@ -827,7 +530,7 @@
                             </div>
                         </a>
                     </li>
-                    <li class="news_list_more" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="3500">
+                    <li class="news_list_more" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="350">
                         <a href="">閱讀更多</a>
                     </li>
 
@@ -844,11 +547,11 @@
                     <strong data-aos="fade-up-500" data-aos-duration="1500">文化活動</strong>
                 </div>
 
-                <p data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1200">京都一年四季都充滿了和文化、藝術以及大自然相關的活動。</p>
+                <p data-aos="fade-up" data-aos-duration="1500" data-aos-delay="120">京都一年四季都充滿了和文化、藝術以及大自然相關的活動。</p>
 
             </div>
             <div class="activity_photo owl-carousel owl-theme" data-aos="fade-up" data-aos-duration="1500"
-                data-aos-delay="1800">
+                data-aos-delay="180">
                 <a href="#" title="故事" target="_blank">
                     <strong>秋季特別公開【寶鏡寺】〈秋之人形娃娃展〉</strong>
                     <div class="activity_date">2019.11.01-2019.11.30</div>
@@ -878,18 +581,6 @@
 
         </section>
 
-        <section class="exploration">
-            <img src="images/exploration_img.png" alt="" class="up_img">
-            <img src="images/exploration_bg.jpg" alt="">
-            <div class="inner-wrapper">
-                <div class="exploration_text">
-                    <strong data-parallax='{"y" : 20}'>Japan Deep Tour</strong>
-                    <p data-parallax='{"y" : 50}'>Kyoto street exploration</p>
-                </div>
-
-            </div>
-
-        </section>
 
 
 

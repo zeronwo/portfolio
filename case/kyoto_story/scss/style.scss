@@ -95,20 +95,20 @@ $color5: #f2f2f2;
     color: $color2;
   }
   &:after {
+    border-radius: 20px;
     position: absolute;
     z-index: 0;
-    top: 0;
-    left: 0;
+    right: 100%;
+    bottom: 0;
     display: block;
-    width: 0;
-    height: 100%;
+    width: 100%;
+    height: 1px;
     content: "";
-    -webkit-transition: width 0.3s ease-in-out;
-    transition: width 0.3s ease-in-out;
+    transition: all 0.4s;
     background: $color1;
   }
   &:hover:after {
-    width: 100%;
+    right: 0;
   }
 }
 
@@ -152,14 +152,39 @@ header {
   .top {
     position: fixed;
     width: 100%;
-    background:  $color3;
+    background: $color3;
     height: auto;
     z-index: 99;
     @include flex();
-    padding: 5px 2%;
+    padding: 10px 2%;
     .logo {
+      position: relative;
+      z-index: 99;
       img {
         max-height: 30px;
+      }
+    }
+  }
+}
+
+.top_img {
+  position: relative;
+  height: 100vh;
+  .top_img_box {
+    .item {
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 0;
+      padding-bottom: 100vh;
+      overflow: hidden;
+      img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        object-fit: cover;
       }
     }
   }
@@ -168,15 +193,117 @@ header {
 .menu {
   li {
     display: inline-block;
+    margin-right: 30px;
     a {
+      width: 35px;
+      height: 21px;
       color: $color1;
+      display: block;
       font-size: 1em;
       padding: 5px 15px;
       position: relative;
-      @include hover_bottom();
+      overflow: hidden;
+      span{
+        white-space: nowrap;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: all 0.3s;
+      }
+      span:first-of-type {
+      
+        transform: translate(0px, 0);
+      }
+      span:last-of-type {
+        transform: translate(0px, 113%);
+      }
+      &:hover{
+        span:first-of-type {
+       
+          transform: translate(0px, -113%);
+        }
+        span:last-of-type {
+          transform: translate(0px, 0);
+        }
+      }
     }
   }
 }
+
+.menu_mob {
+  width: 100%;
+  background: $color3;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 90;
+  .menu_mob_box {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    ul {
+      width: 100%;
+      @include flex();
+      flex-direction: column;
+      li {
+        width: 70%;
+        text-align: center;
+        a {
+          color: $color1;
+          display: block;
+          padding: 5px;
+          margin-bottom: 10px;
+          font-size: 1.25em;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  display: none;
+}
+
+//漢堡選單 ST
+.menu_button {
+  display: inline-block;
+  position: relative;
+  padding: 0.7rem 0.5rem;
+  transition: 0.25s;
+  cursor: pointer;
+  user-select: none;
+  position: absolute;
+  z-index: 100;
+  right: 0;
+  top: 13px;
+  display: none;
+  .menuicon {
+    position: relative;
+    width: 2rem;
+    height: 0.2rem;
+    background: $color1;
+    transition: 0.2s;
+    border-radius: 2.5rem;
+    &:before,
+    &:after {
+      display: block;
+      content: "";
+      height: 0.2rem;
+      width: 2rem;
+      background: $color1;
+      position: absolute;
+      transition: 0.2s;
+      border-radius: 1rem;
+    }
+    &:before {
+      top: 0.5rem;
+    }
+    &:after {
+      top: -0.5rem;
+    }
+  }
+}
+
+//漢堡選單 END
 
 .example-marquee {
   width: 100%;
@@ -185,58 +312,47 @@ header {
   top: 0;
 }
 
-.youtube-background{
-  iframe{
+.youtube-background {
+  iframe {
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
   }
 }
 
 .content {
-  max-width: 1200px;
-  margin: auto;
-  display: table;
-  width: 100%;
-  min-height: 100vh;
-  z-index: 1;
-  position: relative;
+  position: absolute;
+  z-index: 9;
+  top: 60%;
+  transform: translate(0, -50%);
 }
 
 .content .inner {
-  display: table-cell;
-  vertical-align: middle;
-  text-align: center;
-  padding-left: 50px;
-  padding-right: 16px;
+  padding: 0 0 0 120px;
 }
 
 .content .inner h1 {
-  font-size: 95px;
+  font-size: 2.55rem;
   text-align: left;
-  line-height: 108px;
-  padding: 20px 0 60px 0;
+  line-height: 137%;
   position: relative;
   margin-bottom: 20px;
-  color: #fff;
-  .tt{
+  color: $color1;
+  .tt {
     overflow: hidden;
     text-shadow: 2px 2px 10px #000000;
-    strong{
+    strong {
       display: block;
       @include big-text();
-
     }
   }
 }
 
-
-
 .content .inner h1:after {
   content: "";
   width: 60px;
-  height: 12px;
+  height: 5px;
   background: #fff;
   position: absolute;
   bottom: 0;
@@ -246,6 +362,7 @@ header {
 .content .inner p {
   padding: 10px 0;
   text-align: justify;
+  text-shadow: 2px 2px 10px #000000;
 }
 
 .go_top {
@@ -285,12 +402,12 @@ header {
       -webkit-transform: rotate(45deg);
       transform: rotate(45deg);
     }
-    &:hover{
+    &:hover {
       background: $color1;
       &:before,
-    &:after {
-      background: $color3;
-    }
+      &:after {
+        background: $color3;
+      }
     }
   }
 }
@@ -329,7 +446,6 @@ main {
         font-size: 1.75em;
         position: relative;
         transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-       
       }
       &:after {
         content: "";
@@ -466,21 +582,27 @@ main {
     li {
       position: absolute;
       a {
-        color: $color2;
+        border-radius: 5px;
+        border-bottom: 1px #d0b558 solid;
+        background: $color5;
+        color: #5d5d5d;
         display: block;
+        font-size: 0.9em;
         font-weight: bold;
         position: relative;
         padding: 5px;
         @include hover_bottom();
+        overflow: hidden;
+        box-shadow: 0px 0px 4px -1px #717171;
         span {
           position: relative;
           z-index: 9;
         }
         &:after {
-          background: #e5cf19;
+          background: #d13239;
         }
         &:hover {
-          color: $color3;
+          color: #d13239;
         }
       }
     }
@@ -488,9 +610,9 @@ main {
 }
 
 .map_position li.active a {
-  color: $color3;
+  color: #d13239;
   &:after {
-    width: 100%;
+    right: 0;
   }
 }
 
@@ -671,10 +793,10 @@ main {
 }
 
 .owl-theme .owl-nav [class*="owl-"] {
-  border: 1px  $color3 solid;
+  border: 1px $color3 solid;
   width: 40px;
   height: 40px;
-  background:  $color3;
+  background: $color3;
   color: #fff;
   line-height: 40px;
   transition: all 0.4s;
@@ -692,17 +814,15 @@ main {
       content: "\f104";
     }
   }
-  
 }
 
-
 .owl-theme .owl-nav [class*="owl-"]:hover {
-  border: 1px  $color3 solid;
-    background: #ffffff;
-    color:  $color3;
-    &:before {
-      color: $color3;
-    }
+  border: 1px $color3 solid;
+  background: #ffffff;
+  color: $color3;
+  &:before {
+    color: $color3;
+  }
 }
 
 /*箭頭垂直置中*/
@@ -720,20 +840,20 @@ main {
   .inner-wrapper {
     @include flex();
     align-items: flex-start;
-    padding-top: 72px;
+    padding-top: 20px;
     .news_title {
       flex: 0 0 33%;
       padding-right: 5%;
 
-.tt{
-  overflow: hidden;
-  strong {
-    color: $color3;
-    display: block;
-    font-size: 25px;
-    margin-bottom: 15px;
-  }
-}
+      .tt {
+        overflow: hidden;
+        strong {
+          color: $color3;
+          display: block;
+          font-size: 25px;
+          margin-bottom: 15px;
+        }
+      }
       p {
         color: $color2;
         line-height: 25px;
@@ -746,6 +866,7 @@ main {
 .news_list {
   background: $color1;
   flex: 0 0 67%;
+  box-shadow: 0px 0px 8px -1px #d6d6d6;
   li {
     a {
       border-bottom: 1px solid #e5e5e5;
@@ -757,7 +878,9 @@ main {
         flex: 0 0 33%;
         overflow: hidden;
         img {
-          transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+          transition: all 1s ease-out;
+          transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+          will-change: transform;
         }
       }
       .news_list_text {
@@ -805,7 +928,8 @@ main {
         }
       }
       &:hover img {
-        transform: scale(1.09);
+        
+        transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0.85);
       }
     }
     &.news_list_more {
@@ -868,18 +992,17 @@ main {
   }
 }
 
-
 .activity_title {
   margin-bottom: 20px;
-.tt{
-  overflow: hidden;
-  strong {
-    color: $color3;
-    display: block;
-    font-size: 25px;
-    margin-bottom: 5px;
+  .tt {
+    overflow: hidden;
+    strong {
+      color: $color3;
+      display: block;
+      font-size: 25px;
+      margin-bottom: 5px;
+    }
   }
-}
   p {
     color: $color2;
     line-height: 25px;
@@ -901,52 +1024,21 @@ main {
         font-size: 13px;
       }
       .activity_img {
-        padding-bottom: 50%;
+        padding-bottom: 65%;
         background-size: cover;
+        background-position: top center;
         width: 90%;
         margin-left: 10%;
         margin-top: 25px;
         opacity: 1;
-        transition: all 0.4s;
+        transition: all 0.6s;
       }
       &:hover .activity_img {
         opacity: 0.8;
+        background-position: bottom center;
       }
     }
     .owl-item:first-child {
-    }
-  }
-}
-
-.exploration {
-  position: relative;
-  .up_img {
-    position: absolute;
-    top: 17.5%;
-    z-index: 9;
-  }
-  .inner-wrapper {
-    max-width: inherit;
-    width: 100%;
-
-    position: absolute;
-    top: 0;
-    .exploration_text {
-      text-transform: uppercase;
-      color: $color3;
-      text-align: center;
-      padding-top: 5%;
-      strong {
-        display: block;
-        font-size: 5.25em;
-        font-family: "Franklin";
-        letter-spacing: 10px;
-        line-height: 85px;
-      }
-      p {
-        font-size: 2.375em;
-        letter-spacing: 13.5px;
-      }
     }
   }
 }
@@ -964,7 +1056,6 @@ footer {
 
 /*彈出*/
 .lity-container {
-  height: 70%;
   padding: 0 1em;
   .lity-content {
     height: 100%;
@@ -993,25 +1084,24 @@ footer {
     }
   }
 }
-/* scroll */
-::-webkit-scrollbar {
-  width: 8px;
-  max-height: 100%;
-  background-color: $color5;
-  opacity: 0.2;
-  border-radius: 50px;
-  display: block;
+
+.advantage-sec-slide{
+  li{
+    a{
+      display: block;
+      overflow: hidden;
+      img{
+        transition: all 0.5s ease-out;
+        transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        will-change: transform;
+      }
+      &:hover img{
+        transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0.85);
+      }
+    }
+  }
 }
-::-webkit-scrollbar-track {
-  background-color: $color5;
-} /* the new scrollbar will have a flat appearance with the set background color */
-::-webkit-scrollbar-thumb {
-  background-color: $color3;
-  border-radius: 50px;
-} /* this will style the thumb, ignoring the track */
-::-webkit-scrollbar-corner {
-  background-color: black;
-}
+
 
 /*RWD*/
 @media (min-width: 1025px) {
@@ -1024,10 +1114,43 @@ footer {
 }
 
 @media (max-width: 1024px) {
-  .content .inner h1 {
-    font-size: 44px;
-    line-height: 50px;
+  .menu {
+    display: none;
   }
+  .menu_button {
+    display: block;
+  }
+  header .top {
+    justify-content: center;
+  }
+  header.active {
+    .menu_button {
+      .menuicon {
+        background: transparent;
+        &:before {
+          top: 0;
+          transform: rotate(-45deg);
+        }
+        &:after {
+          top: 0;
+          transform: rotate(45deg);
+        }
+      }
+    }
+    .md-overlay {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  .content .inner {
+    padding: 30px;
+    h1 {
+      font-size: 35px;
+      line-height: 50px;
+    }
+  }
+
   .culture .img-hover,
   .culture a:hover .img-hover {
     display: none;
@@ -1058,19 +1181,21 @@ footer {
       padding-top: 20px;
       justify-content: flex-start;
       li {
-        width: calc(100% / 6);
+        width: calc(100% / 4 - 20px);
         position: static;
+        margin: 5px;
       }
     }
   }
   .map_present {
     width: 100%;
     ul li {
-      padding: 15px 0;
+      padding: 30px 0;
       .map_img {
         background: #e5cf19;
         width: 100%;
         height: 275px;
+        margin-bottom: 15px;
       }
     }
   }
@@ -1088,13 +1213,21 @@ footer {
   }
   .map_position {
     ul {
+      justify-content: space-between;
       li {
-        width: calc(100% / 2);
+        width: calc(100% / 2 - 10px);
+        margin: 0 0 10px 0;
+        a {
+          padding: 5px 5px 5px 15px;
+        }
       }
     }
   }
   .news .inner-wrapper {
     flex-direction: column;
+    .news_title {
+      margin-bottom: 10px;
+    }
   }
   .news_list li a {
     flex-direction: column;
@@ -1105,9 +1238,13 @@ footer {
   }
   .news_list li a .news_list_text {
     padding: 5px;
-    text-align: center;
     .news_list_time {
       position: static;
+      padding: 5px 0;
+      text-align: left;
+      .news_list_month {
+        margin-top: 2px;
+      }
     }
   }
   .exploration .inner-wrapper .exploration_text strong {
@@ -1118,5 +1255,16 @@ footer {
   .exploration .inner-wrapper .exploration_text p {
     font-size: 0.8em;
     letter-spacing: 5.5px;
+  }
+  .activity .activity_photo a {
+    .activity_date {
+      margin-bottom: 5px;
+    }
+    .activity_img {
+      margin: 0;
+    }
+  }
+  .activity_title p {
+    padding: 0 15px 0 0;
   }
 }
