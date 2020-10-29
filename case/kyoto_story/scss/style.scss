@@ -544,7 +544,8 @@ main {
 .map {
   @include bg-box();
   background-image: url(../images/map_bg.jpg);
-  height: 633px;
+  background-size: auto;
+  height: 545px;
   overflow: hidden;
   .inner-wrapper {
     @include flex();
@@ -617,27 +618,27 @@ main {
 }
 
 .map_position li:nth-of-type(1) {
-  bottom: 258px;
+  bottom: 169px;
   left: 250px;
 }
 
 .map_position li:nth-of-type(2) {
-  bottom: 368px;
-  left: 333px;
+  bottom: 260px;
+  left: 343px;
 }
 
 .map_position li:nth-of-type(3) {
-  bottom: 381px;
+  bottom: 291px;
   left: 280px;
 }
 
 .map_position li:nth-of-type(4) {
-  bottom: 326px;
+  bottom: 236px;
   left: 208px;
 }
 
 .map_position li:nth-of-type(5) {
-  top: 53px;
+  top: 73px;
   left: 193px;
 }
 
@@ -647,27 +648,27 @@ main {
 }
 
 .map_position li:nth-of-type(7) {
-  bottom: 356px;
+  bottom: 276px;
   left: 80px;
 }
 
 .map_position li:nth-of-type(8) {
-  top: 87px;
+  top: 97px;
   left: 70px;
 }
 
 .map_position li:nth-of-type(9) {
-  top: 68px;
-  right: 220px;
+  top: 88px;
+  right: 340px;
 }
 
 .map_position li:nth-of-type(10) {
-  bottom: 380px;
+  bottom: 291px;
   left: 224px;
 }
 
 .map_position li:nth-of-type(11) {
-  bottom: 456px;
+  bottom: 371px;
   left: 236px;
 }
 
