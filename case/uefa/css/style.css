@@ -534,7 +534,6 @@ body a {
 body,
 html {
   width: 100%;
-  height: 100%;
 }
 
 body {
@@ -544,6 +543,12 @@ body {
   font-size: 100%;
   position: relative;
   overflow-x: hidden;
+}
+
+@supports (-webkit-appearance: none) {
+  .os-android body {
+    min-height: calc(100vh - 56px);
+  }
 }
 
 .container {
