@@ -997,6 +997,12 @@ main {
           animation: overlay 1s;
 }
 
+@media (max-width: 500px) {
+  .map_present ul li .map_img .overlay {
+    display: none;
+  }
+}
+
 .map_present ul li .map_txt dd {
   color: #d13239;
   font-size: 1.563em;
@@ -1028,12 +1034,6 @@ main {
   0% {
     opacity: 0;
   }
-  50% {
-    opacity: 0;
-  }
-  51% {
-    opacity: 1;
-  }
   100% {
     opacity: 1;
     -webkit-transform: translate(-50%, -50%) scale(1);
@@ -1044,12 +1044,6 @@ main {
 @keyframes pic {
   0% {
     opacity: 0;
-  }
-  50% {
-    opacity: 0;
-  }
-  51% {
-    opacity: 1;
   }
   100% {
     opacity: 1;
