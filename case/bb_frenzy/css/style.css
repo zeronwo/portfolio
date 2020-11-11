@@ -105,6 +105,12 @@ body {
   height: calc(var(--vh, 1vh) * 100);
 }
 
+@supports (-webkit-appearance: none) {
+  .os-android body {
+    min-height: calc(100vh - 56px);
+  }
+}
+
 body a:hover {
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
