@@ -9,7 +9,7 @@ $(document).ready(function () {
     });
 
     var bodyClass = document.body.classList,
-        lastScrollY = 0;
+        lastScrollY = 200;
     window.addEventListener('scroll', function () {
         var st = this.scrollY;
         // 判斷是向上捲動，而且捲軸超過 200px
@@ -193,7 +193,7 @@ $(document).ready(function () {
             {
                 breakpoint: 1300,
                 settings: {
-                    
+
                     vertical: false,
                 }
             }
@@ -202,7 +202,61 @@ $(document).ready(function () {
 
     });
 
-  
+    //lookbook_style
+    $(".lookbook_style_list").hide();
+    $(".lookbook_style>ul>li>button").click(function () {
+        $(this).parent().toggleClass("open").siblings().removeClass("open");
+        $(this).parent().find(".lookbook_style_list").slideToggle();
+        $(this).parent().siblings().find(".lookbook_style_list").slideUp();
+    });
+
+    $(".lookbook_style_see").click(function () {
+        $(this).toggleClass("open");
+        $(".lookbook_style_box").slideToggle();
+    });
+
+
+    //lookbook輪播圖
+    $('.lookbook_recommend_box').slick({
+        arrows: false,
+        autoplay: false,
+        autoplaySpeed: 2000,
+        dots: false,
+        infinite: true,
+        speed: 800,
+        slidesToShow: 6,
+        slidesToScroll: 6,
+        responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 5,
+                slidesToScroll: 5,
+                infinite: true,
+                dots: true
+              }
+            },
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 4,
+                slidesToScroll: 4
+              }
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2
+              }
+            }
+            // You can unslick at a given breakpoint now by adding:
+            // settings: "unslick"
+            // instead of a settings object
+          ]
+    });
+
+
 });
 
 
