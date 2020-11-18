@@ -1075,36 +1075,6 @@ section {
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
-  -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0.85);
-          transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0.85);
-  will-change: transform;
-}
-
-.slick-active .slick-slide-image {
-  -webkit-animation: 6s ease topslide-pc;
-          animation: 6s ease topslide-pc;
-}
-
-@-webkit-keyframes topslide-pc {
-  from {
-    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
-            transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
-  }
-  to {
-    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0.85);
-            transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0.85);
-  }
-}
-
-@keyframes topslide-pc {
-  from {
-    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
-            transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
-  }
-  to {
-    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0.85);
-            transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0.85);
-  }
 }
 
 .menu_main {
@@ -3400,6 +3370,7 @@ a:link {
   -ms-flex-line-pack: stretch;
       align-content: stretch;
   align-items: center;
+  margin-bottom: 40px;
 }
 
 .contact form .contact_main .left {
@@ -3689,6 +3660,9 @@ footer .footer_main .footer_right .social a i {
   .index_menu .index_menu_item a {
     padding-bottom: 25%;
   }
+  .page_top_img {
+    height: 400px;
+  }
   .index_shadow {
     margin-bottom: 2px;
   }
@@ -3771,6 +3745,7 @@ footer .footer_main .footer_right .social a i {
         -ms-flex-direction: column;
             flex-direction: column;
     padding: 0 15px;
+    margin-bottom: 20px;
   }
   .contact form .contact_main .left,
   .contact form .contact_main .right {
@@ -3795,7 +3770,7 @@ footer .footer_main .footer_right .social a i {
   }
   .lookbook_recommend_list.often a {
     margin: 0;
-    width: calc(100%/2 - 10px);
+    width: calc(100% / 2 - 10px);
   }
   .lity-close,
   .lity-close:hover,
