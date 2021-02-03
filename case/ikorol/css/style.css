@@ -1765,9 +1765,6 @@ body.open #header_menu #menu ul li a {
 
 .advantage-sec-slide {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   position: relative;
   -webkit-transition-duration: 100s;
           transition-duration: 100s;
