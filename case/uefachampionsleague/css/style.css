@@ -1967,6 +1967,9 @@ footer {
   .top .container .top_left_img {
     margin: auto;
   }
+  .top .container .top_left {
+    margin-bottom: 20px;
+  }
   .stats ul {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
