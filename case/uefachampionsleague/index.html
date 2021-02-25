@@ -33,12 +33,54 @@
 <body>
     <!-- gotop -->
     <div class="gotop">
-        <a href="javascript:;"></a>
+        <a href="javascript:;"><i class="fa fa-angle-up fa-2x" aria-hidden="true"></i></a>
     </div>
 
 
+    <nav class="menu_mob">
+        <div class="menu_mob_main">
+            <div class="menu_mob_img">
+                <img src="images/menu_mob_img01.jpg" alt="">
+            </div>
+            <ul>
+                <li class="ma">
+                    <a href="javascript:;">
+                        <p>TOP</p>
+                        <strong>首頁</strong>
+                    </a>
+                </li>
+                <li class="mb">
+                    <a href="javascript:;">
+                        <p>LATEST NEWS</p>
+                        <strong>最新消息</strong>
+                    </a>
+                </li>
+                <li class="mc">
+                    <a href="javascript:;">
+                        <p>STANDINGS</p>
+                        <strong>積分榜</strong>
+                    </a>
+                </li>
+                <li class="md">
+                    <a href="javascript:;">
+                        <p>ALL STATS</p>
+                        <strong>比賽統計</strong>
+                    </a>
+                </li>
+                <li class="me">
+                    <a href="javascript:;">
+                        <p>LATEST VIDEOS</p>
+                        <strong>最新影片</strong>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="md-overlay"></div>
+
+
     <!-- 上方選單 -->
-    <header>
+    <header id="header">
         <div class="container">
             <!-- logo -->
             <h1>
@@ -57,35 +99,7 @@
             </a>
 
         </div>
-        <nav class="menu_mob">
-            <ul>
-                <li>
-                    <a href="#">
-                        <p>LATEST NEWS</p>
-                        <strong>最新消息</strong>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <p>STANDINGS</p>
-                        <strong>積分榜</strong>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <p>ALL STATS</p>
-                        <strong>比賽統計</strong>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <p>LATEST VIDEOS</p>
-                        <strong>最新影片</strong>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-        <div class="md-overlay"></div>
+
 
     </header>
 
@@ -737,7 +751,7 @@
             </section>
         </div>
         <!-- 最新影片 -->
-        <section class="news m_90">
+        <section class="news video m_90">
             <div class="title">
                 <h2>
                     <p>VIDEOS</p>
@@ -755,7 +769,7 @@
 
                                 <p class="news_date">
                                     <i class="fa fa-play" aria-hidden="true"></i>
-                                    <span>02:00</span>  
+                                    <span>02:00</span>
                                 </p>
                                 <p class="news_title">
                                     巴黎在H組取得獲勝<br>
@@ -771,7 +785,7 @@
 
                                 <p class="news_date">
                                     <i class="fa fa-play" aria-hidden="true"></i>
-                                    <span>02:00</span>  
+                                    <span>02:00</span>
                                 </p>
                                 <p class="news_title">
                                     巴塞羅那如何保持不敗<br>
@@ -786,7 +800,7 @@
                                 </div>
                                 <p class="news_date">
                                     <i class="fa fa-play" aria-hidden="true"></i>
-                                    <span>02:00</span>  
+                                    <span>02:00</span>
                                 </p>
                                 <p class="news_title">
                                     C羅和莫拉塔的進球<br>
@@ -802,11 +816,11 @@
                                 </div>
                                 <p class="news_date">
                                     <i class="fa fa-play" aria-hidden="true"></i>
-                                    <span>02:00</span>  
+                                    <span>02:00</span>
                                 </p>
                                 <p class="news_title">
-                                   曼城3-0馬賽<br>
-                                   C組冠軍勝利中保持不敗
+                                    曼城3-0馬賽<br>
+                                    C組冠軍勝利中保持不敗
                                 </p>
                             </a>
                         </div>
@@ -818,12 +832,78 @@
         </section>
     </main>
     <footer>
+        <div class="container">
+            <div class="footer_main">
+                <div class="footer_top">
+                    <div class="footer_line"></div>
+                    <div class="footer_logo">
+                        <img src="images/logo.png" alt="">
+                    </div>
+                    <div class="footer_line"></div>
+                </div>
+                <div class="footer_bottom">
+                    <ul>
+                        <li class="ma">
+                            <a href="javascript:;">
+                                <p>TOP</p>
+                                <strong>首頁</strong>
+                            </a>
+                        </li>
+                        <li class="mb">
+                            <a href="javascript:;">
+                                <p>LATEST NEWS</p>
+                                <strong>最新消息</strong>
+                            </a>
+                        </li>
+                        <li class="mc">
+                            <a href="javascript:;">
+                                <p>STANDINGS</p>
+                                <strong>積分榜</strong>
+                            </a>
+                        </li>
+                        <li class="md">
+                            <a href="javascript:;">
+                                <p>ALL STATS</p>
+                                <strong>比賽統計</strong>
+                            </a>
+                        </li>
+                        <li class="me">
+                            <a href="javascript:;">
+                                <p>LATEST VIDEOS</p>
+                                <strong>最新影片</strong>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
     </footer>
-    <!-- TOP獎盃 -->
-    <script>
-        $('.tilt').UniversalTilt();
+
+    <script>var new_scroll_position = 0;
+        var last_scroll_position;
+        var header = document.getElementById("header");
+
+        window.addEventListener('scroll', function (e) {
+            last_scroll_position = window.scrollY;
+
+            // Scrolling down
+            if (new_scroll_position < last_scroll_position && last_scroll_position > 80) {
+                // header.removeClass('slideDown').addClass('slideUp');
+                header.classList.remove("slideDown");
+                header.classList.add("slideUp");
+
+                // Scrolling up
+            } else if (new_scroll_position > last_scroll_position) {
+                // header.removeClass('slideUp').addClass('slideDown');
+                header.classList.remove("slideUp");
+                header.classList.add("slideDown");
+            }
+
+            new_scroll_position = last_scroll_position;
+        });
     </script>
+
 
 </body>
 

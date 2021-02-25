@@ -14,32 +14,35 @@ $(document).ready(function () {
     }
   });
   //手機選單
-  $(".menu_button,header .md-overlay,.menu_mob a").click(function () {
-    $("header").toggleClass("active");
-    $(".menu_mob").slideToggle();
+  $(".menu_button,.md-overlay,.menu_mob a").click(function () {
+    $("body").toggleClass("hidden");
+    $("header,.menu_mob").toggleClass("active");
+
   });
 
 
 
   //錨點
   $('.ma').click(function () {
-    $('html,body').animate({ scrollTop: $('.threshold').offset().top - 54 }, 800);
+    $('html,body').animate({ scrollTop: $('.top').offset().top }, 800);
   });
 
   $('.mb').click(function () {
-    $('html,body').animate({ scrollTop: $('.discount').offset().top - 54 }, 800);
+    $('html,body').animate({ scrollTop: $('.news ').offset().top }, 800);
   });
 
   $('.mc').click(function () {
-    $('html,body').animate({ scrollTop: $('.courtesy').offset().top - 54 }, 800);
+    $('html,body').animate({ scrollTop: $('.standings ').offset().top }, 800);
   });
 
   $('.md').click(function () {
-    $('html,body').animate({ scrollTop: $('.condition').offset().top - 54 }, 800);
+    $('html,body').animate({ scrollTop: $('.stats ').offset().top }, 800);
   });
 
 
-
+  $('.me').click(function () {
+    $('html,body').animate({ scrollTop: $('.video').offset().top }, 800);
+  });
 
 
 
@@ -50,23 +53,46 @@ $(document).ready(function () {
     dots: false,
     infinite: true,
     autoplaySpeed: 6000,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          arrows: false,
+          dots: true
+        }
+      },
+
+    ]
   });
 
-  $('.news_img_box').slick({
+  $('.news_img_box,.standings_main ul').slick({
     arrows: true,
     autoplay: false,
     dots: false,
     infinite: true,
     slidesToShow: 3,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          arrows: false,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
+          dots: true
+        }
+      },
+    ]
   });
 
-  $('.standings_main ul').slick({
-    arrows: true,
-    autoplay: false,
-    dots: false,
-    infinite: true,
-    slidesToShow: 3,
-  });
 
 
   //lighrbox
