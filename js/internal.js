@@ -3,20 +3,17 @@ $(document).ready(function () {
 
 
   var bodyClass = document.body.classList,
-  lastScrollY = 0;
-window.addEventListener('scroll', function () {
-  var st = this.scrollY;
-  // 判斷是向上捲動，而且捲軸超過 200px
-  if (st < lastScrollY) {
+    lastScrollY = 0;
+  window.addEventListener('scroll', function () {
+    var st = this.scrollY;
+    // 判斷是向上捲動，而且捲軸超過 200px
+    if (st < lastScrollY) {
       bodyClass.remove('hideUp');
-  } else {
+    } else {
       bodyClass.add('hideUp');
-  }
-  lastScrollY = st;
-});
-
-
-
+    }
+    lastScrollY = st;
+  });
 
   //gotop
   $('.gotop').click(function () {
@@ -31,6 +28,12 @@ window.addEventListener('scroll', function () {
     }
   });
 
+  //LOAD
+  $.fakeLoader({
+    timeToHide:1200,
+    bgColor:"#000000",
+    spinner:"spinner2"
+});
 
   //手機選單
   $(".menu_button,header .md-overlay,.menu_mob a").click(function () {
@@ -39,23 +42,23 @@ window.addEventListener('scroll', function () {
   });
 
   //錨點移動
-  $(".m_a").click(function() {
+  $(".m_a").click(function () {
     $("html,body").animate({ scrollTop: $(".about").offset().top }, 800);
   });
 
-  $(".m_b").click(function() {
+  $(".m_b").click(function () {
     $("html,body").animate({ scrollTop: $(".work").offset().top }, 800);
   });
 
-  $(".m_c").click(function() {
+  $(".m_c").click(function () {
     $("html,body").animate({ scrollTop: $(".skill").offset().top }, 800);
   });
 
-  $(".m_d").click(function() {
+  $(".m_d").click(function () {
     $("html,body").animate({ scrollTop: $(".web").offset().top }, 800);
   });
 
-  $(".m_e").click(function() {
+  $(".m_e").click(function () {
     $("html,body").animate({ scrollTop: $(".visual").offset().top }, 800);
   });
 
@@ -97,79 +100,79 @@ window.addEventListener('scroll', function () {
           slidesToScroll: 2
         }
       }
-  
+
     ]
   });
 
 
-//平面輪播
-$('.slider-single').slick({
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  arrows: true,
-  fade: true,
-  adaptiveHeight: true,
-  infinite: false,
- useTransform: true,
-  speed: 400,
-  cssEase: 'cubic-bezier(0.77, 0, 0.18, 1)',
-});
-
-$('.slider-nav')
-  .on('init', function(event, slick) {
-    $('.slider-nav .slick-slide.slick-current').addClass('is-active');
-  })
-  .slick({
-    slidesToShow: 5,
-    slidesToScroll:5,
-    dots: false,
-    focusOnSelect: false,
+  //平面輪播
+  $('.slider-single').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+    fade: true,
+    adaptiveHeight: true,
     infinite: false,
-    
-    responsive: [{
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 5,
-        slidesToScroll: 5,
-      }
-    }, {
-      breakpoint: 640,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 3,
-     }
-    }, {
-      breakpoint: 420,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 3,
-   }
-    }]
+    useTransform: true,
+    speed: 400,
+    cssEase: 'cubic-bezier(0.77, 0, 0.18, 1)',
   });
 
-$('.slider-single').on('afterChange', function(event, slick, currentSlide) {
-  $('.slider-nav').slick('slickGoTo', currentSlide);
-  var currrentNavSlideElem = '.slider-nav .slick-slide[data-slick-index="' + currentSlide + '"]';
-  $('.slider-nav .slick-slide.is-active').removeClass('is-active');
-  $(currrentNavSlideElem).addClass('is-active');
-});
+  $('.slider-nav')
+    .on('init', function (event, slick) {
+      $('.slider-nav .slick-slide.slick-current').addClass('is-active');
+    })
+    .slick({
+      slidesToShow: 5,
+      slidesToScroll: 5,
+      dots: false,
+      focusOnSelect: false,
+      infinite: false,
 
-$('.slider-nav').on('click', '.slick-slide', function(event) {
-  event.preventDefault();
-  var goToSingleSlide = $(this).data('slick-index');
+      responsive: [{
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 5,
+          slidesToScroll: 5,
+        }
+      }, {
+        breakpoint: 640,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+        }
+      }, {
+        breakpoint: 420,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+        }
+      }]
+    });
 
-  $('.slider-single').slick('slickGoTo', goToSingleSlide);
-});
+  $('.slider-single').on('afterChange', function (event, slick, currentSlide) {
+    $('.slider-nav').slick('slickGoTo', currentSlide);
+    var currrentNavSlideElem = '.slider-nav .slick-slide[data-slick-index="' + currentSlide + '"]';
+    $('.slider-nav .slick-slide.is-active').removeClass('is-active');
+    $(currrentNavSlideElem).addClass('is-active');
+  });
+
+  $('.slider-nav').on('click', '.slick-slide', function (event) {
+    event.preventDefault();
+    var goToSingleSlide = $(this).data('slick-index');
+
+    $('.slider-single').slick('slickGoTo', goToSingleSlide);
+  });
 
 
 
-AOS.init({
-  offset: 300,
-  duration: 600,
-  delay: 100,
-  once: true, //只執行一次動畫
+  AOS.init({
+    offset: 300,
+    duration: 600,
+    delay: 100,
+    once: true, //只執行一次動畫
 
-});
+  });
 
 
 
