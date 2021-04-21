@@ -20,6 +20,12 @@ $(document).ready(function () {
 
   });
 
+  //LOAD
+  $.fakeLoader({
+    timeToHide: 1200,
+    bgColor: "#000000",
+    spinner: "spinner2"
+  });
 
 
   //錨點

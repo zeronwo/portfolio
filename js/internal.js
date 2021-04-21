@@ -30,10 +30,10 @@ $(document).ready(function () {
 
   //LOAD
   $.fakeLoader({
-    timeToHide:1200,
-    bgColor:"#000000",
-    spinner:"spinner2"
-});
+    timeToHide: 1200,
+    bgColor: "#000000",
+    spinner: "spinner2"
+  });
 
   //手機選單
   $(".menu_button,header .md-overlay,.menu_mob a").click(function () {
