@@ -1809,169 +1809,28 @@ body.menu-open {
   margin-top: -157px;
 }
 
-.reserv_tab {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-}
-
-.reserv_tab li {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1;
-          flex: 1 1;
-}
-
-.reserv_tab li a {
-  background: #b79b7e;
-  color: #fff;
-  display: block;
-  padding: 15px 25px;
-  text-align: center;
-  font-size: 1.25em;
-  font-weight: bold;
-}
-
-.reserv_tab li.active a {
-  background: #fff;
-  color: #b79b7e;
-  padding: 20px 25px;
-}
-
 .reserv_main {
   background: #fff;
 }
 
-.reservation_form form {
+.reserv_main ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 2em 2.5em;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
-.reservation_form form h3 {
-  color: #b79b7e;
-  font-size: 1.125em;
-  padding-bottom: 5px;
-}
-
-.reservation_form form .reservation_search {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: calc(100% / 5 * 4);
-}
-
-.reservation_form form .reservation_search .box {
-  width: calc(100% / 3 * 1);
-  padding: 0 18px 0 0;
-}
-
-.reservation_form form .reservation_search .outer_date input {
-  background-repeat: no-repeat;
-  background-position: right center;
-  background-image: url(../imgs/reserve__icon--calendar.png);
-  font-size: 1.25em;
+.reserv_main ul li {
+  border-right: 1px solid #eaeaea;
+  border-bottom: 1px solid #eaeaea;
+  width: calc(100% / 4);
   cursor: pointer;
-  width: 100%;
-  padding-bottom: 0.5em;
-  border: 0 none;
-  border-bottom: 1px solid;
-  color: inherit;
-  background-color: transparent;
+  padding: 22px 20px;
 }
 
-.reservation_form form .reservation_search .outer_people {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.reservation_form form .reservation_search .outer_people .item {
-  width: calc(100% / 2 * 1 - 10px);
-}
-
-.reservation_form form .reservation_search .outer_people .item select {
-  width: 100%;
-  font-size: 1.25em;
-  cursor: pointer;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding-bottom: 0.5em;
-  border: 0 none;
-  border-bottom: 1px solid;
-  color: inherit;
-  background-color: transparent;
-}
-
-.reservation_form form .reservation_btn {
-  background-color: #333;
-  width: calc(100% / 5 * 1);
-  color: #fff;
-}
-
-.reservation_link {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.reservation_link li {
-  padding: 0 16px;
-}
-
-.reservation_link li a {
-  color: #000;
-  display: block;
-  font-size: 1.125em;
-}
-
-.reservation_link li a:hover {
-  color: #b79b7e;
-}
-
-.reservation_link li a:after {
-  content: "\f054";
-  font-family: FontAwesome;
-  display: inline-block;
-  padding-left: 13px;
-  font-size: 0.8em;
-}
-
-.reservation_link li:not(:last-child) {
-  border-right: 1px dotted #000;
-}
-
-.reserv_restaurant {
-  display: -ms-grid;
-  display: grid;
-  grid-gap: 1rem;
-  gap: 1rem;
-  -ms-grid-columns: (minmax(0, 1fr))[4];
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-  padding: 20px;
-}
-
-.reserv_restaurant li a {
-  border-radius: 5px;
-  color: #888;
-  display: block;
-  background-color: #eee;
-  text-align: center;
-  padding: 15px;
-}
-
-.reserv_restaurant li a:hover {
-  background: #b79b7e;
-  color: #fff;
+.reserv_main ul li span {
+  padding-left: 10px;
 }
 
 @media screen and (min-width: 1300px) {
