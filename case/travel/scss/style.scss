@@ -1020,7 +1020,7 @@ body.menu-open {
 
 //預約旅館
 .reservation {
-  max-width: calc(1200px + 12%);
+  max-width: 1200px;
   min-width: 320px;
   margin: auto;
   padding: 0 6%;
@@ -1031,18 +1031,92 @@ body.menu-open {
 
 .reserv_main {
   background: $white;
+  position: relative;
   ul {
     display: flex;
     flex-wrap: wrap;
     li {
       border-right: 1px solid #eaeaea;
       border-bottom: 1px solid #eaeaea;
-      width: calc(100% / 4 );
+      width: calc(100% / 4);
       cursor: pointer;
-      padding: 22px 20px;
-      span{
-        padding-left: 10px;
+      
+      button {
+        width: 100%;
+        padding: 22px 20px;
+        text-align: left;
+        span {
+          padding-left: 10px;
+        }
+
       }
+      &.search {
+        display: flex;
+        padding: 0;
+        button {
+          width: 50%;
+          display: flex;
+          align-content: center;
+          justify-content: center;
+          align-items: center;
+        }
+        .submit {
+          width: 50%;
+          display: flex;
+          justify-content: center;
+          input {
+            width: 100%;
+            border: 0;
+            background: #242a3a;
+            color: $white;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    li:nth-of-type(4n) {
+      border-right: 0;
+    }
+
+  }
+}
+
+.search-bar {
+  width: calc(100% - 260px);
+  position: absolute;
+  overflow: hidden;
+  pointer-events: none;
+  .search-bar_main {
+    border-bottom: 1px solid #eaeaea;
+    background: $white;
+    transform: translateX(778px);
+    height: 68px;
+    display: flex;
+    padding: 10px;
+    transition: transform 1s cubic-bezier(0.77, 0, 0.175, 1) 0s, -webkit-transform 1s cubic-bezier(0.77, 0, 0.175, 1) 0s;
+
+    input {
+      border: 0;
+      width: calc(100% - 78px);
+      background-color: #f3f3f3;
+      height: 60px;
+      line-height: 60px;
+      font-size: 16px;
+      height: 100%;
+      padding: 0 20px;
+      color: #242a3a;
+    }
+    button {
+      width: 78px;
+      border: 0;
+      color: #242a3a;
+      cursor: pointer;
+    }
+  }
+  &.active {
+    pointer-events: auto;
+    .search-bar_main {
+      transform: translateX(0);
     }
   }
 }

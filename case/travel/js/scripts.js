@@ -50,6 +50,13 @@ $(document).ready(function () {
       });
     
 
+      $(".reserv_main>ul .search button").click(function(){
+        $(".search-bar").addClass("active");
+      });
+
+      $(".search-bar_main button").click(function(){
+        $(".search-bar").removeClass("active");
+      });
 
     //lighrbox
     $(document).on('lity:resize', function (event, instance) {

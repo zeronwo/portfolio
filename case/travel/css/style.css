@@ -1800,7 +1800,7 @@ body.menu-open {
 }
 
 .reservation {
-  max-width: calc(1200px + 12%);
+  max-width: 1200px;
   min-width: 320px;
   margin: auto;
   padding: 0 6%;
@@ -1811,6 +1811,7 @@ body.menu-open {
 
 .reserv_main {
   background: #fff;
+  position: relative;
 }
 
 .reserv_main ul {
@@ -1826,11 +1827,108 @@ body.menu-open {
   border-bottom: 1px solid #eaeaea;
   width: calc(100% / 4);
   cursor: pointer;
-  padding: 22px 20px;
 }
 
-.reserv_main ul li span {
+.reserv_main ul li button {
+  width: 100%;
+  padding: 22px 20px;
+  text-align: left;
+}
+
+.reserv_main ul li button span {
   padding-left: 10px;
+}
+
+.reserv_main ul li.search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+}
+
+.reserv_main ul li.search button {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.reserv_main ul li.search .submit {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.reserv_main ul li.search .submit input {
+  width: 100%;
+  border: 0;
+  background: #242a3a;
+  color: #fff;
+  cursor: pointer;
+}
+
+.reserv_main ul li:nth-of-type(4n) {
+  border-right: 0;
+}
+
+.search-bar {
+  width: calc(100% - 260px);
+  position: absolute;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.search-bar .search-bar_main {
+  border-bottom: 1px solid #eaeaea;
+  background: #fff;
+  -webkit-transform: translateX(778px);
+          transform: translateX(778px);
+  height: 68px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px;
+  transition: transform 1s cubic-bezier(0.77, 0, 0.175, 1) 0s, -webkit-transform 1s cubic-bezier(0.77, 0, 0.175, 1) 0s;
+}
+
+.search-bar .search-bar_main input {
+  border: 0;
+  width: calc(100% - 78px);
+  background-color: #f3f3f3;
+  height: 60px;
+  line-height: 60px;
+  font-size: 16px;
+  height: 100%;
+  padding: 0 20px;
+  color: #242a3a;
+}
+
+.search-bar .search-bar_main button {
+  width: 78px;
+  border: 0;
+  color: #242a3a;
+  cursor: pointer;
+}
+
+.search-bar.active {
+  pointer-events: auto;
+}
+
+.search-bar.active .search-bar_main {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
 @media screen and (min-width: 1300px) {
