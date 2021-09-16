@@ -47,16 +47,16 @@ $(document).ready(function () {
         $(this).addClass('active').siblings(".reserv_tab li").removeClass('active');
         $('.reserv_main>li').eq($tabIndex).fadeIn().siblings(".reserv_main>li").hide();
         $('.reserv_main>li').eq($tabIndex).addClass("active");
-      });
-    
+    });
 
-      $(".reserv_main>ul .search button").click(function(){
-        $(".search-bar").addClass("active");
-      });
 
-      $(".search-bar_main button").click(function(){
+    $(".search-bar_button").click(function () {
+        $(".search-bar").toggleClass("active");
+    });
+
+    $(".search-bar_main button").click(function () {
         $(".search-bar").removeClass("active");
-      });
+    });
 
     //lighrbox
     $(document).on('lity:resize', function (event, instance) {
