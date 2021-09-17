@@ -58,6 +58,10 @@ $(document).ready(function () {
         $(".search-bar").removeClass("active");
     });
 
+    $(".reserv_main > ul > li ").click(function () {
+        $(this).find(".sub").toggleClass("open");
+    });
+
     //lighrbox
     $(document).on('lity:resize', function (event, instance) {
         console.log('Lightbox resized');

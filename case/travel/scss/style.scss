@@ -2,12 +2,12 @@
 /* CSS Document */
 @import "reset.scss";
 @import "basic.scss";
-$color1: #242A3A;
+$color1: #242a3a;
 $color2: #fff9cc;
 $color3: #9e2e30;
 $color4: #4b4b4b;
 
-$txt: #242A3A;
+$txt: #242a3a;
 
 $dark: #000;
 $white: #fff;
@@ -202,7 +202,6 @@ body {
 }
 
 .rule {
-
   .md-content {
     height: calc(100vh - 200px);
     background: #ff6869;
@@ -384,8 +383,6 @@ body {
     &:hover {
       background: $color1;
     }
-
-
   }
 }
 
@@ -623,7 +620,6 @@ section {
     }
     &.search_btn {
       padding: 20px 35px;
-    
     }
   }
   .language {
@@ -1002,7 +998,7 @@ body.menu-open {
     display: block;
     width: 100%;
     height: 0;
-    padding-bottom: calc(100vh - 61px);
+    padding-bottom: calc(100vh - 180px);
     overflow: hidden;
   }
   img {
@@ -1017,41 +1013,67 @@ body.menu-open {
 
 //預約旅館
 .reservation {
-  max-width: 1200px;
-  min-width: 320px;
+  max-width: 960px;
   margin: auto;
-  padding: 0 6%;
   position: relative;
   z-index: 9;
-  margin-top: -157px;
+  margin-top: -65px;
+  box-shadow: -1px 4px 74px -16px rgba(50, 50, 50, 0.39);
 }
 
 .reserv_main {
   background: $white;
   position: relative;
-  overflow: hidden;
-  ul {
+  & > ul {
     display: flex;
     flex-wrap: wrap;
-    li {
+    & > li {
       border-right: 1px solid #eaeaea;
-     
       width: calc(100% / 4);
       cursor: pointer;
-      
+      position: relative;
+      //副選單
+      & > ul.sub {
+        width: 100%;
+        height: 276px;
+        background: $white;
+        position: absolute;
+        bottom: 65px;
+        z-index: 9999;
+        padding: 10px 36px 10px 10px;
+        overflow: auto;
+        transform-origin: 50% 100%;
+        transform: scaleY(0);
+        transition: transform .5s cubic-bezier(.165,.84,.44,1),-webkit-transform .5s cubic-bezier(.165,.84,.44,1);
+        & > li {
+          border-bottom: 1px solid #eaeaea;
+          position: relative;
+          a {
+            color: $txt;
+            display: block;
+            line-height: 40px;
+            padding: 3px 20px;
+            font-size: 14px;
+          }
+        }
+        &.open{
+         
+    transform: scaleY(1);
+        }
+      }
       button {
         width: 100%;
         color: $txt;
         padding: 22px 20px;
         text-align: left;
+        transition: all 0.2s;
         span {
           padding-left: 10px;
         }
-        &:hover{
+        &:hover {
           background: $txt;
           color: $white;
         }
-        
       }
       &.search {
         display: flex;
@@ -1072,9 +1094,13 @@ body.menu-open {
           input {
             width: 100%;
             border: 0;
-            background: #242a3a;
+            background: $txt;
             color: $white;
             cursor: pointer;
+            transition: all 0.4s;
+            &:hover {
+              background: $dark;
+            }
           }
         }
       }
@@ -1082,64 +1108,68 @@ body.menu-open {
     li:nth-of-type(4n) {
       border-right: 0;
     }
-    li:nth-of-type(1), li:nth-of-type(2), li:nth-of-type(3), li:nth-of-type(4) {
+    & > li:nth-of-type(1),
+    & > li:nth-of-type(2),
+    & > li:nth-of-type(3),
+    & > li:nth-of-type(4) {
       border-bottom: 1px solid #eaeaea;
     }
-
   }
 }
 
 .search-bar {
-  background: $white;
-  width: calc(100% - 128px);
-  display: flex;
+  width: calc(100% - 120px);
+
   position: absolute;
+  z-index: 9;
   overflow: hidden;
-  //pointer-events: none;
-  transform: translateX(784px);
-  transition: transform 1s cubic-bezier(0.77, 0, 0.175, 1) 0s, -webkit-transform 1s cubic-bezier(0.77, 0, 0.175, 1) 0s;
+  pointer-events: none;
 
-  .search-bar_main {
-    border-bottom: 1px solid #eaeaea;
-    width: calc(100% - 128px);
-    //transform: translateX(778px);
-    height: 61px;
+  .search-bar_box {
+    background: $white;
     display: flex;
-    padding: 10px;
+    pointer-events: auto;
+    transform: translateX(720px);
+    transition: transform 1s cubic-bezier(0.77, 0, 0.175, 1) 0s, -webkit-transform 1s cubic-bezier(0.77, 0, 0.175, 1) 0s;
 
-    input {
-      border: 0;
-      width: calc(100% - 78px);
-      background-color: #f3f3f3;
-      height: 60px;
-      line-height: 60px;
-      font-size: 16px;
-      height: 100%;
-      padding: 0 20px;
-      color: #242a3a;
+    .search-bar_main {
+      width: calc(100% - 128px);
+      height: 65px;
+      display: flex;
+      padding: 10px;
+
+      input {
+        border: 0;
+        width: calc(100% - 78px);
+        background-color: #f3f3f3;
+        line-height: 60px;
+        font-size: 16px;
+        height: 100%;
+        padding: 0 20px;
+        color: #242a3a;
+      }
+      button {
+        width: 78px;
+        border: 0;
+        color: #242a3a;
+        cursor: pointer;
+      }
     }
-    button {
-      width: 78px;
-      border: 0;
-      color: #242a3a;
-      cursor: pointer;
+
+    & > button {
+      width: 120px;
+      background: $white;
+      &:hover {
+        color: $white;
+        background: $txt;
+      }
     }
   }
   &.active {
-    pointer-events: auto;
-    transform: translateX(0);
-    .search-bar_main {
-      
+    .search-bar_box {
+      pointer-events: auto;
+      transform: translateX(0);
     }
-  }
-  &>button{
-    width: 130px;
-    background: $white;
-    &:hover{
-      color: $white;
-      background: $txt;
-    }
-
   }
 }
 
@@ -1176,7 +1206,7 @@ body.menu-open {
   }
 
   body {
-    font-size: 80%;
+    //font-size: 80%;
   }
   body.open #header_menu {
     top: -62px;

@@ -550,7 +550,7 @@ button {
 
 body {
   background: #fff;
-  color: #242A3A;
+  color: #242a3a;
   font-family: 微軟正黑體;
   font-size: 100%;
   position: relative;
@@ -597,7 +597,7 @@ body {
   background: #fff;
   width: 35px;
   height: 35px;
-  color: #242A3A;
+  color: #242a3a;
   padding: 0;
   position: absolute;
   top: -38px;
@@ -902,7 +902,7 @@ body {
 }
 
 .gotop a:hover {
-  background: #242A3A;
+  background: #242a3a;
 }
 
 header {
@@ -1785,7 +1785,7 @@ body.menu-open {
   display: block;
   width: 100%;
   height: 0;
-  padding-bottom: calc(100vh - 61px);
+  padding-bottom: calc(100vh - 180px);
   overflow: hidden;
 }
 
@@ -1800,22 +1800,21 @@ body.menu-open {
 }
 
 .reservation {
-  max-width: 1200px;
-  min-width: 320px;
+  max-width: 960px;
   margin: auto;
-  padding: 0 6%;
   position: relative;
   z-index: 9;
-  margin-top: -157px;
+  margin-top: -65px;
+  -webkit-box-shadow: -1px 4px 74px -16px rgba(50, 50, 50, 0.39);
+          box-shadow: -1px 4px 74px -16px rgba(50, 50, 50, 0.39);
 }
 
 .reserv_main {
   background: #fff;
   position: relative;
-  overflow: hidden;
 }
 
-.reserv_main ul {
+.reserv_main > ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1823,29 +1822,66 @@ body.menu-open {
       flex-wrap: wrap;
 }
 
-.reserv_main ul li {
+.reserv_main > ul > li {
   border-right: 1px solid #eaeaea;
   width: calc(100% / 4);
   cursor: pointer;
+  position: relative;
 }
 
-.reserv_main ul li button {
+.reserv_main > ul > li > ul.sub {
   width: 100%;
-  color: #242A3A;
+  height: 276px;
+  background: #fff;
+  position: absolute;
+  bottom: 65px;
+  z-index: 9999;
+  padding: 10px 36px 10px 10px;
+  overflow: auto;
+  -webkit-transform-origin: 50% 100%;
+          transform-origin: 50% 100%;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), -webkit-transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.reserv_main > ul > li > ul.sub > li {
+  border-bottom: 1px solid #eaeaea;
+  position: relative;
+}
+
+.reserv_main > ul > li > ul.sub > li a {
+  color: #242a3a;
+  display: block;
+  line-height: 40px;
+  padding: 3px 20px;
+  font-size: 14px;
+}
+
+.reserv_main > ul > li > ul.sub.open {
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+}
+
+.reserv_main > ul > li button {
+  width: 100%;
+  color: #242a3a;
   padding: 22px 20px;
   text-align: left;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
 }
 
-.reserv_main ul li button span {
+.reserv_main > ul > li button span {
   padding-left: 10px;
 }
 
-.reserv_main ul li button:hover {
-  background: #242A3A;
+.reserv_main > ul > li button:hover {
+  background: #242a3a;
   color: #fff;
 }
 
-.reserv_main ul li.search {
+.reserv_main > ul > li.search {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1855,7 +1891,7 @@ body.menu-open {
   padding: 0;
 }
 
-.reserv_main ul li.search button {
+.reserv_main > ul > li.search button {
   width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1870,7 +1906,7 @@ body.menu-open {
           align-items: center;
 }
 
-.reserv_main ul li.search .submit {
+.reserv_main > ul > li.search .submit {
   width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1881,50 +1917,63 @@ body.menu-open {
   position: relative;
 }
 
-.reserv_main ul li.search .submit input {
+.reserv_main > ul > li.search .submit input {
   width: 100%;
   border: 0;
   background: #242a3a;
   color: #fff;
   cursor: pointer;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
 }
 
-.reserv_main ul li:nth-of-type(4n) {
+.reserv_main > ul > li.search .submit input:hover {
+  background: #000;
+}
+
+.reserv_main > ul li:nth-of-type(4n) {
   border-right: 0;
 }
 
-.reserv_main ul li:nth-of-type(1), .reserv_main ul li:nth-of-type(2), .reserv_main ul li:nth-of-type(3), .reserv_main ul li:nth-of-type(4) {
+.reserv_main > ul > li:nth-of-type(1),
+.reserv_main > ul > li:nth-of-type(2),
+.reserv_main > ul > li:nth-of-type(3),
+.reserv_main > ul > li:nth-of-type(4) {
   border-bottom: 1px solid #eaeaea;
 }
 
 .search-bar {
+  width: calc(100% - 120px);
+  position: absolute;
+  z-index: 9;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.search-bar .search-bar_box {
   background: #fff;
-  width: calc(100% - 128px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: absolute;
-  overflow: hidden;
-  -webkit-transform: translateX(784px);
-          transform: translateX(784px);
+  pointer-events: auto;
+  -webkit-transform: translateX(720px);
+          transform: translateX(720px);
   transition: transform 1s cubic-bezier(0.77, 0, 0.175, 1) 0s, -webkit-transform 1s cubic-bezier(0.77, 0, 0.175, 1) 0s;
 }
 
-.search-bar .search-bar_main {
-  border-bottom: 1px solid #eaeaea;
+.search-bar .search-bar_box .search-bar_main {
   width: calc(100% - 128px);
-  height: 61px;
+  height: 65px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   padding: 10px;
 }
 
-.search-bar .search-bar_main input {
+.search-bar .search-bar_box .search-bar_main input {
   border: 0;
   width: calc(100% - 78px);
   background-color: #f3f3f3;
-  height: 60px;
   line-height: 60px;
   font-size: 16px;
   height: 100%;
@@ -1932,27 +1981,27 @@ body.menu-open {
   color: #242a3a;
 }
 
-.search-bar .search-bar_main button {
+.search-bar .search-bar_box .search-bar_main button {
   width: 78px;
   border: 0;
   color: #242a3a;
   cursor: pointer;
 }
 
-.search-bar.active {
-  pointer-events: auto;
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
-}
-
-.search-bar > button {
-  width: 130px;
+.search-bar .search-bar_box > button {
+  width: 120px;
   background: #fff;
 }
 
-.search-bar > button:hover {
+.search-bar .search-bar_box > button:hover {
   color: #fff;
-  background: #242A3A;
+  background: #242a3a;
+}
+
+.search-bar.active .search-bar_box {
+  pointer-events: auto;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
 @media screen and (min-width: 1300px) {
@@ -1981,9 +2030,6 @@ body.menu-open {
   .d_no,
   .menu_below {
     display: block;
-  }
-  body {
-    font-size: 80%;
   }
   body.open #header_menu {
     top: -62px;
