@@ -21,13 +21,11 @@ $(document).ready(function () {
         lastScrollY = st;
     });
 
-    $(".language .menu_btn").click(function () {
-        $(".language ul").toggleClass("active");
-    });
 
     $(".menu_button").click(function () {
         $(this).toggleClass("active");
     });
+
     //首頁輪播圖
     $('.top_big_slide').owlCarousel({
         loop: true, //循環播放
@@ -39,27 +37,19 @@ $(document).ready(function () {
         smartSpeed: 450
     });
 
-    $(".datepicker").datepicker({
+    //搜尋框 打開
+    $(".reserv_main > ul > li ").click(function () {
+        $(this).toggleClass('active').siblings("li").removeClass('active');
     });
 
-    $('.reserv_tab li').click(function (e) {
-        var $tabIndex = $(this).index();
-        $(this).addClass('active').siblings(".reserv_tab li").removeClass('active');
-        $('.reserv_main>li').eq($tabIndex).fadeIn().siblings(".reserv_main>li").hide();
-        $('.reserv_main>li').eq($tabIndex).addClass("active");
-    });
-
-
+    //搜尋框 打開
     $(".search-bar_button").click(function () {
         $(".search-bar").toggleClass("active");
+        $(".reserv_main > ul > li").removeClass("active");
     });
-
+    //搜尋框 移除
     $(".search-bar_main button").click(function () {
         $(".search-bar").removeClass("active");
-    });
-
-    $(".reserv_main > ul > li ").click(function () {
-        $(this).find(".sub").toggleClass("open");
     });
 
     //lighrbox
