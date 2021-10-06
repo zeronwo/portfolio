@@ -32,7 +32,7 @@ $(document).ready(function () {
         animateOut: 'fadeOut',
         items: 1,
         margin: 0,
-        autoplay: true, //自動撥放
+        autoplay: false, //自動撥放
         dots: false,
         smartSpeed: 450
     });
