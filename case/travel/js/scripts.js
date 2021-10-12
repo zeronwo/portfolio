@@ -32,14 +32,15 @@ $(document).ready(function () {
         animateOut: 'fadeOut',
         items: 1,
         margin: 0,
-        autoplay: false, //自動撥放
+        autoplay: true, //自動撥放
         dots: false,
         smartSpeed: 450
     });
 
-    //搜尋框 打開
+    //首頁輪播下方選單
     $(".reserv_main > ul > li ").click(function () {
         $(this).toggleClass('active').siblings("li").removeClass('active');
+        $(".search-bar").removeClass("active");
     });
 
     //搜尋框 打開
@@ -50,6 +51,7 @@ $(document).ready(function () {
     //搜尋框 移除
     $(".search-bar_main button").click(function () {
         $(".search-bar").removeClass("active");
+        
     });
 
     //lighrbox

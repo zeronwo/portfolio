@@ -3,461 +3,391 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>ikorol</title>
-    <meta name="description" content="Source code generated using layoutit.com">
-    <meta name="author" content="LayoutIt!">
     <link href="css/font-awesome.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- 彈窗-->
+    <link href="js/lity/lity.css" rel="stylesheet" type="text/css">
+    <!-- 輪播-->
+    <link href="js/slick/slick-theme.css" rel="stylesheet" type="text/css">
+    <link href="js/slick/slick.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="js/aos/aos.css" />
+    <link href="css/hover.css" rel="stylesheet" type="text/css">
+    <!-- LOAD-->
+    <link href="js/fakeLoader/fakeLoader.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <!-- jQuery library -->
+    <script src="js/jquery.min.js"></script>
 
-    <link href="js/jquery-ui/jquery-ui.min.css" rel="stylesheet" type="text/css">
+    <script src="js/aos/aos.js"></script>
 
     <!-- 彈窗-->
-    <link href="../../js/lity/lity.css" rel="stylesheet" type="text/css">
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/max.css" rel="stylesheet" type="text/css" />
-
-    <script src="../../js/jquery.min.js"></script>
-    <script src="../../js/lity/lity.js"></script>
-
-    <link href="../../js/owlCarousel/owl.carousel.css" rel="stylesheet" type="text/css">
-    <link href="../../js/owlCarousel/owl.theme.default.css" rel="stylesheet" type="text/css">
-    <script src="../../js/owlCarousel/owl.carousel.js"></script>
-
-    <script src="js/jquery-ui/jquery-ui.min.js"></script>
-    <script src="js/jquery-ui/datepicker-zh-TW.js"></script><!-- 繁體中文 -->
-    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script><!-- ICON -->
-    <script src="js/scripts.js"></script>
-
-
+    <script src="js/lity/lity.js"></script>
+    <!-- 輪播-->
+    <script type="text/javascript" src="js/slick/slick.js"></script>
+    <!-- LOAD-->
+    <script type="text/javascript" src="js/fakeLoader/fakeLoader.js"></script>
+    <script src="js/internal.js"></script>
+    <title>SPREAD</title>
 </head>
 
+<style>
+    body .normal {
+        display: none !important;
+    }
+</style>
+
 <body>
-
-
-    <!-- 彈窗 活動玩法 -->
-    <div id="m_search" class="lity-hide">
-
-        <div class="searchInputBox">
-            <input type="search" name="search" id="search" placeholder="請填入您要搜尋的內容">
-            <button type="submit"
-                onclick="if($('#search').val()==''){ alert('請輸入關鍵字...');}else{location.href=encodeURI('https://www.fullon-hotels.com.tw/tw/search/?keyword=' + $('#search').val());}">確認送出</button>
-        </div>
-
+    <!-- LOAD -->
+    <div class="fakeLoader"></div>
+    <!-- gotop -->
+    <div class="gotop">
+        <a href="javascript:;"></a>
     </div>
+    <header class="m_60">
 
-
-
-    <header>
-
-        <!--top_img st -->
-
-        <div id="header_menu">
-            <div class="site-nav">
-                <!--menu st-->
-                <div id="menu">
-                    <div class="menu_main">
-
-                        <div class="menu_main_bottom">
-                            <div class="logo"><a href="index.html"><img src="images/logo.png"></a></div>
-
-
-                            <div class="menu_main_right">
-                                <div class="menu_main_top">
-                                    <ul>
-                                        <li>
-                                            <a href="">
-                                                <ion-icon name="mail-outline"></ion-icon>
-                                                <span> 訂閱</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="1-1.html">
-                                                <ion-icon name="person-circle-outline"></ion-icon>
-                                                <span>會員</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="2-1.html">
-                                                <ion-icon name="call-outline"></ion-icon>
-                                                <span>聯絡</span>
-
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-
-                                <ul>
-                                    <li>
-                                        <a href="1-1.html">
-                                            <p>我的目的地</p>
-                                            <span>Our destination</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="2-1.html">
-                                            <p>我們的活動</p>
-                                            <span>Our activities</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="3-1.html">
-                                            <p>旅行</p>
-                                            <span>Travel</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="4-1.html">
-                                            <p>量身訂製的旅行</p>
-                                            <span>Tailor-made travel</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="4-1.html">
-                                            <p>郵輪</p>
-                                            <span>Cruise ship</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="4-1.html">
-                                            <p>關於我們</p>
-                                            <span>About us</span>
-                                        </a>
-                                    </li>
-
-                                </ul>
-                                <span class="menu_rwd_toggle">
-                                    <button class="menu_button">
-                                        <span class="menuicon"></span>
-                                    </button>
-
-                                </span>
-
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <!--menu end-->
-
-
+        <h1>
+            <img src="images/logo.png" alt="">
+        </h1>
+        <a href="javascript:;" class="menu_button">
+            <div class="menuicon"></div>
+        </a>
+        <nav class="menu">
+            <div class="container">
+                <ul>
+                    <li><a href="javascript:;" class="m_a">About</a></li>
+                    <li><a href="javascript:;" class="m_b">Work Experience</a></li>
+                    <li><a href="javascript:;" class="m_c">Skill</a></li>
+                    <li><a href="javascript:;" class="m_d">Web Design</a></li>
+                    <li class="normal"><a href="javascript:;" class="m_e">Visual Design</a></li>
+                </ul>
             </div>
-        </div>
+        </nav>
 
-        <!--top_img end -->
+        <nav class="menu_mob">
+            <div class="menu_mob_box">
+                <ul>
+                    <li><a href="javascript:;" class="m_a">About</a></li>
+                    <li><a href="javascript:;" class="m_b">Work Experience</a></li>
+                    <li><a href="javascript:;" class="m_c">Skill</a></li>
+                    <li><a href="javascript:;" class="m_d">Web Design</a></li>
+                    <li class="normal"><a href="javascript:;" class="m_e">Visual Design</a></li>
+                </ul>
+            </div>
+
+        </nav>
 
     </header>
-    <!-- 副選單 -->
-    <div class="sidemenu">
-        <div class="main">
-            <ul class="menu">
-                <!--01-->
-                <li>
-                    <a href="javascript:;">
-                        <p>我的目的地</p>
-                        <span>Our destination</span>
-                    </a>
-                </li>
-                <!--02-->
-                <li>
-                    <a href="javascript:;">
-                        <p>我們的活動</p>
-                        <span>Our activities</span>
-                    </a>
 
-                </li>
-                <!--03-->
-                <li>
-                    <a href="javascript:;">
-                        <p>旅行</p>
-                        <span>Travel</span>
-                    </a>
-
-                </li>
-                <!--04-->
-                <li>
-                    <a href="javascript:;">
-                        <p>量身訂製的旅行</p>
-                        <span>Tailor-made travel</span>
-                    </a>
-
-                </li>
-                <!--05-->
-                <li>
-                    <a href="javascript:;">
-                        <p>郵輪</p>
-                        <span>Cruise ship</span>
-                    </a>
-
-                </li>
-                <!--06-->
-                <li>
-                    <a href="javascript:;">
-                        <p>關於我們</p>
-                        <span>About us</span>
-                    </a>
-
-                </li>
-            </ul>
+    <section class="about m_70">
+        <div class="about_img " data-aos="fade-right">
+            <img src="images/about_tt.png" alt="">
         </div>
-    </div>
-    <div class="top">
-        <div class="content">
-            <div class="inner">
-                <h1>
-                    <div class="tt"><strong data-aos="fade-up" data-aos-duration="1500"
-                            class="aos-init aos-animate">Discover </strong></div>
-                    <div class="tt"><strong data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300"
-                            class="aos-init aos-animate">Your World</strong></div>
-                </h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-7">
+                    <div class="about_txt" data-aos="fade-up">
+                        <div class="title">
+                            <span>About</span>
+                            <h2>前端網頁設計師</h2>
+                        </div>
+                        <p>
+                            前端要了解更多元性與完整性，喜歡瞭解原因，常思考如何能夠做得更好。<br>
+                            對於每一項任務，會全心投入鑽研與執行，規劃出符合使用者期望的體驗設計，<br>
+                            規劃設計未能以符合使用者預期的流程、動線、互動方式。
+                        </p>
+                        <ul class="about_txt_icon">
+                            <li>
+                                <img src="images/about_icon01.png" alt="">
+                                <span>ALAN</span>
+                            </li>
+                            <li>
+                                <a href="mailto:zeronwo7@hotmail.com">
+                                    <img src="images/about_icon02.png" alt="">
+                                    <span>MAIL</span>
+                                </a>
 
-
+                            </li>
+                            <li>
+                                <img src="images/about_icon03.png" alt="">
+                                <span>093187311</span>
+                            </li>
+                            <li>
+                                <img src="images/about_icon04.png" alt="">
+                                <span>朝陽科大</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
-        <!-- 首頁輪播圖 -->
-        <ul class="top_big_slide owl-carousel owl-theme">
-            <li>
 
-                <img src="images/top_slide_01@2x.jpg" alt="">
-            </li>
-            <li>
-                <img src="images/top_slide_02@2x.jpg" alt="">
-            </li>
-            <li>
-                <img src="images/top_slide_03@2x.jpg" alt="">
-            </li>
-            <li>
-                <img src="images/top_slide_04@2x.jpg" alt="">
-            </li>
-        </ul>
+    </section>
 
-    </div>
-    <!-- 預約旅館 -->
-    <div class="reservation">
-        <form action="">
-            <div class="reserv_main">
-                <div class="search-bar">
-                    <div class="search-bar_box">
-                        <button type="button" class="search-bar_button">
-                            <i class="fa fa-search" aria-hidden="true"></i>
-                        </button>
-                        <div class="search-bar_main">
-                            <input type="text" name="search" placeholder="在此處輸入您的搜索">
-                            <button type="button"><i class="fa fa-times" aria-hidden="true"></i></button>
-                        </div>
-                    </div>
-
+    <div class="bg2">
+        <section class="work m_90" data-aos="fade-up" data-aos-delay="600">
+            <div class="container">
+                <div class="title">
+                    <span>Work Experience</span>
+                    <h2>工作經歷</h2>
                 </div>
-
-                <ul>
+                <ul class="work_list">
                     <li>
-                        <button type="button">
-                            <i class="fa fa-map-marker fa-lg" aria-hidden="true"></i>
-                            <span>目的地</span>
-                        </button>
-                        <!-- SUB -->
-                        <div class="reserv_main_sub">
-                            <ul>
-                                <li>
-                                    <a href="">台北市</a>
-                                </li>
-                                <li>
-                                    <a href="">太魯閣國家公園</a>
-                                </li>
-                                <li>
-                                    <a href="">日月潭</a>
-                                </li>
-                                <li>
-                                    <a href="">台南市</a>
-                                </li>
-                                <li>
-                                    <a href="">陽明山國家公園</a>
-                                </li>
-                                <li>
-                                    <a href="">墾丁國家公園</a>
-                                </li>
-                                <li>
-                                    <a href="">花蓮市</a>
-                                </li>
-                                <li>
-                                    <a href="">台南縣</a>
-                                </li>
+                        <strong>2020-2021</strong>
+                        <div class="work_box">
 
+                            <div class="work_post">
+                                <strong>璽識科技有限公司</strong>
+                                <span>前端設計師</span>
+                            </div>
+                            <ul>
+                                <li>響應式網頁設計(RWD)</li>
+                                <li>開發各式版型模組化能力</li>
+                                <li>視覺設計</li>
                             </ul>
                         </div>
                     </li>
                     <li>
-                        <button type="button">
-                            <i class="fa fa-filter" aria-hidden="true"></i>
-                            <span>行程類型</span>
-                        </button>
-                        <!-- SUB -->
-                        <div class="reserv_main_sub">
+                        <strong>2019-2015</strong>
+                        <div class="work_box">
+                            <div class="work_post">
+                                <strong>典範數位科技有限公司</strong>
+                                <span>前端設計師</span>
+                            </div>
                             <ul>
-                                <li>
-                                    <a href="">美食之旅</a>
-                                </li>
-                                <li>
-                                    <a href="">文化之旅</a>
-                                </li>
-                                <li>
-                                    <a href="">樂活之旅</a>
-                                </li>
-
-                                <li>
-                                    <a href="">離島之旅</a>
-                                </li>
-                                <li>
-                                    <a href="">生態之旅</a>
-                                </li>
-
+                                <li>響應式網頁設計(RWD)</li>
+                                <li>開發各式版型模組化能力</li>
+                                <li>網頁動態互動效設計</li>
                             </ul>
                         </div>
                     </li>
                     <li>
-                        <button type="button">
-                            <i class="fa fa-binoculars" aria-hidden="true"></i>
-                            <span>活動與主題</span>
-                        </button>
-                        <!-- SUB -->
-                        <div class="reserv_main_sub">
+                        <strong>2015-2010</strong>
+                        <div class="work_box">
+                            <div class="work_post">
+                                <strong>家多利行銷股份有限公司</strong>
+                                <span>網頁視覺設計師</span>
+                            </div>
                             <ul>
-                                <li>
-                                    <a href="">自行車旅遊年</a>
-                                </li>
-                                <li>
-                                    <a href="">脊梁山脈旅遊年</a>
-                                </li>
-                                <li>
-                                    <a href="">小鎮漫遊年</a>
-                                </li>
-
-                                <li>
-                                    <a href="">海灣旅遊年</a>
-                                </li>
-
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="search">
-                        <div class="submit">
-                            <input type="submit" value="搜尋">
-                        </div>
-                    </li>
-                    <li>
-                        <button type="button">
-                            <i class="fa fa-exchange" aria-hidden="true"></i>
-                            <span>旅遊指南</span>
-                        </button>
-                        <!-- SUB -->
-                        <div class="reserv_main_sub">
-                            <ul>
-                                <li>
-                                    <a href="">入出境須知</a>
-                                </li>
-                                <li>
-                                    <a href="">購物退稅須知</a>
-                                </li>
-                                <li>
-                                    <a href="">實用資訊</a>
-                                </li>
-
-                                <li>
-                                    <a href="">旅遊諮詢服務</a>
-                                </li>
-
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <button type="button">
-                            <i class="fa fa-calendar" aria-hidden="true"></i>
-                            <span>美食</span>
-                        </button>
-                        <!-- SUB -->
-                        <div class="reserv_main_sub">
-                            <ul>
-                                <li>
-                                    <a href="">臺灣飲食文化</a>
-                                </li>
-                                <li>
-                                    <a href="">小吃飲品</a>
-                                </li>
-                                <li>
-                                    <a href="">蔬食餐廳</a>
-                                </li>
-
-                                <li>
-                                    <a href="">米其林餐廳</a>
-                                </li>
-
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <button type="button">
-                            <i class="fa fa-clock-o" aria-hidden="true"></i>
-                            <span>主題標籤</span>
-                        </button>
-                        <!-- SUB -->
-                        <div class="reserv_main_sub">
-                            <ul>
-                                <li>
-                                    <a href="">文青必訪</a>
-                                </li>
-                                <li>
-                                    <a href="">打卡熱點</a>
-                                </li>
-                                <li>
-                                    <a href="">國家公園</a>
-                                </li>
-
-                                <li>
-                                    <a href="">鐵道旅遊</a>
-                                </li>
-
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <button type="button">
-                            <i class="fa fa-check-circle" aria-hidden="true"></i>
-                            <span>節慶活動</span>
-                        </button>
-                        <!-- SUB -->
-                        <div class="reserv_main_sub">
-                            <ul>
-                                <li>
-                                    <a href="">臺灣觀光雙年曆</a>
-                                </li>
-                                <li>
-                                    <a href="">傳統節慶</a>
-                                </li>
-                                <li>
-                                    <a href="">宗教慶典</a>
-                                </li>
-
-                                <li>
-                                    <a href="">原住民活動</a>
-                                </li>
-
+                                <li>展版規劃設計</li>
+                                <li>企業網站設計</li>
+                                <li>動畫影片編輯製作</li>
                             </ul>
                         </div>
                     </li>
                 </ul>
-
             </div>
-        </form>
+        </section>
 
-
+        <section class="skill">
+            <div class="skill_main" data-aos="skill-animate" data-aos-easing="ease-in-back" data-aos-delay="3000">
+                <div class="skill_title">
+                    <div class="title">
+                        <span>Skill</span>
+                        <h2>技能</h2>
+                    </div>
+                </div>
+                <ul class="skill_list_first">
+                    <li>網頁<br>動態互動</li>
+                    <li>HTML5<br>SCSS</li>
+                    <li>RWD<br>CSS框架</li>
+                    <li>jQuery<br>應用撰寫</li>
+                </ul>
+                <ul class="skill_list_second">
+                    <li>UI/UX<br>設計</li>
+                    <li>中大型<br>網站專案</li>
+                    <li>網頁活動<br>專頁設計</li>
+                    <li>開發<br>模組化</li>
+                </ul>
+            </div>
+        </section>
     </div>
+    <section class="web m_70" data-aos="fade-up">
+        <div class="container">
+            <div class="title t-align-center m_30">
+                <span>Web Design</span>
+                <h2>網頁設計</h2>
+            </div>
 
-    <section>
-        <div class="row">
+            <ul class="web_menu">
+                <li class="active normal"><a href="javascript:;">活動專頁</a></li>
+                <li class="active"><a href="javascript:;">視覺娛樂</a></li>
+                <li><a href="javascript:;">旅遊觀光</a></li>
+                <li><a href="javascript:;">商業網站</a></li>
+            </ul>
 
+            <ul class="web_list">
+                <!--01 -->
+                <li class=" normal">
+                    <div class="web_list_item">
+                        <a href="case/uefa/index.html" target="_blank">
+                            <img src="images/web_design/01-8.jpg" alt="">
+                            <div class="web_list_tt" style="background-color: rgba(7,22,45,0.95);">
+                                <p>歐冠爭霸 競猜獨贏</p>
+                            </div>
+                        </a>
+                        <a href="case/new_year/index.html" target="_blank">
+                            <img src="images/web_design/01-1.jpg" alt="">
+                            <div class="web_list_tt" style="background-color: rgba(194,19,30,0.95);">
+                                <p>億元雙喜賀新春</p>
+                            </div>
+                        </a>
+                        <a href="case/fight/index.html" target="_blank">
+                            <img src="images/web_design/01-2.jpg" alt="">
+                            <div class="web_list_tt" style="background-color: rgba(92,32,118,0.95);">
+                                <p>龍虎爭霸</p>
+                            </div>
+                        </a>
+                        <a href="case/create/index.html" target="_blank">
+                            <img src="images/web_design/01-7.jpg" alt="">
+                            <div class="web_list_tt" style="background-color: rgba(164,18,45,0.95);">
+                                <p>創造百萬收入</p>
+                            </div>
+                        </a>
+                        <a href="case/prize_pool/index.html" target="_blank">
+                            <img src="images/web_design/01-6.jpg" alt="">
+                            <div class="web_list_tt" style="background-color: rgba(16,36,169,0.95);">
+                                <p>成長分紅獎池</p>
+                            </div>
+                        </a>
+                        <a href="case/compass/index.html" target="_blank">
+                            <img src="images/web_design/01-3.jpg" alt="">
+                            <div class="web_list_tt" style="background-color: rgba(29,28,26,0.95);">
+                                <p>領獎指南針</p>
+                            </div>
+                        </a>
+                        <a href="case/bb_video/index.html" target="_blank">
+                            <img src="images/web_design/01-4.jpg" alt="">
+                            <div class="web_list_tt" style="background-color: rgba(255,42,74,0.95);">
+                                <p>BB視訊闖天關</p>
+                            </div>
+                        </a>
+                        <a href="case/bb_frenzy/index.html" target="_blank">
+                            <img src="images/web_design/01-5.jpg" alt="">
+                            <div class="web_list_tt" style="background-color: rgba(5,6,36,0.95);">
+                                <p>千萬總獎闖江虎</p>
+                            </div>
+                        </a>
+
+
+                    </div>
+
+                </li>
+                <!--02 -->
+                <li class="active">
+                    <div class="web_list_item">
+                        <a href="case/uefachampionsleague/index.html" target="_blank">
+                            <img src="images/web_design/02-5.jpg" alt="">
+                            <div class="web_list_tt" style="background-color: rgba(28,28,41,0.95);">
+                                <p>UEFA Champions League</p>
+                            </div>
+                        </a>
+                        <a href="case/barcelona/index.html" target="_blank">
+                            <img src="images/web_design/02-1.jpg" alt="">
+                            <div class="web_list_tt" style="background-color: rgba(8,12,24,0.95);">
+                                <p>FC BARCELONA</p>
+                            </div>
+                        </a>
+                        <a href="case/dark_knight/index.html" target="_blank">
+                            <img src="images/web_design/02-2.jpg" alt="">
+                            <div class="web_list_tt" style="background-color: rgba(29,29,29,0.95);">
+                                <p>Dark Knight</p>
+                            </div>
+                        </a>
+                        <a href="case/game_war/index.html" target="_blank">
+                            <img src="images/web_design/02-3.jpg" alt="">
+                            <div class="web_list_tt" style="background-color: rgba(21,19,30,0.95);">
+                                <p>電玩戰</p>
+                            </div>
+                        </a>
+                        <a href="case/ilx/index.html" target="_blank">
+                            <img src="images/web_design/02-4.jpg" alt="">
+                            <div class="web_list_tt" style="background-color: rgba(0,3,18,0.95);">
+                                <p>ACURA</p>
+                            </div>
+                        </a>
+
+
+                    </div>
+                </li>
+                <!--03 -->
+                <li>
+                    <div class="web_list_item">
+
+                        <a href="case/kyoto_story/index.html" target="_blank">
+                            <img src="images/web_design/03-1.jpg" alt="">
+                            <div class="web_list_tt" style="background-color: rgba(210,49,56,0.95);">
+                                <p>Kyoto Story</p>
+                            </div>
+                        </a>
+                        <a href="case/life/index.html" target="_blank">
+                            <img src="images/web_design/03-2.jpg" alt="">
+                            <div class="web_list_tt" style="background-color: rgba(66,97,42,0.95);">
+                                <p>life</p>
+                            </div>
+                        </a>
+                        <a href="case/taichung/index.html" target="_blank">
+                            <img src="images/web_design/03-3.jpg" alt="">
+                            <div class="web_list_tt" style="background-color: rgba(68,139,202,0.95);">
+                                <p>Taichung</p>
+                            </div>
+                        </a>
+                        <a href="case/kyoto/index.html" target="_blank">
+                            <img src="images/web_design/03-4.jpg" alt="">
+                            <div class="web_list_tt" style="background-color: rgba(68,52,36,0.95);">
+                                <p>Kyoto</p>
+                            </div>
+                        </a>
+
+
+                    </div>
+                </li>
+                <!--04 -->
+                <li>
+                    <div class="web_list_item">
+
+                        <a href="case/leading/index.html" target="_blank">
+                            <img src="images/web_design/04-1.jpg" alt="">
+                            <div class="web_list_tt" style="background-color: rgba(43,70,151,0.95);">
+                                <p>Leading</p>
+                            </div>
+                        </a>
+                        <a href="case/east/index.html" target="_blank">
+                            <img src="images/web_design/04-2.jpg" alt="">
+                            <div class="web_list_tt" style="background-color: rgba(48,83,137,0.95);">
+                                <p>東京大學</p>
+                            </div>
+                        </a>
+                        <a href="case/ikorol/index.html" target="_blank">
+                            <img src="images/web_design/04-3.jpg" alt="">
+                            <div class="web_list_tt" style="background-color: rgba(157,153,125,0.95);">
+                                <p>Ikorol</p>
+                            </div>
+                        </a>
+                        <a href="case/g7x/index.html" target="_blank">
+                            <img src="images/web_design/04-4.jpg" alt="">
+                            <div class="web_list_tt" style="background-color: rgba(151,134,114,0.95);">
+                                <p>G7x</p>
+                            </div>
+                        </a>
+
+
+                    </div>
+                </li>
+            </ul>
         </div>
     </section>
+
+
+
+    <footer>
+        Copyright © 2021 ALAN All rights reserved.
+    </footer>
+    <!--粒子 -->
+    <div id="particles-js"></div>
+    <!--粒子 -->
+    <script src="js/particles.min.js"></script>
+    <script src="js/app.js"></script>
 </body>
 
 </html>
