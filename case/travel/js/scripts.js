@@ -1,12 +1,24 @@
 
 $(document).ready(function () {
 
-    //手機選單
-    $(".menu_rwd_toggle").click(function () {
-        $(".sidemenu").toggleClass("active");
-        $("body").toggleClass("menu-open");
-
+    $("#menu .menu_button").click(function () {
+        $(this).toggleClass("active");
     });
+
+    //手機 上方 右側拉出選單
+    $("#menu .menu_rwd_toggle").click(function () {
+        $(".sidemenu_top").toggleClass("active");
+        $(".menu_main").toggleClass("active");
+    });
+    //手機 下方 右側拉出選單(條件搜尋)
+    $(".reservation_mob").click(function () {
+        $(".sidemenu_bottom").addClass("active");
+    });
+    $(".sidemenu.sidemenu_bottom .menu_rwd_toggle").click(function () {
+        $(".sidemenu_bottom").removeClass("active");
+    });
+
+
 
     var bodyClass = document.body.classList,
         lastScrollY = 200;
@@ -22,9 +34,7 @@ $(document).ready(function () {
     });
 
 
-    $(".menu_button").click(function () {
-        $(this).toggleClass("active");
-    });
+  
 
     //首頁輪播圖
     $('.top_big_slide').owlCarousel({
@@ -51,7 +61,7 @@ $(document).ready(function () {
     //搜尋框 移除
     $(".search-bar_main button").click(function () {
         $(".search-bar").removeClass("active");
-        
+
     });
 
     //lighrbox

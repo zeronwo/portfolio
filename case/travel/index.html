@@ -148,8 +148,8 @@
         <!--top_img end -->
 
     </header>
-    <!-- 副選單 -->
-    <div class="sidemenu">
+    <!--手機 上方 右側拉出選單 -->
+    <div class="sidemenu sidemenu_top">
         <div class="main">
             <ul class="menu">
                 <!--01-->
@@ -202,6 +202,77 @@
             </ul>
         </div>
     </div>
+    <!--手機 下方 右側拉出選單(條件搜尋) -->
+    <div class="sidemenu sidemenu_bottom">
+        <div class="main">
+            <div class="top">
+                <span class="menu_rwd_toggle">
+                    <button class="menu_button active">
+                        <span class="menuicon"></span>
+                    </button>
+
+                </span>
+            </div>
+            <div class="search_main">
+                <input type="text" name="search" placeholder="search">
+            </div>
+            <ul class="menu">
+                <!--01-->
+                <li>
+                    <a href="javascript:;">
+                        <i class="fa fa-map-marker fa-lg" aria-hidden="true"></i>
+                        <p>目的地</p>
+                    </a>
+                </li>
+                <!--02-->
+                <li>
+                    <a href="javascript:;">
+                        <i class="fa fa-filter" aria-hidden="true"></i>
+                        <p>行程類型</p>
+                    </a>
+
+                </li>
+                <!--03-->
+                <li>
+                    <a href="javascript:;">
+                        <i class="fa fa-binoculars" aria-hidden="true"></i>
+                        <p>活動與主題</p>
+                    </a>
+
+                </li>
+                <!--04-->
+                <li>
+                    <a href="javascript:;">
+                        <i class="fa fa-exchange" aria-hidden="true"></i>
+                        <p>旅遊指南</p>
+                    </a>
+
+                </li>
+                <!--05-->
+                <li>
+                    <a href="javascript:;">
+                        <i class="fa fa-calendar" aria-hidden="true"></i>
+                        <p>美食</p>
+                    </a>
+
+                </li>
+                <!--06-->
+                <li>
+                    <a href="javascript:;">
+                        <i class="fa fa-clock-o" aria-hidden="true"></i>
+                        <p>主題標籤</p>
+                    </a>
+                </li>
+                <!--07-->
+                <li>
+                    <a href="javascript:;">
+                        <i class="fa fa-check-circle" aria-hidden="true"></i>
+                        <p>節慶活動</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
     <div class="top">
         <div class="content">
             <div class="inner">
@@ -233,222 +304,233 @@
         </ul>
 
     </div>
-    <!-- 預約旅館 -->
+    <!-- 條件搜尋 -->
     <div class="reservation">
-        <form action="">
-            <div class="reserv_main">
-                <div class="search-bar">
-                    <div class="search-bar_box">
-                        <button type="button" class="search-bar_button">
-                            <i class="fa fa-search" aria-hidden="true"></i>
-                        </button>
-                        <div class="search-bar_main">
-                            <input type="text" name="search" placeholder="在此處輸入您的搜索">
-                            <button type="button"><i class="fa fa-times" aria-hidden="true"></i></button>
+        <div class="reservation_bar">
+            <form action="">
+                <div class="reserv_main">
+                    <div class="search-bar">
+                        <div class="search-bar_box">
+                            <button type="button" class="search-bar_button">
+                                <i class="fa fa-search" aria-hidden="true"></i>
+                            </button>
+                            <div class="search-bar_main">
+                                <input type="text" name="search" placeholder="在此處輸入您的搜索">
+                                <button type="button"><i class="fa fa-times" aria-hidden="true"></i></button>
+                            </div>
                         </div>
+
                     </div>
 
+                    <ul>
+                        <li>
+                            <button type="button">
+                                <i class="fa fa-map-marker fa-lg" aria-hidden="true"></i>
+                                <span>目的地</span>
+                            </button>
+                            <!-- SUB -->
+                            <div class="reserv_main_sub">
+                                <ul>
+                                    <li>
+                                        <a href="">台北市</a>
+                                    </li>
+                                    <li>
+                                        <a href="">太魯閣國家公園</a>
+                                    </li>
+                                    <li>
+                                        <a href="">日月潭</a>
+                                    </li>
+                                    <li>
+                                        <a href="">台南市</a>
+                                    </li>
+                                    <li>
+                                        <a href="">陽明山國家公園</a>
+                                    </li>
+                                    <li>
+                                        <a href="">墾丁國家公園</a>
+                                    </li>
+                                    <li>
+                                        <a href="">花蓮市</a>
+                                    </li>
+                                    <li>
+                                        <a href="">台南縣</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <button type="button">
+                                <i class="fa fa-filter" aria-hidden="true"></i>
+                                <span>行程類型</span>
+                            </button>
+                            <!-- SUB -->
+                            <div class="reserv_main_sub">
+                                <ul>
+                                    <li>
+                                        <a href="">美食之旅</a>
+                                    </li>
+                                    <li>
+                                        <a href="">文化之旅</a>
+                                    </li>
+                                    <li>
+                                        <a href="">樂活之旅</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="">離島之旅</a>
+                                    </li>
+                                    <li>
+                                        <a href="">生態之旅</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <button type="button">
+                                <i class="fa fa-binoculars" aria-hidden="true"></i>
+                                <span>活動與主題</span>
+                            </button>
+                            <!-- SUB -->
+                            <div class="reserv_main_sub">
+                                <ul>
+                                    <li>
+                                        <a href="">自行車旅遊年</a>
+                                    </li>
+                                    <li>
+                                        <a href="">脊梁山脈旅遊年</a>
+                                    </li>
+                                    <li>
+                                        <a href="">小鎮漫遊年</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="">海灣旅遊年</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="search">
+                            <div class="submit">
+                                <input type="submit" value="搜尋">
+                            </div>
+                        </li>
+                        <li>
+                            <button type="button">
+                                <i class="fa fa-exchange" aria-hidden="true"></i>
+                                <span>旅遊指南</span>
+                            </button>
+                            <!-- SUB -->
+                            <div class="reserv_main_sub">
+                                <ul>
+                                    <li>
+                                        <a href="">入出境須知</a>
+                                    </li>
+                                    <li>
+                                        <a href="">購物退稅須知</a>
+                                    </li>
+                                    <li>
+                                        <a href="">實用資訊</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="">旅遊諮詢服務</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <button type="button">
+                                <i class="fa fa-calendar" aria-hidden="true"></i>
+                                <span>美食</span>
+                            </button>
+                            <!-- SUB -->
+                            <div class="reserv_main_sub">
+                                <ul>
+                                    <li>
+                                        <a href="">臺灣飲食文化</a>
+                                    </li>
+                                    <li>
+                                        <a href="">小吃飲品</a>
+                                    </li>
+                                    <li>
+                                        <a href="">蔬食餐廳</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="">米其林餐廳</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <button type="button">
+                                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                                <span>主題標籤</span>
+                            </button>
+                            <!-- SUB -->
+                            <div class="reserv_main_sub">
+                                <ul>
+                                    <li>
+                                        <a href="">文青必訪</a>
+                                    </li>
+                                    <li>
+                                        <a href="">打卡熱點</a>
+                                    </li>
+                                    <li>
+                                        <a href="">國家公園</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="">鐵道旅遊</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <button type="button">
+                                <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                <span>節慶活動</span>
+                            </button>
+                            <!-- SUB -->
+                            <div class="reserv_main_sub">
+                                <ul>
+                                    <li>
+                                        <a href="">臺灣觀光雙年曆</a>
+                                    </li>
+                                    <li>
+                                        <a href="">傳統節慶</a>
+                                    </li>
+                                    <li>
+                                        <a href="">宗教慶典</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="">原住民活動</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+
                 </div>
-
-                <ul>
-                    <li>
-                        <button type="button">
-                            <i class="fa fa-map-marker fa-lg" aria-hidden="true"></i>
-                            <span>目的地</span>
-                        </button>
-                        <!-- SUB -->
-                        <div class="reserv_main_sub">
-                            <ul>
-                                <li>
-                                    <a href="">台北市</a>
-                                </li>
-                                <li>
-                                    <a href="">太魯閣國家公園</a>
-                                </li>
-                                <li>
-                                    <a href="">日月潭</a>
-                                </li>
-                                <li>
-                                    <a href="">台南市</a>
-                                </li>
-                                <li>
-                                    <a href="">陽明山國家公園</a>
-                                </li>
-                                <li>
-                                    <a href="">墾丁國家公園</a>
-                                </li>
-                                <li>
-                                    <a href="">花蓮市</a>
-                                </li>
-                                <li>
-                                    <a href="">台南縣</a>
-                                </li>
-
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <button type="button">
-                            <i class="fa fa-filter" aria-hidden="true"></i>
-                            <span>行程類型</span>
-                        </button>
-                        <!-- SUB -->
-                        <div class="reserv_main_sub">
-                            <ul>
-                                <li>
-                                    <a href="">美食之旅</a>
-                                </li>
-                                <li>
-                                    <a href="">文化之旅</a>
-                                </li>
-                                <li>
-                                    <a href="">樂活之旅</a>
-                                </li>
-
-                                <li>
-                                    <a href="">離島之旅</a>
-                                </li>
-                                <li>
-                                    <a href="">生態之旅</a>
-                                </li>
-
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <button type="button">
-                            <i class="fa fa-binoculars" aria-hidden="true"></i>
-                            <span>活動與主題</span>
-                        </button>
-                        <!-- SUB -->
-                        <div class="reserv_main_sub">
-                            <ul>
-                                <li>
-                                    <a href="">自行車旅遊年</a>
-                                </li>
-                                <li>
-                                    <a href="">脊梁山脈旅遊年</a>
-                                </li>
-                                <li>
-                                    <a href="">小鎮漫遊年</a>
-                                </li>
-
-                                <li>
-                                    <a href="">海灣旅遊年</a>
-                                </li>
-
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="search">
-                        <div class="submit">
-                            <input type="submit" value="搜尋">
-                        </div>
-                    </li>
-                    <li>
-                        <button type="button">
-                            <i class="fa fa-exchange" aria-hidden="true"></i>
-                            <span>旅遊指南</span>
-                        </button>
-                        <!-- SUB -->
-                        <div class="reserv_main_sub">
-                            <ul>
-                                <li>
-                                    <a href="">入出境須知</a>
-                                </li>
-                                <li>
-                                    <a href="">購物退稅須知</a>
-                                </li>
-                                <li>
-                                    <a href="">實用資訊</a>
-                                </li>
-
-                                <li>
-                                    <a href="">旅遊諮詢服務</a>
-                                </li>
-
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <button type="button">
-                            <i class="fa fa-calendar" aria-hidden="true"></i>
-                            <span>美食</span>
-                        </button>
-                        <!-- SUB -->
-                        <div class="reserv_main_sub">
-                            <ul>
-                                <li>
-                                    <a href="">臺灣飲食文化</a>
-                                </li>
-                                <li>
-                                    <a href="">小吃飲品</a>
-                                </li>
-                                <li>
-                                    <a href="">蔬食餐廳</a>
-                                </li>
-
-                                <li>
-                                    <a href="">米其林餐廳</a>
-                                </li>
-
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <button type="button">
-                            <i class="fa fa-clock-o" aria-hidden="true"></i>
-                            <span>主題標籤</span>
-                        </button>
-                        <!-- SUB -->
-                        <div class="reserv_main_sub">
-                            <ul>
-                                <li>
-                                    <a href="">文青必訪</a>
-                                </li>
-                                <li>
-                                    <a href="">打卡熱點</a>
-                                </li>
-                                <li>
-                                    <a href="">國家公園</a>
-                                </li>
-
-                                <li>
-                                    <a href="">鐵道旅遊</a>
-                                </li>
-
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <button type="button">
-                            <i class="fa fa-check-circle" aria-hidden="true"></i>
-                            <span>節慶活動</span>
-                        </button>
-                        <!-- SUB -->
-                        <div class="reserv_main_sub">
-                            <ul>
-                                <li>
-                                    <a href="">臺灣觀光雙年曆</a>
-                                </li>
-                                <li>
-                                    <a href="">傳統節慶</a>
-                                </li>
-                                <li>
-                                    <a href="">宗教慶典</a>
-                                </li>
-
-                                <li>
-                                    <a href="">原住民活動</a>
-                                </li>
-
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
-
+            </form>
+        </div>
+        <div class="reservation_mob">
+            <div class="reservation_mob_icon">
+                <ion-icon size="large" name="options-outline"></ion-icon>
             </div>
-        </form>
+            <div class="reservation_mob_txt">
+                <span>條件搜尋</span>
+            </div>
+        </div>
+
 
 
     </div>

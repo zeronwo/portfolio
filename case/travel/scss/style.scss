@@ -389,6 +389,12 @@ section {
   width: 100%;
   max-width: 1280px;
   margin: auto;
+  &.active {
+    background-color: #242a3a;
+    .menu_rwd_toggle {
+      background-color: #96daf0;
+    }
+  }
 }
 
 .menu_main_bottom {
@@ -413,6 +419,8 @@ section {
       li {
         padding: 10px 18px;
         position: relative;
+        display: flex;
+        align-items: center;
         a {
           display: flex;
           align-items: center;
@@ -538,7 +546,7 @@ section {
   display: none;
   button {
     position: relative;
-    top: 45px;
+    top: 58px;
     width: 3.8rem;
     height: 2.8rem;
     transform: translateY(-50px);
@@ -707,16 +715,14 @@ body.menu-open {
 
 .sidemenu {
   position: fixed;
-  top: 60px;
+  top: 61px;
   left: 0;
   z-index: 89;
   width: 100%;
   height: calc(100vh - 60px);
   background-color: $white;
-  opacity: 0;
-  pointer-events: none;
-  visibility: hidden;
-  transition: all 0.5s ease-out;
+  transform: translateX(100%);
+  transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
   .main {
     width: 100%;
     height: 100%;
@@ -735,20 +741,20 @@ body.menu-open {
         & > a {
           position: relative;
           display: block;
-         
+
           color: #53514f;
           letter-spacing: 1px;
           font-weight: 700;
           font-family: "Cardo", "Noto Serif TC", serif;
-          p{
+          p {
             font-size: 19px;
           }
-          span{
-            color: #242a3a;
-            font-size: 16px;
+          span {
+            color: #878787;
+            font-size: 13px;
+            font-family: "Roboto";
           }
         }
-
 
         &::before {
           content: "";
@@ -766,10 +772,9 @@ body.menu-open {
     }
   }
 }
-.sidemenu.active {
-  opacity: 1;
-  pointer-events: auto;
-  visibility: visible;
+.sidemenu_top.active,
+.sidemenu_bottom.active {
+  transform: translateX(0);
   .menu {
     li {
       & > ul {
@@ -781,6 +786,80 @@ body.menu-open {
   }
 }
 
+.sidemenu.sidemenu_bottom {
+  height: 100vh;
+  top: 0;
+  z-index: 99;
+  .main {
+    overflow-y: auto;
+    .top {
+      background-color: #242a3a;
+      .menu_rwd_toggle {
+        display: flex;
+        justify-content: flex-end;
+        button {
+          background-color: #96daf0;
+          top: 50px;
+          right: 0;
+          width: 3.8rem;
+          height: 60px;
+        }
+      }
+    }
+    .search_main {
+      width: 100%;
+      padding: 10px;
+      background-color: #f3f3f3;
+      position: relative;
+      input {
+        width: 100%;
+        border: 0;
+        background-color: $white;
+        border-radius: 5px;
+        color: #242a3a;
+        font-size: 20px;
+        line-height: 60px;
+        padding: 0 10px 0 60px;
+      }
+      &:before {
+        content: "\f002";
+        font-family: FontAwesome;
+        padding-right: 0.5em;
+        position: absolute;
+        top: 31px;
+        left: 33px;
+        font-size: 20px;
+      }
+    }
+    ul {
+      li {
+        padding: 0 20px;
+        a {
+          display: flex;
+          align-items: center;
+          i {
+            padding-right: 20px;
+          }
+        }
+        &::before {
+          display: none;
+        }
+        &::after {
+          content: "\f0da";
+          font-family: FontAwesome;
+          padding-right: 0.5em;
+          position: absolute;
+          top: 50%;
+          right: 20px;
+          transform: translate(-50%, -50%);
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
+//首頁輪播圖 文字
 .top {
   position: relative;
   .content {
@@ -824,179 +903,212 @@ body.menu-open {
   }
 }
 
-//預約旅館
+//條件搜尋
 .reservation {
-  max-width: 960px;
-  margin: auto;
   position: relative;
   z-index: 9;
   margin-top: -65px;
-  box-shadow: -1px 4px 74px -16px rgba(50, 50, 50, 0.39);
 }
+//條件搜尋 桌機
+.reservation_bar {
+  max-width: 960px;
+  margin: auto;
+  box-shadow: -1px 4px 74px -16px rgba(50, 50, 50, 0.39);
+  .reserv_main {
+    background: $white;
+    position: relative;
+    & > ul {
+      display: flex;
+      flex-wrap: wrap;
+      & > li {
+        border-right: 1px solid #eaeaea;
+        width: calc(100% / 4);
+        cursor: pointer;
+        position: relative;
+        //副選單
+        & > .reserv_main_sub {
+          width: 100%;
+          background: $white;
+          position: absolute;
+          bottom: 65px;
+          z-index: 9999;
+          overflow: auto;
+          transform-origin: 50% 100%;
+          transform: scaleY(0);
+          transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+          ul {
+            padding: 10px 20px 10px 10px;
+            opacity: 0;
 
-.reserv_main {
-  background: $white;
-  position: relative;
-  & > ul {
-    display: flex;
-    flex-wrap: wrap;
-    & > li {
-      border-right: 1px solid #eaeaea;
-      width: calc(100% / 4);
-      cursor: pointer;
-      position: relative;
-      //副選單
-      & > .reserv_main_sub {
-        width: 100%;
-        background: $white;
-        position: absolute;
-        bottom: 65px;
-        z-index: 9999;
-        overflow: auto;
-        transform-origin: 50% 100%;
-        transform: scaleY(0);
-        transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
-        ul {
-          padding: 10px 20px 10px 10px;
-          opacity: 0;
-
-          & > li {
-            position: relative;
-            a {
-              color: $txt;
-              display: block;
-              line-height: 40px;
-              padding: 3px 20px;
-              font-size: 14px;
-              &:hover {
-                background-color: #f5f5f5;
+            & > li {
+              position: relative;
+              a {
+                color: $txt;
+                display: block;
+                line-height: 40px;
+                padding: 3px 20px;
+                font-size: 14px;
+                &:hover {
+                  background-color: #f5f5f5;
+                }
+              }
+              &:not(:last-child) {
+                border-bottom: 1px solid #eaeaea;
               }
             }
-            &:not(:last-child) {
-              border-bottom: 1px solid #eaeaea;
-            }
           }
         }
-      }
-      button {
-        width: 100%;
-        color: $txt;
-        padding: 22px 20px;
-        text-align: left;
-        transition: all 0.2s;
-        span {
-          padding-left: 10px;
-        }
-      }
-      &.search {
-        display: flex;
-        justify-content: flex-end;
-        padding: 0;
         button {
-          width: 50%;
+          width: 100%;
+          color: $txt;
+          padding: 22px 20px;
+          text-align: left;
           display: flex;
-          align-content: center;
-          justify-content: center;
           align-items: center;
+          transition: all 0.2s;
+          span {
+            padding-left: 10px;
+          }
         }
-        .submit {
-          width: 50%;
+        &.search {
           display: flex;
-          justify-content: center;
-          position: relative;
-          input {
-            width: 100%;
-            border: 0;
-            background: $txt;
-            color: $white;
-            cursor: pointer;
-            transition: all 0.4s;
-            &:hover {
-              background: $dark;
+          justify-content: flex-end;
+          padding: 0;
+          button {
+            width: 50%;
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+          }
+          .submit {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            position: relative;
+            input {
+              width: 100%;
+              border: 0;
+              background: $txt;
+              color: $white;
+              cursor: pointer;
+              transition: all 0.4s;
+              &:hover {
+                background: $dark;
+              }
+            }
+          }
+        }
+        &:hover button,
+        &.active button {
+          background: $txt;
+          color: $white;
+        }
+        &.active {
+          .reserv_main_sub {
+            transform: scaleY(1);
+            ul {
+              transition: opacity 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.35s;
+              opacity: 1;
             }
           }
         }
       }
-      &:hover button,
-      &.active button {
-        background: $txt;
-        color: $white;
+      li:nth-of-type(4n) {
+        border-right: 0;
       }
-      &.active {
-        .reserv_main_sub {
-          transform: scaleY(1);
-          ul {
-            transition: opacity 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.35s;
-            opacity: 1;
-          }
+      & > li:nth-of-type(1),
+      & > li:nth-of-type(2),
+      & > li:nth-of-type(3),
+      & > li:nth-of-type(4) {
+        border-bottom: 1px solid #eaeaea;
+      }
+    }
+  }
+
+  .search-bar {
+    width: calc(100% - 120px);
+
+    position: absolute;
+    z-index: 9;
+    overflow: hidden;
+    pointer-events: none;
+
+    .search-bar_box {
+      background: $white;
+      display: flex;
+      pointer-events: auto;
+      transform: translateX(720px);
+      transition: transform 1s cubic-bezier(0.77, 0, 0.175, 1) 0s,
+        -webkit-transform 1s cubic-bezier(0.77, 0, 0.175, 1) 0s;
+
+      .search-bar_main {
+        width: calc(100% - 128px);
+        height: 65px;
+        display: flex;
+        padding: 10px;
+
+        input {
+          border: 0;
+          width: calc(100% - 78px);
+          background-color: #f3f3f3;
+          line-height: 60px;
+          font-size: 16px;
+          height: 100%;
+          padding: 0 20px;
+          color: #242a3a;
+        }
+        button {
+          width: 78px;
+          border: 0;
+          color: #242a3a;
+          cursor: pointer;
+        }
+      }
+
+      & > button {
+        width: 120px;
+        background: $white;
+        &:hover {
+          color: $white;
+          background: $txt;
         }
       }
     }
-    li:nth-of-type(4n) {
-      border-right: 0;
-    }
-    & > li:nth-of-type(1),
-    & > li:nth-of-type(2),
-    & > li:nth-of-type(3),
-    & > li:nth-of-type(4) {
-      border-bottom: 1px solid #eaeaea;
+    &.active {
+      .search-bar_box {
+        pointer-events: auto;
+        transform: translateX(0);
+      }
     }
   }
 }
-
-.search-bar {
-  width: calc(100% - 120px);
-
-  position: absolute;
-  z-index: 9;
-  overflow: hidden;
-  pointer-events: none;
-
-  .search-bar_box {
-    background: $white;
+//條件搜尋 手機
+.reservation_mob {
+  background: $white;
+  max-width: 280px;
+  height: 80px;
+  margin: auto;
+  box-shadow: -1px 4px 74px -16px rgba(50, 50, 50, 0.39);
+  display: flex;
+  align-items: center;
+  display: none;
+  .reservation_mob_icon {
+    width: 80px;
+    height: 80px;
+    position: relative;
     display: flex;
-    pointer-events: auto;
-    transform: translateX(720px);
-    transition: transform 1s cubic-bezier(0.77, 0, 0.175, 1) 0s, -webkit-transform 1s cubic-bezier(0.77, 0, 0.175, 1) 0s;
-
-    .search-bar_main {
-      width: calc(100% - 128px);
-      height: 65px;
-      display: flex;
-      padding: 10px;
-
-      input {
-        border: 0;
-        width: calc(100% - 78px);
-        background-color: #f3f3f3;
-        line-height: 60px;
-        font-size: 16px;
-        height: 100%;
-        padding: 0 20px;
-        color: #242a3a;
-      }
-      button {
-        width: 78px;
-        border: 0;
-        color: #242a3a;
-        cursor: pointer;
-      }
-    }
-
-    & > button {
-      width: 120px;
-      background: $white;
-      &:hover {
-        color: $white;
-        background: $txt;
-      }
-    }
+    align-items: center;
+    justify-content: center;
   }
-  &.active {
-    .search-bar_box {
-      pointer-events: auto;
-      transform: translateX(0);
-    }
+  .reservation_mob_txt {
+    width: calc(100% - 80px);
+    height: 100%;
+    background-color: #242a3a;
+    color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
@@ -1005,7 +1117,7 @@ body.menu-open {
   #menu {
     display: block !important;
   }
-  #menu_rwd {
+  .sidemenu {
     display: none !important;
   }
 }
@@ -1014,7 +1126,8 @@ body.menu-open {
 
 @media (max-width: 1300px) {
   .menu_main_right > ul,
-  .menu_main_right .menu_main_top ul li a span {
+  .menu_main_right .menu_main_top ul li a span,
+  .reservation_bar {
     display: none;
   }
   .menu_rwd_toggle {
@@ -1060,8 +1173,11 @@ body.menu-open {
     border-bottom: none;
   }
 
-  .logo {
+  .menu_main {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    padding: 0;
   }
+
   .logo a img {
     max-width: 80px;
   }
@@ -1069,6 +1185,13 @@ body.menu-open {
   .menu_main_right {
     flex-direction: row;
     padding: 0;
+  }
+  .menu_main_top {
+    ul {
+      li {
+        height: 60px;
+      }
+    }
   }
 
   .menu_search {
@@ -1096,18 +1219,8 @@ body.menu-open {
     padding: 10px 15px;
   }
 
-  #menu {
-    max-width: inherit;
-    .menu_main {
-      padding: 10px;
-      .menu_main_right {
-        a {
-          i {
-            font-size: 16px;
-          }
-        }
-      }
-    }
+  .reservation_mob {
+    display: flex;
   }
 
   //lity
