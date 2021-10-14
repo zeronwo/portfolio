@@ -118,6 +118,12 @@ button {
   background: 0;
   cursor: pointer;
 }
+fieldset,
+img,
+input,
+textarea {
+  border: 0;
+}
 
 body {
   background: $white;
@@ -832,7 +838,10 @@ body.menu-open {
       }
     }
     ul {
+      height: auto;
       li {
+        height: 80px;
+        flex: inherit;
         padding: 0 20px;
         a {
           display: flex;
@@ -856,6 +865,71 @@ body.menu-open {
         }
       }
     }
+    .submit {
+      background-color: #242a3a;
+      display: block;
+      position: relative;
+      width: 100%;
+      max-width: 260px;
+      margin: 30px auto 30px auto;
+      height: 60px;
+      input {
+        width: 100%;
+        height: 100%;
+        color: #fff;
+        font-family: geomanistbook, Sans-Serif;
+        position: relative;
+        z-index: 2;
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+.sidemenu_bottom_sub {
+  height: calc(100vh - 60px);
+  top: 61px;
+  z-index: 100;
+  .main {
+    .menu {
+     
+      li {
+        flex: inherit;
+        padding: 0;
+        a {
+          line-height: 40px;
+          padding: 20px 30px;
+          display: flex;
+          align-items: center;
+        }
+        &:before {
+          display: none;
+        }
+        &.mm {
+          background-color: #f3f3f3;
+          a {
+            padding: 20px 30px 20px 58px;
+          }
+          &::after {
+            content: "\f0d9";
+            font-family: FontAwesome;
+            padding-right: 0.5em;
+            position: absolute;
+            top: 50%;
+            left: 40px;
+            transform: translate(-50%, -50%);
+            font-size: 20px;
+          }
+        }
+      }
+      &.active {
+      display: block;
+        opacity: 1;
+      }
+    }
+  }
+  &.active {
+    transform: translateX(0);
   }
 }
 

@@ -548,6 +548,13 @@ button {
   cursor: pointer;
 }
 
+fieldset,
+img,
+input,
+textarea {
+  border: 0;
+}
+
 body {
   background: #fff;
   color: #242a3a;
@@ -1552,7 +1559,15 @@ body.menu-open {
   font-size: 20px;
 }
 
+.sidemenu.sidemenu_bottom .main ul {
+  height: auto;
+}
+
 .sidemenu.sidemenu_bottom .main ul li {
+  height: 80px;
+  -webkit-box-flex: inherit;
+      -ms-flex: inherit;
+          flex: inherit;
   padding: 0 20px;
 }
 
@@ -1583,6 +1598,84 @@ body.menu-open {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   font-size: 20px;
+}
+
+.sidemenu.sidemenu_bottom .main .submit {
+  background-color: #242a3a;
+  display: block;
+  position: relative;
+  width: 100%;
+  max-width: 260px;
+  margin: 30px auto 30px auto;
+  height: 60px;
+}
+
+.sidemenu.sidemenu_bottom .main .submit input {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  font-family: geomanistbook, Sans-Serif;
+  position: relative;
+  z-index: 2;
+  background-color: transparent;
+}
+
+.sidemenu_bottom_sub {
+  height: calc(100vh - 60px);
+  top: 61px;
+  z-index: 100;
+}
+
+.sidemenu_bottom_sub .main .menu li {
+  -webkit-box-flex: inherit;
+      -ms-flex: inherit;
+          flex: inherit;
+  padding: 0;
+}
+
+.sidemenu_bottom_sub .main .menu li a {
+  line-height: 40px;
+  padding: 20px 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sidemenu_bottom_sub .main .menu li:before {
+  display: none;
+}
+
+.sidemenu_bottom_sub .main .menu li.mm {
+  background-color: #f3f3f3;
+}
+
+.sidemenu_bottom_sub .main .menu li.mm a {
+  padding: 20px 30px 20px 58px;
+}
+
+.sidemenu_bottom_sub .main .menu li.mm::after {
+  content: "\f0d9";
+  font-family: FontAwesome;
+  padding-right: 0.5em;
+  position: absolute;
+  top: 50%;
+  left: 40px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 20px;
+}
+
+.sidemenu_bottom_sub .main .menu.active {
+  display: block;
+  opacity: 1;
+}
+
+.sidemenu_bottom_sub.active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
 .top {
