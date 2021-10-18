@@ -564,10 +564,14 @@ body {
   overflow-x: hidden;
 }
 
+section {
+  padding: 0 12vw;
+}
+
 .container {
-  max-width: 1300px;
-  padding-right: 15px;
-  padding-left: 15px;
+  width: 100%;
+  max-width: 80rem;
+  margin: auto;
   margin: auto;
   position: relative;
 }
@@ -1720,6 +1724,7 @@ body.menu-open {
   position: relative;
   z-index: 9;
   margin-top: -65px;
+  margin-bottom: 115px;
 }
 
 .reservation_bar {
@@ -1995,6 +2000,55 @@ body.menu-open {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.introduce .introduce_bg {
+  background: url(../images/introduce_bg.jpg);
+  position: absolute;
+  top: -116px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-position: 69% 50%;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply;
+  z-index: 1;
+}
+
+.introduce .container {
+  z-index: 2;
+}
+
+.introduce .container .row {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.introduce .container .row > div {
+  width: 42%;
+}
+
+.introduce .container .row > div .txt {
+  max-width: 23rem;
+  margin-bottom: 7em;
+  padding-left: 3em;
+}
+
+.introduce .container .row > div .txt .introduce_title {
+  font-size: 2.25em;
+  margin-bottom: 32px;
+}
+
+.introduce .container .row > div .txt .introduce_title p {
+  font-weight: 100;
+}
+
+.introduce .container .row > div .txt > p {
+  color: #777;
+  font-size: 0.9em;
+  line-height: 2;
 }
 
 @media screen and (min-width: 1300px) {
