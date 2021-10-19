@@ -564,10 +564,6 @@ body {
   overflow-x: hidden;
 }
 
-section {
-  padding: 0 12vw;
-}
-
 .container {
   width: 100%;
   max-width: 80rem;
@@ -730,7 +726,7 @@ section {
 
 header {
   width: 100%;
-  position: fixed;
+  position: absolute;
   top: 0;
   z-index: 99;
 }
@@ -2002,14 +1998,18 @@ body.menu-open {
           justify-content: center;
 }
 
+.introduce {
+  padding: 0 12vw;
+}
+
 .introduce .introduce_bg {
   background: url(../images/introduce_bg.jpg);
   position: absolute;
-  top: -116px;
+  top: -56px;
   left: 0;
   width: 100%;
   height: 100%;
-  background-size: contain;
+  background-size: cover;
   background-position: 69% 50%;
   background-repeat: no-repeat;
   background-blend-mode: multiply;
@@ -2049,6 +2049,47 @@ body.menu-open {
   color: #777;
   font-size: 0.9em;
   line-height: 2;
+}
+
+.map .map_world {
+  position: relative;
+  width: 70%;
+}
+
+.map_clouds {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  overflow: hidden;
+  pointer-events: none;
+  display: block;
+  -webkit-mask-image: url(../images/globe-mask.png);
+  -webkit-mask-size: cover;
+}
+
+.map_clouds img {
+  position: absolute;
+  width: 200%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.3;
+}
+
+.map_inner {
+  position: relative;
+  padding-top: 85%;
+}
+
+.map_inner .map_side {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 @media screen and (min-width: 1300px) {
