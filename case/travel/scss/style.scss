@@ -126,7 +126,7 @@ textarea {
 }
 
 body {
-  background: $white;
+  background: #f3f3f3;
   color: $color1;
   font-family: 微軟正黑體;
   font-size: 100%;
@@ -1215,26 +1215,32 @@ body.menu-open {
           max-width: 23rem;
           margin-bottom: 7em;
           padding-left: 3em;
-          .introduce_title {
-            font-size: 2.25em;
-            margin-bottom: 32px;
-            p {
-              font-weight: 100;
-            }
-          }
-          & > p {
-            color: #777;
-            font-size: 0.9em;
-            line-height: 2;
-          }
         }
       }
     }
   }
 }
 
+.txt {
+  .introduce_title {
+    font-size: 2.25em;
+    margin-bottom: 32px;
+    p {
+      font-weight: 100;
+    }
+  }
+  & > p {
+    color: #777;
+    font-size: 0.9em;
+    line-height: 2;
+  }
+}
+
 .map {
   background: #f3f3f3;
+  .container {
+    padding: 0 12vw;
+  }
   .map_world {
     position: relative;
     width: 70%;
@@ -1252,12 +1258,11 @@ body.menu-open {
   display: block;
   -webkit-mask-image: url(https://zeronwo.github.io/portfolio/case/travel/images/globe-mask.png);
   -webkit-mask-size: cover;
-  img {
-    position: absolute;
-    width: 200%;
+  .clouds {
+    background: url("../images/globe-clouds.png") repeat-x;
+    background-size: cover;
+    width: 3000px;
     height: 100%;
-    top: 0;
-    left: 0;
     opacity: 0.3;
     animation: clouds 175s linear infinite;
   }
@@ -1265,10 +1270,10 @@ body.menu-open {
 
 @keyframes clouds {
   0% {
-    transform: translateX(0);
+    transform: translate3d(0, 0, 0);
   }
-  to {
-    transform: translateX(-50%);
+  100% {
+    transform: translate3d(-1100px, 0, 0);
   }
 }
 
@@ -1283,7 +1288,54 @@ body.menu-open {
     left: 0;
   }
 }
-
+.map_clouds_coordinate {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 99;
+  ul {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    li {
+      position: absolute;
+      a {
+        width: 20px;
+        height: 20px;
+        background-color: rgba(0, 0, 0, 0.8);
+        border-radius: 100%;
+        display: block;
+        position: relative;
+        &:before {
+          content: "";
+          width: 9px;
+          height: 12px;
+          background: url(../images/icons8-location-64.png) no-repeat;
+          background-size: contain;
+          display: block;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+      &:nth-of-type(1) {
+        top: 24%;
+        left: 12.5%;
+      }
+      &:nth-of-type(2) {
+        top: 34%;
+        left: 9%;
+      }
+      &.active {
+        a {
+          background-color: rgba(253, 0, 105, 0.8);
+        }
+      }
+    }
+  }
+}
 .map_content {
   width: 100%;
   height: 100%;
@@ -1296,40 +1348,106 @@ body.menu-open {
     justify-content: flex-end;
     .map_content_box {
       width: calc(-3vw * 0.5 + 50%);
-      padding-top: 10rem;
+      padding-top: 17rem;
       .map_content_box_inner {
         background: #161f1e;
-        display: flex;
-        justify-content: space-between;
-        position: relative;
-        padding: 4vw;
-        .map_content_box__content {
-          width: 55%;
-          ul {
-            color: hsla(0, 0%, 100%, 0.5);
+        li {
+          display: none;
+          .map_content_box_main {
             display: flex;
-            justify-content: space-around;
-            font-size: 0.7rem;
-            li {
-              display: flex;
-              flex-direction: column;
-              align-content: center;
-              justify-content: center;
-              align-items: center;
-              .icon {
-                margin-bottom: .5rem;
+            justify-content: space-between;
+            position: relative;
+            padding: 4vw;
+            .map_content_box__content {
+              width: 55%;
+              ul {
+                color: hsla(0, 0%, 100%, 0.5);
+                display: flex;
+                font-size: 0.7rem;
+                margin-bottom: 75px;
+                li {
+                  display: flex;
+                  flex-direction: column;
+                  align-content: center;
+                  justify-content: center;
+                  align-items: center;
+                  .icon {
+                    margin-bottom: 0.5rem;
+                    img {
+                      max-width: 26px;
+                    }
+                  }
+                }
+                li:not(:last-child) {
+                  margin-right: 40px;
+                }
+              }
+              p {
+                color: hsla(0, 0%, 100%, 0.5);
+                margin-bottom: 30px;
+              }
+              strong {
+                color: $white;
+                display: block;
+                font-size: 2.25em;
+                margin-bottom: 60px;
+              }
+              .coordinate {
+                display: flex;
+                font-size: 0.9rem;
                 img {
-                  max-width: 26px;
+                  max-width: 15px;
+                }
+                p {
+                  margin-left: 20px;
+                }
+              }
+            }
+            .map_content_box__img {
+              --offset: calc(var(--spacing) * -0.75);
+              width: 45%;
+              margin-right: 0;
+              margin-bottom: 0;
+              position: relative;
+              overflow: hidden;
+              margin-top: var(--offset);
+              figure {
+                position: absolute;
+                top: 0;
+                left: -100%;
+                width: 100%;
+                height: 100%;
+                transition: all 0.4s;
+                img {
+                  object-fit: cover;
+                  background-color: #f3f3f3;
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  width: 100%;
+                  height: 100%;
+                }
+              }
+            }
+          }
+          &.active {
+            display: block;
+            .map_content_box_main {
+              .map_content_box__img {
+                figure {
+                  left: 0;
                 }
               }
             }
           }
         }
-        .map_content_box__img {
-        }
       }
     }
   }
+}
+
+:root {
+  --spacing: 10rem;
 }
 
 //桌機時  強制選單出現  手機選單消失

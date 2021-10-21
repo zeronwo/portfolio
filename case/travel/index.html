@@ -749,8 +749,8 @@
 
     </div>
 
-    <main>
-        <section class="introduce">
+    <main id="app">
+        <section class="introduce m_170">
             <div class="introduce_bg">
 
             </div>
@@ -784,11 +784,38 @@
 
         </section>
         <section class="map">
+            <div class="map_txt m_70">
+                <div class="container ">
+                    <div class="row">
+                        <div class="m_20">
+                            <div class="txt">
+                                <h2 class="introduce_title">
+                                    <span>Lands of</span>
+                                    <p>Discovery</p>
+                                </h2>
+                                <p>
+                                    一個遠離日常的世界。你的逃脫。你的避風港。你的世界。<br>
+                                    瀏覽下面的地圖並前往我們的社區。
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
             <div class="map_world">
                 <div class="map_clouds">
-                    <img src="images/globe-clouds.png" alt="">
+                    <div class="clouds"></div>
                 </div>
                 <div class="map_clouds_inner">
+                    <div class="map_clouds_coordinate">
+                        <ul>
+                            <!-- 01 -->
+                            <li class="active"><a href="javascript:;"></a></li>
+                            <!-- 02 -->
+                            <li><a href="javascript:;"></a></li>
+                        </ul>
+                    </div>
                     <div class="map_side">
                         <figure><img src="images/globe-usa.jpg" alt=""></figure>
                     </div>
@@ -796,34 +823,121 @@
             </div>
             <div class="map_content">
                 <div class="map_content_inner">
-                    <div class="map_content_box">
-                        <div class="map_content_box_inner">
-                            <div class="map_content_box__content">
-                                <ul>
-                                    <li>
-                                        <div class="icon">
-                                           <img src="images/icons8-sun-96.png" alt="">
-                                        </div>
-                                        <p>49 °F</p>
-                                    </li>
-                                    <li>
-                                        <div class="icon">
-                                            <img src="images/icons8-wind-90.png" alt="">
-                                        </div>
-                                        <p>9.22mph</p>
-                                    </li>
-                                    <li>
-                                        <div class="icon">
-                                            <img src="images/icons8-compass-96.png" alt="">
-                                        </div>
-                                        <p>122 °</p>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="map_content_box__img">
 
-                            </div>
-                        </div>
+                    <div class="map_content_box">
+                        <ul class="map_content_box_inner">
+                            <!-- 01 -->
+                            <li class="active" style="display: block;"v-for="item in items">
+                                <div class="map_content_box_main">
+                                    <div class="map_content_box__content">
+                                        <ul>
+                                            <li>
+                                                <div class="icon">
+                                                    <img src="images/icons8-sun-96.png" alt="">
+                                                </div>
+                                                <p>49 °F</p>
+                                            </li>
+                                            <li>
+                                                <div class="icon">
+                                                    <img src="images/icons8-wind-90.png" alt="">
+                                                </div>
+                                                <p>9.22mph</p>
+                                            </li>
+                                            <li>
+                                                <div class="icon">
+                                                    <img src="images/icons8-compass-96.png" alt="">
+                                                </div>
+                                                <p>122 °</p>
+                                            </li>
+                                        </ul>
+                                        <p>加拿大不列顛哥倫比亞省南部海灣群島</p>
+                                        <strong>詹姆斯島</strong>
+                                        <div class="coordinate">
+                                            <figure><img src="images/icons8-location-64.png" alt=""></figure>
+                                            <p>48.602830922° N / -123.342998628° W</p>
+                                        </div>
+                                    </div>
+                                    <div class="map_content_box__img">
+                                        <figure> <img src="images/map_content_box__img01.jpg" alt=""></figure>
+                                    </div>
+                                </div>
+
+                            </li>
+                            <!-- 02 -->
+                            <li class="">
+                                <div class="map_content_box_main">
+                                    <div class="map_content_box__content">
+                                        <ul>
+                                            <li>
+                                                <div class="icon">
+                                                    <img src="images/icons8-sun-96.png" alt="">
+                                                </div>
+                                                <p>59 °F</p>
+                                            </li>
+                                            <li>
+                                                <div class="icon">
+                                                    <img src="images/icons8-wind-90.png" alt="">
+                                                </div>
+                                                <p>5.75mph</p>
+                                            </li>
+                                            <li>
+                                                <div class="icon">
+                                                    <img src="images/icons8-compass-96.png" alt="">
+                                                </div>
+                                                <p>340 °</p>
+                                            </li>
+                                        </ul>
+                                        <p>加利福尼亞州矽谷</p>
+                                        <strong>科德瓦萊</strong>
+                                        <div class="coordinate">
+                                            <figure><img src="images/icons8-location-64.png" alt=""></figure>
+                                            <p>37.067811° 北 / -121.632827° 西</p>
+                                        </div>
+                                    </div>
+                                    <div class="map_content_box__img">
+                                        <figure> <img src="images/map_content_box__img02.jpg" alt=""></figure>
+                                    </div>
+                                </div>
+
+                            </li>
+                             <!-- 02 -->
+                             <li class="">
+                                <div class="map_content_box_main">
+                                    <div class="map_content_box__content">
+                                        <ul>
+                                            <li>
+                                                <div class="icon">
+                                                    <img src="images/icons8-sun-96.png" alt="">
+                                                </div>
+                                                <p>59 °F</p>
+                                            </li>
+                                            <li>
+                                                <div class="icon">
+                                                    <img src="images/icons8-wind-90.png" alt="">
+                                                </div>
+                                                <p>5.75mph</p>
+                                            </li>
+                                            <li>
+                                                <div class="icon">
+                                                    <img src="images/icons8-compass-96.png" alt="">
+                                                </div>
+                                                <p>340 °</p>
+                                            </li>
+                                        </ul>
+                                        <p>加利福尼亞州矽谷</p>
+                                        <strong>科德瓦萊</strong>
+                                        <div class="coordinate">
+                                            <figure><img src="images/icons8-location-64.png" alt=""></figure>
+                                            <p>37.067811° 北 / -121.632827° 西</p>
+                                        </div>
+                                    </div>
+                                    <div class="map_content_box__img">
+                                        <figure> <img src="images/map_content_box__img02.jpg" alt=""></figure>
+                                    </div>
+                                </div>
+
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>

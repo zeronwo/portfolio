@@ -75,8 +75,15 @@ $(document).ready(function () {
     //搜尋框 移除
     $(".search-bar_main button").click(function () {
         $(".search-bar").removeClass("active");
-
     });
+//地圖
+    $('.map_clouds_coordinate ul li').click(function (e) {
+        var $tabIndex = $(this).index();
+        $(this).addClass('active').siblings(".map_clouds_coordinate ul li").removeClass('active');
+        $('.map_content_box_inner > li').eq($tabIndex).fadeIn().addClass("active").siblings(".map_content_box_inner > li").hide().removeClass("active");
+      });
+    
+
 
     //lighrbox
     $(document).on('lity:resize', function (event, instance) {
