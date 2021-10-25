@@ -814,6 +814,12 @@
                             <li class="active"><a href="javascript:;"></a></li>
                             <!-- 02 -->
                             <li><a href="javascript:;"></a></li>
+                            <!-- 03 -->
+                            <li><a href="javascript:;"></a></li>
+                            <!-- 04 -->
+                            <li><a href="javascript:;"></a></li>
+                            <!-- 05 -->
+                            <li><a href="javascript:;"></a></li>
                         </ul>
                     </div>
                     <div class="map_side">
@@ -821,13 +827,24 @@
                     </div>
                 </div>
             </div>
+            <div class="map_select">
+                <select name="pets">
+            
+                    <option value="dog" selected>詹姆斯島</option>
+                    <option value="cat">科德瓦萊</option>
+                    <option value="hamster">游吟詩人</option>
+                    <option value="parrot">沙丘甲板</option>
+                    <option value="spider">貝克灣</option>
+           
+                </select>
+            </div>
             <div class="map_content">
                 <div class="map_content_inner">
 
                     <div class="map_content_box">
                         <ul class="map_content_box_inner">
                             <!-- 01 -->
-                            <li class="active" style="display: block;"v-for="item in items">
+                            <li class="active" style="display: block;" v-for="item in items">
                                 <div class="map_content_box_main">
                                     <div class="map_content_box__content">
                                         <ul>
@@ -900,8 +917,8 @@
                                 </div>
 
                             </li>
-                             <!-- 02 -->
-                             <li class="">
+                            <!-- 03 -->
+                            <li class="">
                                 <div class="map_content_box_main">
                                     <div class="map_content_box__content">
                                         <ul>
@@ -909,30 +926,104 @@
                                                 <div class="icon">
                                                     <img src="images/icons8-sun-96.png" alt="">
                                                 </div>
-                                                <p>59 °F</p>
+                                                <p>65 °F</p>
                                             </li>
                                             <li>
                                                 <div class="icon">
                                                     <img src="images/icons8-wind-90.png" alt="">
                                                 </div>
-                                                <p>5.75mph</p>
+                                                <p>1248mph</p>
                                             </li>
                                             <li>
                                                 <div class="icon">
                                                     <img src="images/icons8-compass-96.png" alt="">
                                                 </div>
-                                                <p>340 °</p>
+                                                <p>180 °</p>
                                             </li>
                                         </ul>
-                                        <p>加利福尼亞州矽谷</p>
-                                        <strong>科德瓦萊</strong>
+                                        <p>田納西州納什維爾</p>
+                                        <strong>游吟詩人</strong>
                                         <div class="coordinate">
                                             <figure><img src="images/icons8-location-64.png" alt=""></figure>
-                                            <p>37.067811° 北 / -121.632827° 西</p>
+                                            <p>35.828904° 北 / -86.679158° 西</p>
                                         </div>
                                     </div>
                                     <div class="map_content_box__img">
-                                        <figure> <img src="images/map_content_box__img02.jpg" alt=""></figure>
+                                        <figure> <img src="images/map_content_box__img03.jpg" alt=""></figure>
+                                    </div>
+                                </div>
+
+                            </li>
+                            <!-- 04 -->
+                            <li class="">
+                                <div class="map_content_box_main">
+                                    <div class="map_content_box__content">
+                                        <ul>
+                                            <li>
+                                                <div class="icon">
+                                                    <img src="images/icons8-sun-96.png" alt="">
+                                                </div>
+                                                <p>55 °F</p>
+                                            </li>
+                                            <li>
+                                                <div class="icon">
+                                                    <img src="images/icons8-wind-90.png" alt="">
+                                                </div>
+                                                <p>8.01mph</p>
+                                            </li>
+                                            <li>
+                                                <div class="icon">
+                                                    <img src="images/icons8-compass-96.png" alt="">
+                                                </div>
+                                                <p>276 °</p>
+                                            </li>
+                                        </ul>
+                                        <p>紐約州西漢普頓海灘</p>
+                                        <strong>沙丘甲板</strong>
+                                        <div class="coordinate">
+                                            <figure><img src="images/icons8-location-64.png" alt=""></figure>
+                                            <p>40.8093799° 北 / -72.6458277° 西</p>
+                                        </div>
+                                    </div>
+                                    <div class="map_content_box__img">
+                                        <figure> <img src="images/map_content_box__img04.jpg" alt=""></figure>
+                                    </div>
+                                </div>
+
+                            </li>
+                            <!-- 05 -->
+                            <li class="">
+                                <div class="map_content_box_main">
+                                    <div class="map_content_box__content">
+                                        <ul>
+                                            <li>
+                                                <div class="icon">
+                                                    <img src="images/icons8-sun-96.png" alt="">
+                                                </div>
+                                                <p>80 °F</p>
+                                            </li>
+                                            <li>
+                                                <div class="icon">
+                                                    <img src="images/icons8-wind-90.png" alt="">
+                                                </div>
+                                                <p>13.73mph</p>
+                                            </li>
+                                            <li>
+                                                <div class="icon">
+                                                    <img src="images/icons8-compass-96.png" alt="">
+                                                </div>
+                                                <p>157 °</p>
+                                            </li>
+                                        </ul>
+                                        <p>巴哈馬大瓜納島</p>
+                                        <strong>貝克灣</strong>
+                                        <div class="coordinate">
+                                            <figure><img src="images/icons8-location-64.png" alt=""></figure>
+                                            <p>26.686966° 北 / -77.146015° 西</p>
+                                        </div>
+                                    </div>
+                                    <div class="map_content_box__img">
+                                        <figure> <img src="images/map_content_box__img05.jpg" alt=""></figure>
                                     </div>
                                 </div>
 

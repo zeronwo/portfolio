@@ -143,6 +143,7 @@ section {
   margin: auto;
   position: relative;
   .row {
+    margin: 0;
   }
 }
 
@@ -1239,7 +1240,7 @@ body.menu-open {
 .map {
   background: #f3f3f3;
   .container {
-    padding: 0 12vw;
+    padding-left: 3em;
   }
   .map_world {
     position: relative;
@@ -1293,7 +1294,7 @@ body.menu-open {
   height: 100%;
   position: absolute;
   top: 0;
-  z-index: 99;
+  z-index: 9;
   ul {
     width: 100%;
     height: 100%;
@@ -1328,6 +1329,18 @@ body.menu-open {
         top: 34%;
         left: 9%;
       }
+      &:nth-of-type(3) {
+        top: 38%;
+        left: 41%;
+      }
+      &:nth-of-type(4) {
+        top: 33%;
+        left: 49%;
+      }
+      &:nth-of-type(5) {
+        top: 54%;
+        left: 46%;
+      }
       &.active {
         a {
           background-color: rgba(253, 0, 105, 0.8);
@@ -1342,7 +1355,7 @@ body.menu-open {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 9;
+  z-index: 8;
   .map_content_inner {
     display: flex;
     justify-content: flex-end;
@@ -1365,6 +1378,7 @@ body.menu-open {
                 display: flex;
                 font-size: 0.7rem;
                 margin-bottom: 75px;
+
                 li {
                   display: flex;
                   flex-direction: column;
@@ -1395,6 +1409,7 @@ body.menu-open {
               .coordinate {
                 display: flex;
                 font-size: 0.9rem;
+
                 img {
                   max-width: 15px;
                 }
@@ -1433,6 +1448,14 @@ body.menu-open {
           &.active {
             display: block;
             .map_content_box_main {
+              .map_content_box__content {
+                ul,
+                & > p,
+                strong,
+                .coordinate {
+                  animation: fadeInUp 1s;
+                }
+              }
               .map_content_box__img {
                 figure {
                   left: 0;
@@ -1465,7 +1488,8 @@ body.menu-open {
 @media (max-width: 1300px) {
   .menu_main_right > ul,
   .menu_main_right .menu_main_top ul li a span,
-  .reservation_bar {
+  .reservation_bar,
+  .map_world {
     display: none;
   }
   .menu_rwd_toggle {
@@ -1559,6 +1583,67 @@ body.menu-open {
 
   .reservation_mob {
     display: flex;
+  }
+
+  .introduce .container .row {
+    flex-direction: column;
+  }
+  .introduce .container .row > div {
+    width: 100%;
+    .txt {
+      padding: 0;
+    }
+  }
+
+.map_txt{
+  padding: 0 12vw;
+  .container{padding: 0;} 
+}
+
+  .map_content {
+    position: static;
+    .map_content_inner {
+      display: block;
+      .map_content_box {
+        width: 100%;
+        padding: 0;
+        .map_content_box_inner {
+          li {
+            flex-direction: column;
+            .map_content_box_main {
+              flex-direction: column;
+              padding: 0;
+              .map_content_box__content {
+                width: 100%;
+                padding: 8vw 6vw;
+                ul{
+                  margin-bottom: 20px;
+                  li{
+                    &>p{
+                      margin-bottom: 0;
+                    }
+                  }
+                }
+                strong{
+                  margin: 20px 0;
+                }
+                p{
+                  margin-bottom: 0;
+                }
+              }
+              .map_content_box__img {
+                width: 100%;
+                margin-top: auto;
+                figure {
+                  position: static;
+                  padding-bottom: 71%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
 
   //lity
