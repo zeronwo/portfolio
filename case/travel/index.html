@@ -750,6 +750,7 @@
     </div>
 
     <main id="app">
+        <!-- introduce -->
         <section class="introduce m_170">
             <div class="introduce_bg">
 
@@ -783,6 +784,7 @@
             </div>
 
         </section>
+        <!-- map -->
         <section class="map">
             <div class="map_txt m_70">
                 <div class="container ">
@@ -828,14 +830,14 @@
                 </div>
             </div>
             <div class="map_select">
-                <select name="pets">
-            
-                    <option value="dog" selected>詹姆斯島</option>
-                    <option value="cat">科德瓦萊</option>
-                    <option value="hamster">游吟詩人</option>
-                    <option value="parrot">沙丘甲板</option>
-                    <option value="spider">貝克灣</option>
-           
+                <select name="map_select_1">
+
+                    <option value="map_select-1" selected>詹姆斯島</option>
+                    <option value="map_select-2">科德瓦萊</option>
+                    <option value="map_select-3">游吟詩人</option>
+                    <option value="map_select-4">沙丘甲板</option>
+                    <option value="map_select-5">貝克灣</option>
+
                 </select>
             </div>
             <div class="map_content">
@@ -844,7 +846,7 @@
                     <div class="map_content_box">
                         <ul class="map_content_box_inner">
                             <!-- 01 -->
-                            <li class="active" style="display: block;" v-for="item in items">
+                            <li class="map_select-1 active " v-for="item in items">
                                 <div class="map_content_box_main">
                                     <div class="map_content_box__content">
                                         <ul>
@@ -881,7 +883,7 @@
 
                             </li>
                             <!-- 02 -->
-                            <li class="">
+                            <li class="map_select-2">
                                 <div class="map_content_box_main">
                                     <div class="map_content_box__content">
                                         <ul>
@@ -918,7 +920,7 @@
 
                             </li>
                             <!-- 03 -->
-                            <li class="">
+                            <li class="map_select-3">
                                 <div class="map_content_box_main">
                                     <div class="map_content_box__content">
                                         <ul>
@@ -955,7 +957,7 @@
 
                             </li>
                             <!-- 04 -->
-                            <li class="">
+                            <li class="map_select-4">
                                 <div class="map_content_box_main">
                                     <div class="map_content_box__content">
                                         <ul>
@@ -992,7 +994,7 @@
 
                             </li>
                             <!-- 05 -->
-                            <li class="">
+                            <li class="map_select-5">
                                 <div class="map_content_box_main">
                                     <div class="map_content_box__content">
                                         <ul>
@@ -1031,6 +1033,54 @@
                         </ul>
                     </div>
                 </div>
+            </div>
+        </section>
+        <section class="panels">
+            <div class="panels_outer">
+                <ul>
+                    <li>
+                        <figure>
+                            <picture>
+                                <source srcset="images/panels_01_m.jpg" media="(max-width: 700px)">
+                                <img class="js-panel__img" src="images/panels_01.jpg" alt="">
+                            </picture>
+                        </figure>
+                        <div class="panels__box">
+                            <h4>經驗</h4>
+                            <div class="panels___circle ">
+                                <div class="icon type1"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28.06 20.91">
+                                        <path
+                                            d="M0 11.1h25.86L16.97 20c0 .04.91.92.91.91l10-10c0-.01.01-.01.02-.02l.04-.04c.01-.01.02-.02.02-.03.01-.01.02-.03.03-.05.01-.01.01-.03.02-.04 0-.01.01-.02.01-.03v-.02c.01-.01.01-.03.01-.04 0-.02.01-.03.01-.05 0-.01 0-.03.01-.04 0-.02 0-.03.01-.05v-.05-.05c0-.02 0-.03-.01-.05 0-.01 0-.03-.01-.04 0-.02-.01-.03-.01-.05 0-.01-.01-.03-.01-.04 0-.01 0-.01-.01-.02 0-.01-.01-.02-.02-.03-.01-.01-.01-.03-.02-.04-.01-.02-.02-.03-.03-.05-.01-.01-.02-.02-.02-.03-.01-.01-.02-.03-.04-.04.01 0 0-.01 0-.01l-10-10c0-.01-.91.91-.91.91l8.89 8.9H0v1.29z">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <div class="icon type2"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28.06 20.91">
+                                    <path
+                                        d="M0 11.1h25.86L16.97 20c0 .04.91.92.91.91l10-10c0-.01.01-.01.02-.02l.04-.04c.01-.01.02-.02.02-.03.01-.01.02-.03.03-.05.01-.01.01-.03.02-.04 0-.01.01-.02.01-.03v-.02c.01-.01.01-.03.01-.04 0-.02.01-.03.01-.05 0-.01 0-.03.01-.04 0-.02 0-.03.01-.05v-.05-.05c0-.02 0-.03-.01-.05 0-.01 0-.03-.01-.04 0-.02-.01-.03-.01-.05 0-.01-.01-.03-.01-.04 0-.01 0-.01-.01-.02 0-.01-.01-.02-.02-.03-.01-.01-.01-.03-.02-.04-.01-.02-.02-.03-.03-.05-.01-.01-.02-.02-.02-.03-.01-.01-.02-.03-.04-.04.01 0 0-.01 0-.01l-10-10c0-.01-.91.91-.91.91l8.89 8.9H0v1.29z">
+                                    </path>
+                                </svg>
+                            </div>
+                            </div>
+
+                        </div>
+                    </li>
+                    <li>
+                        <figure>
+                            <picture>
+                                <source srcset="images/panels_02_m.jpg" media="(max-width: 700px)">
+                                <img class="js-panel__img" src="images/panels_02.jpg" alt="">
+                            </picture>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure>
+                            <picture>
+                                <source srcset="images/panels_03_m.jpg" media="(max-width: 700px)">
+                                <img class="js-panel__img" src="images/panels_03.jpg" alt="">
+                            </picture>
+                        </figure>
+                    </li>
+                </ul>
             </div>
         </section>
     </main>

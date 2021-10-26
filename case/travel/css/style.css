@@ -2356,6 +2356,140 @@ body.menu-open {
   left: 0;
 }
 
+.map_select {
+  width: 100%;
+  max-width: 280px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  display: none;
+}
+
+.map_select select {
+  background-color: #fff;
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+  border: 1px solid #eaeaea;
+  font-size: 16px;
+  font-family: geomanistlight, Sans-Serif;
+}
+
+.panels_outer ul {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.panels_outer ul li {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  position: relative;
+}
+
+.panels_outer ul li figure:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background-color: rgba(17, 17, 17, 0.35);
+  z-index: 2;
+}
+
+.panels__box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 9;
+}
+
+.panels__box h4 {
+  color: #fff;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.panels__box .panels___circle {
+  position: relative;
+  margin-top: 1.5rem;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.panels__box .panels___circle .icon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transition: opacity 1.1s ease, -webkit-transform 1.1s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: opacity 1.1s ease, -webkit-transform 1.1s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: transform 1.1s cubic-bezier(0.19, 1, 0.22, 1), opacity 1.1s ease;
+  transition: transform 1.1s cubic-bezier(0.19, 1, 0.22, 1), opacity 1.1s ease, -webkit-transform 1.1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.panels__box .panels___circle .icon svg {
+  width: 1.15rem;
+  height: 100%;
+}
+
+.panels__box .panels___circle .icon svg path {
+  fill: #fff;
+}
+
+.panels_outer li .type1 {
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  opacity: 1;
+}
+
+.panels_outer li .type2 {
+  -webkit-transform: translate(-100%, -50%);
+          transform: translate(-100%, -50%);
+  opacity: 0;
+}
+
+.panels_outer li:hover .type1 {
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+  opacity: 0;
+}
+
+.panels_outer li:hover .type2 {
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  opacity: 1;
+}
+
 :root {
   --spacing: 10rem;
 }
@@ -2376,7 +2510,8 @@ body.menu-open {
   .map_world {
     display: none;
   }
-  .menu_rwd_toggle {
+  .menu_rwd_toggle,
+  .map_select {
     display: block;
   }
   .menu_button,

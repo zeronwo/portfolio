@@ -28,7 +28,7 @@ $(document).ready(function () {
         $('.sidemenu_bottom_sub ').eq($tabIndex).addClass("active").siblings(".sidemenu_bottom_sub ").removeClass("active");
     });
 
-     //手機 下方 右側拉出選單(副選單) 移除
+    //手機 下方 右側拉出選單(副選單) 移除
     $(".sidemenu_bottom_sub li.mm").click(function () {
         $(".sidemenu_bottom_sub").removeClass("active");
     });
@@ -76,14 +76,26 @@ $(document).ready(function () {
     $(".search-bar_main button").click(function () {
         $(".search-bar").removeClass("active");
     });
-//地圖
+    //地圖
     $('.map_clouds_coordinate ul li').click(function (e) {
         var $tabIndex = $(this).index();
         $(this).addClass('active').siblings(".map_clouds_coordinate ul li").removeClass('active');
         $('.map_content_box_inner > li').eq($tabIndex).fadeIn().addClass("active").siblings(".map_content_box_inner > li").hide().removeClass("active");
-      });
-    
+    });
+    //map_select 手機
+    $("select[name*='map_select_']").change(function () {
+        select_changed();
+    });
 
+    function select_changed() {
+        $("li[class*='map_select-']").each(function () {
+            $(this).removeClass("active");
+        });
+        $("select[name*='map_select_']").each(function () {
+            var selected = $(this).val();
+            $("." + selected).addClass("active");
+        });
+    }
 
     //lighrbox
     $(document).on('lity:resize', function (event, instance) {
