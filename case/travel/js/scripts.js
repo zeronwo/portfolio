@@ -97,12 +97,37 @@ $(document).ready(function () {
         });
     }
 
-    //lighrbox
-    $(document).on('lity:resize', function (event, instance) {
-        console.log('Lightbox resized');
-    });
+    //
+    $(".panels_outer ul li").click(function () {
+        $(".panels_outer ul").addClass("active")
+            .delay(1000)
+            .queue(function () {
+                $(".panels_outer").css({"opacity": "0", "visibility": "hidden"});
+                $(this).dequeue();
+            });
+                $(".panels_video").addClass("active");
+                $('.js-panels__video').get(0).play()
 
-});
+            });
+
+
+        $(".panels_video__close").click(function () {
+            $(".panels_outer").removeAttr("style")
+            $(".panels_outer ul").removeClass("active");
+            $(".panels_video").removeClass("active");
+
+        });
+
+
+
+
+
+        //lighrbox
+        $(document).on('lity:resize', function (event, instance) {
+            console.log('Lightbox resized');
+        });
+
+    });
 
 
 
