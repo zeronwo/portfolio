@@ -82,7 +82,7 @@ $(document).ready(function () {
         $(this).addClass('active').siblings(".map_clouds_coordinate ul li").removeClass('active');
         $('.map_content_box_inner > li').eq($tabIndex).fadeIn().addClass("active").siblings(".map_content_box_inner > li").hide().removeClass("active");
     });
-    //map_select 手機
+    //map_select 手機下拉
     $("select[name*='map_select_']").change(function () {
         select_changed();
     });
@@ -97,37 +97,51 @@ $(document).ready(function () {
         });
     }
 
-    //
+    //三拉門
     $(".panels_outer ul li").click(function () {
+        var $tabIndex = $(this).index();
         $(".panels_outer ul").addClass("active")
             .delay(1000)
+            //1秒消失
             .queue(function () {
-                $(".panels_outer").css({"opacity": "0", "visibility": "hidden"});
+                $(".panels_outer").css({ "opacity": "0", "visibility": "hidden" });
                 $(this).dequeue();
             });
-                $(".panels_video").addClass("active");
-                $('.js-panels__video').get(0).play()
+        //影片打開 
+        $('.panels_video li').eq($tabIndex).addClass("active").siblings(".panels_video li").removeClass("active");
+        //影片撥放
+        $('.panels_video li').eq($tabIndex).find("video").get(0).play().siblings(".panels_video li").find("video").get(0).pause().get(0).currentTime = 0;
 
+    });
+
+    //影片關閉
+    $(".panels_video__close").click(function () {
+        //取消1秒消失
+        $(".panels_outer").removeAttr("style");
+        $(".panels_outer ul").removeClass("active")
+            .delay(1000)
+            .queue(function () {
+                //影片1秒 關閉
+                $(".panels_video li").removeClass("active");
+                $(this).dequeue();
             });
 
 
-        $(".panels_video__close").click(function () {
-            $(".panels_outer").removeAttr("style")
-            $(".panels_outer ul").removeClass("active");
-            $(".panels_video").removeClass("active");
 
-        });
-
-
-
-
-
-        //lighrbox
-        $(document).on('lity:resize', function (event, instance) {
-            console.log('Lightbox resized');
-        });
+        // $(".panels_video").removeClass("active");
 
     });
+
+
+
+
+
+    //lighrbox
+    $(document).on('lity:resize', function (event, instance) {
+        console.log('Lightbox resized');
+    });
+
+});
 
 
 

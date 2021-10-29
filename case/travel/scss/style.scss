@@ -1504,6 +1504,9 @@ body.menu-open {
       cursor: pointer;
       overflow: hidden;
       figure {
+        width: 100%;
+        height: 100%;
+        display: block;
         transition: 1s cubic-bezier(0.165, 0.84, 0.44, 1);
         &:before {
           position: absolute;
@@ -1515,6 +1518,18 @@ body.menu-open {
           background-color: rgba(17, 17, 17, 0.35);
           z-index: 3;
         }
+        picture {
+          display: block;
+          padding-bottom: 143%;
+          img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
       }
     }
     &.active {
@@ -1522,8 +1537,9 @@ body.menu-open {
         figure {
           transform: translate(100%, 0%);
         }
-        .panels__box{
+        .panels__box {
           opacity: 0;
+          
         }
       }
     }
@@ -1540,10 +1556,13 @@ body.menu-open {
   display: flex;
   flex-direction: column;
   align-items: center;
+  opacity: 1;
+  transition: all 0.8s;
   h4 {
     color: $white;
     text-align: center;
-    font-size: 1.5em;
+    font-size: calc(21.33333px + 1.13333vw);
+    font-weight: 100;
   }
   .panels___circle {
     position: relative;
@@ -1598,7 +1617,7 @@ body.menu-open {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   z-index: 1;
   ul {
     li {
@@ -1617,6 +1636,13 @@ body.menu-open {
         width: 100%;
         height: 100%;
       }
+      &.active {
+        opacity: 1;
+        visibility: inherit;
+        .panels_video__txt{
+          animation: fadeInUp 1s;
+        }
+      }
     }
   }
   &:before {
@@ -1629,27 +1655,33 @@ body.menu-open {
     background-color: rgba(17, 17, 17, 0.5);
     z-index: 3;
   }
-  &.active {
-    
-    ul {
-      li {
-        opacity: 1;
-        visibility: inherit;
-      }
-    }
+}
+
+.panels_video__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+  color: $white;
+  ion-icon {
+    font-size: 32px;
   }
 }
 
-.panels_video__close{
+.panels_video__txt {
+  width: 100%;
+  height: 100%;
   position: absolute;
-    top: 20px;
-    right: 20px;
-    z-index: 9;
+  z-index: 9;
+  display: flex;
+  align-items: center;
+  color: $white;
+ 
+  p {
     color: $white;
-    ion-icon{
-      font-size: 32px;
-    }
+  }
 }
+
 :root {
   --spacing: 10rem;
 }
