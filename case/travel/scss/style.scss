@@ -1237,7 +1237,7 @@ body.menu-open {
   }
 }
 
-.map {
+.map,.bxslider  {
   background: #f3f3f3;
   .container {
     padding-left: 3em;
@@ -1539,7 +1539,6 @@ body.menu-open {
         }
         .panels__box {
           opacity: 0;
-          
         }
       }
     }
@@ -1639,7 +1638,7 @@ body.menu-open {
       &.active {
         opacity: 1;
         visibility: inherit;
-        .panels_video__txt{
+        .panels_video__txt {
           animation: fadeInUp 1s;
         }
       }
@@ -1676,9 +1675,39 @@ body.menu-open {
   display: flex;
   align-items: center;
   color: $white;
- 
+
   p {
     color: $white;
+  }
+}
+
+footer {
+  background: #242a3a;
+  padding: 3em;
+  .row {
+    justify-content: space-evenly;
+    align-items: center;
+    .footer_logo {
+      img {
+        max-height: 45px;
+      }
+    }
+    .footer_menu {
+      ul {
+        display: flex;
+        li {
+          a {
+            color: $white;
+            display: block;
+            padding: 0 10px;
+            font-size: 0.9em;
+            &:hover {
+              color: #96daf0;
+            }
+          }
+        }
+      }
+    }
   }
 }
 
@@ -1714,6 +1743,10 @@ body.menu-open {
   .d_no,
   .menu_below {
     display: block;
+  }
+
+  .introduce,.reservation,.map_txt  {
+    margin-bottom: 30px;
   }
 
   body {
@@ -1878,5 +1911,33 @@ body.menu-open {
     position: fixed;
     right: 0;
     top: 0;
+  }
+  .panels_outer ul.active li figure {
+    transform: translate(0%, 100%);
+  }
+  .panels_outer ul {
+    flex-direction: column;
+    li figure picture {
+      padding-bottom: 38%;
+    }
+  }
+  .panels_video__txt {
+    padding: 0 1em;
+  }
+  footer{
+    padding: 1.5em;
+    .row {
+      flex-direction: column;
+      .footer_logo {
+        margin-bottom: 20px;
+      }
+      .footer_menu ul {
+        flex-direction: column;
+        align-items: center;
+        li {
+          margin-bottom: 10px;
+        }
+      }
+    }
   }
 }

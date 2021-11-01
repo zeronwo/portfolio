@@ -125,12 +125,17 @@ $(document).ready(function () {
                 $(".panels_video li").removeClass("active");
                 $(this).dequeue();
             });
-
-
-
-        // $(".panels_video").removeClass("active");
-
     });
+
+        //首頁水平輪播
+        $(".advantage-sec-slide").bxSlider({
+            minSlides: 2,
+            maxSlides: 6,
+            slideWidth: 400,
+            slideMargin: 5,
+            ticker: true,
+            speed: 100000
+        });
 
 
 

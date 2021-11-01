@@ -2055,15 +2055,15 @@ body.menu-open {
   line-height: 2;
 }
 
-.map {
+.map, .bxslider {
   background: #f3f3f3;
 }
 
-.map .container {
+.map .container, .bxslider .container {
   padding-left: 3em;
 }
 
-.map .map_world {
+.map .map_world, .bxslider .map_world {
   position: relative;
   width: 70%;
 }
@@ -2623,6 +2623,41 @@ body.menu-open {
   color: #fff;
 }
 
+footer {
+  background: #242a3a;
+  padding: 3em;
+}
+
+footer .row {
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .row .footer_logo img {
+  max-height: 45px;
+}
+
+footer .row .footer_menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer .row .footer_menu ul li a {
+  color: #fff;
+  display: block;
+  padding: 0 10px;
+  font-size: 0.9em;
+}
+
+footer .row .footer_menu ul li a:hover {
+  color: #96daf0;
+}
+
 :root {
   --spacing: 10rem;
 }
@@ -2651,6 +2686,9 @@ body.menu-open {
   .d_no,
   .menu_below {
     display: block;
+  }
+  .introduce, .reservation, .map_txt {
+    margin-bottom: 30px;
   }
   body.open #header_menu {
     top: -62px;
@@ -2801,6 +2839,46 @@ body.menu-open {
     position: fixed;
     right: 0;
     top: 0;
+  }
+  .panels_outer ul.active li figure {
+    -webkit-transform: translate(0%, 100%);
+            transform: translate(0%, 100%);
+  }
+  .panels_outer ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .panels_outer ul li figure picture {
+    padding-bottom: 38%;
+  }
+  .panels_video__txt {
+    padding: 0 1em;
+  }
+  footer {
+    padding: 1.5em;
+  }
+  footer .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  footer .row .footer_logo {
+    margin-bottom: 20px;
+  }
+  footer .row .footer_menu ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  footer .row .footer_menu ul li {
+    margin-bottom: 10px;
   }
 }
 /*# sourceMappingURL=style.css.map */
