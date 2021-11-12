@@ -9,16 +9,19 @@ $(document).ready(function () {
     $("#menu .menu_rwd_toggle").click(function () {
         $(".sidemenu_top").toggleClass("active");
         $(".menu_main").toggleClass("active");
+        $("body").toggleClass("active");
     });
 
     //手機 下方 右側拉出選單(條件搜尋)
     $(".reservation_mob").click(function () {
         $(".sidemenu_bottom").addClass("active");
+        $("body").addClass("active");
     });
     //手機 下方 右側拉出選單(條件搜尋) 移除
     $(".sidemenu.sidemenu_bottom .menu_rwd_toggle").click(function () {
         $(".sidemenu_bottom").removeClass("active");
         $(".sidemenu_bottom_sub").removeClass("active");
+        $("body").removeClass("active");
     });
 
     //手機 下方 右側拉出選單(副選單)
@@ -119,7 +122,7 @@ $(document).ready(function () {
         //取消1秒消失
         $(".panels_outer").removeAttr("style");
         $(".panels_outer ul").removeClass("active")
-            .delay(1000)
+            .delay(800)
             .queue(function () {
                 //影片1秒 關閉
                 $(".panels_video li").removeClass("active");
@@ -127,17 +130,39 @@ $(document).ready(function () {
             });
     });
 
-        //首頁水平輪播
-        $(".advantage-sec-slide").bxSlider({
-            minSlides: 2,
-            maxSlides: 6,
-            slideWidth: 400,
-            slideMargin: 5,
-            ticker: true,
-            speed: 100000
-        });
+    //首頁水平輪播
+    $(".advantage-sec-slide").bxSlider({
+        minSlides: 2,
+        maxSlides: 6,
+        slideWidth: 500,
+        slideMargin: 10,
+        ticker: true,
+        speed: 100000,
+    });
 
-
+    var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        effect: 'fade',
+        loop: true,
+        speed: 300,
+        autoplay: {
+            delay: 8000,
+          },
+        mousewheel: {
+            invert: false,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+            dynamicBullets: true
+        },
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        }
+    });
 
 
 
