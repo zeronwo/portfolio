@@ -2930,9 +2930,6 @@ footer .row .footer_menu ul li a:hover {
   .map_txt {
     margin-bottom: 30px;
   }
-  body.open #header_menu {
-    top: -62px;
-  }
   header.active .container .menu_button .menuicon {
     background: transparent;
   }
