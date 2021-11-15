@@ -1915,11 +1915,17 @@ footer {
 
 //桌機時  強制選單出現  手機選單消失
 @media screen and (min-width: 1300px) {
+  body{
+    overflow: auto !important;
+  }
   #menu {
     display: block !important;
   }
   .sidemenu {
     display: none !important;
+  }
+  .menu_main{
+    background-color: transparent !important;
   }
 }
 

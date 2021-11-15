@@ -2901,11 +2901,17 @@ footer .row .footer_menu ul li a:hover {
 }
 
 @media screen and (min-width: 1300px) {
+  body {
+    overflow: auto !important;
+  }
   #menu {
     display: block !important;
   }
   .sidemenu {
     display: none !important;
+  }
+  .menu_main {
+    background-color: transparent !important;
   }
 }
 
