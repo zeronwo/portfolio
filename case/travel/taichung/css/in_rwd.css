@@ -6,7 +6,6 @@
         top: 0;
         z-index: 999;
         color: #fff;
-        clip-path: polygon(0 0,calc(100% - 479px) 0,calc(100% - -3px) 100%,0 100%);
         }
 }
 
