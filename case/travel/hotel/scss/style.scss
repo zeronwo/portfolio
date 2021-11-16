@@ -470,8 +470,9 @@ section {
   a {
     display: block;
     padding: 10px 20px;
-    img {
-      max-width: 160px;
+    svg {
+      max-width: 155px;
+      height: 46px;
     }
   }
 }
@@ -548,9 +549,6 @@ section {
     &:hover li:not(:hover) a {
       opacity: 0.3;
     }
-  }
-  .menu_main_right {
-    @include flex-center();
   }
 }
 
@@ -1091,13 +1089,12 @@ body.menu-open {
 
 .reserv_restaurant {
   display: grid;
-    grid-gap: 1rem;
-    gap: 1rem;
-    grid-template-columns: repeat(4,minmax(0,1fr));
+  grid-gap: 1rem;
+  gap: 1rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   padding: 20px;
 
   li {
-
     a {
       border-radius: 5px;
       color: #888;
@@ -1105,8 +1102,8 @@ body.menu-open {
       background-color: #eee;
       text-align: center;
       padding: 15px;
-      &:hover{
-        background: #B79B7E;
+      &:hover {
+        background: #b79b7e;
         color: $white;
       }
     }
@@ -1126,11 +1123,8 @@ body.menu-open {
 //RWD
 
 @media (max-width: 1300px) {
-  #menu ul,
-  .menu_main_right .search_btn,
-  .menu_top .menu_top_main .menu_top_right .menu_btn span,
-  .menu_main_right a span,
-  .lookbook_menu_web {
+  .menu_main > ul,
+  .menu_top .menu_top_main .menu_top_right .menu_btn span {
     display: none;
   }
   .right-menu,
@@ -1179,10 +1173,6 @@ body.menu-open {
   }
 
   .logo {
-    position: absolute;
-    top: 13px;
-    left: 50%;
-    transform: translate(-50%, 0);
   }
   .menu_top {
     padding: 10px;
@@ -1217,13 +1207,63 @@ body.menu-open {
     max-width: inherit;
     .menu_main {
       padding: 10px;
+      justify-content: space-between;
       .menu_main_right {
+        .menu_rwd_toggle {
+          order: 4;
+        }
+        .search_btn {
+          padding: 8px 24px;
+        }
+        .m_reservation {
+          padding: 8px 25px;
+        }
         a {
           i {
             font-size: 16px;
           }
         }
       }
+    }
+  }
+  .top_big_slide li{
+    padding-bottom: calc(60vh - 61px);
+  }
+  .sidemenu {
+    overflow-y: scroll;
+    .main {
+      display: block;
+      padding: 7vh;
+      .menu {
+        flex-wrap: wrap;
+        & > li {
+          width: calc(100% / 2);
+          margin-bottom: 25px;
+          padding-right: 60px;
+          a {
+            margin-bottom: 0;
+            padding-bottom: 10px;
+          }
+          & > ul {
+          }
+        }
+      }
+    }
+  }
+
+  .reservation_form form{
+    flex-direction: column;
+    .reservation_search{
+      width: 100%;
+    
+
+    }
+    .reservation_btn{
+      border-radius: 5px;
+      width: 100%;
+      max-width: 320px;
+      margin: 15px auto;
+      padding: 15px;
     }
   }
 
