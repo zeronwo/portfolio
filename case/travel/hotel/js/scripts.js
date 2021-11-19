@@ -22,7 +22,7 @@ $(document).ready(function () {
     });
 
     $(".language .menu_btn").click(function () {
-        $(".language ul").toggleClass("active");
+        $(this).next(".language ul").toggleClass("active");
     });
 
     $(".menu_button").click(function () {
@@ -47,9 +47,13 @@ $(document).ready(function () {
         $(this).addClass('active').siblings(".reserv_tab li").removeClass('active');
         $('.reserv_main>li').eq($tabIndex).fadeIn().siblings(".reserv_main>li").hide();
         $('.reserv_main>li').eq($tabIndex).addClass("active");
-      });
-    
+    });
 
+    $(".menu_rwd_menu > li > ul").hide();
+    $(".menu_rwd_menu li").click(function() {
+        $(this).find("ul").slideToggle();
+        $(this).siblings().find('ul').slideUp();
+    });
 
     //lighrbox
     $(document).on('lity:resize', function (event, instance) {
