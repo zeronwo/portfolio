@@ -1,6 +1,30 @@
 
 $(document).ready(function () {
 
+  //gotop
+  $('.footer_go-top').click(function () {
+    $('html,body').animate({ scrollTop: '0px' }, 800);
+  });
+    $(".main-visual-scroll").click(function () {
+        $("html,body").animate({ scrollTop: $(".reservation").offset().top }, 800);
+    });
+
+    //滑下出現選單
+    var bodyClass = document.body.classList,
+        lastScrollY = 0;
+    window.addEventListener('scroll', function () {
+        var st = this.scrollY;
+        // 判斷是向上捲動，而且捲軸超過 200px
+        if (st < lastScrollY) {
+            bodyClass.remove('hideUp');
+        } else {
+            bodyClass.add('hideUp');
+        }
+        lastScrollY = st;
+    });
+
+
+
     //手機選單
     $(".menu_rwd_toggle").click(function () {
         $(".sidemenu").toggleClass("active");
@@ -39,21 +63,46 @@ $(document).ready(function () {
         smartSpeed: 450
     });
 
+    //月曆
     $(".datepicker").datepicker({
+        numberOfMonths: 2,
+        showButtonPanel: true
     });
 
-    $('.reserv_tab li').click(function (e) {
-        var $tabIndex = $(this).index();
-        $(this).addClass('active').siblings(".reserv_tab li").removeClass('active');
-        $('.reserv_main>li').eq($tabIndex).fadeIn().siblings(".reserv_main>li").hide();
-        $('.reserv_main>li').eq($tabIndex).addClass("active");
-    });
-
+    //手機副選單
     $(".menu_rwd_menu > li > ul").hide();
-    $(".menu_rwd_menu li").click(function() {
+    $(".menu_rwd_menu li").click(function () {
         $(this).find("ul").slideToggle();
         $(this).siblings().find('ul').slideUp();
     });
+
+    //滑入播圖片
+    $(function () {
+        $('.billboard_list li').hover(function () {
+            var $tabIndex = $(this).index();
+            $(".billboard_img").addClass('active');
+            $('.billboard_img li').eq($tabIndex).addClass("active");
+        }, function () {
+            var $tabIndex = $(this).index();
+            $(".billboard_img").removeClass('active');
+            $('.billboard_img li').eq($tabIndex).removeClass("active");
+        })
+    })
+
+    $(function () {
+        let show = 'show';
+        
+        $('.field_box input').on('checkval', function () {
+          let label = $(this).next('label');
+          if(this.value !== '') {
+            label.addClass(show);
+          } else {
+            label.removeClass(show);
+          }
+        }).on('keyup', function () {
+          $(this).trigger('checkval');
+        }); 
+      });
 
     //lighrbox
     $(document).on('lity:resize', function (event, instance) {
