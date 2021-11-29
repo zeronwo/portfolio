@@ -553,7 +553,7 @@ body.hideUp header {
     li::after {
       position: absolute;
       content: "";
-      bottom: 0;
+      bottom: -5px;
       left: 0;
       width: 100%;
       height: 1px;
@@ -907,6 +907,8 @@ body.menu-open {
     }
   }
 }
+
+//top_big
 .top_big {
   position: relative;
   .main-visual-scroll {
@@ -914,7 +916,7 @@ body.menu-open {
     display: block;
     letter-spacing: 0.4em;
     position: absolute;
-    bottom: 9%;
+    bottom: 16%;
     left: 50%;
     opacity: 0;
     transition: opacity 0.2s ease;
@@ -978,8 +980,18 @@ body.menu-open {
     display: block;
     width: 100%;
     height: 0;
-    padding-bottom: calc(100vh - 61px);
+    padding-bottom: 100vh;
     overflow: hidden;
+    &::before{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      content: "";
+      background-color: rgba(17, 17, 17, 0.35);
+      z-index: 10;
+    }
   }
   img {
     position: absolute;
@@ -1000,11 +1012,12 @@ main {
   z-index: 2;
 }
 
-//預約旅館
+//reservation
 .reservation {
-  min-width: 320px;
+  max-width: 1016px;
   position: relative;
   z-index: 9;
+  margin: -102px auto 110px;
 }
 
 .reserv_tab {
@@ -1033,7 +1046,7 @@ main {
 
 .reserv_main {
   background: $white;
-  padding: 1.2vw;
+  border-radius: 10px;
 }
 .reservation_tt {
   display: flex;
@@ -1047,15 +1060,22 @@ main {
     font-size: 0.9em;
   }
 }
+html.has-scroll-smooth {
+  overflow: hidden;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;  
+}
 
 .reservation_form {
-  border-bottom: 1px solid #ebddd0;
   color: #5a5129;
   font-family: "adobe-garamond-pro";
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 20px;
+
   form {
     display: flex;
     justify-content: center;
@@ -1169,11 +1189,94 @@ main {
   }
 }
 
+//galleria
+.galleria {
+  margin: 2rem 0 4rem 0;
+  &__inner {
+    &:active {
+    }
+  }
+
+  &__item {
+    flex: 0 0 440px;
+    padding: 0 7%;
+
+    &-inner {
+      position: relative;
+      display: block;
+      width: 100%;
+      padding-bottom: 90%;
+      overflow: hidden;
+      img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+      }
+    }
+  }
+  .owl-nav {
+    position: absolute;
+    right: 3.85rem;
+    top: 50%;
+    transform: translate(0%, -50%);
+    width: 6.5rem;
+    height: 4rem;
+    border-radius: 6.25rem;
+    background-color: #f9f7f7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    & [class*="owl-"] {
+      background: none;
+      &:hover {
+        background: none;
+      }
+    }
+    .owl-prev,
+    .owl-next {
+      position: relative;
+      font-size: 0;
+      margin: 0 5px;
+      &:before {
+        content: "\f177";
+        font-family: FontAwesome;
+        color: #000;
+        font-size: 18px;
+        display: inline-block;
+      }
+    }
+    .owl-next {
+      &:before {
+        content: "\f178";
+      }
+    }
+  }
+  .owl-dots {
+    margin-top: 20px;
+    .owl-dot {
+      width: calc(60% / 8);
+      span {
+        width: 100%;
+        height: 2px;
+        margin: 0;
+        border-radius: 0;
+      }
+      &.active span {
+        background: $gold;
+      }
+    }
+  }
+}
+
 .billboard {
   position: relative;
   min-height: 680px;
   overflow: hidden;
-  .billboard_list {
+  &_list {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -1269,11 +1372,12 @@ main {
     opacity: 1;
   }
 }
-
+//texts
 .texts {
   .row {
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 90px;
 
     .img,
     .txt {
@@ -1293,45 +1397,61 @@ main {
         height: 100%;
         object-fit: cover;
       }
+      &:before {
+        content: "";
+        border: 1px solid #fff;
+        width: calc(100% - 50px);
+        height: calc(100% - 50px);
+        display: block;
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        z-index: 1;
+      }
     }
     .txt {
-      h2 {
-        color: $gold;
-        font-size: 2em;
-        font-weight: 500;
-        padding-bottom: 47px;
-      }
-      p {
-        font-size: 0.9em;
-        letter-spacing: 0.02em;
-        color: #7f7f7f;
-        line-height: 1.7;
-        padding-bottom: 20px;
-      }
-      a {
-        color: $gold;
-        position: relative;
-        display: inline-block;
-        &:before {
-          content: "";
-          display: block;
-          width: 50px;
-          height: 1px;
-          background-color: rgba(0, 0, 0, 0.4);
-          position: absolute;
-          top: 50%;
-          right: -70px;
-          pointer-events: none;
-          z-index: 3;
-          transition: right 0.2s ease-in-out, width 0.3s ease-in-out 0s;
-        }
-        &:hover:before {
-          left: initial;
-          right: 0px;
-          width: 100%;
-          transition: right 0.2s ease-in-out, width 0.3s ease-in-out 0.1s;
-        }
-      }
+      position: relative;
+      z-index: 1;
+    }
+  }
+}
+
+.txt {
+  h2 {
+    color: $gold;
+    font-size: 2em;
+    font-weight: 500;
+    padding-bottom: 1.5rem;
+  }
+  p {
+    font-size: 0.9em;
+    letter-spacing: 0.02em;
+    color: #7f7f7f;
+    line-height: 1.7;
+    padding-bottom: 20px;
+  }
+  a {
+    color: $gold;
+    position: relative;
+    display: inline-block;
+    &:before {
+      content: "";
+      display: block;
+      width: 50px;
+      height: 1px;
+      background-color: rgba(0, 0, 0, 0.4);
+      position: absolute;
+      top: 50%;
+      right: -70px;
+      pointer-events: none;
+      z-index: 3;
+      transition: right 0.2s ease-in-out, width 0.3s ease-in-out 0s;
+    }
+    &:hover:before {
+      left: initial;
+      right: 0px;
+      width: 100%;
+      transition: right 0.2s ease-in-out, width 0.3s ease-in-out 0.1s;
     }
   }
 }
@@ -1466,7 +1586,7 @@ footer {
   position: relative;
   display: flex;
   align-items: flex-end;
-  .field_box-item {
+  &-item {
     height: 4rem;
     display: flex;
     align-items: flex-end;
@@ -1787,12 +1907,42 @@ footer {
           left: 50%;
           transform: translate(-50%, -50%);
         }
+        &:hover {
+          .line {
+            height: 1px;
+          }
+        }
       }
     }
   }
 
-  .texts .row:last-of-type {
-    flex-direction: column-reverse;
+  .galleria {
+    .owl-nav {
+      right: 1.5%;
+    }
+  }
+
+  //texts
+  .texts .row {
+    flex-direction: column;
+    margin-bottom: 50px;
+    .img {
+      margin-bottom: 20px;
+      &:before {
+        width: calc(100% - 20px);
+        height: calc(100% - 20px);
+        top: 10px;
+        left: 10px;
+      }
+    }
+    .txt {
+      h2 {
+        padding-bottom: 20px;
+      }
+    }
+    &:last-of-type {
+      flex-direction: column-reverse;
+    }
   }
 
   main {

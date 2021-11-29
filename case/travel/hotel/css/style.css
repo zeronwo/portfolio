@@ -188,6 +188,26 @@ table {
   margin-bottom: 90px;
 }
 
+.m_100 {
+  margin-bottom: 100px;
+}
+
+.m_110 {
+  margin-bottom: 110px;
+}
+
+.m_120 {
+  margin-bottom: 120px;
+}
+
+.m_130 {
+  margin-bottom: 130px;
+}
+
+.m_140 {
+  margin-bottom: 140px;
+}
+
 .m_170 {
   margin-bottom: 170px;
 }
@@ -1131,7 +1151,7 @@ body.hideUp header {
 .menu_main > ul li::after {
   position: absolute;
   content: "";
-  bottom: 0;
+  bottom: -5px;
   left: 0;
   width: 100%;
   height: 1px;
@@ -1628,7 +1648,7 @@ body.menu-open {
   display: block;
   letter-spacing: 0.4em;
   position: absolute;
-  bottom: 9%;
+  bottom: 16%;
   left: 50%;
   opacity: 0;
   -webkit-transition: opacity 0.2s ease;
@@ -1741,8 +1761,19 @@ body.menu-open {
   display: block;
   width: 100%;
   height: 0;
-  padding-bottom: calc(100vh - 61px);
+  padding-bottom: 100vh;
   overflow: hidden;
+}
+
+.top_big_slide li::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background-color: rgba(17, 17, 17, 0.35);
+  z-index: 10;
 }
 
 .top_big_slide img {
@@ -1765,9 +1796,10 @@ main {
 }
 
 .reservation {
-  min-width: 320px;
+  max-width: 1016px;
   position: relative;
   z-index: 9;
+  margin: -102px auto 110px;
 }
 
 .reserv_tab {
@@ -1803,7 +1835,7 @@ main {
 
 .reserv_main {
   background: #fff;
-  padding: 1.2vw;
+  border-radius: 10px;
 }
 
 .reservation_tt {
@@ -1823,8 +1855,16 @@ main {
   font-size: 0.9em;
 }
 
+html.has-scroll-smooth {
+  overflow: hidden;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
 .reservation_form {
-  border-bottom: 1px solid #ebddd0;
   color: #5a5129;
   font-family: "adobe-garamond-pro";
   display: -webkit-box;
@@ -1836,7 +1876,6 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 20px;
 }
 
 .reservation_form form {
@@ -1989,13 +2028,111 @@ main {
   color: #fff;
 }
 
+.galleria {
+  margin: 2rem 0 4rem 0;
+}
+
+.galleria__item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 440px;
+          flex: 0 0 440px;
+  padding: 0 7%;
+}
+
+.galleria__item-inner {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding-bottom: 90%;
+  overflow: hidden;
+}
+
+.galleria__item-inner img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.galleria .owl-nav {
+  position: absolute;
+  right: 3.85rem;
+  top: 50%;
+  -webkit-transform: translate(0%, -50%);
+          transform: translate(0%, -50%);
+  width: 6.5rem;
+  height: 4rem;
+  border-radius: 6.25rem;
+  background-color: #f9f7f7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0;
+}
+
+.galleria .owl-nav [class*="owl-"] {
+  background: none;
+}
+
+.galleria .owl-nav [class*="owl-"]:hover {
+  background: none;
+}
+
+.galleria .owl-nav .owl-prev,
+.galleria .owl-nav .owl-next {
+  position: relative;
+  font-size: 0;
+  margin: 0 5px;
+}
+
+.galleria .owl-nav .owl-prev:before,
+.galleria .owl-nav .owl-next:before {
+  content: "\f177";
+  font-family: FontAwesome;
+  color: #000;
+  font-size: 18px;
+  display: inline-block;
+}
+
+.galleria .owl-nav .owl-next:before {
+  content: "\f178";
+}
+
+.galleria .owl-dots {
+  margin-top: 20px;
+}
+
+.galleria .owl-dots .owl-dot {
+  width: calc(60% / 8);
+}
+
+.galleria .owl-dots .owl-dot span {
+  width: 100%;
+  height: 2px;
+  margin: 0;
+  border-radius: 0;
+}
+
+.galleria .owl-dots .owl-dot.active span {
+  background: #b79b7e;
+}
+
 .billboard {
   position: relative;
   min-height: 680px;
   overflow: hidden;
 }
 
-.billboard .billboard_list {
+.billboard_list {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -2008,11 +2145,11 @@ main {
   z-index: 10;
 }
 
-.billboard .billboard_list li {
+.billboard_list li {
   width: calc(100% / 4);
 }
 
-.billboard .billboard_list li a {
+.billboard_list li a {
   color: #fff;
   display: block;
   padding: 32px;
@@ -2020,12 +2157,12 @@ main {
   position: relative;
 }
 
-.billboard .billboard_list li a span {
+.billboard_list li a span {
   font-family: "baskerville";
   font-size: 2.75em;
 }
 
-.billboard .billboard_list li a .line {
+.billboard_list li a .line {
   height: 64px;
   position: absolute;
   -webkit-transform: translateY(-50%);
@@ -2041,7 +2178,7 @@ main {
   transition: height 600ms cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-.billboard .billboard_list li a:hover .line {
+.billboard_list li a:hover .line {
   height: 128px;
 }
 
@@ -2120,6 +2257,7 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 90px;
 }
 
 .texts .row .img,
@@ -2145,14 +2283,31 @@ main {
      object-fit: cover;
 }
 
-.texts .row .txt h2 {
+.texts .row .img:before {
+  content: "";
+  border: 1px solid #fff;
+  width: calc(100% - 50px);
+  height: calc(100% - 50px);
+  display: block;
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  z-index: 1;
+}
+
+.texts .row .txt {
+  position: relative;
+  z-index: 1;
+}
+
+.txt h2 {
   color: #b79b7e;
   font-size: 2em;
   font-weight: 500;
-  padding-bottom: 47px;
+  padding-bottom: 1.5rem;
 }
 
-.texts .row .txt p {
+.txt p {
   font-size: 0.9em;
   letter-spacing: 0.02em;
   color: #7f7f7f;
@@ -2160,13 +2315,13 @@ main {
   padding-bottom: 20px;
 }
 
-.texts .row .txt a {
+.txt a {
   color: #b79b7e;
   position: relative;
   display: inline-block;
 }
 
-.texts .row .txt a:before {
+.txt a:before {
   content: "";
   display: block;
   width: 50px;
@@ -2181,7 +2336,7 @@ main {
   transition: right 0.2s ease-in-out, width 0.3s ease-in-out 0s;
 }
 
-.texts .row .txt a:hover:before {
+.txt a:hover:before {
   left: initial;
   right: 0px;
   width: 100%;
@@ -2372,7 +2527,7 @@ footer .logo a svg path:not(:nth-child(2)) {
           align-items: flex-end;
 }
 
-.field_box .field_box-item {
+.field_box-item {
   height: 4rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2382,7 +2537,7 @@ footer .logo a svg path:not(:nth-child(2)) {
           align-items: flex-end;
 }
 
-.field_box .field_box-item input {
+.field_box-item input {
   width: 100%;
   color: #fff;
   display: block;
@@ -2392,7 +2547,7 @@ footer .logo a svg path:not(:nth-child(2)) {
   border: none;
 }
 
-.field_box .field_box-item label {
+.field_box-item label {
   color: #fff;
   font-size: 0.68rem;
   font-weight: 500;
@@ -2723,6 +2878,31 @@ footer .logo a svg path:not(:nth-child(2)) {
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
+  }
+  .billboard .billboard_list li a:hover .line {
+    height: 1px;
+  }
+  .galleria .owl-nav {
+    right: 1.5%;
+  }
+  .texts .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 50px;
+  }
+  .texts .row .img {
+    margin-bottom: 20px;
+  }
+  .texts .row .img:before {
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+    top: 10px;
+    left: 10px;
+  }
+  .texts .row .txt h2 {
+    padding-bottom: 20px;
   }
   .texts .row:last-of-type {
     -webkit-box-orient: vertical;
