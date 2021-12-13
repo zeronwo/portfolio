@@ -871,11 +871,7 @@ body {
 .lity-close:focus,
 .lity-close:active,
 .lity-close:visited {
-  color: #000;
-  position: absolute;
-  top: 2px;
-  right: 20px;
-  text-shadow: none;
+  color: #fff;
 }
 
 .img-change img:last-of-type {
@@ -1057,7 +1053,7 @@ header {
   transition: all 0.6s ease;
 }
 
-body.hideUp header {
+header.slideUp {
   top: -75px;
 }
 

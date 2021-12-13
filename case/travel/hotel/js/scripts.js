@@ -3,19 +3,26 @@ $(document).ready(function () {
 
 
 
+
     //滑下出現選單
-    var bodyClass = document.body.classList,
-        lastScrollY = 0;
-    window.addEventListener('scroll', function () {
-        var st = this.scrollY;
-        // 判斷是向上捲動，而且捲軸超過 200px
-        if (st < lastScrollY) {
-            bodyClass.remove('hideUp');
-        } else {
-            bodyClass.add('hideUp');
-        }
-        lastScrollY = st;
+    var new_scroll_position = 0;
+    var last_scroll_position;
+    var header = document.getElementById("header");
+    window.addEventListener('scroll', function(e) {
+      last_scroll_position = window.scrollY;
+      // Scrolling down
+      if (new_scroll_position < last_scroll_position && last_scroll_position > 80) {
+        // header.removeClass('slideDown').addClass('slideUp');
+        header.classList.add("slideUp");
+        // Scrolling up
+      } else if (new_scroll_position > last_scroll_position) {
+        // header.removeClass('slideUp').addClass('slideDown');
+        header.classList.remove("slideUp");
+      }
+      new_scroll_position = last_scroll_position;
     });
+
+
 
 
 
@@ -26,18 +33,6 @@ $(document).ready(function () {
 
     });
 
-    var bodyClass = document.body.classList,
-        lastScrollY = 200;
-    window.addEventListener('scroll', function () {
-        var st = this.scrollY;
-        // 判斷是向上捲動，而且捲軸超過 200px
-        if (st < lastScrollY) {
-            bodyClass.remove('open');
-        } else {
-            bodyClass.add('open');
-        }
-        lastScrollY = st;
-    });
 
     $(".language .menu_btn").click(function () {
         $(this).next(".language ul").toggleClass("active");
@@ -119,21 +114,6 @@ $(document).ready(function () {
         });
     });
 
- 
-    const scroll = new LocomotiveScroll({
-        el: document.querySelector("#scroll-zone"),
-        smooth: true,
-        lerp: 0.1,
-        repeat: true,
-        tablet:{
-          smooth:true,
-          breakpoint:25
-        },
-        smartphone:{
-          smooth:false
-        }
-      });
-      
 
 
     //lighrbox
