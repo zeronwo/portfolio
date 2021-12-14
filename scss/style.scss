@@ -123,7 +123,6 @@ body.hideUp header {
   z-index: -1;
 }
 
-
 // 彈窗
 .md {
   .md-modal {
@@ -204,7 +203,7 @@ body.hideUp header {
     height: 40px;
     border-radius: 10px;
     border: 3px $color2 solid;
-    background:#28282b ;
+    background: #28282b;
     background-size: cover;
     display: block;
     position: relative;
@@ -271,15 +270,15 @@ header {
 
   .menu_mob {
     width: 100%;
-    
+
     background: #1b1b1c;
     position: fixed;
     top: 0;
     z-index: 90;
-    .menu_mob_box{
+    .menu_mob_box {
       height: 100vh;
       display: flex;
-    align-items: center;
+      align-items: center;
       ul {
         width: 100%;
         @include flex();
@@ -301,7 +300,6 @@ header {
 
     display: none;
   }
-
 }
 
 //漢堡選單 ST
@@ -345,6 +343,21 @@ header {
 }
 
 //漢堡選單 END
+
+//LOAD
+.doubleLoader.theme-fluoGreen .doubleLoaderBottom,
+.doubleLoader.theme-fluoGreen .doubleLoaderTop {
+  background-color: #212123;
+}
+.doubleLoaderProgBar {
+  height: 3px;
+  span {
+    height: 3px;
+  }
+}
+.doubleLoader.theme-fluoGreen .doubleLoaderProgBar span {
+  background-color: #7a604a;
+}
 
 .title {
   padding-bottom: 15px;
@@ -437,7 +450,6 @@ header {
 .bg2 {
   background: url(../images/bg2.jpg) no-repeat top -100px center;
   position: relative;
-  
 }
 //work
 
@@ -536,7 +548,6 @@ header {
     ul {
       li {
         transform: scale(0.1);
-       
       }
     }
   }
@@ -698,7 +709,6 @@ header {
         display: block;
         overflow: hidden;
         position: relative;
-      
 
         img {
           transition: transform 0.35s ease-out;
@@ -716,7 +726,7 @@ header {
         }
         &:hover {
           border: 1px solid $color2;
-        
+
           img {
             transform: scale(1.15);
           }
@@ -789,10 +799,10 @@ header {
 .slick-next {
   z-index: 9;
 }
-.slick-dots li button:before{
+.slick-dots li button:before {
   color: $color1;
 }
-.slick-dots li.slick-active button:before{
+.slick-dots li.slick-active button:before {
   color: $color3;
 }
 
@@ -849,7 +859,8 @@ footer {
     margin-bottom: 20px;
   }
 
-  .about_img,.work .work_list > li:before {
+  .about_img,
+  .work .work_list > li:before {
     display: none;
   }
   .about,
@@ -871,19 +882,18 @@ footer {
       }
     }
   }
-  .work{
-    .work_list{
+  .work {
+    .work_list {
       flex-direction: column;
-      &>li{
+      & > li {
         width: 100%;
-        margin-bottom: 15px;;
-        .work_box{
-          border-right:0;
+        margin-bottom: 15px;
+        .work_box {
+          border-right: 0;
         }
       }
     }
   }
-
 
   .skill {
     padding-bottom: 0;

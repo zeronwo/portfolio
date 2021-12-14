@@ -844,6 +844,23 @@ header .menu_mob .menu_mob_box ul li a {
   top: -0.5rem;
 }
 
+.doubleLoader.theme-fluoGreen .doubleLoaderBottom,
+.doubleLoader.theme-fluoGreen .doubleLoaderTop {
+  background-color: #212123;
+}
+
+.doubleLoaderProgBar {
+  height: 3px;
+}
+
+.doubleLoaderProgBar span {
+  height: 3px;
+}
+
+.doubleLoader.theme-fluoGreen .doubleLoaderProgBar span {
+  background-color: #7a604a;
+}
+
 .title {
   padding-bottom: 15px;
 }
@@ -1430,7 +1447,8 @@ footer {
   [class*="m_"] {
     margin-bottom: 20px;
   }
-  .about_img, .work .work_list > li:before {
+  .about_img,
+  .work .work_list > li:before {
     display: none;
   }
   .about,

@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="js/aos/aos.css" />
     <link href="css/hover.css" rel="stylesheet" type="text/css">
     <!-- LOAD-->
-    <link href="js/fakeLoader/fakeLoader.css" rel="stylesheet" type="text/css">
+    <link href="js/jqueryIntroLoader/introLoader.min.css" rel="stylesheet" type="text/css">
     <link href="css/style.css" rel="stylesheet" type="text/css">
     <!-- jQuery library -->
     <script src="js/jquery.min.js"></script>
@@ -26,15 +26,38 @@
     <!-- 輪播-->
     <script type="text/javascript" src="js/slick/slick.js"></script>
     <!-- LOAD-->
-    <script type="text/javascript" src="js/fakeLoader/fakeLoader.js"></script>
+    <script src="js/jqueryIntroLoader/jquery.easing.1.3.js"></script>
+    <script src="js/jqueryIntroLoader/spin.min.js"></script>
+    <script type="text/javascript" src="js/jqueryIntroLoader/jquery.introLoader.min.js"></script>
+
     <script src="js/internal.js"></script>
+
+    <script>
+        $(document).on('ready', function () {
+
+            $("#element").introLoader({
+                animation: {
+                    name: 'doubleLoader',
+                    options: {
+                        exitFx: 'fadeOut',
+                        ease: "easeInOutCirc",
+                        style: 'fluoGreen',
+                        delayBefore: 500,
+                        exitTime: 300,
+                        progbarTime: 700,
+                        progbarDelayAfter: 400
+                    }
+                }
+            });
+        });
+    </script>
     <title>SPREAD</title>
 </head>
 
 
 <body>
     <!-- LOAD -->
-    <div class="fakeLoader"></div>
+    <div id="element" class="introLoading"></div>
     <!-- gotop -->
     <div class="gotop">
         <a href="javascript:;"></a>
