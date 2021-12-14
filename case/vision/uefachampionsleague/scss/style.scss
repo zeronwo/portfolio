@@ -573,6 +573,23 @@ header.active {
 
 //漢堡選單 END
 
+//LOAD
+.introLoading{
+  background-color: #1d1d29;
+}
+.doubleLoader.theme-fluoGreen .doubleLoaderBottom,
+.doubleLoader.theme-fluoGreen .doubleLoaderTop {
+  background-color: #1d1d29;
+}
+.doubleLoaderProgBar {
+  height: 3px;
+  span {
+    height: 3px;
+  }
+}
+.doubleLoader.theme-fluoGreen .doubleLoaderProgBar span {
+  background-color: #5af7dc;
+}
 section {
   position: relative;
 }
@@ -1095,7 +1112,7 @@ footer {
           strong {
             font-size: 1.25em;
           }
-          &:hover{
+          &:hover {
             color: $white;
           }
         }
@@ -1146,7 +1163,7 @@ footer {
     .top_left_img {
       margin: auto;
     }
-    .top_left{
+    .top_left {
       margin-bottom: 20px;
     }
   }

@@ -823,6 +823,23 @@ header .md-overlay {
           box-shadow: rgba(255, 255, 255, 0.75) 0 1px 0, rgba(0, 0, 0, 0.15) 0 1px 3px inset;
 }
 
+.theme-fluoGreen.introLoader.counterLoader {
+  background-color: #242a3a;
+}
+
+.theme-fluoGreen.introLoader.counterLoader .counterLoaderBox {
+  background-color: #242a3a;
+  color: #fff;
+}
+
+.doubleLoader.theme-fluoGreen .doubleLoaderProgBar {
+  background-color: #242a3a;
+}
+
+.doubleLoader.theme-fluoGreen .doubleLoaderProgBar span {
+  background-color: #7a604a;
+}
+
 section {
   position: relative;
 }
@@ -2839,7 +2856,7 @@ body.menu-open {
 
 .advantage-sec-slide li a {
   display: block;
-  padding-bottom: 112%;
+  padding-bottom: 80%;
   overflow: hidden;
 }
 
@@ -3002,18 +3019,6 @@ footer .row .footer_menu ul li a:hover {
     display: -ms-flexbox;
     display: flex;
   }
-  .introduce .container .row {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .introduce .container .row > div {
-    width: 100%;
-  }
-  .introduce .container .row > div .txt {
-    padding: 0;
-  }
   .map_txt {
     padding: 0 12vw;
   }
@@ -3082,7 +3087,8 @@ footer .row .footer_menu ul li a:hover {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .experts_main .experts_left, .experts_main .experts_right {
+  .experts_main .experts_left,
+  .experts_main .experts_right {
     width: 100%;
   }
   .experts_main .experts_left {
@@ -3128,6 +3134,22 @@ footer .row .footer_menu ul li a:hover {
 }
 
 @media (max-width: 768px) {
+  .introduce figure {
+    -webkit-transform: none !important;
+            transform: none !important;
+  }
+  .introduce .container .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .introduce .container .row > div {
+    width: 100%;
+  }
+  .introduce .container .row > div .txt {
+    padding: 0;
+  }
   footer {
     padding: 1.5em;
   }

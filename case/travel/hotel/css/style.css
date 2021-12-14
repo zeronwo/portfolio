@@ -2976,6 +2976,10 @@ footer .logo a svg path:not(:nth-child(2)) {
   .billboard .billboard_list li a span {
     font-size: 3em;
   }
+  .texts .img {
+    -webkit-transform: none !important;
+            transform: none !important;
+  }
   .lity-close,
   .lity-close:hover,
   .lity-close:focus,

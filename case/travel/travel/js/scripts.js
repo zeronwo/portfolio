@@ -37,9 +37,6 @@ $(document).ready(function () {
     });
 
 
-
-
-
     //首頁輪播圖
     $('.top_big_slide').owlCarousel({
         loop: true, //循環播放
@@ -135,7 +132,7 @@ $(document).ready(function () {
         speed: 300,
         autoplay: {
             delay: 8000,
-          },
+        },
         mousewheel: {
             invert: false,
         },
@@ -151,6 +148,19 @@ $(document).ready(function () {
         }
     });
 
+    //LOAD
+    $("#element").introLoader({
+
+        animation: {
+            name: 'counterLoader',
+            options: {
+                ease: "easeOutSine",
+                style: 'fluoGreen',
+                animationTime: 1000
+            }
+        }
+
+    });
 
 
     //lighrbox

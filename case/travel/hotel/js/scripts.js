@@ -42,7 +42,19 @@ $(document).ready(function () {
         $(this).toggleClass("active");
     });
 
-
+  //LOAD
+  $("#element").introLoader({
+    animation: {
+        name: 'gifLoader',
+        options: {
+            ease: "easeInOutCirc",
+            style: 'light',
+            delayBefore: 500,
+            delayAfter: 0,
+            exitTime: 500
+        }
+    }
+});
 
 
     //首頁輪播圖

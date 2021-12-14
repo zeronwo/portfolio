@@ -21,12 +21,20 @@ $(document).ready(function () {
   });
 
   //LOAD
-  $.fakeLoader({
-    timeToHide: 1200,
-    bgColor: "#000000",
-    spinner: "spinner2"
+  $("#element").introLoader({
+    animation: {
+      name: 'doubleLoader',
+      options: {
+        exitFx: 'fadeOut',
+        ease: "easeInOutCirc",
+        style: 'fluoGreen',
+        delayBefore: 500,
+        exitTime: 300,
+        progbarTime: 700,
+        progbarDelayAfter: 400
+      }
+    }
   });
-
 
   //錨點
   $('.ma').click(function () {

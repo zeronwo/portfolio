@@ -350,6 +350,21 @@ header {
 //漢堡選單 ST
 
 //漢堡選單 END
+//LOAD
+.theme-fluoGreen.introLoader.counterLoader {
+  background-color: #242a3a;
+}
+.theme-fluoGreen.introLoader.counterLoader .counterLoaderBox {
+  background-color: #242a3a;
+  color: $white;
+}
+
+.doubleLoader.theme-fluoGreen .doubleLoaderProgBar {
+  background-color: #242a3a;
+  span {
+    background-color: #7a604a;
+  }
+}
 
 section {
   position: relative;
@@ -1313,14 +1328,14 @@ body.menu-open {
     }
   }
 }
-.experts_right{
+.experts_right {
   width: 33%;
 }
 .swiper-container {
   position: relative;
 
   height: 100%;
-  
+
   border-radius: 10px;
   .swiper-wrapper {
     width: 100%;
@@ -1858,7 +1873,7 @@ body.menu-open {
   li {
     a {
       display: block;
-      padding-bottom: 112%;
+      padding-bottom: 80%;
       overflow: hidden;
       img {
         object-fit: cover;
@@ -1870,8 +1885,8 @@ body.menu-open {
         height: 100%;
         transition: all 0.2s;
       }
-      &:hover{
-        img{
+      &:hover {
+        img {
           transform: scale(0.98);
         }
       }
@@ -1915,7 +1930,7 @@ footer {
 
 //桌機時  強制選單出現  手機選單消失
 @media screen and (min-width: 1300px) {
-  body{
+  body {
     overflow: auto !important;
   }
   #menu {
@@ -1924,7 +1939,7 @@ footer {
   .sidemenu {
     display: none !important;
   }
-  .menu_main{
+  .menu_main {
     background-color: transparent !important;
   }
 }
@@ -1958,7 +1973,6 @@ footer {
   body {
     //font-size: 80%;
   }
-
 
   header.active {
     .container {
@@ -2036,15 +2050,6 @@ footer {
     display: flex;
   }
 
-  .introduce .container .row {
-    flex-direction: column;
-  }
-  .introduce .container .row > div {
-    width: 100%;
-    .txt {
-      padding: 0;
-    }
-  }
 
   .map_txt {
     padding: 0 12vw;
@@ -2111,22 +2116,22 @@ footer {
     max-width: 100%;
     height: auto;
     flex-direction: column;
-    .experts_left,.experts_right{
+    .experts_left,
+    .experts_right {
       width: 100%;
     }
-    .experts_left{
+    .experts_left {
       padding: 1.5em;
     }
-    .experts_right{
+    .experts_right {
       padding: 2em;
       .swiper-container {
         margin: auto;
-        .swiper-pagination{
+        .swiper-pagination {
           bottom: -13px;
         }
       }
     }
-    
   }
 
   @media (max-width: 500px) {
@@ -2152,6 +2157,19 @@ footer {
       padding: 0 1em;
     }
   }
+
+  .introduce  figure {
+    transform: none !important;
+}
+.introduce .container .row {
+  flex-direction: column;
+}
+.introduce .container .row > div {
+  width: 100%;
+  .txt {
+    padding: 0;
+  }
+}
 
   footer {
     padding: 1.5em;

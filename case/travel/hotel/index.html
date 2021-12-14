@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
     <link href="js/jquery-ui/jquery-ui.min.css" rel="stylesheet" type="text/css">
+    <!-- LOAD-->
+    <link href="../../../js/jqueryIntroLoader/introLoader.min.css" rel="stylesheet" type="text/css">
 
     <!-- 彈窗-->
     <link href="../../../js/lity/lity.css" rel="stylesheet" type="text/css">
@@ -36,14 +38,21 @@
     <!-- 檢測瀏覽器的支援性 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
     <script src="js/jquery.easing.1.3.js"></script>
-    <!-- 視差滾動 -->
-
+    <!-- LOAD-->
+    <script src="../../../js/jqueryIntroLoader/jquery.easing.1.3.js"></script>
+    <script src="../../../js/jqueryIntroLoader/spin.min.js"></script>
+    <script src="../../../js/jqueryIntroLoader/jquery.introLoader.min.js"></script>
+    <!-- 視差-->
+    <script src="../../../js/parallax-scroll/jquery.easing.1.3.js"></script>
+    <script src="../../../js/parallax-scroll/jquery.parallax-scroll.js"></script>
 
     <script src="js/scripts.js"></script>
 
 </head>
 
 <body>
+     <!-- LOAD -->
+     <div id="element" class="introLoading"></div>
     <!-- 彈窗 活動玩法 -->
     <div id="m_search" class="lity-hide">
         <div class="searchInputBox">
@@ -504,10 +513,10 @@
         <section  class="texts m_60" data-scroll-container>
             <div class="container">
                 <div class="row">
-                    <div class="img"data-scroll data-scroll-speed="2">
+                    <div class="img" data-parallax='{"y":20}'>
                         <img src="images/texts-01.jpg" alt="">
                     </div>
-                    <div class="txt" data-scroll data-scroll-speed="4">
+                    <div class="txt" >
                         <h2>到采爾馬特的神奇之地</h2>
                         <p>米拉博酒店坐落在寧靜的地方，離采爾馬特主火車站<br>
                             和著名的Gornergrat車站只有幾分鐘的步行路程。</p>
@@ -524,7 +533,7 @@
                 </div>
 
                 <div class="row ">
-                    <div class="txt" data-parallax='{"y":-50}'>
+                    <div class="txt">
                         <h2>為您提供終極度假勝地</h2>
                         <p>在這個世界裡，現代奢華展現出超出預期的範圍，<br>並融入任何純粹和線性的慶祝活動。自然而真實。
                             永恆、熱情和熟悉。</p>
@@ -537,7 +546,7 @@
                             <span>查看更多</span>
                         </a>
                     </div>
-                    <div class="img">
+                    <div class="img" data-parallax='{"y":20}'>
                         <img src="images/texts-02.jpg" alt="">
                     </div>
                 </div>

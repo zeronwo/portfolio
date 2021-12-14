@@ -27,7 +27,21 @@ $(document).ready(function () {
       $(".gotop").fadeOut();
     }
   });
-
+  //LOAD
+  $("#element").introLoader({
+    animation: {
+      name: 'doubleLoader',
+      options: {
+        exitFx: 'fadeOut',
+        ease: "easeInOutCirc",
+        style: 'fluoGreen',
+        delayBefore: 500,
+        exitTime: 300,
+        progbarTime: 700,
+        progbarDelayAfter: 400
+      }
+    }
+  });
 
   //手機選單
   $(".menu_button,header .md-overlay,.menu_mob a").click(function () {

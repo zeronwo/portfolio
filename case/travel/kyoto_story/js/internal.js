@@ -32,7 +32,19 @@ $(document).ready(function (e) {
     $('html,body').animate({ scrollTop: '0px' }, 800);
   });
 
-
+  //LOAD
+  $("#element").introLoader({
+    animation: {
+        name: 'gifLoader',
+        options: {
+            ease: "easeInOutCirc",
+            style: 'light',
+            delayBefore: 500,
+            delayAfter: 0,
+            exitTime: 500
+        }
+    }
+});
 
   $('.map_position li').click(function (e) {
     var $tabIndex = $(this).index();
@@ -49,9 +61,9 @@ $(document).ready(function (e) {
     items: 1,
     margin: 0,
     autoplay: true, //自動撥放
-    dots:false,
+    dots: false,
     smartSpeed: 450
-});
+  });
 
   var owl = $('.activity_photo');
   owl.owlCarousel({
@@ -77,14 +89,14 @@ $(document).ready(function (e) {
     }
   })
 
-    //首頁水平輪播
-    $(".advantage-sec-slide").bxSlider({
-      minSlides: 2,
-      maxSlides: 6,
-      slideWidth: 400,
-      slideMargin: 5,
-      ticker: true,
-      speed: 100000
+  //首頁水平輪播
+  $(".advantage-sec-slide").bxSlider({
+    minSlides: 2,
+    maxSlides: 6,
+    slideWidth: 400,
+    slideMargin: 5,
+    ticker: true,
+    speed: 100000
   });
 
 
