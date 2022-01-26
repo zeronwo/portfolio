@@ -4,12 +4,7 @@ $(document).ready(function () {
     $(".include_footer").load("include/footer.html");
 
 
-    //手機選單
-    $(".menu_rwd_toggle").click(function () {
-        $("#header_menu").toggleClass("active");
-        $("body").toggleClass("menu-open");
 
-    });
 
     var bodyClass = document.body.classList,
         lastScrollY = 200;
@@ -41,9 +36,7 @@ $(document).ready(function () {
     });
 
 
-    $(".search_btn").click(function () {
-        $(".menu_search").slideToggle();
-    });
+ 
 
     //lookbook最愛
     $(".lookbook_heart,.FavoritesButton").click(function () {

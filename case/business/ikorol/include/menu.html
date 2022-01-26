@@ -120,3 +120,15 @@
         <!--menu end-->
     </div>
 </div>
+
+<script>
+        //手機選單
+        $(".menu_rwd_toggle").click(function () {
+        $("#header_menu").toggleClass("active");
+        $("body").toggleClass("menu-open");
+
+    });
+    $(".search_btn").click(function () {
+        $(".menu_search").slideToggle();
+    });
+</script>
