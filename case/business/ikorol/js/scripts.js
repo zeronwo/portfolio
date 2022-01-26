@@ -1,5 +1,8 @@
 
 $(document).ready(function () {
+    $(".include_menu").load("include/menu.html");
+    $(".include_footer").load("include/footer.html");
+
 
     //手機選單
     $(".menu_rwd_toggle").click(function () {
@@ -158,17 +161,6 @@ $(document).ready(function () {
         $(".right-menu_list").eq($tabIndex).fadeIn().siblings(".right-menu_list").hide();
     });
 
-
-    //首頁水平輪播
-    $(".advantage-sec-slide").bxSlider({
-        minSlides: 2,
-        maxSlides: 6,
-        slideWidth: 400,
-        slideMargin: 1,
-        ticker: true,
-        speed: 100000
-    });
-
     //lookbook輪播圖
     $('.slider-for').slick({
         slidesToShow: 1,
@@ -199,6 +191,8 @@ $(document).ready(function () {
         ]
 
     });
+
+
 
     //lookbook_style
     $(".lookbook_style_list").hide();
@@ -252,6 +246,15 @@ $(document).ready(function () {
             // settings: "unslick"
             // instead of a settings object
         ]
+    });
+    //首頁水平輪播
+    $(".advantage-sec-slide").bxSlider({
+        minSlides: 2,
+        maxSlides: 6,
+        slideWidth: 400,
+        slideMargin: 1,
+        ticker: true,
+        speed: 100000
     });
 
 
