@@ -20,21 +20,6 @@ $(document).ready(function () {
 
   });
 
-  //LOAD
-  $("#element").introLoader({
-    animation: {
-      name: 'doubleLoader',
-      options: {
-        exitFx: 'fadeOut',
-        ease: "easeInOutCirc",
-        style: 'fluoGreen',
-        delayBefore: 500,
-        exitTime: 300,
-        progbarTime: 700,
-        progbarDelayAfter: 400
-      }
-    }
-  });
 
   //錨點
   $('.ma').click(function () {
@@ -58,7 +43,22 @@ $(document).ready(function () {
     $('html,body').animate({ scrollTop: $('.video').offset().top }, 800);
   });
 
-
+        //LOAD
+        $("#element").introLoader({
+          animation: {
+            name: 'doubleLoader',
+            options: {
+              exitFx: 'fadeOut',
+              ease: "easeInOutCirc",
+              style: 'fluoGreen',
+              delayBefore: 500,
+              exitTime: 300,
+              progbarTime: 700,
+              progbarDelayAfter: 400
+            }
+          }
+        });
+      
 
   //首頁輪播
   $('.top_left_img_box').slick({
