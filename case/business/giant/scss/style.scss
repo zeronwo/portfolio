@@ -262,9 +262,6 @@ body {
       &:hover {
          background: $color1;
       }
-
-      &:hover:before {
-      }
    }
 }
 
@@ -478,8 +475,6 @@ header {
                line-height: 1.1em;
                margin-bottom: 50px;
                letter-spacing: 2px;
-               strong {
-               }
                p {
                   span {
                      color: $blue;
@@ -662,9 +657,6 @@ header {
             max-width: 162px;
          }
       }
-      &.current {
-         //background: $color3;
-      }
    }
 }
 
@@ -715,6 +707,7 @@ header {
 .parts {
    background: url(../images/parts_bg.png) no-repeat top 200px left 85px;
    padding-bottom: 143px;
+
    .parts__inner {
       .owl-dots {
          text-align: right;
@@ -734,41 +727,7 @@ header {
    justify-content: space-between;
    padding: 0 100px 0 300px;
    .txt {
-      h2 {
-         color: $blue;
-         font-size: 1.125em;
-         font-weight: bold;
-         margin-bottom: 25px;
-      }
-      strong {
-         color: $dark;
-         display: block;
-         font-size: 1.875em;
-         line-height: 1.2em;
-         margin-bottom: 70px;
-      }
-      p {
-         color: $dark;
-         font-size: 0.9em;
-         font-weight: bold;
-         margin-bottom: 90px;
-         line-height: 1.8em;
-      }
-      a {
-         width: 175px;
-         height: 63px;
-         background: #0062ad;
-         background: linear-gradient(49deg, #0062ad 0%, #00b1d7 100%);
-         border-radius: 30px;
-         color: $white;
-         display: flex;
-         justify-content: center;
-         align-items: center;
-         &:hover {
-            background: #0062ad;
-            background: linear-gradient(49deg, #00b1d7 0%, #0062ad 100%);
-         }
-      }
+
    }
    .img {
       width: 100%;
@@ -805,16 +764,67 @@ header {
    }
 }
 
+.carousel_txt {
+   h2 {
+      color: $blue;
+      font-size: 1.125em;
+      font-weight: bold;
+      margin-bottom: 25px;
+   }
+   strong {
+      color: $dark;
+      display: block;
+      font-size: 1.875em;
+      line-height: 1.2em;
+      margin-bottom: 70px;
+   }
+   p {
+      color: $dark;
+      font-size: 0.9em;
+      font-weight: bold;
+      margin-bottom: 90px;
+      line-height: 1.8em;
+   }
+   a {
+      width: 175px;
+      height: 63px;
+      background: #0062ad;
+      background: linear-gradient(49deg, #0062ad 0%, #00b1d7 100%);
+      border-radius: 30px;
+      color: $white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &:hover {
+         background: #0062ad;
+         background: linear-gradient(49deg, #00b1d7 0%, #0062ad 100%);
+      }
+   }
+}
+
 //promotion
 .promotion {
+   margin-bottom: 140px;
    .promotion__inner {
       .promotion_img__item {
          padding: 15px 0 0 0;
          .img {
+            border: 1px #efefef solid;
             padding: 35px 15px;
             border-radius: 30px;
             box-shadow: 0px 0px 15px 0px rgba(50, 50, 50, 0.23);
             margin-bottom: 25px;
+            position: relative;
+            overflow: hidden;
+            span {
+               background: #ffd92e;
+               border-radius: 0 0 0 30px;
+               padding: 14px;
+               font-weight: bold;
+               position: absolute;
+               top: 0;
+               right: 0;
+            }
             img {
                max-width: 300px;
             }
@@ -827,7 +837,6 @@ header {
                width: calc(100% - 100px);
                strong {
                   color: $dark;
-                 
                   border-bottom: 1px #000 solid;
                   display: block;
                   padding-bottom: 10px;
@@ -836,10 +845,13 @@ header {
                   color: $blue;
                   font-size: 2.688em;
                   font-family: "Roboto";
+                  span {
+                     font-size: 70%;
+                  }
                }
             }
             .R-box {
-               a{
+               a {
                   width: 77px;
                   height: 63px;
                   border-radius: 30px;
@@ -853,6 +865,56 @@ header {
             }
          }
       }
+   }
+}
+
+.promotion_tt {
+   color: $blue;
+   display: inline-block;
+   font-size: 1.25em;
+   position: relative;
+
+   display: flex;
+   justify-content: center;
+   strong {
+      width: 80px;
+      border-bottom: 4px #0062ad solid;
+      display: inline-block;
+      padding-bottom: 10px;
+      position: relative;
+      text-align: center;
+      &:before {
+         content: "";
+         width: 40px;
+         height: 4px;
+         background: #00b1d7;
+         display: block;
+         position: absolute;
+         right: 0;
+         bottom: -4px;
+      }
+   }
+}
+
+//news{
+.news {
+   padding: 80px 0;
+   position: relative;
+   background: url(../images/news_bg.png) no-repeat center top;
+}
+.news_main {
+   padding: 200px 0 0 210px;
+   .news_tt {
+   }
+}
+.news_img__item {
+   width: 100%;
+    display: flex;
+   .L-box {
+      width:35%;
+   }
+   .R-box {
+      width: 65%;
    }
 }
 
