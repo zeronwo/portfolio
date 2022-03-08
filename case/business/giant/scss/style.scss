@@ -307,28 +307,119 @@ header {
    }
 }
 
-.btn {
-   display: inline-block;
-   text-decoration: none;
-   font-family: "Arvo", courier, serif;
-   font-weight: bold;
-   font-size: 14px;
-   color: #fff;
-   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
-   border-radius: 6px;
-   padding: 5px 15px;
-   margin: 0 5px 5px 0;
-   background: #4e443c;
-   box-shadow: rgba(255, 255, 255, 0.75) 0 1px 0;
-   &:hover {
-      background-color: #9a9994;
-      box-shadow: rgba(255, 255, 255, 0.75) 0 1px 0, rgba(0, 0, 0, 0.15) 0 1px 3px inset;
+//手機選單
+.menu_mob {
+   width: 100%;
+   height: 100vh;
+   background: linear-gradient(49deg, #0062ad 0%, #00b1d7 100%);
+   position: fixed;
+   top: 0;
+   z-index: 11;
+   opacity: 0;
+   pointer-events: none;
+   transition: 0.5s;
+   transform: translate(0%, -100%);
+   ul {
+      width: 100%;
+      margin: auto;
+      @include flex();
+      flex-direction: column;
+      align-items: flex-start;
+      padding-top: 70px;
+      li {
+         border-bottom: 1px solid rgba(255,255,255,.1);
+         width: 100%;
+         height: 100px;
+         a {
+            width: 100%;
+            height: 100px;
+            color: $white;
+            display: flex;
+            align-items: center;
+            padding-left: 40px;
+
+            strong {
+               font-size: 18px;
+
+               display: block;
+               position: relative;
+            }
+         }
+      }
+   }
+   &.active {
+      opacity: 1;
+      pointer-events: initial;
+      transition: 0.5s;
+      transform: translate(0px, 0px);
    }
 }
+.md-overlay {
+   z-index: 10;
+}
 
-//漢堡選單 ST
-
-//漢堡選單 END
+//漢堡選單
+.menu_button {
+   width: 27px;
+   height: 20px;
+   cursor: pointer;
+   z-index: 98;
+   position: relative;
+   .menuicon {
+      position: absolute;
+      top: 50%;
+      left: 0px;
+      right: 0px;
+      margin: 0px auto;
+      transform: translateY(-1px);
+      display: inline-block;
+      cursor: pointer;
+      user-select: none;
+      transition: all 300ms ease 0s;
+      width: 27px;
+      height: 2px;
+      background-color: rgb(0, 0, 0);
+      &:before,
+      &:after {
+         content: "";
+         display: inline-block;
+         width: 27px;
+         height: 2px;
+         background-color: rgb(0, 0, 0);
+         position: absolute;
+         left: 0px;
+         transform-origin: 50% 50%;
+         transition: top 300ms cubic-bezier(0.165, 0.84, 0.44, 1) 300ms,
+            transform 300ms cubic-bezier(0.165, 0.84, 0.44, 1) 0s,
+            background-color 300ms cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
+      }
+      &:before {
+         top: 10px;
+      }
+      &:after {
+         top: -10px;
+      }
+   }
+}
+.menu_button.active {
+   .menuicon {
+      background: transparent;
+      &:before,
+      &:after {
+         background: $white;
+         transition: top 300ms cubic-bezier(0.165, 0.84, 0.44, 1) 0s,
+            transform 300ms cubic-bezier(0.165, 0.84, 0.44, 1) 300ms;
+         top: 0px;
+         width: 27px;
+      }
+      &:before {
+         transform: rotate3d(0, 0, 1, 45deg) scale(1.1);
+      }
+      &:after {
+         transform: rotate3d(0, 0, 1, -45deg) scale(1.1);
+      }
+   }
+}
 
 section {
    position: relative;
@@ -338,12 +429,11 @@ section {
 /*  選單 */
 /*---------------------------------------*/
 .logo {
-   a {
-      display: inline-block;
-      svg {
-         max-width: 188px;
-         height: 32px;
-      }
+   img {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-width: 188px;
    }
 }
 header {
@@ -553,15 +643,29 @@ header {
    font-weight: bold;
    line-height: 90%;
    position: absolute;
-   top: 1%;
-   right: 17%;
    z-index: -1;
 }
-.parts .title {
+.top_title {
+   top: 1%;
+   right: 17%;
+}
+.parts_title {
    top: 116px;
    left: 127px;
 }
-
+.news_title {
+   top: 126px;
+   left: 70px;
+}
+.news_title {
+   top: 126px;
+   left: 70px;
+}
+.map_title {
+   transform: rotate(90deg);
+   top: 70px;
+   right: 100px;
+}
 //輪播圖
 
 .top {
@@ -658,30 +762,30 @@ header {
          }
       }
    }
-}
-
-.owl-theme .owl-nav [class*="owl-"]:hover,
-.owl-theme .owl-nav [class*="owl-"] {
-   background: transparent;
-   position: absolute;
-   &:before {
-      color: $dark;
-      font-family: FontAwesome;
-      font-size: 20px;
+   .owl-nav [class*="owl-"]:hover,
+   .owl-nav [class*="owl-"] {
+      background: transparent;
+      position: absolute;
+      font-size: 0;
+      &:before {
+         color: $dark;
+         font-family: FontAwesome;
+         font-size: 20px;
+      }
    }
-}
-.owl-prev {
-   left: 0;
-   bottom: 30px;
-   &:before {
-      content: "\f053";
+   .owl-prev {
+      left: 0;
+      bottom: 30px;
+      &:before {
+         content: "\f053";
+      }
    }
-}
-.owl-next {
-   right: 0;
-   bottom: 30px;
-   &:before {
-      content: "\f054";
+   .owl-next {
+      right: 0;
+      bottom: 30px;
+      &:before {
+         content: "\f054";
+      }
    }
 }
 
@@ -727,7 +831,6 @@ header {
    justify-content: space-between;
    padding: 0 100px 0 300px;
    .txt {
-
    }
    .img {
       width: 100%;
@@ -804,7 +907,6 @@ header {
 
 //promotion
 .promotion {
-   margin-bottom: 140px;
    .promotion__inner {
       .promotion_img__item {
          padding: 15px 0 0 0;
@@ -887,7 +989,7 @@ header {
          content: "";
          width: 40px;
          height: 4px;
-         background: #00b1d7;
+         background: $blue;
          display: block;
          position: absolute;
          right: 0;
@@ -898,32 +1000,167 @@ header {
 
 //news{
 .news {
-   padding: 80px 0;
+   width: 100%;
+   padding: 243px 0;
    position: relative;
-   background: url(../images/news_bg.png) no-repeat center top;
+   background: url(../images/news_bg.png) no-repeat center top 117px;
 }
 .news_main {
-   padding: 200px 0 0 210px;
+   padding: 0 0 0 170px;
    .news_tt {
+   }
+   .owl-nav {
+      width: 518px;
+      height: 239px;
+      background: linear-gradient(49deg, #0062ad 0%, #00b1d7 100%);
+      border-top-left-radius: 140px;
+      border-bottom-left-radius: 140px;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      bottom: -60px;
+      right: 0;
+      [class*="owl-"] {
+         position: static;
+         font-size: 0;
+      }
+      &:before {
+         content: "PREV / NEXT";
+         color: $white;
+         font-size: 0.9em;
+         display: inline-block;
+         margin-right: 50px;
+      }
+      .owl-prev,
+      .owl-prev:hover,
+      .owl-next {
+         width: 30px;
+         height: 56px;
+         background: url(../images/btn_prev.png) no-repeat;
+         display: block;
+         &:before {
+            display: none;
+         }
+      }
+      .owl-next,
+      .owl-next:hover {
+         background: url(../images/btn_next.png) no-repeat;
+      }
    }
 }
 .news_img__item {
    width: 100%;
-    display: flex;
+   display: flex;
+   justify-content: space-between;
    .L-box {
-      width:35%;
+      width: 40%;
+      padding-top: 116px;
    }
    .R-box {
-      width: 65%;
+      width: calc(60% - 20px);
+      position: relative;
+      padding-bottom: 39%;
+      border-top-left-radius: 280px;
+      border-bottom-left-radius: 280px;
+      overflow: hidden;
+      img {
+         position: absolute;
+         width: 100%;
+         height: 100%;
+         top: 0;
+         left: 0;
+         -o-object-fit: cover;
+         object-fit: cover;
+      }
+   }
+}
+
+//map
+.map {
+   background: url(../images/map_bg.png) no-repeat right bottom;
+}
+.map_main {
+   display: flex;
+   align-items: center;
+   &_box {
+      width: 605px;
+      height: 572px;
+      border-top-right-radius: 400px;
+      border-bottom-right-radius: 400px;
+      overflow: hidden;
+      margin-right: 40px;
+      iframe {
+         width: 100%;
+         height: 100%;
+      }
+   }
+   .map_main_txt {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .logo {
+         margin-bottom: 50px;
+         img {
+            max-width: 280px;
+         }
+      }
+      ul {
+         li {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            strong {
+               font-size: 1.125em;
+            }
+            p {
+               font-size: 0.9em;
+            }
+            a {
+               color: $blue;
+               &:hover {
+                  color: #005669;
+               }
+            }
+         }
+         li:not(:last-child) {
+            margin-bottom: 40px;
+         }
+      }
+   }
+}
+
+//footer
+footer {
+   background: $dark;
+   padding: 20px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   .logo {
+   }
+
+   p {
+      color: $white;
+   }
+   ul {
+      display: flex;
+      li {
+         a {
+            color: $white;
+         }
+      }
+      li:not(:last-child) {
+         margin-right: 15px;
+      }
    }
 }
 
 //桌機時  強制選單出現  手機選單消失
 @media screen and (min-width: 1300px) {
-   #menu {
-      display: block !important;
-   }
-   .menu_rwd {
+   .menu_button {
       display: none !important;
    }
 }
@@ -931,30 +1168,136 @@ header {
 //RWD
 
 @media (max-width: 1300px) {
-   .menu_main > ul,
-   .menu_top .menu_top_main .menu_top_right .menu_btn span,
-   .sidemenu .main > .menu,
-   .reservation,
-   .footer_go-top {
+   .folow,
+   header:before,
+   .header_menu {
       display: none;
    }
    .menu_rwd_toggle {
       display: block;
    }
 
-   .menu_button,
-   .d_no,
-   .menu_below {
+   .d_no {
       display: block;
    }
 
    body {
       font-size: 80%;
    }
-   body.open #header_menu {
-      top: -62px;
+
+   .title {
+      font-size: 6em;
+   }
+   .top_title {
+      left: 0;
+   }
+   .parts_title {
+      top: 106px;
+      left: 30px;
+   }
+   .top,
+   .parts,
+   .map {
+      background: none;
+   }
+   .top {
+      padding: 40px 0;
+   }
+   .top_img {
+      margin-left: 66px;
+      .top_img__inner .top_img__item {
+         flex-direction: column;
+
+         .bike {
+            width: 100%;
+            padding-bottom: 57%;
+            margin-bottom: 10px;
+         }
+         .txt {
+            width: 100%;
+            padding: 0;
+            margin-bottom: 20px;
+            .tt {
+               display: flex;
+               margin-bottom: 10px;
+            }
+            .check {
+               margin-bottom: 20px;
+            }
+            .details {
+               justify-content: flex-start;
+            }
+         }
+      }
+   }
+   .top_img_thumb {
+      width: 100%;
+      padding: 0 45px;
+   }
+   .top .owl-theme .owl-nav.disabled + .owl-dots {
+      left: -66px;
+   }
+   .scroll_img {
+      left: -45px;
    }
 
+   //parts
+   .parts {
+      padding-bottom: 30px;
+      .parts_img__item {
+         padding: 0 15px;
+         .txt {
+            width: 50%;
+            padding-right: 15px;
+         }
+         .img {
+            width: 50%;
+            padding-bottom: 64%;
+         }
+      }
+   }
+   .carousel_txt p {
+      margin-bottom: 40px;
+   }
+
+   //news
+   .news {
+      padding: 40px 0;
+      .news_main {
+         padding: 0;
+         .news_img__item {
+            flex-direction: column-reverse;
+            .L-box {
+               width: 100%;
+               padding: 0;
+               strong,
+               p {
+                  margin-bottom: 20px;
+               }
+            }
+            .R-box {
+               width: 100%;
+               padding-bottom: 59%;
+            }
+         }
+      }
+   }
+   //map
+   .map_main {
+      flex-direction: column;
+      & &_box {
+         width: 100%;
+         margin: 0 0 20px 0;
+      }
+      & &_txt {
+         .logo {
+            margin-bottom: 20px;
+         }
+         ul li:not(:last-child) {
+            margin-bottom: 20px;
+         }
+      }
+   }
    //lity
    .lity-box {
       width: calc(100vw - 20px);
@@ -963,41 +1306,40 @@ header {
 }
 
 @media (max-width: 500px) {
-   .menu_main_right .language,
-   .menu_main_right .m_reservation {
+   .title {
       display: none;
    }
-   .reservation_form form {
-      .reservation_search {
+
+   .top_img{
+      margin: 0;
+      .top_img__inner .top_img__item .txt .tt{
          flex-direction: column;
-         .box {
-            width: 100%;
-            padding: 0;
-            margin-bottom: 15px;
-         }
       }
    }
-   .reservation_link {
-      li {
-         width: calc(100% / 2);
+   .top .owl-theme .owl-nav.disabled + .owl-dots{
+      display: none;
+   }
+   .parts .parts_img__item{
+     
+    flex-direction: column-reverse;
+      .txt,.img{
+         width: 100%;
       }
    }
-
-   .billboard .billboard_list li a span {
-      font-size: 3em;
+   .carousel_txt strong{
+      margin-bottom: 20px;
    }
-
-   .texts .img {
-      transform: none !important;
+   .parts .parts__inner .owl-dots{
+      margin: auto;
+      text-align: center;
    }
-
-   .lity-close,
-   .lity-close:hover,
-   .lity-close:focus,
-   .lity-close:active,
-   .lity-close:visited {
-      position: fixed;
-      right: 0;
-      top: 0;
+   .map_main .map_main_box{
+      height: 227px;
+   }
+   footer{
+      flex-direction: column;
+      .logo,p{
+         margin-bottom: 10px;
+      }
    }
 }

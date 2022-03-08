@@ -23,18 +23,13 @@ $(document).ready(function () {
     });
 
 
-
-
-
     //手機選單
-    $(".menu_rwd_toggle").click(function () {
-        $(".sidemenu").toggleClass("active");
-        $("body").toggleClass("menu-open");
+    $(".menu_button,.md-overlay,.menu_mob a").click(function () {
+        $("body").toggleClass("hidden");
+        $(this).toggleClass("active");
+        $(".menu_mob").toggleClass("active");
 
     });
-
-
-
     //LOAD
     $("#element").introLoader({
         animation: {
@@ -54,31 +49,54 @@ $(document).ready(function () {
 
     //零件
     $('.parts__inner').owlCarousel({
-        loop:true,
-        nav:false,
-        items:1,
+        loop: true,
+        nav: false,
+        items: 1,
         dots: true,
 
     })
     //促銷
     $('.promotion__inner').owlCarousel({
         center: true,
-        items:2,
-        loop:true,
-        margin:60,
-        responsive:{
-            600:{
-                items:4
+        loop: true,
+        margin: 60,
+        responsive: {
+            0: {
+                items: 1,
+
+            },
+            600: {
+                items: 2,
+
+            },
+            1000: {
+                items: 4,
+
             }
         }
     });
 
-     //最新消息
-     $('.news__inner').owlCarousel({
-        loop:true,
-        nav:false,
-        items:1,
-        dots: true,
+    //最新消息
+    $('.news__inner').owlCarousel({
+        loop: true,
+        responsive: {
+            0: {
+                items: 1,
+
+            },
+            600: {
+                nav: false,
+                items: 1,
+                dots: true,
+
+            },
+            1000: {
+                nav: true,
+                items: 1,
+                dots: false,
+
+            }
+        }
 
     })
 
