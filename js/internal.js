@@ -1,32 +1,8 @@
 
 $(document).ready(function () {
 
-
-  var bodyClass = document.body.classList,
-    lastScrollY = 0;
-  window.addEventListener('scroll', function () {
-    var st = this.scrollY;
-    // 判斷是向上捲動，而且捲軸超過 200px
-    if (st < lastScrollY) {
-      bodyClass.remove('hideUp');
-    } else {
-      bodyClass.add('hideUp');
-    }
-    lastScrollY = st;
-  });
-
-  //gotop
-  $('.gotop').click(function () {
-    $('html,body').animate({ scrollTop: '0px' }, 800);
-  });
-  //高度200 gotop出現
-  $(window).scroll(function () {
-    if ($(window).scrollTop() >= 200) {
-      $(".gotop").fadeIn();
-    } else {
-      $(".gotop").fadeOut();
-    }
-  });
+  //判斷捲軸事件
+  $.scrollDirection.init();
   //LOAD
   $("#element").introLoader({
     animation: {
@@ -42,6 +18,21 @@ $(document).ready(function () {
       }
     }
   });
+
+
+  //gotop
+  $('.gotop').click(function () {
+    $('html,body').animate({ scrollTop: '0px' }, 800);
+  });
+  //高度200 gotop出現
+  $(window).scroll(function () {
+    if ($(window).scrollTop() >= 200) {
+      $(".gotop").fadeIn();
+    } else {
+      $(".gotop").fadeOut();
+    }
+  });
+
 
   //手機選單
   $(".menu_button,header .md-overlay,.menu_mob a").click(function () {

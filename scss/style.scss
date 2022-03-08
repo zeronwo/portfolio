@@ -104,10 +104,12 @@ body {
   overflow-x: hidden;
 }
 
-body.hideUp header {
+body.scroll-down header {
   top: -62px;
 }
-
+body.scroll-up header {
+  top: 0;
+}
 .container {
   max-width: 1200px;
   padding-right: 15px;
