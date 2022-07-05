@@ -1,6 +1,17 @@
 
 $(document).ready(function () {
-
+  //gotop
+  $('.gotop').click(function () {
+    $('html,body').animate({ scrollTop: '0px' }, 800);
+  });
+  //高度200 gotop出現
+  $(window).scroll(function () {
+    if ($(window).scrollTop() >= 200) {
+      $(".gotop").fadeIn();
+    } else {
+      $(".gotop").fadeOut();
+    }
+  });
     //LOAD
     $("#element").introLoader({
       animation: {

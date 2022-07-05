@@ -613,10 +613,53 @@ button {
   padding: 0;
 }
 
+.gotop {
+  position: fixed;
+  bottom: 10%;
+  right: 48px;
+  z-index: 9;
+  display: none;
+}
+
+.gotop a {
+  border: 1px solid transparent;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background: #e1a957;
+  color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: stretch;
+      align-content: stretch;
+  position: relative;
+  -webkit-transition: all 0s;
+  transition: all 0s;
+}
+
+.gotop a:hover {
+  border: 2px solid #e1a957;
+  background: black;
+  color: #e1a957;
+}
+
 body {
   background: black url(../images/bg.jpg) no-repeat center top;
-  background-size: cover;
-  background-attachment: fixed;
+  background-size: 100%;
+  background-repeat: repeat-y;
   color: white;
   font-family: 微軟正黑體;
   font-size: 100%;
@@ -1336,6 +1379,7 @@ body.hidden {
   display: grid;
   -ms-grid-columns: 52fr 10fr 38fr;
       grid-template-columns: 52fr 10fr 38fr;
+  overflow: hidden;
 }
 
 .featured .container .box {
@@ -1661,7 +1705,7 @@ body.hidden {
 
 .replay .replay_inner .replay_img__item strong {
   display: block;
-  font-size: 1.25em;
+  font-size: clamp(15px, 3vw, 23px);
   margin-top: 15px;
 }
 
@@ -1742,6 +1786,9 @@ footer .bottom .link a {
 @media (max-width: 1200px) {
   .replay .ball {
     display: none;
+  }
+  body {
+    background-size: contain;
   }
   .news,
   .countdown_box,
@@ -2016,5 +2063,11 @@ footer .bottom .link a {
         -ms-flex-direction: column;
             flex-direction: column;
     grid-gap: 15px;
+  }
+  .meet {
+    margin-bottom: 50px;
+  }
+  .replay {
+    margin-bottom: 20px;
   }
 }

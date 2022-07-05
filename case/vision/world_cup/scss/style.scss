@@ -120,10 +120,35 @@ button {
   padding: 0;
 }
 
+.gotop {
+  position: fixed;
+  bottom: 10%;
+  right: 48px;
+  z-index: 9;
+  display: none;
+  a {
+    border: 1px solid transparent;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background: $gold;
+    color: black;
+    @include flex-center();
+    position: relative;
+    transition: all 0s;
+
+    &:hover {
+      border: 2px solid $gold;
+      background: black;
+      color: $gold;
+    }
+  }
+}
+
 body {
   background: black url(../images/bg.jpg) no-repeat center top;
-  background-size: cover;
-  background-attachment: fixed;
+  background-size: 100%;
+  background-repeat: repeat-y;
   color: white;
   font-family: 微軟正黑體;
   font-size: 100%;
@@ -703,6 +728,7 @@ body {
   .container {
     display: grid;
     grid-template-columns: 52fr 10fr 38fr;
+    overflow: hidden;
     .box {
       display: flex;
       grid-gap: 20px;
@@ -920,7 +946,7 @@ body {
       }
       strong {
         display: block;
-        font-size: 1.25em;
+        font-size: clamp(15px, 3vw, 23px);
         margin-top: 15px;
       }
     }
@@ -980,6 +1006,9 @@ footer {
 @media (max-width: 1200px) {
   .replay .ball{
     display: none;
+  }
+  body{
+    background-size: contain;
   }
   .news,
   .countdown_box,
@@ -1147,5 +1176,10 @@ footer {
       grid-gap: 15px;
     }
   }
-
+  .meet{
+    margin-bottom: 50px;
+  }
+  .replay{
+    margin-bottom: 20px;
+  }
 }
