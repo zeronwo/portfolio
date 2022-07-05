@@ -32,9 +32,11 @@ $(document).ready(function () {
   $('.news_inner').owlCarousel({
 
     loop: true,
-    margin: 0,
+    margin: 50,
+    center: true,
     dots: false,
     nav: true,
+    //autoWidth: true,
     responsive: {
       0: {
         items: 2,
