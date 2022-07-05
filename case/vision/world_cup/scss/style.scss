@@ -158,7 +158,10 @@ body {
     overflow: hidden;
   }
 }
-
+.section {
+  width: 100%;
+  overflow: hidden;
+}
 .container {
   max-width: 1600px;
   margin: auto;
