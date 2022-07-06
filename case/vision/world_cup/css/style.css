@@ -1983,6 +1983,9 @@ footer .bottom .link a {
   body {
     background-size: contain;
   }
+  .banner picture {
+    padding-bottom: 95%;
+  }
   .match .title {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
