@@ -12,22 +12,22 @@ $(document).ready(function () {
       $(".gotop").fadeOut();
     }
   });
-    //LOAD
-    $("#element").introLoader({
-      animation: {
-        name: 'doubleLoader',
-        options: {
-          exitFx: 'fadeOut',
-          ease: "easeInOutCirc",
-          style: 'fluoGreen',
-          delayBefore: 500,
-          exitTime: 300,
-          progbarTime: 700,
-          progbarDelayAfter: 400
-        }
+  //LOAD
+  $("#element").introLoader({
+    animation: {
+      name: 'doubleLoader',
+      options: {
+        exitFx: 'fadeOut',
+        ease: "easeInOutCirc",
+        style: 'fluoGreen',
+        delayBefore: 500,
+        exitTime: 300,
+        progbarTime: 700,
+        progbarDelayAfter: 400
       }
-    });
-  
+    }
+  });
+
 
   $('.news_inner').owlCarousel({
 
@@ -36,15 +36,17 @@ $(document).ready(function () {
     center: true,
     dots: false,
     nav: true,
-    //autoWidth: true,
+    autoWidth: true,
     responsive: {
       0: {
         items: 2,
         margin: 10,
+        autoWidth: false,
       },
       600: {
         items: 2,
         margin: 20,
+        autoWidth: false,
       },
       1000: {
         items: 4,

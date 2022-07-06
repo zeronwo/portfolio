@@ -774,7 +774,7 @@ body.hidden {
 }
 
 .doubleLoader.theme-fluoGreen .doubleLoaderProgBar span {
-  background-color: #E1A957;
+  background-color: #e1a957;
 }
 
 .bg1 {
@@ -904,8 +904,8 @@ body.hidden {
 }
 
 .news .news_inner .news_img__item a .img img {
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .news .news_inner .news_img__item a .txt {
@@ -946,8 +946,8 @@ body.hidden {
 }
 
 .news .news_inner .news_img__item a:hover img {
-  -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0.85);
-          transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0.85);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .news .news_inner .news_img__item:before {
@@ -1699,13 +1699,13 @@ body.hidden {
 }
 
 .replay .replay_inner .replay_img__item a img {
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .replay .replay_inner .replay_img__item a:hover img {
-  -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0.85);
-          transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0.85);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .replay .replay_inner .replay_img__item strong {

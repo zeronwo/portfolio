@@ -236,7 +236,7 @@ body {
   }
 }
 //LOAD
-.introLoading{
+.introLoading {
   background-color: #212123;
 }
 .doubleLoader.theme-fluoGreen .doubleLoaderBottom,
@@ -250,7 +250,7 @@ body {
   }
 }
 .doubleLoader.theme-fluoGreen .doubleLoaderProgBar span {
-  background-color: #E1A957;
+  background-color: #e1a957;
 }
 
 .bg1 {
@@ -359,7 +359,7 @@ body {
         color: white;
         .img {
           img {
-            transition: all 0.2s;
+            transition: all 0.3s ease-in-out;
           }
         }
         .txt {
@@ -388,7 +388,7 @@ body {
         }
         &:hover {
           img {
-            transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0.85);
+            transform: scale(1.1);
           }
         }
       }
@@ -927,7 +927,7 @@ body {
 .replay {
   margin-bottom: 50px;
   position: relative;
-  .ball{
+  .ball {
     position: absolute;
     right: 6%;
     top: -70%;
@@ -939,11 +939,11 @@ body {
         display: block;
         overflow: hidden;
         img {
-          transition: all 0.2s;
+          transition: all 0.3s ease-in-out;
         }
         &:hover {
           img {
-            transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0.85);
+            transform: scale(1.1);
           }
         }
       }
@@ -1007,10 +1007,10 @@ footer {
 }
 //RWD
 @media (max-width: 1200px) {
-  .replay .ball{
+  .replay .ball {
     display: none;
   }
-  body{
+  body {
     background-size: contain;
   }
   .news,
@@ -1100,18 +1100,18 @@ footer {
       margin-top: -90px;
     }
   }
-  footer .top{
+  footer .top {
     display: flex;
     justify-content: space-between;
-    .icon{
-      ul{
+    .icon {
+      ul {
         grid-gap: 25px;
       }
     }
-    p{
+    p {
       display: none;
     }
-    .app{
+    .app {
       grid-gap: 15px;
     }
   }
@@ -1171,18 +1171,18 @@ footer {
     display: block;
   }
   footer {
-    .top .icon{
+    .top .icon {
       display: none;
     }
-    .bottom{
+    .bottom {
       flex-direction: column;
       grid-gap: 15px;
     }
   }
-  .meet{
+  .meet {
     margin-bottom: 50px;
   }
-  .replay{
+  .replay {
     margin-bottom: 20px;
   }
 }
