@@ -12,6 +12,7 @@ $(document).ready(function () {
       $(".gotop").fadeOut();
     }
   });
+  
   //LOAD
   $("#element").introLoader({
     animation: {

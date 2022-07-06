@@ -158,7 +158,7 @@ body {
     overflow: hidden;
   }
 }
-.section {
+section {
   width: 100%;
   overflow: hidden;
 }
@@ -355,8 +355,12 @@ body {
       box-shadow: 0 1px 4px #151515;
       position: relative;
       overflow: hidden;
+     
       a {
+        border-radius: 20px;
         color: white;
+        display: block;
+        overflow: hidden;
         .img {
           img {
             transition: all 0.3s ease-in-out;
@@ -1010,9 +1014,7 @@ footer {
   .replay .ball {
     display: none;
   }
-  body {
-    background-size: contain;
-  }
+
   .news,
   .countdown_box,
   .related {
@@ -1117,6 +1119,9 @@ footer {
   }
 }
 @media (max-width: 766px) {
+  body {
+    background-size: contain;
+  }
   .match .title {
     flex-direction: column-reverse;
     align-items: normal;

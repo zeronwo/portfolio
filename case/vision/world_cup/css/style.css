@@ -671,7 +671,7 @@ body.hidden {
   overflow: hidden;
 }
 
-.section {
+section {
   width: 100%;
   overflow: hidden;
 }
@@ -900,7 +900,10 @@ body.hidden {
 }
 
 .news .news_inner .news_img__item a {
+  border-radius: 20px;
   color: white;
+  display: block;
+  overflow: hidden;
 }
 
 .news .news_inner .news_img__item a .img img {
@@ -1792,9 +1795,6 @@ footer .bottom .link a {
   .replay .ball {
     display: none;
   }
-  body {
-    background-size: contain;
-  }
   .news,
   .countdown_box,
   .related {
@@ -1980,6 +1980,9 @@ footer .bottom .link a {
 }
 
 @media (max-width: 766px) {
+  body {
+    background-size: contain;
+  }
   .match .title {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
