@@ -1,5 +1,31 @@
 
 $(document).ready(function () {
+
+  //判斷捲軸事件
+  $.scrollDirection.init();
+  //LOAD
+  $("#element").introLoader({
+    animation: {
+      name: 'doubleLoader',
+      options: {
+        exitFx: 'fadeOut',
+        ease: "easeInOutCirc",
+        style: 'fluoGreen',
+        delayBefore: 500,
+        exitTime: 300,
+        progbarTime: 700,
+        progbarDelayAfter: 400
+      }
+    }
+  });
+
+
+  $(".menu_rwd_toggle").click(function () {
+    $(".mob_menu").toggleClass("active");
+    $(".menu_button ").toggleClass("active");
+    $("body").toggleClass("hidden");
+});
+
   //gotop
   $('.gotop').click(function () {
     $('html,body').animate({ scrollTop: '0px' }, 800);
