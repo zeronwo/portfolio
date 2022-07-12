@@ -15,7 +15,21 @@ body, div, dl, dt, dd, ul, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, le
     margin: 0;
     padding: 0;
 }
+button {
+  background: none;
+  border: 0;
+  box-sizing: content-box;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  line-height: inherit;
+  overflow: visible;
+  vertical-align: inherit
+}
 
+button:focus {
+  outline: none
+}
 ol{
   margin: 0;
 }

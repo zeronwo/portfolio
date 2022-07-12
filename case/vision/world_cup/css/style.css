@@ -28,6 +28,23 @@ body, div, dl, dt, dd, ul, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, le
   padding: 0;
 }
 
+button {
+  background: none;
+  border: 0;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  line-height: inherit;
+  overflow: visible;
+  vertical-align: inherit;
+}
+
+button:focus {
+  outline: none;
+}
+
 ol {
   margin: 0;
 }
@@ -1231,13 +1248,15 @@ header .md-overlay {
   z-index: 11;
   width: 100%;
   height: 100vh;
-  background-color: black;
+  background-color: rgba(50, 50, 55, 0.8);
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
   -webkit-transition: -webkit-transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
   transition: -webkit-transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
   transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
   transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1), -webkit-transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
 }
 
 .mob_menu .mob_menu_main_box {
@@ -1252,6 +1271,9 @@ header .md-overlay {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   grid-gap: 1em;
   margin-bottom: 20px;
 }
@@ -1283,6 +1305,10 @@ header .md-overlay {
   color: #e1a957;
 }
 
+.mob_menu .mob_menu_main_box .icon {
+  overflow: hidden;
+}
+
 .mob_menu .mob_menu_main_box .icon ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1291,6 +1317,29 @@ header .md-overlay {
       -ms-flex-align: center;
           align-items: center;
   grid-gap: 25px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transform: translate3d(0, 100%, 0);
+          transform: translate3d(0, 100%, 0);
+  -webkit-transition: -webkit-transform 0.6s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: -webkit-transform 0.6s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: transform 0.6s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: transform 0.6s cubic-bezier(0.55, 0.055, 0.675, 0.19), -webkit-transform 0.6s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.mob_menu .mob_menu_main_box .icon ul li {
+  position: relative;
+  overflow: hidden;
+}
+
+.mob_menu .mob_menu_main_box .icon ul li a {
+  -webkit-transform: translate3d(0, 100%, 0);
+          transform: translate3d(0, 100%, 0);
+  -webkit-transition: -webkit-transform 0.6s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: -webkit-transform 0.6s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: transform 0.6s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: transform 0.6s cubic-bezier(0.55, 0.055, 0.675, 0.19), -webkit-transform 0.6s cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
 
 .mob_menu.active .mob_menu_main {
@@ -1298,7 +1347,8 @@ header .md-overlay {
           transform: translateX(0);
 }
 
-.mob_menu.active .mob_menu_main .mob_menu_main_box ul li a {
+.mob_menu.active .mob_menu_main .mob_menu_main_box ul li a,
+.mob_menu.active .mob_menu_main .mob_menu_main_box .icon ul {
   -webkit-transform: translateZ(0);
           transform: translateZ(0);
   -webkit-transition: -webkit-transform 1s cubic-bezier(0.215, 0.61, 0.355, 1) 0.6s;
