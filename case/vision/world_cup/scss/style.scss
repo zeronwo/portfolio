@@ -148,7 +148,7 @@ button {
 body {
   background: black url(../images/bg.jpg) no-repeat center top;
   background-size: 100%;
-  background-repeat: repeat-y;
+  background-attachment: fixed;
   color: white;
   font-family: 微軟正黑體;
   font-size: 100%;
