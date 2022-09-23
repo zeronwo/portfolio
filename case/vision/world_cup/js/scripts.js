@@ -1,31 +1,6 @@
 
 $(document).ready(function () {
-  $('.news_inner').owlCarousel({
 
-    loop: true,
-    margin: 50,
-    center: true,
-    dots: false,
-    nav: true,
-    autoWidth: true,
-    responsive: {
-      0: {
-        items: 2,
-        margin: 10,
-        autoWidth: false,
-      },
-      600: {
-        items: 2,
-        margin: 20,
-        autoWidth: false,
-      },
-      1000: {
-        items: 4,
-
-
-      }
-    }
-  });
   //判斷捲軸事件
   $.scrollDirection.init();
   //LOAD
@@ -81,7 +56,30 @@ $(document).ready(function () {
   });
 
 
+  $('.news_inner').owlCarousel({
+    loop: true,
+    margin: 50,
+    dots: false,
+    nav: true,
+    autoWidth: true,
+    responsive: {
+      0: {
+        items: 2,
+        margin: 10,
+        autoWidth: false,
+      },
+      600: {
+        items: 2,
+        margin: 20,
+        autoWidth: false,
+      },
+      1000: {
+        items: 4,
 
+
+      }
+    }
+  });
   $('.match_inner').owlCarousel({
     loop: true,
     margin: 0,
