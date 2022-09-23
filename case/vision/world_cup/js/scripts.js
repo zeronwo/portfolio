@@ -55,13 +55,26 @@ $(document).ready(function () {
     }
   });
 
-
+  var fixOwl = function(){
+    var $stage = $('.owl-stage'),
+        stageW = $stage.width(),
+        $el = $('.owl-item'),
+        elW = 0;
+    $el.each(function() {
+        elW += $(this).width()+ +($(this).css("margin-right").slice(0, -2))
+    });
+    if ( elW > stageW ) {
+        $stage.width( elW );
+    };
+}
   $('.news_inner').owlCarousel({
     loop: true,
     margin: 50,
     dots: false,
     nav: true,
     autoWidth: true,
+    onInitialized: fixOwl,
+    onRefreshed: fixOwl,
     responsive: {
       0: {
         items: 2,
